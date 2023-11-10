@@ -9,7 +9,8 @@ class CreateModels < ActiveRecord::Migration[7.0]
       t.integer :leadership
       t.integer :objective_control
       t.integer :invulnerable_save
-
+      t.string :base
+      
       t.timestamps
     end
   end

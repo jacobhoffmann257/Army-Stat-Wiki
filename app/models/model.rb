@@ -3,6 +3,7 @@
 # Table name: models
 #
 #  id                :integer          not null, primary key
+#  base              :string
 #  invulnerable_save :integer
 #  leadership        :integer
 #  movement          :integer

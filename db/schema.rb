@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_09_210953) do
     t.integer "leadership"
     t.integer "objective_control"
     t.integer "invulnerable_save"
+    t.string "base"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
