@@ -8,6 +8,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+gem "httparty"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -99,6 +100,7 @@ end
 
 group :development, :test do
   gem "rspec-rails", "~> 6.0.0"
+  gem "nokogiri"
 end
 
 group :test do

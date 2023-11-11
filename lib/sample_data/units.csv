@@ -1,0 +1,26 @@
+id,name,bio,faction_id,slug
+1,Hive Tyrant,A powerful and customizable Tyranid HQ unit often used as a leader in Tyranid armies.,1,Hive-Tyrant
+2,Tervigon,A massive creature capable of spawning Termagants and providing battlefield support.,1,Tervigon
+3,Carnifex,Large and heavily armored creatures that serve as potent assault units.,1,Carnifex
+4,Trygon,Subterranean creatures used for deep strikes and underground assaults.,1,Trygon
+5,Ripper Swarm,Small fast-moving units often used for capturing objectives.,1,Ripper-Swarm
+6,Genestealers,Stealthy and deadly melee units with the ability to infiltrate.,1,Genestealers
+7,Termagants,Basic infantry units that can be armed with various weapons.,1,Termagants
+8,Hormagaunts,Swift melee infantry used for close combat.,1,Hormagaunts
+9,Gargoyles,Flying creatures that can provide aerial support.,1,Gargoyles
+10,Biovores,Artillery units that fire spore mines at opponents.,1,Biovores
+11,Zoanthropes,Psychic creatures with powerful psychic abilities.,1,Zoanthropes
+12,Lictors,Infiltrating assassins used for eliminating key targets.,1,Lictors
+13,Warriors,Versatile Tyranid infantry units with various weapon options.,1,Warriors
+14,Venomthropes,Creatures that provide defensive buffs for nearby Tyranid units.,1,Venomthropes
+15,Exocrines,Long-range artillery creatures with powerful bio-cannons.,1,Exocrines
+16,Mawloc,Another burrowing creature with devastating close combat abilities.,1,Mawloc
+17,Swarmlord,A unique Tyranid HQ unit with enhanced combat abilities.,1,Swarmlord
+18,Haruspex,A close combat monster with a powerful tongue attack.,1,Haruspex
+19,Neurothropes,Psychic units with synaptic control abilities.,1,Neurothropes
+20,Malanthropes,Support units that can provide synapse and other benefits.,1,Malanthropes
+21,Pyrovores,Creatures with flame-based weaponry.,1,Pyrovores
+22,Sporocysts,Defensive units that can deploy spore mines.,1,Sporocysts
+23,Tyrannofex,A long-range artillery unit with a massive cannon.,1,Tyrannofex
+24,Harpies,Flying creatures equipped with bio-weaponry.,1,Harpies
+25,Maleceptor,A psychic creature with potent psychic abilities.,1,Maleceptor
