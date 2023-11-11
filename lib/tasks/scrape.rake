@@ -71,28 +71,28 @@ task({ :scrape_tyranids_data => :environment}) do
 
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
 
-    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"]  # Headers for the CSV
+    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
-  parsed_page.css('.dsOuterFrame').each do |frame|
+    parsed_page.css('.dsOuterFrame').each do |frame|
     name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
 
     # Extracting weapon details
-    frame.css('.wTable').each do |table|
-      table.css('tr').each do |row|
-        next if row.at_css('.wTable_WEAPON')  # Skip header rows
+      frame.css('.wTable').each do |table|
+        table.css('tr').each do |row|
+          next if row.at_css('.wTable_WEAPON') 
 
-        weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
-        range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
-        a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
-        bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
-        s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
-        ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
-        d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
+          weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
+          range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
+          a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
+          bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
+          s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
+          ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
+          d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
 
-        csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+          csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+        end
       end
     end
-  end
     
   end
 end
