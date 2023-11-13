@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_211831) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_211929) do
   create_table "abilities", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -92,6 +92,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_211831) do
     t.datetime "updated_at", null: false
     t.index ["ability_id"], name: "index_unit_abilities_on_ability_id"
     t.index ["unit_id"], name: "index_unit_abilities_on_unit_id"
+  end
+
+  create_table "unit_keywords", force: :cascade do |t|
+    t.integer "unit_id", null: false
+    t.integer "keyword_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["keyword_id"], name: "index_unit_keywords_on_keyword_id"
+    t.index ["unit_id"], name: "index_unit_keywords_on_unit_id"
   end
 
   create_table "units", force: :cascade do |t|

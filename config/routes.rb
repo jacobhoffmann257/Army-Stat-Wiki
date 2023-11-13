@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :unit_keywords
   resources :keywords
   resources :unit_abilities
   resources :abilities
