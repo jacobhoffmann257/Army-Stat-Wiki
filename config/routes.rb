@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tags
   resources :profiles
   resources :equipment
   resources :weapons
