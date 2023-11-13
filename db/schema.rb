@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_210211) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_210330) do
   create_table "equipment", force: :cascade do |t|
     t.integer "model_id", null: false
     t.integer "weapon", null: false
@@ -54,6 +54,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_210211) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["weapon_id"], name: "index_profiles_on_weapon_id"
+  end
+
+  create_table "tag_profiles", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "profile_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_tag_profiles_on_profile_id"
+    t.index ["tag_id"], name: "index_tag_profiles_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|

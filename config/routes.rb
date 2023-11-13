@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tag_profiles
   resources :tags
   resources :profiles
   resources :equipment
