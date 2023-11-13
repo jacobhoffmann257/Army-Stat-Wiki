@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :keywords
   resources :unit_abilities
   resources :abilities
   resources :tag_profiles
