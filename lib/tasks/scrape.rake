@@ -96,3 +96,118 @@ task({ :scrape_tyranids_data => :environment}) do
     
   end
 end
+
+
+desc "Scraping necrons Data"
+
+task({ :scrape_necrons_data => :environment}) do
+
+  url = 'https://wahapedia.ru/wh40k10ed/factions/necrons/datasheets.html'
+  page = HTTParty.get(url)
+  parsed_page = Nokogiri::HTML(page)
+
+  CSV.open("lib/sample_data/necrons_stats.csv", "w") do |csv|
+    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
+    parsed_page.css('.dsOuterFrame').each do |frame|
+      name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+
+      m = frame.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      t = frame.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      sv = frame.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      w = frame.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      ld = frame.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      oc = frame.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+
+      csv << [name, m, t, sv, w, ld, oc]
+    end
+  end
+
+  CSV.open("lib/sample_data/necrons_weapons.csv", "w") do |csv|
+
+    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
+
+    parsed_page.css('.dsOuterFrame').each do |frame|
+    name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+
+    # Extracting weapon details
+      frame.css('.wTable').each do |table|
+        table.css('tr').each do |row|
+          next if row.at_css('.wTable_WEAPON') 
+
+          weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
+          range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
+          a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
+          bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
+          s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
+          ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
+          d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
+
+          csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+        end
+      end
+    end
+    
+  end
+end
+
+
+desc "Scraping astra militarum Data"
+
+task({ :scrape_astra_militarum_data => :environment}) do
+
+  url = 'https://wahapedia.ru/wh40k10ed/factions/astra-militarum/datasheets.html'
+  page = HTTParty.get(url)
+  parsed_page = Nokogiri::HTML(page)
+
+  CSV.open("lib/sample_data/astra_militarum_stats.csv", "w") do |csv|
+    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
+    parsed_page.css('.dsOuterFrame').each do |frame|
+
+      prename = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+
+      frame.css(".dsProfileBaseWrap").each do |box|
+
+        name = "#{prename} #{box.at_css('.dsModelName')&.text&.strip || 'Unknown'}"
+      
+
+        m = box.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        t = box.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        sv = box.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        w = box.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        ld = box.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        oc = box.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+
+        csv << [name, m, t, sv, w, ld, oc]
+
+      end
+
+    end
+  end
+
+  CSV.open("lib/sample_data/astra_militarum_weapons.csv", "w") do |csv|
+
+    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
+
+    parsed_page.css('.dsOuterFrame').each do |frame|
+    name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+
+    # Extracting weapon details
+      frame.css('.wTable').each do |table|
+        table.css('tr').each do |row|
+          next if row.at_css('.wTable_WEAPON') 
+
+          weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
+          range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
+          a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
+          bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
+          s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
+          ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
+          d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
+
+          csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+        end
+      end
+    end
+    
+  end
+end
