@@ -1,0 +1,62 @@
+<%= form_with(model: model) do |form| %>
+  <% if model.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+        <% model.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :movement, style: "display: block" %>
+    <%= form.number_field :movement %>
+  </div>
+
+  <div>
+    <%= form.label :toughness, style: "display: block" %>
+    <%= form.number_field :toughness %>
+  </div>
+
+  <div>
+    <%= form.label :save_value, style: "display: block" %>
+    <%= form.number_field :save_value %>
+  </div>
+
+  <div>
+    <%= form.label :invulnerable_save, style: "display: block" %>
+    <%= form.number_field :invulnerable_save %>
+  </div>
+
+  <div>
+    <%= form.label :wounds, style: "display: block" %>
+    <%= form.number_field :wounds %>
+  </div>
+
+  <div>
+    <%= form.label :leadership, style: "display: block" %>
+    <%= form.number_field :leadership %>
+  </div>
+
+  <div>
+    <%= form.label :objective_control, style: "display: block" %>
+    <%= form.number_field :objective_control %>
+  </div>
+
+  <div>
+    <%= form.label :unit_id, style: "display: block" %>
+    <%= form.number_field :unit_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

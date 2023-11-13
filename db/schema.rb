@@ -10,11 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_204203) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_204722) do
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.integer "movement"
+    t.integer "toughness"
+    t.integer "save_value"
+    t.integer "invulnerable_save"
+    t.integer "wounds"
+    t.integer "leadership"
+    t.integer "objective_control"
+    t.integer "unit_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_models_on_unit_id"
   end
 
   create_table "units", force: :cascade do |t|
