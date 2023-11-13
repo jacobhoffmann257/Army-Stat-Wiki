@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Unit abilities</h1>
+
+<div id="unit_abilities">
+  <% @unit_abilities.each do |unit_ability| %>
+    <%= render unit_ability %>
+    <p>
+      <%= link_to "Show this unit ability", unit_ability %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New unit ability", new_unit_ability_path %>
