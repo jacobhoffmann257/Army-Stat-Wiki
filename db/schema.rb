@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_13_204722) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_13_205252) do
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -46,6 +46,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_204722) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["faction_id"], name: "index_units_on_faction_id"
+  end
+
+  create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.integer "range"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
