@@ -65,6 +65,6 @@ class ModelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def model_params
-      params.require(:model).permit(:unit, :movement, :toughness, :save_value, :wounds, :leadership, :objective_control, :invulnerable_save)
+      params.require(:model).permit(:movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control, :unit_id, :name)
     end
 end

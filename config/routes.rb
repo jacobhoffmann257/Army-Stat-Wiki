@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :unit_keywords
+  resources :keywords
+  resources :unit_abilities
+  resources :abilities
+  resources :tag_profiles
+  resources :tags
+  resources :profiles
+  resources :equipment
+  resources :weapons
   resources :models
   resources :units
   resources :factions

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @keyword %>
+
+<div>
+  <%= link_to "Edit this keyword", edit_keyword_path(@keyword) %> |
+  <%= link_to "Back to keywords", keywords_path %>
+
+  <%= button_to "Destroy this keyword", @keyword, method: :delete %>
+</div>
