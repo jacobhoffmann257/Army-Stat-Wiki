@@ -1,0 +1,37 @@
+<%= form_with(model: faction) do |form| %>
+  <% if faction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(faction.errors.count, "error") %> prohibited this faction from being saved:</h2>
+
+      <ul>
+        <% faction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :banner, style: "display: block" %>
+    <%= form.text_field :banner %>
+  </div>
+
+  <div>
+    <%= form.label :icon, style: "display: block" %>
+    <%= form.text_field :icon %>
+  </div>
+
+  <div>
+    <%= form.label :picture, style: "display: block" %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
