@@ -3,48 +3,6 @@ require "nokogiri"
 require "csv"
 require 'httparty'
 
-desc "Scraping Unit Data"
-
-task({ :scrape_unit_data => :environment}) do
-  #Get List Of Slugs
-  slugs = CSV.read('lib/sample_data/units.csv').map { |row| row.at(4) }
-
-  #Get list of raw responses
-  raw_responses = slugs.map { |slug| HTTP.get("https://wahapedia.ru/wh40k10ed/factions/tyranids/#{slug}") }
-
-  documents = raw_responses.map { |response| Nokogiri::HTML(response.to_s) }
-
-  units_data = documents.map do |doc|
-
-    char_wraps = doc.css('.dsCharWrap')
-    character_name = doc.css('.dsH2Header').text
-    
-    data = char_wraps.map do |wrap|
-      
-      stats = wrap.at('.dsCharName').text
-      stats_points = wrap.at('.dsCharValue').text
-
-      {
-        character_name: character_name,
-        stats: stats,
-        stats_points:stats_points
-      }
-    end
-
-    CSV.open("lib/sample_data/unit_data.csv", "a+") do |csv|
-
-      existing = csv.entries
-      data.each do |unit|
-        unless existing.include?([unit[:character_name], unit[:stats], unit[:stats_points]])
-          csv << [unit[:character_name], unit[:stats], unit[:stats_points]]
-        end
-      end
-    end
-  end
-end
-
-
-
 desc "Scraping tyranids Data"
 
 task({ :scrape_tyranids_data => :environment}) do
@@ -55,27 +13,101 @@ task({ :scrape_tyranids_data => :environment}) do
 
   CSV.open("lib/sample_data/tyranids_stats.csv", "w") do |csv|
     csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
+    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
     parsed_page.css('.dsOuterFrame').each do |frame|
-      name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
 
-      m = frame.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      t = frame.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      sv = frame.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      w = frame.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      ld = frame.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      oc = frame.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+      unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      unitname = unitname.gsub("#{base}", "")
+      invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
+      lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
+      
+      frame.css(".dsProfileBaseWrap").each do |box|
 
-      csv << [name, m, t, sv, w, ld, oc]
+        modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
+        box.css(".dsProfileWrap").each do |profile|  
+          #statline = String.new
+          statline = Array.new
+          statline << unitname
+          statline << base
+          statline << modelname
+          statline << invulerable
+          statline << lore
+          #statline.concat("#{name}")
+          profile.css(".dsCharFrameBack").each do |stat|
+            x = stat.at_css('.dsCharValue')&.text&.strip
+            statline << x.to_i
+          end 
+          csv << statline
+        #m = profile.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        #t = profile.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        #sv = profile.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        #w = profile.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        #ld = profile.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+        #oc = profile.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
+
+        #csv << [name, m, t, sv, w, ld, oc]
+        end
+      end
+
+    end
+  
+  end
+  CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
+    csv << ["Unit Name", "Name", "Description", "Aura", "Type" ]
+    parsed_page.css('.dsOuterFrame').each do |box|
+      name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      name = name.gsub("#{base}", "")
+      value = 1
+      #Extracting Ability details
+      abilities_list = Array.new
+      abilities_list << name
+      box.css('.dsAbility').each do |ability|
+        if /CORE/.match(ability.text.strip) || /FACTION/.match(ability.text.strip)
+           raw = ability.text.strip
+           change1 = raw.gsub(":","*")
+           change2 = change1.gsub(",","*")
+           change3 =  change2.gsub("\"", "")
+           thing = change3.split("*")
+           abilities_list << thing
+        elsif /This model is equipped with/.match(ability.text.strip)
+        elsif /This model can be attached to the following units/.match(ability.text.strip)
+          guard = Array.new
+            ability.css("ul").each do |bullet|
+              bullet.css("li").each do |guardian|
+
+              guard << guardian.text
+              end
+              
+            end
+            abilities_list << guard
+            abilities_list << csv
+        elsif /<td>/.match(ability.to_s)
+          modelsize = Array.new
+            ability.css("table").each do |table|
+              table.css("tr").each do |row|
+                raw = row.text.strip
+                remove = raw.gsub("model","")
+                removes = remove.gsub("s","")
+                spilting = removes.split(" ")
+                modelsize << spilting
+              end
+              abilities_list << modelsize
+            end
+        end
+     
+      end
+        csv << abilities_list
     end
   end
-
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
-
+    
     csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
     parsed_page.css('.dsOuterFrame').each do |frame|
     name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-
+    
     # Extracting weapon details
       frame.css('.wTable').each do |table|
         table.css('tr').each do |row|
@@ -88,7 +120,6 @@ task({ :scrape_tyranids_data => :environment}) do
             s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
             ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
             d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
-
             csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
           end
         end
@@ -99,7 +130,7 @@ task({ :scrape_tyranids_data => :environment}) do
 end
 desc "Scraping astra militarum Data"
 
-task({ :scrape_astra_militarum_data2 => :environment}) do
+task({ :scrape_astra_militarum_data => :environment}) do
 
   url = 'https://wahapedia.ru/wh40k10ed/factions/astra-militarum/datasheets.html'
   page = HTTParty.get(url)
