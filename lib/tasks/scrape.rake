@@ -224,23 +224,27 @@ task({ :scrape_astra_militarum_data2 => :environment}) do
     csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
     parsed_page.css('.dsOuterFrame').each do |frame|
 
-      prename = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-
+      unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      unitname = unitname.gsub("#{base}", "")
+      invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
+      lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
       frame.css(".dsProfileBaseWrap").each do |box|
 
-        name = "#{prename} #{box.at_css('.dsModelName')&.text&.strip || ''}"
+        modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
         box.css(".dsProfileWrap").each do |profile|  
-          statline = String.new
-          #statline = Array.new
-          #statline << name
-          statline.concat("#{name}")
-          pp statline
+          #statline = String.new
+          statline = Array.new
+          statline << unitname
+          statline << base
+          statline << modelname
+          statline << invulerable
+          statline << lore
+          #statline.concat("#{name}")
           profile.css(".dsCharFrameBack").each do |stat|
             x = stat.at_css('.dsCharValue')&.text&.strip
-            statline.concat(",#{x}")
-            pp"1"
+            statline << x.to_i
           end 
-          pp statline
           csv << statline
         #m = profile.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
         #t = profile.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
@@ -262,7 +266,7 @@ task({ :scrape_astra_militarum_data2 => :environment}) do
 
     parsed_page.css('.dsOuterFrame').each do |frame|
     name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-
+    
     # Extracting weapon details
       frame.css('.wTable').each do |table|
         table.css('tr').each do |row|
