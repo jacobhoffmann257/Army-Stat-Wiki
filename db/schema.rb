@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_15_223614) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_155356) do
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.string "banner"
     t.string "icon"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "models", force: :cascade do |t|
+    t.string "name"
+    t.integer "unit_it", null: false
+    t.integer "movement"
+    t.integer "toughness"
+    t.integer "save_value"
+    t.integer "invulnerable_save"
+    t.integer "wounds"
+    t.integer "leadership"
+    t.integer "objective_control"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_223614) do
     t.integer "cost"
     t.integer "faction_id", null: false
     t.integer "max_size"
-    t.string "base_size"
+    t.integer "base_size"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
