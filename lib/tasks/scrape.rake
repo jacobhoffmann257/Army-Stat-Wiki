@@ -105,8 +105,9 @@ task({ :scrape_tyranids_data => :environment}) do
     csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
     parsed_page.css('.dsOuterFrame').each do |frame|
-    name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-    
+      name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      name = name.gsub("#{base}", "")
     # Extracting weapon details
       frame.css('.wTable').each do |table|
         table.css('tr').each do |row|

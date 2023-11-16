@@ -16,4 +16,6 @@
 #  unit_id           :integer          not null
 #
 class Model < ApplicationRecord
+  belongs_to :unit, class_name: "Unit", counter_cache: true
+  has_many :equipments
 end
