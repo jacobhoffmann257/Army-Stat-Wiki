@@ -65,6 +65,6 @@ class FactionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def faction_params
-      params.require(:faction).permit(:name)
+      params.require(:faction).permit(:name, :banner, :icon, :picture)
     end
 end

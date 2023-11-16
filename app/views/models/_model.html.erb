@@ -1,7 +1,12 @@
 <div id="<%= dom_id model %>">
   <p>
-    <strong>Unit:</strong>
-    <%= model.unit %>
+    <strong>Name:</strong>
+    <%= model.name %>
+  </p>
+
+  <p>
+    <strong>Unit it:</strong>
+    <%= model.unit_it %>
   </p>
 
   <p>
@@ -20,6 +25,11 @@
   </p>
 
   <p>
+    <strong>Invulnerable save:</strong>
+    <%= model.invulnerable_save %>
+  </p>
+
+  <p>
     <strong>Wounds:</strong>
     <%= model.wounds %>
   </p>
@@ -32,11 +42,6 @@
   <p>
     <strong>Objective control:</strong>
     <%= model.objective_control %>
-  </p>
-
-  <p>
-    <strong>Invulnerable save:</strong>
-    <%= model.invulnerable_save %>
   </p>
 
 </div>

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :models
+  resources :unit_abilities
+  resources :abilities
+  resources :profiles
+  resources :equipment
+  resources :weapons
   resources :units
+  resources :models
   resources :factions
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

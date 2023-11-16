@@ -6,10 +6,11 @@
 #  invulnerable_save :integer
 #  leadership        :integer
 #  movement          :integer
+#  name              :string
 #  objective_control :integer
 #  save_value        :integer
 #  toughness         :integer
-#  unit              :integer          not null
+#  unit_it           :integer          not null
 #  wounds            :integer
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null

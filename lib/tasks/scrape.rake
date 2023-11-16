@@ -93,8 +93,8 @@ task({ :scrape_tyranids_data => :environment}) do
                 spilting = removes.split(" ")
                 modelsize << spilting
               end
-              abilities_list << modelsize
             end
+            abilities_list << modelsize
         end
      
       end
@@ -215,8 +215,8 @@ task({ :scrape_astra_militarum_data => :environment}) do
                 spilting = removes.split(" ")
                 modelsize << spilting
               end
-              abilities_list << modelsize
             end
+            abilities_list << modelsize
         end
      
       end
