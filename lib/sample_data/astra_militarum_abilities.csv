@@ -1,23 +1,39 @@
 Unit Name,Name,Description,Aura,Type
-‘Iron Hand’ Straken,"[""CORE"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]"
-Cadian Castellan,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""45""]]",CADIAN SHOCK TROOPS,INFANTRY SQUAD,KASRKIN
-Cadian Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""5"", ""65""]]"
-Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""30""]]",CADIAN SHOCK TROOPS,CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,KASRKIN,TEMPESTUS SCIONS,DEATH KORPS GRENADIER SQUAD
+‘Iron Hand’ Straken,"[""CORE"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]","[""CATACHAN JUNGLE FIGHTERS""]"
+‘Iron Hand’ Straken,"[""CORE"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]","[""CATACHAN JUNGLE FIGHTERS""]"
+Cadian Castellan,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""45""]]","[""CADIAN SHOCK TROOPS"", ""INFANTRY SQUAD"", ""KASRKIN""]"
+Cadian Castellan,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""45""]]","[""CADIAN SHOCK TROOPS"", ""INFANTRY SQUAD"", ""KASRKIN""]"
+Cadian Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""5"", ""65""]]","[""CADIAN SHOCK TROOPS""]"
+Cadian Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""5"", ""65""]]","[""CADIAN SHOCK TROOPS""]"
+Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""30""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""30""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
 Gaunt’s Ghosts,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Voice of Command""]","[[""6"", ""100""]]"
-Lord Solar Leontus,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""125""]]",ATTILAN ROUGH RIDERS,CADIAN SHOCK TROOPS,CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,KASRKIN,DEATH KORPS GRENADIER SQUAD
-Militarum Tempestus Command Squad,"[""CORE"", "" Deep Strike"", "" Leader""]","[[""5"", ""80""]]"
-Platoon Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""4-5"", ""60""]]",CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,DEATH KORPS GRENADIER SQUAD
-Primaris Psyker,"[""CORE"", "" Leader""]","[[""1"", ""60""]]",CADIAN SHOCK TROOPS,CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,KASRKIN,TEMPESTUS SCIONS,DEATH KORPS GRENADIER SQUAD
-Regimental Enginseer,"[""CORE"", "" Leader""]","[[""1"", ""45""]]",CADIAN SHOCK TROOPS,CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,KASRKIN,MUNITORUM SERVITORS,DEATH KORPS GRENADIER SQUAD
-Regimental Preacher,"[""CORE"", "" Leader""]","[[""1"", ""35""]]",CADIAN SHOCK TROOPS,CATACHAN JUNGLE FIGHTERS,DEATH KORPS OF KRIEG,INFANTRY SQUAD,KASRKIN,TEMPESTUS SCIONS,DEATH KORPS GRENADIER SQUAD
-Sergeant Harker,"[""CORE"", "" Feel No Pain 6+"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""40""]]"
+Lord Solar Leontus,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""125""]]","[""ATTILAN ROUGH RIDERS"", ""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""DEATH KORPS GRENADIER SQUAD""]"
+Lord Solar Leontus,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""125""]]","[""ATTILAN ROUGH RIDERS"", ""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""DEATH KORPS GRENADIER SQUAD""]"
+Militarum Tempestus Command Squad,"[""CORE"", "" Deep Strike"", "" Leader""]","[[""5"", ""80""]]","[""TEMPESTUS SCIONS""]"
+Militarum Tempestus Command Squad,"[""CORE"", "" Deep Strike"", "" Leader""]","[[""5"", ""80""]]","[""TEMPESTUS SCIONS""]"
+Platoon Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""4-5"", ""60""]]","[""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
+Platoon Command Squad,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""4-5"", ""60""]]","[""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
+Primaris Psyker,"[""CORE"", "" Leader""]","[[""1"", ""60""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Primaris Psyker,"[""CORE"", "" Leader""]","[[""1"", ""60""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Regimental Enginseer,"[""CORE"", "" Leader""]","[[""1"", ""45""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""MUNITORUM SERVITORS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Regimental Enginseer,"[""CORE"", "" Leader""]","[[""1"", ""45""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""MUNITORUM SERVITORS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Regimental Preacher,"[""CORE"", "" Leader""]","[[""1"", ""35""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Regimental Preacher,"[""CORE"", "" Leader""]","[[""1"", ""35""]]","[""CADIAN SHOCK TROOPS"", ""CATACHAN JUNGLE FIGHTERS"", ""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""KASRKIN"", ""TEMPESTUS SCIONS"", ""DEATH KORPS GRENADIER SQUAD""]"
+Sergeant Harker,"[""CORE"", "" Feel No Pain 6+"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""40""]]","[""CATACHAN JUNGLE FIGHTERS""]"
+Sergeant Harker,"[""CORE"", "" Feel No Pain 6+"", "" Leader"", "" Scouts 6""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""40""]]","[""CATACHAN JUNGLE FIGHTERS""]"
 Sly Marbo,"[""CORE"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[[""1"", ""65""]]"
 Tank Commander,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""205""]]"
-Ursula Creed,"[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]",CADIAN SHOCK TROOPS,INFANTRY SQUAD,KASRKIN
-Death Korps Marshal,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]",DEATH KORPS OF KRIEG,INFANTRY SQUAD,DEATH KORPS GRENADIER SQUAD
-Death Rider Squadron Commander,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]"
-Death Rider Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""35""]]"
-Quartermaster Cadre Squad,"[""CORE"", "" Leader""]","[[""5"", ""45""]]",DEATH KORPS OF KRIEG,INFANTRY SQUAD,DEATH KORPS GRENADIER SQUAD
+Ursula Creed,"[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]","[""CADIAN SHOCK TROOPS"", ""INFANTRY SQUAD"", ""KASRKIN""]"
+Ursula Creed,"[""FACTION"", "" Voice of Command""]","[[""1"", ""55""]]","[""CADIAN SHOCK TROOPS"", ""INFANTRY SQUAD"", ""KASRKIN""]"
+Death Korps Marshal,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]","[""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
+Death Korps Marshal,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]","[""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
+Death Rider Squadron Commander,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]","[""DEATH RIDER SQUADRON""]"
+Death Rider Squadron Commander,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""60""]]","[""DEATH RIDER SQUADRON""]"
+Death Rider Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""35""]]","[""DEATH RIDER SQUADRON""]"
+Death Rider Commissar,"[""CORE"", "" Leader""]","[""FACTION"", "" Voice of Command""]","[[""1"", ""35""]]","[""DEATH RIDER SQUADRON""]"
+Quartermaster Cadre Squad,"[""CORE"", "" Leader""]","[[""5"", ""45""]]","[""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
+Quartermaster Cadre Squad,"[""CORE"", "" Leader""]","[[""5"", ""45""]]","[""DEATH KORPS OF KRIEG"", ""INFANTRY SQUAD"", ""DEATH KORPS GRENADIER SQUAD""]"
 Rein And Raus,"[""CORE"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[[""2"", ""50""]]"
 Cadian Shock Troops,"[[""10"", ""60""], [""20"", ""120""]]"
 Catachan Jungle Fighters,"[""CORE"", "" Scouts 6""]","[[""10"", ""55""], [""20"", ""110""]]"

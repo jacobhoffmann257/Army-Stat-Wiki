@@ -1,15 +1,15 @@
 Unit Name,Name,Description,Aura,Type
-Broodlord,"[""CORE"", "" Leader"", "" Scouts 8""]","[""FACTION"", "" Synapse""]","[[""1"", ""90""]]"
+Broodlord,"[""CORE"", "" Leader"", "" Scouts 8""]","[""FACTION"", "" Synapse""]","[[""1"", ""90""]]","[""GENESTEALERS""]",#<CSV:0x00007f71b71aa470>
 Deathleaper,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""70""]]"
-Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""235""]]"
-Neurotyrant,"[""CORE"", "" Leader""]","[""FACTION"", "" Synapse"", "" Shadow in the Warp""]","[[""1"", ""105""]]","[""NEUROGAUNTS"", ""TYRANT GUARD""]"
-Old One Eye,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Synapse""]","[[""1"", ""140""]]"
+Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""235""]]","[""TYRANT GUARD""]",#<CSV:0x00007f71b71aa470>
+Neurotyrant,"[""CORE"", "" Leader""]","[""FACTION"", "" Synapse"", "" Shadow in the Warp""]","[[""1"", ""105""]]","[""NEUROGAUNTS"", ""TYRANT GUARD""]",#<CSV:0x00007f71b71aa470>
+Old One Eye,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Synapse""]","[[""1"", ""140""]]","[""CARNIFEXES""]",#<CSV:0x00007f71b71aa470>
 Parasite Of Mortrex,"[""CORE"", "" Deep Strike"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""80""]]"
 Tervigon,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""190""]]"
-The Swarmlord,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""270""]]"
+The Swarmlord,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""270""]]","[""TYRANT GUARD""]",#<CSV:0x00007f71b71aa470>
 Winged Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Deep Strike""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""210""]]"
-Winged Tyranid Prime,"[""CORE"", "" Deep Strike"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]","[""GARGOYLES"", ""TYRANID WARRIORS WITH MELEE BIO-WEAPONS"", ""TYRANID WARRIORS WITH RANGED BIO-WEAPONS""]"
-Malanthrope,"[""CORE"", "" Leader"", "" Stealth""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""75""]]"
+Winged Tyranid Prime,"[""CORE"", "" Deep Strike"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]","[""GARGOYLES"", ""TYRANID WARRIORS WITH MELEE BIO-WEAPONS"", ""TYRANID WARRIORS WITH RANGED BIO-WEAPONS""]",#<CSV:0x00007f71b71aa470>
+Malanthrope,"[""CORE"", "" Leader"", "" Stealth""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""75""]]","[""VENOMTHROPES""]",#<CSV:0x00007f71b71aa470>
 Gargoyles,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""10"", ""75""], [""20"", ""150""]]"
 Hormagaunts,"[""FACTION"", "" Synapse""]","[[""10"", ""65""], [""20"", ""130""]]"
 Termagants,"[""FACTION"", "" Synapse""]","[[""10"", ""60""], [""20"", ""120""]]"

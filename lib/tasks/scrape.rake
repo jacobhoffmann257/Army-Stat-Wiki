@@ -72,7 +72,7 @@ task({ :scrape_tyranids_data => :environment}) do
            thing = change3.split("*")
            abilities_list << thing
         elsif /This model is equipped with/.match(ability.text.strip)
-        elsif /This model can be attached to the following units/.match(ability.text.strip)
+        elsif /This model can be attached to the following unit/.match(ability.text.strip)
           guard = Array.new
             ability.css("ul").each do |bullet|
               bullet.css("li").each do |guardian|
@@ -195,16 +195,17 @@ task({ :scrape_astra_militarum_data => :environment}) do
            thing = change3.split("*")
            abilities_list << thing
         elsif /This model is equipped with/.match(ability.text.strip)
-        elsif /This model can be attached to the following units/.match(ability.text.strip)
+        elsif /This model can be attached to the following unit/.match(ability.text.strip)
           guard = Array.new
             ability.css("ul").each do |bullet|
               bullet.css("li").each do |guardian|
 
-              abilities_list << guardian.text
+              guard << guardian.text
               end
               
             end
-            abilities_list << csv
+            abilities_list << guard
+            csv << abilities_list
         elsif /<td>/.match(ability.to_s)
           modelsize = Array.new
             ability.css("table").each do |table|
