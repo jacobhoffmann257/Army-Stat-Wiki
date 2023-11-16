@@ -11,6 +11,7 @@ namespace :slurp do
       u.name = row["Model_Name"]
       u.faction_id = 1
       u.base_size = row["Base_Size"]
+      #u.save
       m.name = row["Unit_Name"]
       m.invulnerable_save = row["Invurebale_Save"]
       m.movement = row["M"]
