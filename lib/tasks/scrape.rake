@@ -12,8 +12,7 @@ task({ :scrape_tyranids_data => :environment}) do
   parsed_page = Nokogiri::HTML(page)
 
   CSV.open("lib/sample_data/tyranids_stats.csv", "w") do |csv|
-    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
-    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
+    csv << ["Model Name","Base Size", "Invurebale Save", "M", "T", "Sv", "W", "Ld", "OC"]  
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
@@ -28,8 +27,9 @@ task({ :scrape_tyranids_data => :environment}) do
         box.css(".dsProfileWrap").each do |profile|  
           #statline = String.new
           statline = Array.new
-          statline << modelname
+          statline << unitname
           statline << base
+          statline << modelname
           statline << invulerable
           statline << lore
           #statline.concat("#{name}")
@@ -151,8 +151,9 @@ task({ :scrape_astra_militarum_data => :environment}) do
         box.css(".dsProfileWrap").each do |profile|  
           #statline = String.new
           statline = Array.new
-          statline << modelname
+          statline << unitname
           statline << base
+          statline << modelname
           statline << invulerable
           statline << lore
           #statline.concat("#{name}")
