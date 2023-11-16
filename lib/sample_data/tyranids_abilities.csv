@@ -2,13 +2,13 @@ Unit Name,Name,Description,Aura,Type
 Broodlord,"[""CORE"", "" Leader"", "" Scouts 8""]","[""FACTION"", "" Synapse""]","[[""1"", ""90""]]"
 Deathleaper,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""70""]]"
 Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""235""]]"
-Neurotyrant,"[""CORE"", "" Leader""]","[""FACTION"", "" Synapse"", "" Shadow in the Warp""]","[[""1"", ""105""]]","[""NEUROGAUNTS"", ""TYRANT GUARD""]",#<CSV:0x00007fa2f9e6a480>
+Neurotyrant,"[""CORE"", "" Leader""]","[""FACTION"", "" Synapse"", "" Shadow in the Warp""]","[[""1"", ""105""]]","[""NEUROGAUNTS"", ""TYRANT GUARD""]"
 Old One Eye,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Synapse""]","[[""1"", ""140""]]"
 Parasite Of Mortrex,"[""CORE"", "" Deep Strike"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""80""]]"
 Tervigon,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""190""]]"
 The Swarmlord,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""270""]]"
 Winged Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Deep Strike""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""210""]]"
-Winged Tyranid Prime,"[""CORE"", "" Deep Strike"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]","[""GARGOYLES"", ""TYRANID WARRIORS WITH MELEE BIO-WEAPONS"", ""TYRANID WARRIORS WITH RANGED BIO-WEAPONS""]",#<CSV:0x00007fa2f9e6a480>
+Winged Tyranid Prime,"[""CORE"", "" Deep Strike"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]","[""GARGOYLES"", ""TYRANID WARRIORS WITH MELEE BIO-WEAPONS"", ""TYRANID WARRIORS WITH RANGED BIO-WEAPONS""]"
 Malanthrope,"[""CORE"", "" Leader"", "" Stealth""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""75""]]"
 Gargoyles,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""10"", ""75""], [""20"", ""150""]]"
 Hormagaunts,"[""FACTION"", "" Synapse""]","[[""10"", ""65""], [""20"", ""130""]]"
