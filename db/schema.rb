@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_155356) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_160431) do
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.string "banner"
@@ -42,6 +42,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_155356) do
     t.integer "max_size"
     t.integer "base_size"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weapons", force: :cascade do |t|
+    t.string "name"
+    t.integer "range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
