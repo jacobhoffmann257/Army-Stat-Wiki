@@ -1,56 +1,56 @@
 Name,M,T,Sv,W,Ld,OC
 Name,M,T,Sv,W,Ld,OC
-Broodlord,(⌀75 x 42mm),Broodlord,4+,records purged,8,5,4,6,7,1
-Deathleaper,(⌀60mm),Deathleaper,4+,records purged,8,6,3,7,7,1
-Hive Tyrant,(⌀60mm),Hive Tyrant,4+,records purged,8,10,2,10,7,3
-Neurotyrant,(⌀50mm),Neurotyrant,4+,records purged,6,8,4,9,7,3
-Old One Eye,(⌀105 x 70mm),Old One Eye,0,records purged,8,9,2,9,8,3
-Parasite Of Mortrex,(⌀40mm),Parasite Of Mortrex,0,records purged,12,5,4,5,8,1
-Tervigon,(⌀120 x 92mm),Tervigon,0,records purged,8,11,2,16,7,5
-The Swarmlord,(⌀60mm),The Swarmlord,4+,records purged,8,10,2,10,7,3
-Winged Hive Tyrant,(⌀60mm),Winged Hive Tyrant,4+,records purged,12,9,2,10,7,3
-Winged Tyranid Prime,(⌀50mm),Winged Tyranid Prime,0,records purged,12,5,4,6,7,1
-Malanthrope,(⌀60mm),Malanthrope,0,records purged,6,5,4,10,7,3
-Gargoyles,(⌀32mm flying base),Gargoyles,0,records purged,12,3,6,1,8,2
-Hormagaunts,(⌀28mm),Hormagaunts,0,records purged,10,3,5,1,8,2
-Termagants,(⌀28mm),Termagants,0,records purged,6,3,5,1,8,2
-Tyrannocyte,(⌀100mm),Tyrannocyte,0,records purged,8,9,3,10,8,2
-Barbgaunts,(⌀40mm),Barbgaunts,0,records purged,6,4,4,2,8,1
-Biovores,(⌀80mm),Biovores,0,records purged,5,6,3,5,8,1
-Carnifexes,(⌀105 x 70mm),Carnifexes,0,records purged,8,9,2,8,8,3
-Exocrine,(⌀120 x 92mm),Exocrine,0,records purged,8,10,3,14,8,4
-Genestealers,(⌀32mm),Genestealers,5+,records purged,8,4,5,2,7,1
-Harpy,(⌀120 x 92mm flying base),Harpy,0,records purged,9,3,12,8,0
-Haruspex,(⌀120 x 92mm),Haruspex,0,records purged,8,11,3,14,8,4
-Hive Crone,(⌀120 x 92mm flying base),Hive Crone,0,records purged,9,3,12,8,0
-Hive Guard,(⌀50mm),Hive Guard,0,records purged,6,7,3,4,8,1
-Lictor,(⌀50mm),Lictor,0,records purged,8,6,4,6,7,1
-Maleceptor,(⌀120 x 92mm),Maleceptor,4+,records purged,8,11,3,14,7,4
-Mawloc,(⌀120 x 92mm),Mawloc,0,records purged,10,10,3,14,8,4
-Mucolid Spores,(⌀40mm),Mucolid Spores,0,records purged,4,4,7,3,8,0
-Neurogaunts,Unknown,Neurogaunts,0,records purged,6,3,6,1,8,1
-Neurolictor,Unknown,Neurolictor,4+,records purged,8,5,4,7,7,1
-Norn Assimilator,Unknown,Norn Assimilator,0,records purged,10,11,2,16,7,5
-Norn Emissary,Unknown,Norn Emissary,4+,records purged,10,11,2,16,7,5
-Psychophage,(⌀120 x 92mm),Psychophage,0,records purged,8,9,3,10,8,3
-Pyrovores,(⌀80mm),Pyrovores,0,records purged,5,6,3,5,8,1
-Raveners,(⌀40mm),Raveners,0,records purged,10,5,5,3,8,1
-Ripper Swarms,(⌀40mm),Ripper Swarms,0,records purged,6,2,6,4,8,0
-Screamer-killer,(⌀90mm),Screamer-killer,0,records purged,8,9,2,10,8,3
-Spore Mines,(⌀25mm),Spore Mines,0,records purged,4,1,7,1,8,0
-Sporocyst,(⌀100mm),Sporocyst,0,records purged,0,10,3,10,8,0
-Toxicrene,(⌀120 x 92mm),Toxicrene,0,records purged,8,11,3,14,8,4
-Trygon,(⌀120 x 92mm),Trygon,0,records purged,10,10,3,14,8,4
-Tyranid Warriors With Melee Bio-weapons,(⌀50mm),Tyranid Warriors With Melee Bio-weapons,0,records purged,6,5,4,3,7,2
-Tyranid Warriors With Ranged Bio-weapons,(⌀50mm),Tyranid Warriors With Ranged Bio-weapons,0,records purged,6,5,4,3,7,2
-Tyrannofex,(⌀120 x 92mm),Tyrannofex,0,records purged,9,12,2,16,8,5
-Tyrant Guard,(⌀50mm),Tyrant Guard,0,records purged,6,8,3,4,8,1
-Venomthropes,(⌀40mm),Venomthropes,0,records purged,6,5,4,3,8,1
-Von Ryan’s Leapers,(⌀40mm),Von Ryan’s Leapers,6+,records purged,10,5,4,3,8,1
-Zoanthropes,(⌀40mm),Zoanthropes,4+,records purged,5,5,5,3,7,1
-Barbed Hierodule,(⌀127mm),Barbed Hierodule,0,records purged,8,12,2,18,8,5
-Harridan,(⌀120 x 92mm flying base),Harridan,0,records purged,10,3,30,8,0
-Hierophant,(⌀Use model),Hierophant,5+,records purged,12,14,2,30,8,12
-Scythed Hierodule,(⌀127mm),Scythed Hierodule,0,records purged,12,12,2,18,8,5
-Dimachaeron,(⌀120 x 92mm),Dimachaeron,5+,records purged,12,10,3,16,7,5
-Sky-slasher Swarms,(⌀40mm),Sky-slasher Swarms,0,records purged,12,2,6,4,8,0
+Broodlord,(⌀75 x 42mm),4+,records purged,8,5,4,6,7,1
+Deathleaper,(⌀60mm),4+,records purged,8,6,3,7,7,1
+Hive Tyrant,(⌀60mm),4+,records purged,8,10,2,10,7,3
+Neurotyrant,(⌀50mm),4+,records purged,6,8,4,9,7,3
+Old One Eye,(⌀105 x 70mm),0,records purged,8,9,2,9,8,3
+Parasite Of Mortrex,(⌀40mm),0,records purged,12,5,4,5,8,1
+Tervigon,(⌀120 x 92mm),0,records purged,8,11,2,16,7,5
+The Swarmlord,(⌀60mm),4+,records purged,8,10,2,10,7,3
+Winged Hive Tyrant,(⌀60mm),4+,records purged,12,9,2,10,7,3
+Winged Tyranid Prime,(⌀50mm),0,records purged,12,5,4,6,7,1
+Malanthrope,(⌀60mm),0,records purged,6,5,4,10,7,3
+Gargoyles,(⌀32mm flying base),0,records purged,12,3,6,1,8,2
+Hormagaunts,(⌀28mm),0,records purged,10,3,5,1,8,2
+Termagants,(⌀28mm),0,records purged,6,3,5,1,8,2
+Tyrannocyte,(⌀100mm),0,records purged,8,9,3,10,8,2
+Barbgaunts,(⌀40mm),0,records purged,6,4,4,2,8,1
+Biovores,(⌀80mm),0,records purged,5,6,3,5,8,1
+Carnifexes,(⌀105 x 70mm),0,records purged,8,9,2,8,8,3
+Exocrine,(⌀120 x 92mm),0,records purged,8,10,3,14,8,4
+Genestealers,(⌀32mm),5+,records purged,8,4,5,2,7,1
+Harpy,(⌀120 x 92mm flying base),0,records purged,9,3,12,8,0
+Haruspex,(⌀120 x 92mm),0,records purged,8,11,3,14,8,4
+Hive Crone,(⌀120 x 92mm flying base),0,records purged,9,3,12,8,0
+Hive Guard,(⌀50mm),0,records purged,6,7,3,4,8,1
+Lictor,(⌀50mm),0,records purged,8,6,4,6,7,1
+Maleceptor,(⌀120 x 92mm),4+,records purged,8,11,3,14,7,4
+Mawloc,(⌀120 x 92mm),0,records purged,10,10,3,14,8,4
+Mucolid Spores,(⌀40mm),0,records purged,4,4,7,3,8,0
+Neurogaunts,Unknown,0,records purged,6,3,6,1,8,1
+Neurolictor,Unknown,4+,records purged,8,5,4,7,7,1
+Norn Assimilator,Unknown,0,records purged,10,11,2,16,7,5
+Norn Emissary,Unknown,4+,records purged,10,11,2,16,7,5
+Psychophage,(⌀120 x 92mm),0,records purged,8,9,3,10,8,3
+Pyrovores,(⌀80mm),0,records purged,5,6,3,5,8,1
+Raveners,(⌀40mm),0,records purged,10,5,5,3,8,1
+Ripper Swarms,(⌀40mm),0,records purged,6,2,6,4,8,0
+Screamer-killer,(⌀90mm),0,records purged,8,9,2,10,8,3
+Spore Mines,(⌀25mm),0,records purged,4,1,7,1,8,0
+Sporocyst,(⌀100mm),0,records purged,0,10,3,10,8,0
+Toxicrene,(⌀120 x 92mm),0,records purged,8,11,3,14,8,4
+Trygon,(⌀120 x 92mm),0,records purged,10,10,3,14,8,4
+Tyranid Warriors With Melee Bio-weapons,(⌀50mm),0,records purged,6,5,4,3,7,2
+Tyranid Warriors With Ranged Bio-weapons,(⌀50mm),0,records purged,6,5,4,3,7,2
+Tyrannofex,(⌀120 x 92mm),0,records purged,9,12,2,16,8,5
+Tyrant Guard,(⌀50mm),0,records purged,6,8,3,4,8,1
+Venomthropes,(⌀40mm),0,records purged,6,5,4,3,8,1
+Von Ryan’s Leapers,(⌀40mm),6+,records purged,10,5,4,3,8,1
+Zoanthropes,(⌀40mm),4+,records purged,5,5,5,3,7,1
+Barbed Hierodule,(⌀127mm),0,records purged,8,12,2,18,8,5
+Harridan,(⌀120 x 92mm flying base),0,records purged,10,3,30,8,0
+Hierophant,(⌀Use model),5+,records purged,12,14,2,30,8,12
+Scythed Hierodule,(⌀127mm),0,records purged,12,12,2,18,8,5
+Dimachaeron,(⌀120 x 92mm),5+,records purged,12,10,3,16,7,5
+Sky-slasher Swarms,(⌀40mm),0,records purged,12,2,6,4,8,0

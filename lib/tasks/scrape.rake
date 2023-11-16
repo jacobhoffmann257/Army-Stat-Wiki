@@ -28,9 +28,8 @@ task({ :scrape_tyranids_data => :environment}) do
         box.css(".dsProfileWrap").each do |profile|  
           #statline = String.new
           statline = Array.new
-          statline << unitname
-          statline << base
           statline << modelname
+          statline << base
           statline << invulerable
           statline << lore
           #statline.concat("#{name}")
@@ -152,9 +151,8 @@ task({ :scrape_astra_militarum_data => :environment}) do
         box.css(".dsProfileWrap").each do |profile|  
           #statline = String.new
           statline = Array.new
-          statline << unitname
-          statline << base
           statline << modelname
+          statline << base
           statline << invulerable
           statline << lore
           #statline.concat("#{name}")
