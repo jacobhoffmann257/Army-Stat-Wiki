@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_160431) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_160549) do
+  create_table "equipment", force: :cascade do |t|
+    t.integer "model_id", null: false
+    t.integer "weapon_id", null: false
+    t.integer "limits"
+    t.integer "slot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.string "banner"
