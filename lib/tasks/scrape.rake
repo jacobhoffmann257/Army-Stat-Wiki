@@ -94,7 +94,33 @@ task({ :scrape_tyranids_data => :environment}) do
               end
             end
             abilities_list << modelsize
+          elsif /This model is equipped with:/.match(ability.to_s)
+          elsif /model is equipped with/.match(ability.to_s)
+          elsif /<b>/.match(ability.to_s)
+            raw = ability.text.strip
+            raw = raw.split(".")
+            parsed = Array.new
+            raw.each do |second|
+              temp = second.split(":")
+              #pp temp
+              parsed << temp
+            end
+            pp parsed
+            abilities_list << parsed
+
+
+          elsif /<div class="dsLineHor">/.match(ability.to_s)
+            raw = ability.text.strip
+            raw = raw.split(".")
+            parsed = Array.new
+            raw.each do |second|
+              temp = second.split(":")
+              parsed << temp
+            end
+
+            abilities_list << parsed
         end
+
      
       end
         csv << abilities_list
@@ -163,14 +189,6 @@ task({ :scrape_astra_militarum_data => :environment}) do
             statline << x.to_i
           end 
           csv << statline
-        #m = profile.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #t = profile.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #sv = profile.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #w = profile.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #ld = profile.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #oc = profile.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-
-        #csv << [name, m, t, sv, w, ld, oc]
         end
       end
 
@@ -195,6 +213,19 @@ task({ :scrape_astra_militarum_data => :environment}) do
            thing = change3.split("*")
            abilities_list << thing
         elsif /This model is equipped with/.match(ability.text.strip)
+        elsif /This model is equipped with:/.match(ability.to_s)
+        elsif /is equipped with/.match(ability.to_s)
+        elsif /<b>/.match(ability.to_s)
+          raw = ability.text.strip
+          raw = raw.split(".")
+          parsed = Array.new
+          raw.each do |second|
+            temp = second.split(":")
+            #pp temp
+            parsed << temp
+          end
+          pp parsed
+          abilities_list << parsed
         elsif /This model can be attached to the following unit/.match(ability.text.strip)
           guard = Array.new
             ability.css("ul").each do |bullet|
@@ -206,7 +237,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
             end
             abilities_list << guard
             csv << abilities_list
-        elsif /<td>/.match(ability.to_s)
+          elsif /<td>/.match(ability.to_s)
           modelsize = Array.new
             ability.css("table").each do |table|
               table.css("tr").each do |row|
@@ -218,6 +249,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
               end
             end
             abilities_list << modelsize
+
         end
      
       end
