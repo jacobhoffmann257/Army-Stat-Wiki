@@ -1,16 +1,16 @@
 Name,Weapon Name,Range,A,BS/WS,S,AP,D
-‘Iron Hand’ Straken(⌀25mm),Auto shotgun [assault],"12,3,3+,4,0,2
-‘Iron Hand’ Straken(⌀25mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
-‘Iron Hand’ Straken(⌀25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
-‘Iron Hand’ Straken(⌀25mm),Bionic arm with devil’s claw [anti-monster 4+],Melee,6,2+,6,-2,2
-Cadian Castellan(⌀28mm),Bolt pistol [pistol],"12,1,3+,4,0,1
-Cadian Castellan(⌀28mm),Boltgun [rapid fire 1],"24,1,3+,4,0,1
-Cadian Castellan(⌀28mm),Laspistol [pistol],"12,1,3+,3,0,1
-Cadian Castellan(⌀28mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
-Cadian Castellan(⌀28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
-Cadian Castellan(⌀28mm),Chainsword,Melee,5,3+,3,0,1
-Cadian Castellan(⌀28mm),Power fist,Melee,3,3+,6,-2,2
-Cadian Castellan(⌀28mm),Power weapon,Melee,4,3+,4,-2,1
+‘Iron Hand’ Straken(25mm),Auto shotgun [assault],"12,3,3+,4,0,2
+‘Iron Hand’ Straken(25mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
+‘Iron Hand’ Straken(25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
+‘Iron Hand’ Straken(25mm),Bionic arm with devil’s claw [anti-monster 4+],Melee,6,2+,6,-2,2
+Cadian Castellan(28mm),Bolt pistol [pistol],"12,1,3+,4,0,1
+Cadian Castellan(28mm),Boltgun [rapid fire 1],"24,1,3+,4,0,1
+Cadian Castellan(28mm),Laspistol [pistol],"12,1,3+,3,0,1
+Cadian Castellan(28mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
+Cadian Castellan(28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
+Cadian Castellan(28mm),Chainsword,Melee,5,3+,3,0,1
+Cadian Castellan(28mm),Power fist,Melee,3,3+,6,-2,2
+Cadian Castellan(28mm),Power weapon,Melee,4,3+,4,-2,1
 Cadian Command Squad,Bolt pistol [pistol],"12,1,4+,4,0,1
 Cadian Command Squad,"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
 Cadian Command Squad,Grenade launcher – frag [blast],"24,D3,4+,4,0,1
@@ -26,11 +26,11 @@ Cadian Command Squad,Chainsword,Melee,4,4+,3,0,1
 Cadian Command Squad,Close combat weapon,Melee,2,4+,3,0,1
 Cadian Command Squad,Power fist,Melee,3,4+,6,-2,2
 Cadian Command Squad,Power weapon,Melee,3,4+,4,-2,1
-Commissar(⌀28mm),Bolt pistol [pistol],"12,1,3+,4,0,1
-Commissar(⌀28mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
-Commissar(⌀28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
-Commissar(⌀28mm),Chainsword,Melee,4,3+,3,0,1
-Commissar(⌀28mm),Power weapon,Melee,3,3+,4,-2,1
+Commissar(28mm),Bolt pistol [pistol],"12,1,3+,4,0,1
+Commissar(28mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
+Commissar(28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
+Commissar(28mm),Chainsword,Melee,4,3+,3,0,1
+Commissar(28mm),Power weapon,Melee,3,3+,4,-2,1
 Gaunt’s Ghosts,Bragg’s autocannon [heavy],"48,4,5+,9,-1,3
 Gaunt’s Ghosts,Bolt pistol [pistol],"12,1,2+,4,0,1
 Gaunt’s Ghosts,Corbec’s hot-shot lascarbine [assault],"24,3,3+,3,-1,1
@@ -40,9 +40,9 @@ Gaunt’s Ghosts,"Rawne’s lascarbine [assault, sustained hits]","24,3,3+,3,0,1
 Gaunt’s Ghosts,Gaunt’s chainsword,Melee,5,2+,3,-1,1
 Gaunt’s Ghosts,Straight silver knife,Melee,3,3+,3,0,1
 Gaunt’s Ghosts,"Mkoll’s straight silver knife [devastating wounds, precision]",Melee,5,2+,3,-1,1
-Lord Solar Leontus(⌀80mm),Sol’s Righteous Gaze [pistol],"12,2,2+,8,-2,2
-Lord Solar Leontus(⌀80mm),Conquest,Melee,6,2+,6,-2,2
-Lord Solar Leontus(⌀80mm),Konstantin’s hooves [extra attacks],Melee,2,4+,4,0,1
+Lord Solar Leontus(80mm),Sol’s Righteous Gaze [pistol],"12,2,2+,8,-2,2
+Lord Solar Leontus(80mm),Conquest,Melee,6,2+,6,-2,2
+Lord Solar Leontus(80mm),Konstantin’s hooves [extra attacks],Melee,2,4+,4,0,1
 Militarum Tempestus Command Squad,Bolt pistol [pistol],"12,1,3+,4,0,1
 Militarum Tempestus Command Squad,"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
 Militarum Tempestus Command Squad,Grenade launcher – frag [blast],"24,D3,3+,4,0,1
@@ -81,95 +81,95 @@ Platoon Command Squad,Chainsword,Melee,3,4+,3,0,1
 Platoon Command Squad,Close combat weapon,Melee,2,4+,3,0,1
 Platoon Command Squad,Power fist,Melee,3,4+,6,-2,2
 Platoon Command Squad,Power weapon,Melee,3,4+,4,-2,1
-Primaris Psyker(⌀32mm),Laspistol [pistol],"12,1,3+,3,0,1
-Primaris Psyker(⌀32mm),"Psychic Maelstrom – witchfire [blast, devastating wounds, psychic]","18,D6,3+,6,-2,1
-Primaris Psyker(⌀32mm),"Psychic Maelstrom – focused witchfire [blast, devastating wounds, hazardous, psychic]","18,D6+3,3+,6,-2,2
-Primaris Psyker(⌀32mm),Force weapon [psychic],Melee,3,4+,6,-1,D3
-Regimental Enginseer(⌀32mm),"Archeotech pistol [devastating wounds, pistol]","12,1,3+,6,0,1
-Regimental Enginseer(⌀32mm),Enginseer axe,Melee,3,4+,6,-2,2
-Regimental Enginseer(⌀32mm),Servo-arm [extra attacks],Melee,1,4+,6,-2,2
-Regimental Preacher(⌀25mm),Autogun [rapid fire 1],"24,1,4+,3,0,1
-Regimental Preacher(⌀25mm),Holy pistol [pistol],"12,3,4+,4,0,1
-Regimental Preacher(⌀25mm),Preacher shotgun [assault],"12,2,4+,4,0,1
-Regimental Preacher(⌀25mm),Chainsword,Melee,4,4+,3,0,1
-Regimental Preacher(⌀25mm),Power weapon,Melee,3,4+,4,-2,1
-Sergeant Harker(⌀25mm),Payback [sustained hits 1],"36,3,3+,5,-1,2
-Sergeant Harker(⌀25mm),Close combat weapon,Melee,4,3+,4,0,1
-Sly Marbo(⌀32mm),"Ripper pistol [anti-infantry 2+, pistol, precision]","12,3,2+,5,-1,2
-Sly Marbo(⌀32mm),"Envenomed blade [anti-infantry 2+, precision]",Melee,5,2+,5,-1,2
-Tank Commander(⌀Use model),Demolisher battle cannon [blast],"24,D6+3,4+,14,-3,D6
-Tank Commander(⌀Use model),"Eradicator nova cannon [blast, ignores cover]","36,D3+6,4+,7,-1,2
-Tank Commander(⌀Use model),Executioner plasma cannon – standard [blast],"36,D6+3,4+,7,-2,2
-Tank Commander(⌀Use model),"Executioner plasma cannon – supercharge [blast, hazardous]","36,D6+3,4+,8,-3,3
-Tank Commander(⌀Use model),"Exterminator autocannon [rapid fire 4, twin-linked]","48,4,4+,9,-1,3
-Tank Commander(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Tank Commander(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Tank Commander(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Tank Commander(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Tank Commander(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Tank Commander(⌀Use model),Leman Russ battle cannon [blast],"48,D6+3,4+,10,-1,3
-Tank Commander(⌀Use model),Militarum plasma cannon – standard [blast],"36,D3,4+,7,-2,1
-Tank Commander(⌀Use model),"Militarum plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
-Tank Commander(⌀Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
-Tank Commander(⌀Use model),Punisher gatling cannon,"24,20,4+,5,0,1
-Tank Commander(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Tank Commander(⌀Use model),Vanquisher battle cannon [heavy],"72,1,4+,18,-4,D6+6
-Tank Commander(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Ursula Creed(⌀32mm),Duty and Vengeance [pistol],"12,4,3+,5,-2,1
-Ursula Creed(⌀32mm),Power weapon,Melee,4,3+,4,-2,1
-Death Korps Marshal(⌀25mm),Bolt pistol [pistol],"12,1,3+,4,0,1
-Death Korps Marshal(⌀25mm),Laspistol [pistol],"12,1,3+,3,0,1
-Death Korps Marshal(⌀25mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
-Death Korps Marshal(⌀25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
-Death Korps Marshal(⌀25mm),Power weapon,Melee,4,3+,4,-2,1
-Death Rider Squadron Commander(⌀40mm),Bolt pistol [pistol],"12,1,4+,4,0,1
-Death Rider Squadron Commander(⌀40mm),Laspistol [pistol],"12,1,4+,3,0,1
-Death Rider Squadron Commander(⌀40mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
-Death Rider Squadron Commander(⌀40mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
-Death Rider Squadron Commander(⌀40mm),Death Rider hunting lance [lance],Melee,5,3+,4,-1,1
-Death Rider Squadron Commander(⌀40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
-Death Rider Commissar(⌀40mm),Commissar’s pistol [pistol],"12,1,3+,3,-1,1
-Death Rider Commissar(⌀40mm),Commissar’s close combat weapon,Melee,3,3+,4,-2,1
-Death Rider Commissar(⌀40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
+Primaris Psyker(32mm),Laspistol [pistol],"12,1,3+,3,0,1
+Primaris Psyker(32mm),"Psychic Maelstrom – witchfire [blast, devastating wounds, psychic]","18,D6,3+,6,-2,1
+Primaris Psyker(32mm),"Psychic Maelstrom – focused witchfire [blast, devastating wounds, hazardous, psychic]","18,D6+3,3+,6,-2,2
+Primaris Psyker(32mm),Force weapon [psychic],Melee,3,4+,6,-1,D3
+Regimental Enginseer(32mm),"Archeotech pistol [devastating wounds, pistol]","12,1,3+,6,0,1
+Regimental Enginseer(32mm),Enginseer axe,Melee,3,4+,6,-2,2
+Regimental Enginseer(32mm),Servo-arm [extra attacks],Melee,1,4+,6,-2,2
+Regimental Preacher(25mm),Autogun [rapid fire 1],"24,1,4+,3,0,1
+Regimental Preacher(25mm),Holy pistol [pistol],"12,3,4+,4,0,1
+Regimental Preacher(25mm),Preacher shotgun [assault],"12,2,4+,4,0,1
+Regimental Preacher(25mm),Chainsword,Melee,4,4+,3,0,1
+Regimental Preacher(25mm),Power weapon,Melee,3,4+,4,-2,1
+Sergeant Harker(25mm),Payback [sustained hits 1],"36,3,3+,5,-1,2
+Sergeant Harker(25mm),Close combat weapon,Melee,4,3+,4,0,1
+Sly Marbo(32mm),"Ripper pistol [anti-infantry 2+, pistol, precision]","12,3,2+,5,-1,2
+Sly Marbo(32mm),"Envenomed blade [anti-infantry 2+, precision]",Melee,5,2+,5,-1,2
+Tank Commander(Use model),Demolisher battle cannon [blast],"24,D6+3,4+,14,-3,D6
+Tank Commander(Use model),"Eradicator nova cannon [blast, ignores cover]","36,D3+6,4+,7,-1,2
+Tank Commander(Use model),Executioner plasma cannon – standard [blast],"36,D6+3,4+,7,-2,2
+Tank Commander(Use model),"Executioner plasma cannon – supercharge [blast, hazardous]","36,D6+3,4+,8,-3,3
+Tank Commander(Use model),"Exterminator autocannon [rapid fire 4, twin-linked]","48,4,4+,9,-1,3
+Tank Commander(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Tank Commander(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Tank Commander(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Tank Commander(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Tank Commander(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Tank Commander(Use model),Leman Russ battle cannon [blast],"48,D6+3,4+,10,-1,3
+Tank Commander(Use model),Militarum plasma cannon – standard [blast],"36,D3,4+,7,-2,1
+Tank Commander(Use model),"Militarum plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
+Tank Commander(Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
+Tank Commander(Use model),Punisher gatling cannon,"24,20,4+,5,0,1
+Tank Commander(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Tank Commander(Use model),Vanquisher battle cannon [heavy],"72,1,4+,18,-4,D6+6
+Tank Commander(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Ursula Creed(32mm),Duty and Vengeance [pistol],"12,4,3+,5,-2,1
+Ursula Creed(32mm),Power weapon,Melee,4,3+,4,-2,1
+Death Korps Marshal(25mm),Bolt pistol [pistol],"12,1,3+,4,0,1
+Death Korps Marshal(25mm),Laspistol [pistol],"12,1,3+,3,0,1
+Death Korps Marshal(25mm),Plasma pistol – standard [pistol],"12,1,3+,7,-2,1
+Death Korps Marshal(25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,3+,8,-3,2
+Death Korps Marshal(25mm),Power weapon,Melee,4,3+,4,-2,1
+Death Rider Squadron Commander(40mm),Bolt pistol [pistol],"12,1,4+,4,0,1
+Death Rider Squadron Commander(40mm),Laspistol [pistol],"12,1,4+,3,0,1
+Death Rider Squadron Commander(40mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
+Death Rider Squadron Commander(40mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
+Death Rider Squadron Commander(40mm),Death Rider hunting lance [lance],Melee,5,3+,4,-1,1
+Death Rider Squadron Commander(40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
+Death Rider Commissar(40mm),Commissar’s pistol [pistol],"12,1,3+,3,-1,1
+Death Rider Commissar(40mm),Commissar’s close combat weapon,Melee,3,3+,4,-2,1
+Death Rider Commissar(40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
 Quartermaster Cadre Squad,Quartermaster’s pistol [pistol],"12,1,3+,3,-1,1
 Quartermaster Cadre Squad,Medical scalpels,Melee,1,5+,3,0,1
 Quartermaster Cadre Squad,Quartermaster’s close combat weapon,Melee,2,3+,4,-2,1
-Rein And Raus(⌀25mm),"Demolition charge [blast, hazardous, one shot]","6,D6+3,4+,12,-2,2
-Rein And Raus(⌀25mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
-Rein And Raus(⌀25mm),Stub pistol [pistol],"12,1,3+,4,0,1
-Rein And Raus(⌀25mm),Close combat weapon,Melee,1,5+,2,0,1
-Cadian Shock Troops(⌀25mm),Bolt pistol [pistol],"12,1,4+,4,0,1
-Cadian Shock Troops(⌀25mm),Drum-fed autogun,"24,2,4+,3,0,1
-Cadian Shock Troops(⌀25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Cadian Shock Troops(⌀25mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
-Cadian Shock Troops(⌀25mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
-Cadian Shock Troops(⌀25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Cadian Shock Troops(⌀25mm),Laspistol [pistol],"12,1,4+,3,0,1
-Cadian Shock Troops(⌀25mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
-Cadian Shock Troops(⌀25mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
-Cadian Shock Troops(⌀25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
-Cadian Shock Troops(⌀25mm),Chainsword,Melee,3,4+,3,0,1
-Cadian Shock Troops(⌀25mm),Close combat weapon,Melee,1,4+,3,0,1
-Catachan Jungle Fighters(⌀25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Catachan Jungle Fighters(⌀25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Catachan Jungle Fighters(⌀25mm),Laspistol [pistol],"12,1,4+,3,0,1
-Catachan Jungle Fighters(⌀25mm),Close combat weapon,Melee,1,4+,3,0,1
-Death Korps Of Krieg(⌀25mm),Bolt pistol [PISTOL],"12,1,4+,4,0,1
-Death Korps Of Krieg(⌀25mm),Boltgun [rapid fire 1],"24,1,4+,4,0,1
-Death Korps Of Krieg(⌀25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Death Korps Of Krieg(⌀25mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
-Death Korps Of Krieg(⌀25mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
-Death Korps Of Krieg(⌀25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Death Korps Of Krieg(⌀25mm),Laspistol [pistol],"12,1,4+,3,0,1
-Death Korps Of Krieg(⌀25mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
-Death Korps Of Krieg(⌀25mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
-Death Korps Of Krieg(⌀25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
-Death Korps Of Krieg(⌀25mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
-Death Korps Of Krieg(⌀25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
-Death Korps Of Krieg(⌀25mm),"Sniper rifle [heavy, precision]","36,1,4+,4,-2,2
-Death Korps Of Krieg(⌀25mm),Chainsword,Melee,3,4+,3,0,1
-Death Korps Of Krieg(⌀25mm),Close combat weapon,Melee,1,4+,3,0,1
-Death Korps Of Krieg(⌀25mm),Power weapon,Melee,2,4+,4,-2,1
+Rein And Raus(25mm),"Demolition charge [blast, hazardous, one shot]","6,D6+3,4+,12,-2,2
+Rein And Raus(25mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
+Rein And Raus(25mm),Stub pistol [pistol],"12,1,3+,4,0,1
+Rein And Raus(25mm),Close combat weapon,Melee,1,5+,2,0,1
+Cadian Shock Troops(25mm),Bolt pistol [pistol],"12,1,4+,4,0,1
+Cadian Shock Troops(25mm),Drum-fed autogun,"24,2,4+,3,0,1
+Cadian Shock Troops(25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Cadian Shock Troops(25mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
+Cadian Shock Troops(25mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
+Cadian Shock Troops(25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Cadian Shock Troops(25mm),Laspistol [pistol],"12,1,4+,3,0,1
+Cadian Shock Troops(25mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
+Cadian Shock Troops(25mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
+Cadian Shock Troops(25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
+Cadian Shock Troops(25mm),Chainsword,Melee,3,4+,3,0,1
+Cadian Shock Troops(25mm),Close combat weapon,Melee,1,4+,3,0,1
+Catachan Jungle Fighters(25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Catachan Jungle Fighters(25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Catachan Jungle Fighters(25mm),Laspistol [pistol],"12,1,4+,3,0,1
+Catachan Jungle Fighters(25mm),Close combat weapon,Melee,1,4+,3,0,1
+Death Korps Of Krieg(25mm),Bolt pistol [PISTOL],"12,1,4+,4,0,1
+Death Korps Of Krieg(25mm),Boltgun [rapid fire 1],"24,1,4+,4,0,1
+Death Korps Of Krieg(25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Death Korps Of Krieg(25mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
+Death Korps Of Krieg(25mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
+Death Korps Of Krieg(25mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Death Korps Of Krieg(25mm),Laspistol [pistol],"12,1,4+,3,0,1
+Death Korps Of Krieg(25mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
+Death Korps Of Krieg(25mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
+Death Korps Of Krieg(25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
+Death Korps Of Krieg(25mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
+Death Korps Of Krieg(25mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
+Death Korps Of Krieg(25mm),"Sniper rifle [heavy, precision]","36,1,4+,4,-2,2
+Death Korps Of Krieg(25mm),Chainsword,Melee,3,4+,3,0,1
+Death Korps Of Krieg(25mm),Close combat weapon,Melee,1,4+,3,0,1
+Death Korps Of Krieg(25mm),Power weapon,Melee,2,4+,4,-2,1
 Infantry Squad,Autocannon [heavy],"48,2,5+,9,-1,3
 Infantry Squad,Bolt pistol [PISTOL],"12,1,4+,4,0,1
 Infantry Squad,Boltgun [rapid fire 1],"24,1,4+,4,0,1
@@ -192,161 +192,161 @@ Infantry Squad,"Sniper rifle [heavy, precision]","36,1,4+,4,-2,2
 Infantry Squad,Chainsword,Melee,3,4+,3,0,1
 Infantry Squad,Close combat weapon,Melee,1,4+,3,0,1
 Infantry Squad,Power weapon,Melee,2,4+,4,-2,1
-Chimera(⌀Use model),Chimera heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Chimera(⌀Use model),"Chimera heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Chimera(⌀Use model),Chimera multi-laser,"36,4,4+,6,0,1
-Chimera(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Chimera(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Chimera(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Chimera(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Chimera(⌀Use model),Lasgun array [rapid fire 6],"24,6,4+,3,0,1
-Chimera(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Chimera(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Taurox(⌀Use model),Twin autocannon [twin-linked],"48,2,4+,9,-1,3
-Taurox(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Taurox(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Taurox Prime(⌀Use model),Storm bolter [rapid fire 2],"24,2,3+,4,0,1
-Taurox Prime(⌀Use model),Taurox battle cannon [blast],"48,D6,3+,8,-1,2
-Taurox Prime(⌀Use model),Taurox gatling cannon,"24,12,3+,4,0,1
-Taurox Prime(⌀Use model),Taurox missile launcher – frag [blast],"48,2D6,3+,4,0,1
-Taurox Prime(⌀Use model),Taurox missile launcher – krak,"48,2,3+,9,-2,D6
-Taurox Prime(⌀Use model),Twin autocannon [twin-linked],"48,2,3+,9,-1,3
-Taurox Prime(⌀Use model),"Twin Taurox hot-shot volley gun [rapid fire 3, twin-linked]","30,3,3+,4,-1,1
-Taurox Prime(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Storm Chimera(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Storm Chimera(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Storm Chimera(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Storm Chimera(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Storm Chimera(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Storm Chimera(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Storm Chimera(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
+Chimera(Use model),Chimera heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Chimera(Use model),"Chimera heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Chimera(Use model),Chimera multi-laser,"36,4,4+,6,0,1
+Chimera(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Chimera(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Chimera(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Chimera(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Chimera(Use model),Lasgun array [rapid fire 6],"24,6,4+,3,0,1
+Chimera(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Chimera(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Taurox(Use model),Twin autocannon [twin-linked],"48,2,4+,9,-1,3
+Taurox(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Taurox(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Taurox Prime(Use model),Storm bolter [rapid fire 2],"24,2,3+,4,0,1
+Taurox Prime(Use model),Taurox battle cannon [blast],"48,D6,3+,8,-1,2
+Taurox Prime(Use model),Taurox gatling cannon,"24,12,3+,4,0,1
+Taurox Prime(Use model),Taurox missile launcher – frag [blast],"48,2D6,3+,4,0,1
+Taurox Prime(Use model),Taurox missile launcher – krak,"48,2,3+,9,-2,D6
+Taurox Prime(Use model),Twin autocannon [twin-linked],"48,2,3+,9,-1,3
+Taurox Prime(Use model),"Twin Taurox hot-shot volley gun [rapid fire 3, twin-linked]","30,3,3+,4,-1,1
+Taurox Prime(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Storm Chimera(Use model),Autocannon,"48,2,4+,9,-1,3
+Storm Chimera(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Storm Chimera(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Storm Chimera(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Storm Chimera(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Storm Chimera(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Storm Chimera(Use model),Armoured tracks,Melee,3,4+,6,0,1
 Earthshaker Platform,"Earthshaker cannon [blast, indirect fire]","240,D6+3,4+,8,-2,2
 Earthshaker Platform,Close combat weapons,Melee,3,4+,3,0,1
-Hydra Platform(⌀Use model),"Hydra quad autocannon [anti-fly 2+, twin-linked]","72,4,4+,9,-1,3
-Hydra Platform(⌀Use model),Close combat weapons,Melee,3,4+,3,0,1
-Manticore Platform(⌀Use model),"Storm eagle rockets [blast, indirect fire]","120,D6+1,4+,10,-2,3
-Manticore Platform(⌀Use model),Close combat weapons,Melee,3,4+,3,0,1
-Sabre Weapons Battery(⌀Use model),Twin autocannon [twin-linked],"48,2,4+,9,-1,3
-Sabre Weapons Battery(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Sabre Weapons Battery(⌀Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
-Sabre Weapons Battery(⌀Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
-Sabre Weapons Battery(⌀Use model),Close combat weapon,Melee,1,4+,3,0,1
-Armoured Sentinels(⌀80mm),Autocannon,"48,2,4+,9,-1,3
-Armoured Sentinels(⌀80mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Armoured Sentinels(⌀80mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Armoured Sentinels(⌀80mm),Lascannon,"48,1,4+,12,-3,D6+1
-Armoured Sentinels(⌀80mm),Militarum multi-laser,"36,4,4+,6,0,1
-Armoured Sentinels(⌀80mm),"Missile launcher – frag [blast, heavy]","48,D6,4+,4,0,1
-Armoured Sentinels(⌀80mm),Missile launcher – krak [heavy],"48,1,4+,9,-2,D6
-Armoured Sentinels(⌀80mm),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
-Armoured Sentinels(⌀80mm),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
-Armoured Sentinels(⌀80mm),Close combat weapon,Melee,2,4+,6,0,1
-Armoured Sentinels(⌀80mm),Sentinel chainsaw,Melee,3,4+,6,-1,1
-Attilan Rough Riders(⌀60 x 35mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Attilan Rough Riders(⌀60 x 35mm),Laspistol [pistol],"12,1,4+,3,0,1
-Attilan Rough Riders(⌀60 x 35mm),Goad lance [lance],Melee,2,3+,6,-2,2
-Attilan Rough Riders(⌀60 x 35mm),Hunting lance – frag tip [lance],Melee,D6,3+,4,0,1
-Attilan Rough Riders(⌀60 x 35mm),Hunting lance – melta tip [lance],Melee,1,3+,9,-4,D6
-Attilan Rough Riders(⌀60 x 35mm),Power sabre,Melee,4,3+,4,-2,1
-Attilan Rough Riders(⌀60 x 35mm),Steed’s hooves [extra attacks],Melee,2,4+,4,0,1
-Baneblade(⌀Use model),Baneblade cannon [blast],"72,3D6,4+,12,-2,3
-Baneblade(⌀Use model),Co-axial autocannon,"48,2,4+,9,-1,3
-Baneblade(⌀Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
-Baneblade(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Baneblade(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Baneblade(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Baneblade(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Baneblade(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Banehammer(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Banehammer(⌀Use model),Tremor cannon [blast],"36,2D6+3,4+,12,-2,3
-Banehammer(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Banehammer(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Banehammer(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Banesword(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Banesword(⌀Use model),"Quake cannon [blast, ignores cover]","72,D6+6,4+,16,-4,4
-Banesword(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Banesword(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Banesword(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Basilisk(⌀Use model),"Earthshaker cannon [blast, heavy, indirect fire]","240,D6+3,4+,8,-2,2
-Basilisk(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Basilisk(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Basilisk(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Basilisk(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Bullgryn Squad(⌀40mm),Grenadier gauntlet [blast],"18,D6,4+,4,0,1
-Bullgryn Squad(⌀40mm),Bullgryn maul,Melee,4,3+,7,-1,2
-Bullgryn Squad(⌀40mm),Close combat weapon,Melee,4,3+,6,0,1
-Deathstrike(⌀Use model),"Deathstrike missile [blast, one shot, plasma warhead]",N/A,2D6,2+,16,-4,1
-Deathstrike(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Deathstrike(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Deathstrike(⌀Use model),Hunter-killer missile [one shot],"48,1,3+,14,-3,D6
-Deathstrike(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Doomhammer(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Doomhammer(⌀Use model),"Magma cannon [blast, melta 6]","24,D6+3,4+,12,-4,D6
-Doomhammer(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Doomhammer(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Doomhammer(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Field Ordnance Battery(⌀100mm),"Bombast field gun [blast, heavy, indirect fire]","48,D6,5+,7,-1,2
-Field Ordnance Battery(⌀100mm),Heavy lascannon [heavy],"48,2,5+,14,-3,D6+1
-Field Ordnance Battery(⌀100mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Field Ordnance Battery(⌀100mm),Laspistol [pistol],"12,1,4+,3,0,1
-Field Ordnance Battery(⌀100mm),"Malleus rocket launcher [blast, heavy]","48,D6+6,5+,6,-1,1
-Field Ordnance Battery(⌀100mm),Battery close combat weapons,Melee,3,4+,3,0,1
-Heavy Weapons Squad(⌀50mm),Autocannon [heavy],"48,2,5+,9,-1,3
-Heavy Weapons Squad(⌀50mm),"Heavy bolter [heavy, sustained hits 1]","36,3,5+,5,-1,2
-Heavy Weapons Squad(⌀50mm),Las small arms [pistol],"18,1,4+,3,0,1
-Heavy Weapons Squad(⌀50mm),Lascannon [heavy],"48,1,5+,12,-3,D6+1
-Heavy Weapons Squad(⌀50mm),"Missile launcher – frag [blast, heavy]","48,D6,5+,4,0,1
-Heavy Weapons Squad(⌀50mm),Missile launcher – krak [heavy],"48,1,5+,9,-2,D6
-Heavy Weapons Squad(⌀50mm),"Mortar [blast, heavy, indirect fire]","48,D6,5+,5,0,1
-Heavy Weapons Squad(⌀50mm),Weapons team close combat weapons,Melee,2,4+,3,0,1
-Hellhammer(⌀Use model),Co-axial autocannon,"48,2,4+,9,-1,3
-Hellhammer(⌀Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
-Hellhammer(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Hellhammer(⌀Use model),"Hellhammer cannon [blast, ignores cover]","30,4D6,4+,7,-1,2
-Hellhammer(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Hellhammer(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Hellhammer(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Hellhammer(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Hellhound(⌀Use model),"Chem cannon [anti-infantry 2+, torrent]","12,D6+1,N/A,2,-2,2
-Hellhound(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Hellhound(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Hellhound(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Hellhound(⌀Use model),"Inferno cannon [ignores cover, torrent]","18,2D6,N/A,6,-2,1
-Hellhound(⌀Use model),"Melta cannon [blast, melta 4]","18,D3,4+,9,-4,D6
-Hellhound(⌀Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
-Hellhound(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Hydra(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Hydra(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Hydra(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Hydra(⌀Use model),"Hydra autocannon [anti-fly 2+, twin-linked]","72,4,4+,9,-1,3
-Hydra(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Kasrkin(⌀28mm),Bolt pistol [PISTOL],"12,1,4+,4,0,1
-Kasrkin(⌀28mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Kasrkin(⌀28mm),Grenade launcher – frag [blast],"24,D3,3+,4,0,1
-Kasrkin(⌀28mm),Grenade launcher – krak,"24,1,3+,9,-2,D3
-Kasrkin(⌀28mm),Hot-shot lasgun [rapid fire 1],"24,1,3+,3,-1,1
-Kasrkin(⌀28mm),Hot-shot laspistol [pistol],"12,1,3+,3,-1,1
-Kasrkin(⌀28mm),"Hot-shot marksman rifle [heavy, precision]","36,1,3+,4,-2,3
-Kasrkin(⌀28mm),Hot-shot volley gun [rapid fire 2],"30,2,3+,4,-1,1
-Kasrkin(⌀28mm),Meltagun [melta 2],"12,1,3+,9,-4,D6
-Kasrkin(⌀28mm),Plasma gun – standard [rapid fire 1],"24,1,3+,7,-2,1
-Kasrkin(⌀28mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,3+,8,-3,2
-Kasrkin(⌀28mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
-Kasrkin(⌀28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
-Kasrkin(⌀28mm),Chainsword,Melee,4,4+,3,0,1
-Kasrkin(⌀28mm),Close combat weapon,Melee,2,4+,3,0,1
-Kasrkin(⌀28mm),Power weapon,Melee,3,4+,4,-2,1
-Leman Russ Battle Tank(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Leman Russ Battle Tank(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Leman Russ Battle Tank(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Leman Russ Battle Tank(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Leman Russ Battle Tank(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Leman Russ Battle Tank(⌀Use model),Leman Russ battle cannon [blast],"48,D6+3,4+,10,-1,3
-Leman Russ Battle Tank(⌀Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
-Leman Russ Battle Tank(⌀Use model),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
-Leman Russ Battle Tank(⌀Use model),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
-Leman Russ Battle Tank(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Leman Russ Battle Tank(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
+Hydra Platform(Use model),"Hydra quad autocannon [anti-fly 2+, twin-linked]","72,4,4+,9,-1,3
+Hydra Platform(Use model),Close combat weapons,Melee,3,4+,3,0,1
+Manticore Platform(Use model),"Storm eagle rockets [blast, indirect fire]","120,D6+1,4+,10,-2,3
+Manticore Platform(Use model),Close combat weapons,Melee,3,4+,3,0,1
+Sabre Weapons Battery(Use model),Twin autocannon [twin-linked],"48,2,4+,9,-1,3
+Sabre Weapons Battery(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Sabre Weapons Battery(Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
+Sabre Weapons Battery(Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
+Sabre Weapons Battery(Use model),Close combat weapon,Melee,1,4+,3,0,1
+Armoured Sentinels(80mm),Autocannon,"48,2,4+,9,-1,3
+Armoured Sentinels(80mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Armoured Sentinels(80mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Armoured Sentinels(80mm),Lascannon,"48,1,4+,12,-3,D6+1
+Armoured Sentinels(80mm),Militarum multi-laser,"36,4,4+,6,0,1
+Armoured Sentinels(80mm),"Missile launcher – frag [blast, heavy]","48,D6,4+,4,0,1
+Armoured Sentinels(80mm),Missile launcher – krak [heavy],"48,1,4+,9,-2,D6
+Armoured Sentinels(80mm),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
+Armoured Sentinels(80mm),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
+Armoured Sentinels(80mm),Close combat weapon,Melee,2,4+,6,0,1
+Armoured Sentinels(80mm),Sentinel chainsaw,Melee,3,4+,6,-1,1
+Attilan Rough Riders(60 x 35mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Attilan Rough Riders(60 x 35mm),Laspistol [pistol],"12,1,4+,3,0,1
+Attilan Rough Riders(60 x 35mm),Goad lance [lance],Melee,2,3+,6,-2,2
+Attilan Rough Riders(60 x 35mm),Hunting lance – frag tip [lance],Melee,D6,3+,4,0,1
+Attilan Rough Riders(60 x 35mm),Hunting lance – melta tip [lance],Melee,1,3+,9,-4,D6
+Attilan Rough Riders(60 x 35mm),Power sabre,Melee,4,3+,4,-2,1
+Attilan Rough Riders(60 x 35mm),Steed’s hooves [extra attacks],Melee,2,4+,4,0,1
+Baneblade(Use model),Baneblade cannon [blast],"72,3D6,4+,12,-2,3
+Baneblade(Use model),Co-axial autocannon,"48,2,4+,9,-1,3
+Baneblade(Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
+Baneblade(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Baneblade(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Baneblade(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Baneblade(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Baneblade(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Banehammer(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Banehammer(Use model),Tremor cannon [blast],"36,2D6+3,4+,12,-2,3
+Banehammer(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Banehammer(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Banehammer(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Banesword(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Banesword(Use model),"Quake cannon [blast, ignores cover]","72,D6+6,4+,16,-4,4
+Banesword(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Banesword(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Banesword(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Basilisk(Use model),"Earthshaker cannon [blast, heavy, indirect fire]","240,D6+3,4+,8,-2,2
+Basilisk(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Basilisk(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Basilisk(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Basilisk(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Bullgryn Squad(40mm),Grenadier gauntlet [blast],"18,D6,4+,4,0,1
+Bullgryn Squad(40mm),Bullgryn maul,Melee,4,3+,7,-1,2
+Bullgryn Squad(40mm),Close combat weapon,Melee,4,3+,6,0,1
+Deathstrike(Use model),"Deathstrike missile [blast, one shot, plasma warhead]",N/A,2D6,2+,16,-4,1
+Deathstrike(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Deathstrike(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Deathstrike(Use model),Hunter-killer missile [one shot],"48,1,3+,14,-3,D6
+Deathstrike(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Doomhammer(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Doomhammer(Use model),"Magma cannon [blast, melta 6]","24,D6+3,4+,12,-4,D6
+Doomhammer(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Doomhammer(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Doomhammer(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Field Ordnance Battery(100mm),"Bombast field gun [blast, heavy, indirect fire]","48,D6,5+,7,-1,2
+Field Ordnance Battery(100mm),Heavy lascannon [heavy],"48,2,5+,14,-3,D6+1
+Field Ordnance Battery(100mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Field Ordnance Battery(100mm),Laspistol [pistol],"12,1,4+,3,0,1
+Field Ordnance Battery(100mm),"Malleus rocket launcher [blast, heavy]","48,D6+6,5+,6,-1,1
+Field Ordnance Battery(100mm),Battery close combat weapons,Melee,3,4+,3,0,1
+Heavy Weapons Squad(50mm),Autocannon [heavy],"48,2,5+,9,-1,3
+Heavy Weapons Squad(50mm),"Heavy bolter [heavy, sustained hits 1]","36,3,5+,5,-1,2
+Heavy Weapons Squad(50mm),Las small arms [pistol],"18,1,4+,3,0,1
+Heavy Weapons Squad(50mm),Lascannon [heavy],"48,1,5+,12,-3,D6+1
+Heavy Weapons Squad(50mm),"Missile launcher – frag [blast, heavy]","48,D6,5+,4,0,1
+Heavy Weapons Squad(50mm),Missile launcher – krak [heavy],"48,1,5+,9,-2,D6
+Heavy Weapons Squad(50mm),"Mortar [blast, heavy, indirect fire]","48,D6,5+,5,0,1
+Heavy Weapons Squad(50mm),Weapons team close combat weapons,Melee,2,4+,3,0,1
+Hellhammer(Use model),Co-axial autocannon,"48,2,4+,9,-1,3
+Hellhammer(Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
+Hellhammer(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Hellhammer(Use model),"Hellhammer cannon [blast, ignores cover]","30,4D6,4+,7,-1,2
+Hellhammer(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Hellhammer(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Hellhammer(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Hellhammer(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Hellhound(Use model),"Chem cannon [anti-infantry 2+, torrent]","12,D6+1,N/A,2,-2,2
+Hellhound(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Hellhound(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Hellhound(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Hellhound(Use model),"Inferno cannon [ignores cover, torrent]","18,2D6,N/A,6,-2,1
+Hellhound(Use model),"Melta cannon [blast, melta 4]","18,D3,4+,9,-4,D6
+Hellhound(Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
+Hellhound(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Hydra(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Hydra(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Hydra(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Hydra(Use model),"Hydra autocannon [anti-fly 2+, twin-linked]","72,4,4+,9,-1,3
+Hydra(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Kasrkin(28mm),Bolt pistol [PISTOL],"12,1,4+,4,0,1
+Kasrkin(28mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Kasrkin(28mm),Grenade launcher – frag [blast],"24,D3,3+,4,0,1
+Kasrkin(28mm),Grenade launcher – krak,"24,1,3+,9,-2,D3
+Kasrkin(28mm),Hot-shot lasgun [rapid fire 1],"24,1,3+,3,-1,1
+Kasrkin(28mm),Hot-shot laspistol [pistol],"12,1,3+,3,-1,1
+Kasrkin(28mm),"Hot-shot marksman rifle [heavy, precision]","36,1,3+,4,-2,3
+Kasrkin(28mm),Hot-shot volley gun [rapid fire 2],"30,2,3+,4,-1,1
+Kasrkin(28mm),Meltagun [melta 2],"12,1,3+,9,-4,D6
+Kasrkin(28mm),Plasma gun – standard [rapid fire 1],"24,1,3+,7,-2,1
+Kasrkin(28mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,3+,8,-3,2
+Kasrkin(28mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
+Kasrkin(28mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
+Kasrkin(28mm),Chainsword,Melee,4,4+,3,0,1
+Kasrkin(28mm),Close combat weapon,Melee,2,4+,3,0,1
+Kasrkin(28mm),Power weapon,Melee,3,4+,4,-2,1
+Leman Russ Battle Tank(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Leman Russ Battle Tank(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Leman Russ Battle Tank(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Leman Russ Battle Tank(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Leman Russ Battle Tank(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Leman Russ Battle Tank(Use model),Leman Russ battle cannon [blast],"48,D6+3,4+,10,-1,3
+Leman Russ Battle Tank(Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
+Leman Russ Battle Tank(Use model),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
+Leman Russ Battle Tank(Use model),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
+Leman Russ Battle Tank(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Leman Russ Battle Tank(Use model),Armoured tracks,Melee,6,4+,7,0,1
 Leman Russ Demolisher,Demolisher battle cannon [blast],"24,D6+3,4+,14,-3,D6
 Leman Russ Demolisher,Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
 Leman Russ Demolisher,"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
@@ -414,273 +414,273 @@ Leman Russ Vanquisher,"Plasma cannon – supercharge [blast, hazardous]","36,D3,
 Leman Russ Vanquisher,Storm bolter [rapid fire 2],"24,2,4+,4,0,1
 Leman Russ Vanquisher,Vanquisher battle cannon [heavy],"72,1,4+,18,-4,D6+6
 Leman Russ Vanquisher,Armoured tracks,Melee,6,4+,7,0,1
-Manticore(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Manticore(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Manticore(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Manticore(⌀Use model),"Storm eagle rockets [blast, heavy, indirect fire]","120,D6+1,4+,10,-2,3
-Manticore(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Munitorum Servitors(⌀25mm),"Heavy bolter [heavy, sustained hits 1]","36,3,6+,5,-1,2
-Munitorum Servitors(⌀25mm),"Multi-melta [heavy, melta 2]","18,2,6+,9,-4,D6
-Munitorum Servitors(⌀25mm),"Plasma cannon – standard [blast, heavy]","36,D3,6+,7,-2,1
-Munitorum Servitors(⌀25mm),"Plasma cannon – supercharge [blast, hazardous, heavy]","36,D3,6+,8,-3,2
-Munitorum Servitors(⌀25mm),Close combat weapon,Melee,1,5+,3,0,1
-Munitorum Servitors(⌀25mm),Servitor’s servo-arm,Melee,1,5+,6,-2,3
-Nork Deddog(⌀40mm),Ripper gun [sustained hits 1],"18,3,3+,5,-1,2
-Nork Deddog(⌀40mm),Huge knife [devastating wounds],Melee,6,2+,8,-1,2
-Ogryn Bodyguard(⌀40mm),Grenadier gauntlet [blast],"18,D6,4+,4,0,1
-Ogryn Bodyguard(⌀40mm),Ripper gun [sustained hits 1],"18,3,4+,5,-1,2
-Ogryn Bodyguard(⌀40mm),Bullgryn maul,Melee,5,3+,7,-1,2
-Ogryn Bodyguard(⌀40mm),Close combat weapon,Melee,4,3+,6,0,1
-Ogryn Bodyguard(⌀40mm),Huge knife,Melee,6,3+,8,-1,2
-Ogryn Bodyguard(⌀40mm),Ripper gun,Melee,5,3+,6,-1,1
-Ogryn Squad(⌀40mm),Ripper gun [rapid fire 3],"18,3,4+,5,-1,2
-Ogryn Squad(⌀40mm),Ripper gun,Melee,4,3+,6,-1,1
-Ratling Snipers(⌀25mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
-Ratling Snipers(⌀25mm),Close combat weapon,Melee,1,5+,2,0,1
+Manticore(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Manticore(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Manticore(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Manticore(Use model),"Storm eagle rockets [blast, heavy, indirect fire]","120,D6+1,4+,10,-2,3
+Manticore(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Munitorum Servitors(25mm),"Heavy bolter [heavy, sustained hits 1]","36,3,6+,5,-1,2
+Munitorum Servitors(25mm),"Multi-melta [heavy, melta 2]","18,2,6+,9,-4,D6
+Munitorum Servitors(25mm),"Plasma cannon – standard [blast, heavy]","36,D3,6+,7,-2,1
+Munitorum Servitors(25mm),"Plasma cannon – supercharge [blast, hazardous, heavy]","36,D3,6+,8,-3,2
+Munitorum Servitors(25mm),Close combat weapon,Melee,1,5+,3,0,1
+Munitorum Servitors(25mm),Servitor’s servo-arm,Melee,1,5+,6,-2,3
+Nork Deddog(40mm),Ripper gun [sustained hits 1],"18,3,3+,5,-1,2
+Nork Deddog(40mm),Huge knife [devastating wounds],Melee,6,2+,8,-1,2
+Ogryn Bodyguard(40mm),Grenadier gauntlet [blast],"18,D6,4+,4,0,1
+Ogryn Bodyguard(40mm),Ripper gun [sustained hits 1],"18,3,4+,5,-1,2
+Ogryn Bodyguard(40mm),Bullgryn maul,Melee,5,3+,7,-1,2
+Ogryn Bodyguard(40mm),Close combat weapon,Melee,4,3+,6,0,1
+Ogryn Bodyguard(40mm),Huge knife,Melee,6,3+,8,-1,2
+Ogryn Bodyguard(40mm),Ripper gun,Melee,5,3+,6,-1,1
+Ogryn Squad(40mm),Ripper gun [rapid fire 3],"18,3,4+,5,-1,2
+Ogryn Squad(40mm),Ripper gun,Melee,4,3+,6,-1,1
+Ratling Snipers(25mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
+Ratling Snipers(25mm),Close combat weapon,Melee,1,5+,2,0,1
 Regimental Attachés,Laspistol [pistol],"12,1,4+,3,0,1
 Regimental Attachés,Close combat weapon,Melee,1,4+,3,0,1
 Regimental Attachés,Astropath’s stave [psychic],Melee,1,4+,6,-1,D3
-Rogal Dorn Battle Tank(⌀Use model),Castigator gatling cannon,"24,12,4+,5,0,1
-Rogal Dorn Battle Tank(⌀Use model),Co-axial autocannon,"48,2,3+,9,-1,3
-Rogal Dorn Battle Tank(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Rogal Dorn Battle Tank(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Rogal Dorn Battle Tank(⌀Use model),Meltagun [melta 2],"12,1,4+,9,-4,D6
-Rogal Dorn Battle Tank(⌀Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
-Rogal Dorn Battle Tank(⌀Use model),Oppressor cannon [blast],"72,D6+3,4+,12,-2,3
-Rogal Dorn Battle Tank(⌀Use model),Pulveriser cannon [blast],"24,D6,4+,9,-3,3
-Rogal Dorn Battle Tank(⌀Use model),"Twin battle cannon [blast, twin-linked]","48,D6+3,4+,10,-1,3
-Rogal Dorn Battle Tank(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Scout Sentinels(⌀80mm),Autocannon,"48,2,4+,9,-1,3
-Scout Sentinels(⌀80mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Scout Sentinels(⌀80mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Scout Sentinels(⌀80mm),Lascannon,"48,1,4+,12,-3,D6+1
-Scout Sentinels(⌀80mm),Militarum multi-laser,"36,4,4+,6,0,1
-Scout Sentinels(⌀80mm),"Missile launcher – frag [blast, heavy]","48,D6,4+,4,0,1
-Scout Sentinels(⌀80mm),Missile launcher – krak [heavy],"48,1,4+,9,-2,D6
-Scout Sentinels(⌀80mm),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
-Scout Sentinels(⌀80mm),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
-Scout Sentinels(⌀80mm),Close combat weapon,Melee,2,4+,6,0,1
-Scout Sentinels(⌀80mm),Sentinel chainsaw,Melee,3,4+,6,-1,1
-Shadowsword(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Shadowsword(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Shadowsword(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Shadowsword(⌀Use model),"Volcano cannon [blast, heavy]","96,D3+1,4+,24,-5,12
-Shadowsword(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Stormlord(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Stormlord(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Stormlord(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Stormlord(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Stormlord(⌀Use model),Vulcan mega-bolter [sustained hits 1],"48,20,4+,6,-1,2
-Stormlord(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Stormsword(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Stormsword(⌀Use model),"Stormsword siege cannon [blast, ignores cover]","48,D6+6,4+,16,-4,D6+2
-Stormsword(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Stormsword(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,6,-1,1
-Stormsword(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Tempestus Scions(⌀25mm),Bolt pistol [PISTOL],"12,1,3+,4,0,1
-Tempestus Scions(⌀25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Tempestus Scions(⌀25mm),Grenade launcher – frag [blast],"24,D3,3+,4,0,1
-Tempestus Scions(⌀25mm),Grenade launcher – krak,"24,1,3+,9,-2,D3
-Tempestus Scions(⌀25mm),Hot-shot lasgun [rapid fire 1],"24,1,3+,3,-1,1
-Tempestus Scions(⌀25mm),Hot-shot laspistol [pistol],"12,1,3+,3,-1,1
-Tempestus Scions(⌀25mm),Hot-shot volley gun [rapid fire 2],"30,2,3+,4,-1,1
-Tempestus Scions(⌀25mm),Meltagun [melta 2],"12,1,3+,9,-4,D6
-Tempestus Scions(⌀25mm),Plasma gun – standard [rapid fire 1],"24,1,3+,7,-2,1
-Tempestus Scions(⌀25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,3+,8,-3,2
-Tempestus Scions(⌀25mm),Plasma pistol – standard [PISTOL],"12,1,3+,7,-2,1
-Tempestus Scions(⌀25mm),"Plasma pistol – supercharge [HAZARDOUS, PISTOL]","12,1,3+,8,-3,2
-Tempestus Scions(⌀25mm),Chainsword,Melee,4,4+,3,0,1
-Tempestus Scions(⌀25mm),Close combat weapon,Melee,2,4+,3,0,1
-Tempestus Scions(⌀25mm),Power fist,Melee,3,4+,6,-2,2
-Tempestus Scions(⌀25mm),Power weapon,Melee,3,4+,4,-2,1
-Valkyrie(⌀120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Valkyrie(⌀120 x 92mm flying base),Hellstrike missiles [anti-fly 2+],"48,1,4+,10,-3,D6
-Valkyrie(⌀120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
-Valkyrie(⌀120 x 92mm flying base),Militarum multi-laser,"36,4,4+,6,0,1
-Valkyrie(⌀120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
-Valkyrie(⌀120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
-Wyvern(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Wyvern(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Wyvern(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Wyvern(⌀Use model),"Wyvern quad stormshard mortar [blast, ignores cover, heavy, indirect fire, twin-linked]","48,2D6,4+,5,0,1
-Wyvern(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Avenger Strike Fighter(⌀120 x 92mm flying base),Avenger bolt cannon [sustained hits 1],"36,10,4+,6,-1,2
-Avenger Strike Fighter(⌀120 x 92mm flying base),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Avenger Strike Fighter(⌀120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
-Avenger Strike Fighter(⌀120 x 92mm flying base),Armoured hull,Melee,6,4+,8,0,1
-Carnodon(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Carnodon(⌀Use model),Carnodon twin autocannon [twin-linked],"48,2,4+,9,-1,3
-Carnodon(⌀Use model),Carnodon twin lascannon [twin-linked],"48,1,4+,14,-3,D6+1
-Carnodon(⌀Use model),Carnodon twin multi-laser [twin-linked],"36,6,4+,6,0,1
-Carnodon(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Carnodon(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Carnodon(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Carnodon(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Carnodon(⌀Use model),Militarum Multi-laser,"36,4,4+,6,0,1
-Carnodon(⌀Use model),Volkite caliver [devastating wounds],"24,2,4+,5,0,2
-Carnodon(⌀Use model),Volkite culverin [devastating wounds],"36,4,4+,6,0,2
-Carnodon(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Colossus(⌀Use model),"Colossus siege mortar [blast, devastating wounds]","120,D6,4+,6,-1,D6+2
-Colossus(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Colossus(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Colossus(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Colossus(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Crassus(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Crassus(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Crassus(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Crassus(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Death Rider Squadron(⌀40mm),Bolt pistol [pistol],"12,1,4+,4,0,1
-Death Rider Squadron(⌀40mm),Laspistol [pistol],"12,1,4+,3,0,1
-Death Rider Squadron(⌀40mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
-Death Rider Squadron(⌀40mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
-Death Rider Squadron(⌀40mm),Death Rider hunting lance [lance],Melee,3,3+,4,-1,1
-Death Rider Squadron(⌀40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
-Earthshaker Carriage Battery(⌀Use model),"Earthshaker cannon [blast, heavy, indirect fire]","240,D6+3,5+,8,-2,2
-Earthshaker Carriage Battery(⌀Use model),Battery close combat weapons,Melee,5,4+,3,0,1
-Hades Breaching Drill(⌀Use model),Melta-cutter drill,Melee,6,4+,9,-4,D6+2
-Macharius(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Macharius(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Macharius(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Macharius(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Macharius(⌀Use model),"Macharius twin battle cannon [blast, twin-linked]","48,D6+3,4+,10,-1,3
-Macharius(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Macharius(⌀Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
-Macharius(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Macharius Vanquisher(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Macharius Vanquisher(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Macharius Vanquisher(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Macharius Vanquisher(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Macharius Vanquisher(⌀Use model),"Macharius twin vanquisher cannon [heavy, twin-linked]","72,1,4+,18,-4,D6+6
-Macharius Vanquisher(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Macharius Vanquisher(⌀Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
-Macharius Vanquisher(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Macharius Vulcan(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Macharius Vulcan(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Macharius Vulcan(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Macharius Vulcan(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Macharius Vulcan(⌀Use model),Macharius vulcan mega-bolter [sustained hits 1],"48,16,4+,6,-1,2
-Macharius Vulcan(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Macharius Vulcan(⌀Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
-Macharius Vulcan(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Malcador(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Malcador(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Malcador(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Malcador(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Malcador(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Malcador(⌀Use model),Malcador battle cannon [blast],"48,D6+3,4+,9,-1,3
-Malcador(⌀Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
-Malcador(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Malcador Annihilator(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Malcador Annihilator(⌀Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
-Malcador Annihilator(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Malcador Annihilator(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Malcador Annihilator(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Malcador Annihilator(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Malcador Annihilator(⌀Use model),Malcador twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
-Malcador Annihilator(⌀Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
-Malcador Annihilator(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Malcador Defender(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Malcador Defender(⌀Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
-Malcador Defender(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Malcador Defender(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Malcador Defender(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Malcador Defender(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Malcador Defender(⌀Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
-Malcador Defender(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Malcador Infernus(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Malcador Infernus(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Malcador Infernus(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Malcador Infernus(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Malcador Infernus(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Malcador Infernus(⌀Use model),"Inferno gun [ignores cover, torrent]","18,D6+3,N/A,5,-2,2
-Malcador Infernus(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Malcador Infernus(⌀Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
-Malcador Infernus(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Marauder Bomber(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Marauder Bomber(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Marauder Bomber(⌀Use model),Armoured hull,Melee,6,4+,8,0,1
-Marauder Destroyer(⌀Use model),Assault cannon [devastating wounds],"24,6,4+,6,0,1
-Marauder Destroyer(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Marauder Destroyer(⌀Use model),Hellstrike missile rack [anti-fly 2+],"48,2,4+,10,-3,D6
-Marauder Destroyer(⌀Use model),Marauder nose autocannons [twin-linked],"48,4,4+,10,-2,3
-Marauder Destroyer(⌀Use model),Armoured hull,Melee,6,4+,8,0,1
-Medusa Carriage Battery(⌀Use model),"Medusa siege cannon [blast, heavy, indirect fire]","36,D6,5+,10,-3,3
-Medusa Carriage Battery(⌀Use model),Battery close combat weapons,Melee,5,4+,3,0,1
-Praetor(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Praetor(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Praetor(⌀Use model),"Praetor launcher – firestorm [blast, heavy, ignores cover, indirect fire]","120,2D6,4+,6,-1,2
-Praetor(⌀Use model),"Praetor launcher – foehammer [anti-monster 4+, anti-vehicle 4+, blast, heavy, indirect fire]","120,D6+1,4+,4,-2,3
-Praetor(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Praetor(⌀Use model),Armoured tracks,Melee,6,4+,7,0,1
-Rapier Laser Destroyer Battery(⌀Use model),"Laser destroyer [heavy, twin-linked]","36,2,5+,12,-2,D6+1
-Rapier Laser Destroyer Battery(⌀Use model),Close combat weapon,Melee,2,4+,3,0,1
-Stormblade(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Stormblade(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Stormblade(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Stormblade(⌀Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
-Stormblade(⌀Use model),Stormblade plasma blastgun – standard [blast],"48,D6+3,4+,9,-2,3
-Stormblade(⌀Use model),"Stormblade plasma blastgun – supercharge [blast, hazardous]","48,D6+3,4+,10,-3,4
-Stormblade(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Stormblade(⌀Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
-Stormblade(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Tarantula Battery(⌀Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
-Tarantula Battery(⌀Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
-Tarantula Battery(⌀Use model),Close combat weapon,Melee,1,4+,4,0,1
+Rogal Dorn Battle Tank(Use model),Castigator gatling cannon,"24,12,4+,5,0,1
+Rogal Dorn Battle Tank(Use model),Co-axial autocannon,"48,2,3+,9,-1,3
+Rogal Dorn Battle Tank(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Rogal Dorn Battle Tank(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Rogal Dorn Battle Tank(Use model),Meltagun [melta 2],"12,1,4+,9,-4,D6
+Rogal Dorn Battle Tank(Use model),Multi-melta [melta 2],"18,2,4+,9,-4,D6
+Rogal Dorn Battle Tank(Use model),Oppressor cannon [blast],"72,D6+3,4+,12,-2,3
+Rogal Dorn Battle Tank(Use model),Pulveriser cannon [blast],"24,D6,4+,9,-3,3
+Rogal Dorn Battle Tank(Use model),"Twin battle cannon [blast, twin-linked]","48,D6+3,4+,10,-1,3
+Rogal Dorn Battle Tank(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Scout Sentinels(80mm),Autocannon,"48,2,4+,9,-1,3
+Scout Sentinels(80mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Scout Sentinels(80mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Scout Sentinels(80mm),Lascannon,"48,1,4+,12,-3,D6+1
+Scout Sentinels(80mm),Militarum multi-laser,"36,4,4+,6,0,1
+Scout Sentinels(80mm),"Missile launcher – frag [blast, heavy]","48,D6,4+,4,0,1
+Scout Sentinels(80mm),Missile launcher – krak [heavy],"48,1,4+,9,-2,D6
+Scout Sentinels(80mm),Plasma cannon – standard [blast],"36,D3,4+,7,-2,1
+Scout Sentinels(80mm),"Plasma cannon – supercharge [blast, hazardous]","36,D3,4+,8,-3,2
+Scout Sentinels(80mm),Close combat weapon,Melee,2,4+,6,0,1
+Scout Sentinels(80mm),Sentinel chainsaw,Melee,3,4+,6,-1,1
+Shadowsword(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Shadowsword(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Shadowsword(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Shadowsword(Use model),"Volcano cannon [blast, heavy]","96,D3+1,4+,24,-5,12
+Shadowsword(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Stormlord(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Stormlord(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Stormlord(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Stormlord(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Stormlord(Use model),Vulcan mega-bolter [sustained hits 1],"48,20,4+,6,-1,2
+Stormlord(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Stormsword(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Stormsword(Use model),"Stormsword siege cannon [blast, ignores cover]","48,D6+6,4+,16,-4,D6+2
+Stormsword(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Stormsword(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,6,-1,1
+Stormsword(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Tempestus Scions(25mm),Bolt pistol [PISTOL],"12,1,3+,4,0,1
+Tempestus Scions(25mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Tempestus Scions(25mm),Grenade launcher – frag [blast],"24,D3,3+,4,0,1
+Tempestus Scions(25mm),Grenade launcher – krak,"24,1,3+,9,-2,D3
+Tempestus Scions(25mm),Hot-shot lasgun [rapid fire 1],"24,1,3+,3,-1,1
+Tempestus Scions(25mm),Hot-shot laspistol [pistol],"12,1,3+,3,-1,1
+Tempestus Scions(25mm),Hot-shot volley gun [rapid fire 2],"30,2,3+,4,-1,1
+Tempestus Scions(25mm),Meltagun [melta 2],"12,1,3+,9,-4,D6
+Tempestus Scions(25mm),Plasma gun – standard [rapid fire 1],"24,1,3+,7,-2,1
+Tempestus Scions(25mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,3+,8,-3,2
+Tempestus Scions(25mm),Plasma pistol – standard [PISTOL],"12,1,3+,7,-2,1
+Tempestus Scions(25mm),"Plasma pistol – supercharge [HAZARDOUS, PISTOL]","12,1,3+,8,-3,2
+Tempestus Scions(25mm),Chainsword,Melee,4,4+,3,0,1
+Tempestus Scions(25mm),Close combat weapon,Melee,2,4+,3,0,1
+Tempestus Scions(25mm),Power fist,Melee,3,4+,6,-2,2
+Tempestus Scions(25mm),Power weapon,Melee,3,4+,4,-2,1
+Valkyrie(120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Valkyrie(120 x 92mm flying base),Hellstrike missiles [anti-fly 2+],"48,1,4+,10,-3,D6
+Valkyrie(120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
+Valkyrie(120 x 92mm flying base),Militarum multi-laser,"36,4,4+,6,0,1
+Valkyrie(120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
+Valkyrie(120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
+Wyvern(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Wyvern(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Wyvern(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Wyvern(Use model),"Wyvern quad stormshard mortar [blast, ignores cover, heavy, indirect fire, twin-linked]","48,2D6,4+,5,0,1
+Wyvern(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Avenger Strike Fighter(120 x 92mm flying base),Avenger bolt cannon [sustained hits 1],"36,10,4+,6,-1,2
+Avenger Strike Fighter(120 x 92mm flying base),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Avenger Strike Fighter(120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
+Avenger Strike Fighter(120 x 92mm flying base),Armoured hull,Melee,6,4+,8,0,1
+Carnodon(Use model),Autocannon,"48,2,4+,9,-1,3
+Carnodon(Use model),Carnodon twin autocannon [twin-linked],"48,2,4+,9,-1,3
+Carnodon(Use model),Carnodon twin lascannon [twin-linked],"48,1,4+,14,-3,D6+1
+Carnodon(Use model),Carnodon twin multi-laser [twin-linked],"36,6,4+,6,0,1
+Carnodon(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Carnodon(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Carnodon(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Carnodon(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Carnodon(Use model),Militarum Multi-laser,"36,4,4+,6,0,1
+Carnodon(Use model),Volkite caliver [devastating wounds],"24,2,4+,5,0,2
+Carnodon(Use model),Volkite culverin [devastating wounds],"36,4,4+,6,0,2
+Carnodon(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Colossus(Use model),"Colossus siege mortar [blast, devastating wounds]","120,D6,4+,6,-1,D6+2
+Colossus(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Colossus(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Colossus(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Colossus(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Crassus(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Crassus(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Crassus(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Crassus(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Death Rider Squadron(40mm),Bolt pistol [pistol],"12,1,4+,4,0,1
+Death Rider Squadron(40mm),Laspistol [pistol],"12,1,4+,3,0,1
+Death Rider Squadron(40mm),Plasma pistol – standard [pistol],"12,1,4+,7,-2,1
+Death Rider Squadron(40mm),"Plasma pistol – supercharge [hazardous, pistol]","12,1,4+,8,-3,2
+Death Rider Squadron(40mm),Death Rider hunting lance [lance],Melee,3,3+,4,-1,1
+Death Rider Squadron(40mm),Savage claws [extra attacks],Melee,2,4+,4,-1,1
+Earthshaker Carriage Battery(Use model),"Earthshaker cannon [blast, heavy, indirect fire]","240,D6+3,5+,8,-2,2
+Earthshaker Carriage Battery(Use model),Battery close combat weapons,Melee,5,4+,3,0,1
+Hades Breaching Drill(Use model),Melta-cutter drill,Melee,6,4+,9,-4,D6+2
+Macharius(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Macharius(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Macharius(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Macharius(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Macharius(Use model),"Macharius twin battle cannon [blast, twin-linked]","48,D6+3,4+,10,-1,3
+Macharius(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Macharius(Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
+Macharius(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Macharius Vanquisher(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Macharius Vanquisher(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Macharius Vanquisher(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Macharius Vanquisher(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Macharius Vanquisher(Use model),"Macharius twin vanquisher cannon [heavy, twin-linked]","72,1,4+,18,-4,D6+6
+Macharius Vanquisher(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Macharius Vanquisher(Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
+Macharius Vanquisher(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Macharius Vulcan(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Macharius Vulcan(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Macharius Vulcan(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Macharius Vulcan(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Macharius Vulcan(Use model),Macharius vulcan mega-bolter [sustained hits 1],"48,16,4+,6,-1,2
+Macharius Vulcan(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Macharius Vulcan(Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
+Macharius Vulcan(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Malcador(Use model),Autocannon,"48,2,4+,9,-1,3
+Malcador(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Malcador(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Malcador(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Malcador(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Malcador(Use model),Malcador battle cannon [blast],"48,D6+3,4+,9,-1,3
+Malcador(Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
+Malcador(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Malcador Annihilator(Use model),Autocannon,"48,2,4+,9,-1,3
+Malcador Annihilator(Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
+Malcador Annihilator(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Malcador Annihilator(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Malcador Annihilator(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Malcador Annihilator(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Malcador Annihilator(Use model),Malcador twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
+Malcador Annihilator(Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
+Malcador Annihilator(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Malcador Defender(Use model),Autocannon,"48,2,4+,9,-1,3
+Malcador Defender(Use model),Demolisher cannon [blast],"24,D6+3,4+,14,-3,D6
+Malcador Defender(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Malcador Defender(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Malcador Defender(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Malcador Defender(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Malcador Defender(Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
+Malcador Defender(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Malcador Infernus(Use model),Autocannon,"48,2,4+,9,-1,3
+Malcador Infernus(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Malcador Infernus(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Malcador Infernus(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Malcador Infernus(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Malcador Infernus(Use model),"Inferno gun [ignores cover, torrent]","18,D6+3,N/A,5,-2,2
+Malcador Infernus(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Malcador Infernus(Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
+Malcador Infernus(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Marauder Bomber(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Marauder Bomber(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Marauder Bomber(Use model),Armoured hull,Melee,6,4+,8,0,1
+Marauder Destroyer(Use model),Assault cannon [devastating wounds],"24,6,4+,6,0,1
+Marauder Destroyer(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Marauder Destroyer(Use model),Hellstrike missile rack [anti-fly 2+],"48,2,4+,10,-3,D6
+Marauder Destroyer(Use model),Marauder nose autocannons [twin-linked],"48,4,4+,10,-2,3
+Marauder Destroyer(Use model),Armoured hull,Melee,6,4+,8,0,1
+Medusa Carriage Battery(Use model),"Medusa siege cannon [blast, heavy, indirect fire]","36,D6,5+,10,-3,3
+Medusa Carriage Battery(Use model),Battery close combat weapons,Melee,5,4+,3,0,1
+Praetor(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Praetor(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Praetor(Use model),"Praetor launcher – firestorm [blast, heavy, ignores cover, indirect fire]","120,2D6,4+,6,-1,2
+Praetor(Use model),"Praetor launcher – foehammer [anti-monster 4+, anti-vehicle 4+, blast, heavy, indirect fire]","120,D6+1,4+,4,-2,3
+Praetor(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Praetor(Use model),Armoured tracks,Melee,6,4+,7,0,1
+Rapier Laser Destroyer Battery(Use model),"Laser destroyer [heavy, twin-linked]","36,2,5+,12,-2,D6+1
+Rapier Laser Destroyer Battery(Use model),Close combat weapon,Melee,2,4+,3,0,1
+Stormblade(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Stormblade(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Stormblade(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Stormblade(Use model),Storm bolter [rapid fire 2],"24,1,4+,4,0,1
+Stormblade(Use model),Stormblade plasma blastgun – standard [blast],"48,D6+3,4+,9,-2,3
+Stormblade(Use model),"Stormblade plasma blastgun – supercharge [blast, hazardous]","48,D6+3,4+,10,-3,4
+Stormblade(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Stormblade(Use model),"Twin heavy flamer [ignores cover, torrent, twin-linked]","12,D6,N/A,5,-1,1
+Stormblade(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Tarantula Battery(Use model),"Twin heavy bolter [sustained hits 1, twin-linked]","36,3,4+,5,-1,2
+Tarantula Battery(Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
+Tarantula Battery(Use model),Close combat weapon,Melee,1,4+,4,0,1
 Thunderbolt Heavy Fighter,Lascannon,"48,1,4+,12,-3,D6+1
 Thunderbolt Heavy Fighter,Thunderbolt hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
 Thunderbolt Heavy Fighter,Thunderbolt nose autocannons [twin-linked],"48,4,4+,9,-1,3
 Thunderbolt Heavy Fighter,Armoured hull,Melee,6,4+,8,0,1
-Trojan Support Vehicle(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Trojan Support Vehicle(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Trojan Support Vehicle(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Trojan Support Vehicle(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Valdor(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Valdor(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Valdor(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Valdor(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Valdor(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Valdor(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Valdor(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Valdor(⌀Use model),Valdor neutron laser [heavy],"48,2,4+,16,-4,D6+1
-Valdor(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Voss-pattern Lightning(⌀120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
-Voss-pattern Lightning(⌀120 x 92mm flying base),Lightning hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
-Voss-pattern Lightning(⌀120 x 92mm flying base),Armoured hull,Melee,6,4+,8,0,1
-Vulture Gunship(⌀120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Vulture Gunship(⌀120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
-Vulture Gunship(⌀120 x 92mm flying base),Vulture gatling cannon [sustained hits 1],"24,18,4+,5,0,1
-Vulture Gunship(⌀120 x 92mm flying base),Vulture hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
-Vulture Gunship(⌀120 x 92mm flying base),Armoured hull,Melee,6,4+,4,0,1
-Aquila Lander(⌀120 x 92mm flying base),Autocannon,"48,2,4+,9,-1,3
-Aquila Lander(⌀120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Aquila Lander(⌀120 x 92mm flying base),Multi-laser,"36,4,4+,6,0,1
-Aquila Lander(⌀120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
-Arkurian Stormhammer(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Arkurian Stormhammer(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Arkurian Stormhammer(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Arkurian Stormhammer(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Arkurian Stormhammer(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Arkurian Stormhammer(⌀Use model),Multi-laser,"36,4,4+,6,0,1
-Arkurian Stormhammer(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Arkurian Stormhammer(⌀Use model),Stormhammer cannon [blast],"72,3D6,4+,12,-2,3
-Arkurian Stormhammer(⌀Use model),"Twin battle cannon [blast, twin-linked]","48,D6+3,4+,9,-1,3
-Arkurian Stormhammer(⌀Use model),Armoured tracks,Melee,6,4+,8,0,1
-Armageddon-pattern Medusa(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Armageddon-pattern Medusa(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Armageddon-pattern Medusa(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Armageddon-pattern Medusa(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Armageddon-pattern Medusa(⌀Use model),"Medusa siege cannon [blast, indirect fire]","36,D6,4+,12,-2,4
-Armageddon-pattern Medusa(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Armageddon-pattern Medusa(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Arvus Lighter(⌀120 x 92mm flying base),Armoured hull,Melee,2,4+,5,0,1
-Atlas Recovery Vehicle(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Atlas Recovery Vehicle(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Atlas Recovery Vehicle(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Atlas Recovery Vehicle(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Atlas Recovery Vehicle(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Centaur Light Carrier(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Centaur Light Carrier(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Centaur Light Carrier(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
+Trojan Support Vehicle(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Trojan Support Vehicle(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Trojan Support Vehicle(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Trojan Support Vehicle(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Valdor(Use model),Autocannon,"48,2,4+,9,-1,3
+Valdor(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Valdor(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Valdor(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Valdor(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Valdor(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Valdor(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Valdor(Use model),Valdor neutron laser [heavy],"48,2,4+,16,-4,D6+1
+Valdor(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Voss-pattern Lightning(120 x 92mm flying base),Lascannon,"48,1,4+,12,-3,D6+1
+Voss-pattern Lightning(120 x 92mm flying base),Lightning hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
+Voss-pattern Lightning(120 x 92mm flying base),Armoured hull,Melee,6,4+,8,0,1
+Vulture Gunship(120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Vulture Gunship(120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
+Vulture Gunship(120 x 92mm flying base),Vulture gatling cannon [sustained hits 1],"24,18,4+,5,0,1
+Vulture Gunship(120 x 92mm flying base),Vulture hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
+Vulture Gunship(120 x 92mm flying base),Armoured hull,Melee,6,4+,4,0,1
+Aquila Lander(120 x 92mm flying base),Autocannon,"48,2,4+,9,-1,3
+Aquila Lander(120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Aquila Lander(120 x 92mm flying base),Multi-laser,"36,4,4+,6,0,1
+Aquila Lander(120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
+Arkurian Stormhammer(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Arkurian Stormhammer(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Arkurian Stormhammer(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Arkurian Stormhammer(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Arkurian Stormhammer(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Arkurian Stormhammer(Use model),Multi-laser,"36,4,4+,6,0,1
+Arkurian Stormhammer(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Arkurian Stormhammer(Use model),Stormhammer cannon [blast],"72,3D6,4+,12,-2,3
+Arkurian Stormhammer(Use model),"Twin battle cannon [blast, twin-linked]","48,D6+3,4+,9,-1,3
+Arkurian Stormhammer(Use model),Armoured tracks,Melee,6,4+,8,0,1
+Armageddon-pattern Medusa(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Armageddon-pattern Medusa(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Armageddon-pattern Medusa(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Armageddon-pattern Medusa(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Armageddon-pattern Medusa(Use model),"Medusa siege cannon [blast, indirect fire]","36,D6,4+,12,-2,4
+Armageddon-pattern Medusa(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Armageddon-pattern Medusa(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Arvus Lighter(120 x 92mm flying base),Armoured hull,Melee,2,4+,5,0,1
+Atlas Recovery Vehicle(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Atlas Recovery Vehicle(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Atlas Recovery Vehicle(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Atlas Recovery Vehicle(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Atlas Recovery Vehicle(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Centaur Light Carrier(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Centaur Light Carrier(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Centaur Light Carrier(Use model),Armoured tracks,Melee,3,4+,6,0,1
 Death Korps Grenadier Squad,"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
 Death Korps Grenadier Squad,Grenade launcher – frag [blast],"24,D3,3+,4,0,1
 Death Korps Grenadier Squad,Grenade launcher – krak,"24,1,3+,9,-2,D3
@@ -694,96 +694,96 @@ Death Korps Grenadier Squad,Sergeant’s pistol [pistol],"12,1,3+,3,-1,1
 Death Korps Grenadier Squad,"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
 Death Korps Grenadier Squad,Close combat weapon,Melee,1,4+,3,0,1
 Death Korps Grenadier Squad,Sergeant’s close combat weapon,Melee,2,4+,4,-2,1
-Dominus Armoured Siege Bombard(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Dominus Armoured Siege Bombard(⌀Use model),"Dominus triple bombard [blast, indirect fire]","48,2D6,4+,12,-2,3
-Dominus Armoured Siege Bombard(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Dominus Armoured Siege Bombard(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Dominus Armoured Siege Bombard(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Dominus Armoured Siege Bombard(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Dominus Armoured Siege Bombard(⌀Use model),Lascannon,"48,1,4+,12,-3,D6+1
-Dominus Armoured Siege Bombard(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Dominus Armoured Siege Bombard(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Elysian Drop Sentinel(⌀60mm),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Elysian Drop Sentinel(⌀60mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Elysian Drop Sentinel(⌀60mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Elysian Drop Sentinel(⌀60mm),Multi-melta [melta 2],"18,2,4+,9,-4,D6
-Elysian Drop Sentinel(⌀60mm),Close combat weapon,Melee,2,4+,6,0,1
-Elysian Sniper Squad(⌀60mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
-Elysian Sniper Squad(⌀60mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
-Elysian Sniper Squad(⌀60mm),Close combat weapon,Melee,1,4+,3,0,1
-Gorgon Heavy Transport(⌀Use model),"Gorgon mortar [blast, indirect fire]","48,D6,4+,5,0,1
-Gorgon Heavy Transport(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Gorgon Heavy Transport(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Gorgon Heavy Transport(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Gorgon Heavy Transport(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Gorgon Heavy Transport(⌀Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
-Gorgon Heavy Transport(⌀Use model),Landing ramp,Melee,6,4+,8,0,1
-Griffon Mortar Carrier(⌀Use model),"Griffon heavy mortar [blast, indirect fire]","48,D6,4+,7,-1,2
-Griffon Mortar Carrier(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Griffon Mortar Carrier(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Griffon Mortar Carrier(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Griffon Mortar Carrier(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Griffon Mortar Carrier(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Heavy Mortar Team(⌀Use model),"Heavy mortar [heavy, blast, indirect fire]","48,D6,5+,6,-1,2
-Heavy Mortar Team(⌀Use model),Close combat weapons,Melee,3,4+,3,0,1
-Heavy Quad Launcher Team(⌀Use model),"Heavy quad launcher [blast, indirect fire]","48,2D6,4+,5,0,1
-Heavy Quad Launcher Team(⌀Use model),Close combat weapons,Melee,3,4+,3,0,1
-Macharius Omega(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Macharius Omega(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Macharius Omega(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Macharius Omega(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Macharius Omega(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Macharius Omega(⌀Use model),Omega-pattern plasma blastgun – standard [blast],"60,2D6,4+,8,-2,2
-Macharius Omega(⌀Use model),"Omega-pattern plasma blastgun – supercharge [blast, hazardous]","60,2D6,4+,9,-3,3
-Macharius Omega(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Macharius Omega(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Minotaur(⌀Use model),"Minotaur twin earthshaker cannon [blast, indirect fire, twin-linked]","240,D6+3,4+,8,-2,2
-Minotaur(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Mukaali Riders(⌀40mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
-Mukaali Riders(⌀40mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
-Mukaali Riders(⌀40mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
-Mukaali Riders(⌀40mm),Laspistol [pistol],"12,1,4+,3,0,1
-Mukaali Riders(⌀40mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
-Mukaali Riders(⌀40mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
-Mukaali Riders(⌀40mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
-Mukaali Riders(⌀40mm),Plasma pistol – standard [rapid fire 1],"24,1,4+,7,-2,1
-Mukaali Riders(⌀40mm),"Plasma pistol – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
-Mukaali Riders(⌀40mm),Chainsword,Melee,4,4+,3,0,1
-Mukaali Riders(⌀40mm),Hunting lance [lance],Melee,3,4+,4,0,1
-Mukaali Riders(⌀40mm),Power weapon,Melee,3,4+,4,-2,1
-Mukaali Riders(⌀40mm),Stomping feet [extra attacks],Melee,2,4+,4,0,1
-Salamander Command Vehicle(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Salamander Command Vehicle(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Salamander Command Vehicle(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Salamander Command Vehicle(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Salamander Command Vehicle(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Salamander Command Vehicle(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Salamander Scout Vehicle(⌀Use model),Autocannon,"48,2,4+,9,-1,3
-Salamander Scout Vehicle(⌀Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Salamander Scout Vehicle(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Salamander Scout Vehicle(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Salamander Scout Vehicle(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Salamander Scout Vehicle(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Sentinel Powerlifter(⌀Use model),Powerlifter,Melee,3,4+,10,-2,D3
-Stygies Destroyer Tank Hunter(⌀Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
-Stygies Destroyer Tank Hunter(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Stygies Destroyer Tank Hunter(⌀Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
-Stygies Destroyer Tank Hunter(⌀Use model),Stygies laser destroyer [heavy],"72,2,4+,14,-4,D6+3
-Stygies Destroyer Tank Hunter(⌀Use model),Armoured tracks,Melee,3,4+,6,0,1
-Tauros Assault Vehicle(⌀Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
-Tauros Assault Vehicle(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Tauros Assault Vehicle(⌀Use model),Tauros grenade launcher – frag [blast],"24,D6,4+,4,0,1
-Tauros Assault Vehicle(⌀Use model),Tauros grenade launcher – krak,"24,2,4+,9,-2,D3
-Tauros Assault Vehicle(⌀Use model),Armoured frame,Melee,2,4+,5,0,1
-Tauros Venator(⌀Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
-Tauros Venator(⌀Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
-Tauros Venator(⌀Use model),Twin multi-laser [twin-linked],"36,4,4+,6,0,1
-Tauros Venator(⌀Use model),Armoured frame,Melee,2,4+,5,0,1
-Valkyrie Sky Talon(⌀120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Valkyrie Sky Talon(⌀120 x 92mm flying base),Hellstrike missile [anti-fly 2+],"48,1,4+,10,-3,D6
-Valkyrie Sky Talon(⌀120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
-Valkyrie Sky Talon(⌀120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
-Vendetta Gunship(⌀120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
-Vendetta Gunship(⌀120 x 92mm flying base),Vendetta hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
-Vendetta Gunship(⌀120 x 92mm flying base),Vendetta twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
-Vendetta Gunship(⌀120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
+Dominus Armoured Siege Bombard(Use model),Autocannon,"48,2,4+,9,-1,3
+Dominus Armoured Siege Bombard(Use model),"Dominus triple bombard [blast, indirect fire]","48,2D6,4+,12,-2,3
+Dominus Armoured Siege Bombard(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Dominus Armoured Siege Bombard(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Dominus Armoured Siege Bombard(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Dominus Armoured Siege Bombard(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Dominus Armoured Siege Bombard(Use model),Lascannon,"48,1,4+,12,-3,D6+1
+Dominus Armoured Siege Bombard(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Dominus Armoured Siege Bombard(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Elysian Drop Sentinel(60mm),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Elysian Drop Sentinel(60mm),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Elysian Drop Sentinel(60mm),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Elysian Drop Sentinel(60mm),Multi-melta [melta 2],"18,2,4+,9,-4,D6
+Elysian Drop Sentinel(60mm),Close combat weapon,Melee,2,4+,6,0,1
+Elysian Sniper Squad(60mm),Lasgun [rapid fire 1],"24,1,4+,3,0,1
+Elysian Sniper Squad(60mm),"Sniper rifle [heavy, precision]","36,1,3+,4,-2,2
+Elysian Sniper Squad(60mm),Close combat weapon,Melee,1,4+,3,0,1
+Gorgon Heavy Transport(Use model),"Gorgon mortar [blast, indirect fire]","48,D6,4+,5,0,1
+Gorgon Heavy Transport(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Gorgon Heavy Transport(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Gorgon Heavy Transport(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Gorgon Heavy Transport(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Gorgon Heavy Transport(Use model),"Twin heavy stubber [rapid fire 3, twin-linked]","36,3,4+,4,0,1
+Gorgon Heavy Transport(Use model),Landing ramp,Melee,6,4+,8,0,1
+Griffon Mortar Carrier(Use model),"Griffon heavy mortar [blast, indirect fire]","48,D6,4+,7,-1,2
+Griffon Mortar Carrier(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Griffon Mortar Carrier(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Griffon Mortar Carrier(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Griffon Mortar Carrier(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Griffon Mortar Carrier(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Heavy Mortar Team(Use model),"Heavy mortar [heavy, blast, indirect fire]","48,D6,5+,6,-1,2
+Heavy Mortar Team(Use model),Close combat weapons,Melee,3,4+,3,0,1
+Heavy Quad Launcher Team(Use model),"Heavy quad launcher [blast, indirect fire]","48,2D6,4+,5,0,1
+Heavy Quad Launcher Team(Use model),Close combat weapons,Melee,3,4+,3,0,1
+Macharius Omega(Use model),Autocannon,"48,2,4+,9,-1,3
+Macharius Omega(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Macharius Omega(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Macharius Omega(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Macharius Omega(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Macharius Omega(Use model),Omega-pattern plasma blastgun – standard [blast],"60,2D6,4+,8,-2,2
+Macharius Omega(Use model),"Omega-pattern plasma blastgun – supercharge [blast, hazardous]","60,2D6,4+,9,-3,3
+Macharius Omega(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Macharius Omega(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Minotaur(Use model),"Minotaur twin earthshaker cannon [blast, indirect fire, twin-linked]","240,D6+3,4+,8,-2,2
+Minotaur(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Mukaali Riders(40mm),"Flamer [ignores cover, torrent]","12,D6,N/A,4,0,1
+Mukaali Riders(40mm),Grenade launcher – frag [blast],"24,D3,4+,4,0,1
+Mukaali Riders(40mm),Grenade launcher – krak,"24,1,4+,9,-2,D3
+Mukaali Riders(40mm),Laspistol [pistol],"12,1,4+,3,0,1
+Mukaali Riders(40mm),Meltagun [melta 2],"12,1,4+,9,-4,D6
+Mukaali Riders(40mm),Plasma gun – standard [rapid fire 1],"24,1,4+,7,-2,1
+Mukaali Riders(40mm),"Plasma gun – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
+Mukaali Riders(40mm),Plasma pistol – standard [rapid fire 1],"24,1,4+,7,-2,1
+Mukaali Riders(40mm),"Plasma pistol – supercharge [hazardous, rapid fire 1]","24,1,4+,8,-3,2
+Mukaali Riders(40mm),Chainsword,Melee,4,4+,3,0,1
+Mukaali Riders(40mm),Hunting lance [lance],Melee,3,4+,4,0,1
+Mukaali Riders(40mm),Power weapon,Melee,3,4+,4,-2,1
+Mukaali Riders(40mm),Stomping feet [extra attacks],Melee,2,4+,4,0,1
+Salamander Command Vehicle(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Salamander Command Vehicle(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Salamander Command Vehicle(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Salamander Command Vehicle(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Salamander Command Vehicle(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Salamander Command Vehicle(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Salamander Scout Vehicle(Use model),Autocannon,"48,2,4+,9,-1,3
+Salamander Scout Vehicle(Use model),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Salamander Scout Vehicle(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Salamander Scout Vehicle(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Salamander Scout Vehicle(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Salamander Scout Vehicle(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Sentinel Powerlifter(Use model),Powerlifter,Melee,3,4+,10,-2,D3
+Stygies Destroyer Tank Hunter(Use model),Heavy stubber [rapid fire 3],"36,3,4+,4,0,1
+Stygies Destroyer Tank Hunter(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Stygies Destroyer Tank Hunter(Use model),Storm bolter [rapid fire 2],"24,2,4+,4,0,1
+Stygies Destroyer Tank Hunter(Use model),Stygies laser destroyer [heavy],"72,2,4+,14,-4,D6+3
+Stygies Destroyer Tank Hunter(Use model),Armoured tracks,Melee,3,4+,6,0,1
+Tauros Assault Vehicle(Use model),"Heavy flamer [ignores cover, torrent]","12,D6,N/A,5,-1,1
+Tauros Assault Vehicle(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Tauros Assault Vehicle(Use model),Tauros grenade launcher – frag [blast],"24,D6,4+,4,0,1
+Tauros Assault Vehicle(Use model),Tauros grenade launcher – krak,"24,2,4+,9,-2,D3
+Tauros Assault Vehicle(Use model),Armoured frame,Melee,2,4+,5,0,1
+Tauros Venator(Use model),Hunter-killer missile [one shot],"48,1,4+,14,-3,D6
+Tauros Venator(Use model),Twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
+Tauros Venator(Use model),Twin multi-laser [twin-linked],"36,4,4+,6,0,1
+Tauros Venator(Use model),Armoured frame,Melee,2,4+,5,0,1
+Valkyrie Sky Talon(120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Valkyrie Sky Talon(120 x 92mm flying base),Hellstrike missile [anti-fly 2+],"48,1,4+,10,-3,D6
+Valkyrie Sky Talon(120 x 92mm flying base),Multiple rocket pod [blast],"36,D6,4+,6,0,1
+Valkyrie Sky Talon(120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1
+Vendetta Gunship(120 x 92mm flying base),Heavy bolter [sustained hits 1],"36,3,4+,5,-1,2
+Vendetta Gunship(120 x 92mm flying base),Vendetta hellstrike rack [anti-fly 2+],"48,2,4+,10,-3,D6
+Vendetta Gunship(120 x 92mm flying base),Vendetta twin lascannon [twin-linked],"48,1,4+,12,-3,D6+1
+Vendetta Gunship(120 x 92mm flying base),Armoured hull,Melee,3,4+,6,0,1

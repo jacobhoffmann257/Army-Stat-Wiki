@@ -3,7 +3,7 @@
 # Table name: units
 #
 #  id         :integer          not null, primary key
-#  base_size  :integer
+#  base_size  :string
 #  cost       :integer
 #  max_size   :integer
 #  name       :string

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_161933) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_201838) do
   create_table "abilities", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_161933) do
 
   create_table "models", force: :cascade do |t|
     t.string "name"
-    t.integer "unit_it", null: false
+    t.integer "unit_id", null: false
     t.integer "movement"
     t.integer "toughness"
     t.integer "save_value"
@@ -76,7 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_161933) do
     t.integer "cost"
     t.integer "faction_id", null: false
     t.integer "max_size"
-    t.integer "base_size"
+    t.string "base_size"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
