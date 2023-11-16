@@ -1,55 +1,55 @@
 Unit Name,Name,Description,Aura,Type
-Broodlord,"[""CORE"", "" Leader"", "" Scouts 8""]","[""FACTION"", "" Synapse""]","[[""1"", ""90""]]","[""GENESTEALERS""]"
-Deathleaper,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""70""]]"
-Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""235""]]","[""TYRANT GUARD""]"
-Neurotyrant,"[""CORE"", "" Leader""]","[""FACTION"", "" Synapse"", "" Shadow in the Warp""]","[[""1"", ""105""]]","[""NEUROGAUNTS"", ""TYRANT GUARD""]"
-Old One Eye,"[""CORE"", "" Feel No Pain 5+"", "" Leader""]","[""FACTION"", "" Synapse""]","[[""1"", ""140""]]","[""CARNIFEXES""]"
-Parasite Of Mortrex,"[""CORE"", "" Deep Strike"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""80""]]"
-Tervigon,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""190""]]"
-The Swarmlord,"[""CORE"", "" Deadly Demise D3"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""270""]]","[""TYRANT GUARD""]"
-Winged Hive Tyrant,"[""CORE"", "" Deadly Demise D3"", "" Deep Strike""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""210""]]"
-Winged Tyranid Prime,"[""CORE"", "" Deep Strike"", "" Leader""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]","[""GARGOYLES"", ""TYRANID WARRIORS WITH MELEE BIO-WEAPONS"", ""TYRANID WARRIORS WITH RANGED BIO-WEAPONS""]"
-Malanthrope,"[""CORE"", "" Leader"", "" Stealth""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""75""]]","[""VENOMTHROPES""]"
-Gargoyles,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""10"", ""75""], [""20"", ""150""]]"
-Hormagaunts,"[""FACTION"", "" Synapse""]","[[""10"", ""65""], [""20"", ""130""]]"
-Termagants,"[""FACTION"", "" Synapse""]","[[""10"", ""60""], [""20"", ""120""]]"
-Tyrannocyte,"[""CORE"", "" Deadly Demise D3"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""1"", ""105""]]"
-Barbgaunts,"[""FACTION"", "" Synapse""]","[[""5"", ""60""], [""10"", ""120""]]"
-Biovores,"[""CORE"", "" Deadly Demise 1""]","[""FACTION"", "" Synapse""]","[[""1"", ""75""], [""2"", ""150""], [""3"", ""225""]]"
-Carnifexes,"[""CORE"", "" Deadly Demise 1""]","[""FACTION"", "" Synapse""]","[[""1"", ""125""], [""2"", ""250""]]"
-Exocrine,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Synapse""]","[[""1"", ""135""]]"
-Genestealers,"[""CORE"", "" Scouts 8""]","[""FACTION"", "" Synapse""]","[[""5"", ""85""], [""10"", ""170""]]"
-Harpy,"[""CORE"", "" Deadly Demise D3"", "" Hover""]","[""FACTION"", "" Synapse""]","[[""1"", ""215""]]"
-Haruspex,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Synapse""]","[[""1"", ""125""]]"
-Hive Crone,"[""CORE"", "" Deadly Demise D3"", "" Hover""]","[""FACTION"", "" Synapse""]","[[""1"", ""200""]]"
-Hive Guard,"[""FACTION"", "" Synapse""]","[[""3"", ""110""], [""6"", ""220""]]"
-Lictor,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""1"", ""60""]]"
-Maleceptor,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""170""]]"
-Mawloc,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""1"", ""145""]]"
-Mucolid Spores,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""1"", ""50""], [""2"", ""100""]]"
-Neurogaunts,"[""FACTION"", "" Synapse""]","[[""11"", ""45""], [""22"", ""90""]]"
-Neurolictor,"[""CORE"", "" Infiltrators"", "" Lone Operative"", "" Stealth""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""65""]]"
-Norn Assimilator,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""310""]]"
-Norn Emissary,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""1"", ""290""]]"
-Psychophage,"[""CORE"", "" Deadly Demise 1"", "" Feel No Pain 5+""]","[""FACTION"", "" Synapse""]","[[""1"", ""125""]]"
-Pyrovores,"[""CORE"", "" Deadly Demise 1""]","[""FACTION"", "" Synapse""]","[[""1"", ""30""], [""2"", ""60""], [""3"", ""90""]]"
-Raveners,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""3"", ""75""], [""6"", ""150""]]"
-Ripper Swarms,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""1"", ""20""], [""2"", ""40""], [""3"", ""60""]]"
-Screamer-killer,"[""CORE"", "" Deadly Demise 1""]","[""FACTION"", "" Synapse""]","[[""1"", ""170""]]"
-Spore Mines,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""3"", ""55""], [""6"", ""110""]]"
-Sporocyst,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Synapse""]","[[""1"", ""145""]]"
-Toxicrene,"[""CORE"", "" Deadly Demise D3""]","[""FACTION"", "" Synapse""]","[[""1"", ""180""]]"
-Trygon,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""1"", ""180""]]"
-Tyranid Warriors With Melee Bio-weapons,"[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""3"", ""85""], [""6"", ""170""]]"
-Tyranid Warriors With Ranged Bio-weapons,"[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""3"", ""70""], [""6"", ""140""]]"
-Tyrannofex,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Synapse""]","[[""1"", ""245""]]"
-Tyrant Guard,"[""FACTION"", "" Synapse""]","[[""3"", ""95""], [""6"", ""190""]]"
-Venomthropes,"[""CORE"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""3"", ""70""], [""6"", ""140""]]"
-Von Ryan’s Leapers,"[""CORE"", "" Fights First"", "" Infiltrators"", "" Stealth""]","[""FACTION"", "" Synapse""]","[[""3"", ""75""], [""6"", ""150""]]"
-Zoanthropes,"[""FACTION"", "" Shadow in the Warp"", "" Synapse""]","[[""3"", ""110""], [""6"", ""220""]]"
-Barbed Hierodule,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Synapse""]","[[""1"", ""340""]]"
-Harridan,"[""CORE"", "" Deadly Demise 2D6"", "" Hover""]","[""FACTION"", "" Synapse""]","[[""1"", ""610""]]"
-Hierophant,"[""CORE"", "" Deadly Demise 2D6""]","[""FACTION"", "" Synapse""]","[[""1"", ""810""]]"
-Scythed Hierodule,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Synapse""]","[[""1"", ""330""]]"
-Dimachaeron,"[""CORE"", "" Deadly Demise D6""]","[""FACTION"", "" Synapse""]","[[""1"", ""240""]]"
-Sky-slasher Swarms,"[""CORE"", "" Deep Strike""]","[""FACTION"", "" Synapse""]","[[""3"", ""60""]]"
+Broodlord,[CORE,  Leader,  Scouts 8],[FACTION,  Synapse],[[1, 90]],[GENESTEALERS]
+Deathleaper,[CORE,  Fights First,  Infiltrators,  Lone Operative,  Stealth],[FACTION,  Synapse],[[1, 70]]
+Hive Tyrant,[CORE,  Deadly Demise D3,  Leader],[FACTION,  Shadow in the Warp,  Synapse],[[1, 235]],[TYRANT GUARD]
+Neurotyrant,[CORE,  Leader],[FACTION,  Synapse,  Shadow in the Warp],[[1, 105]],[NEUROGAUNTS, TYRANT GUARD]
+Old One Eye,[CORE,  Feel No Pain 5+,  Leader],[FACTION,  Synapse],[[1, 140]],[CARNIFEXES]
+Parasite Of Mortrex,[CORE,  Deep Strike,  Lone Operative,  Stealth],[FACTION,  Synapse],[[1, 80]]
+Tervigon,[CORE,  Deadly Demise D6],[FACTION,  Shadow in the Warp,  Synapse],[[1, 190]]
+The Swarmlord,[CORE,  Deadly Demise D3,  Leader],[FACTION,  Shadow in the Warp,  Synapse],[[1, 270]],[TYRANT GUARD]
+Winged Hive Tyrant,[CORE,  Deadly Demise D3,  Deep Strike],[FACTION,  Shadow in the Warp,  Synapse],[[1, 210]]
+Winged Tyranid Prime,[CORE,  Deep Strike,  Leader],[FACTION,  Shadow in the Warp,  Synapse],[[1, 65]],[GARGOYLES, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS]
+Malanthrope,[CORE,  Leader,  Stealth],[FACTION,  Shadow in the Warp,  Synapse],[[1, 75]],[VENOMTHROPES]
+Gargoyles,[CORE,  Deep Strike],[FACTION,  Synapse],[[10, 75], [20, 150]]
+Hormagaunts,[FACTION,  Synapse],[[10, 65], [20, 130]]
+Termagants,[FACTION,  Synapse],[[10, 60], [20, 120]]
+Tyrannocyte,[CORE,  Deadly Demise D3,  Deep Strike],[FACTION,  Synapse],[[1, 105]]
+Barbgaunts,[FACTION,  Synapse],[[5, 60], [10, 120]]
+Biovores,[CORE,  Deadly Demise 1],[FACTION,  Synapse],[[1, 75], [2, 150], [3, 225]]
+Carnifexes,[CORE,  Deadly Demise 1],[FACTION,  Synapse],[[1, 125], [2, 250]]
+Exocrine,[CORE,  Deadly Demise D3],[FACTION,  Synapse],[[1, 135]]
+Genestealers,[CORE,  Scouts 8],[FACTION,  Synapse],[[5, 85], [10, 170]]
+Harpy,[CORE,  Deadly Demise D3,  Hover],[FACTION,  Synapse],[[1, 215]]
+Haruspex,[CORE,  Deadly Demise D3],[FACTION,  Synapse],[[1, 125]]
+Hive Crone,[CORE,  Deadly Demise D3,  Hover],[FACTION,  Synapse],[[1, 200]]
+Hive Guard,[FACTION,  Synapse],[[3, 110], [6, 220]]
+Lictor,[CORE,  Fights First,  Infiltrators,  Lone Operative,  Stealth],[FACTION,  Synapse],[[1, 60]]
+Maleceptor,[CORE,  Deadly Demise D3],[FACTION,  Shadow in the Warp,  Synapse],[[1, 170]]
+Mawloc,[CORE,  Deep Strike],[FACTION,  Synapse],[[1, 145]]
+Mucolid Spores,[CORE,  Deep Strike],[FACTION,  Synapse],[[1, 50], [2, 100]]
+Neurogaunts,[FACTION,  Synapse],[[11, 45], [22, 90]]
+Neurolictor,[CORE,  Infiltrators,  Lone Operative,  Stealth],[FACTION,  Shadow in the Warp,  Synapse],[[1, 65]]
+Norn Assimilator,[CORE,  Deadly Demise D6],[FACTION,  Shadow in the Warp,  Synapse],[[1, 310]]
+Norn Emissary,[CORE,  Deadly Demise D6],[FACTION,  Shadow in the Warp,  Synapse],[[1, 290]]
+Psychophage,[CORE,  Deadly Demise 1,  Feel No Pain 5+],[FACTION,  Synapse],[[1, 125]]
+Pyrovores,[CORE,  Deadly Demise 1],[FACTION,  Synapse],[[1, 30], [2, 60], [3, 90]]
+Raveners,[CORE,  Deep Strike],[FACTION,  Synapse],[[3, 75], [6, 150]]
+Ripper Swarms,[CORE,  Deep Strike],[FACTION,  Synapse],[[1, 20], [2, 40], [3, 60]]
+Screamer-killer,[CORE,  Deadly Demise 1],[FACTION,  Synapse],[[1, 170]]
+Spore Mines,[CORE,  Deep Strike],[FACTION,  Synapse],[[3, 55], [6, 110]]
+Sporocyst,[CORE,  Deadly Demise D3],[FACTION,  Synapse],[[1, 145]]
+Toxicrene,[CORE,  Deadly Demise D3],[FACTION,  Synapse],[[1, 180]]
+Trygon,[CORE,  Deep Strike],[FACTION,  Synapse],[[1, 180]]
+Tyranid Warriors With Melee Bio-weapons,[FACTION,  Shadow in the Warp,  Synapse],[[3, 85], [6, 170]]
+Tyranid Warriors With Ranged Bio-weapons,[FACTION,  Shadow in the Warp,  Synapse],[[3, 70], [6, 140]]
+Tyrannofex,[CORE,  Deadly Demise D6],[FACTION,  Synapse],[[1, 245]]
+Tyrant Guard,[FACTION,  Synapse],[[3, 95], [6, 190]]
+Venomthropes,[CORE,  Stealth],[FACTION,  Synapse],[[3, 70], [6, 140]]
+Von Ryan’s Leapers,[CORE,  Fights First,  Infiltrators,  Stealth],[FACTION,  Synapse],[[3, 75], [6, 150]]
+Zoanthropes,[FACTION,  Shadow in the Warp,  Synapse],[[3, 110], [6, 220]]
+Barbed Hierodule,[CORE,  Deadly Demise D6],[FACTION,  Synapse],[[1, 340]]
+Harridan,[CORE,  Deadly Demise 2D6,  Hover],[FACTION,  Synapse],[[1, 610]]
+Hierophant,[CORE,  Deadly Demise 2D6],[FACTION,  Synapse],[[1, 810]]
+Scythed Hierodule,[CORE,  Deadly Demise D6],[FACTION,  Synapse],[[1, 330]]
+Dimachaeron,[CORE,  Deadly Demise D6],[FACTION,  Synapse],[[1, 240]]
+Sky-slasher Swarms,[CORE,  Deep Strike],[FACTION,  Synapse],[[3, 60]]
