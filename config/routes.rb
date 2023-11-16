@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :unit_abilities
   resources :abilities
   resources :profiles
   resources :equipment
