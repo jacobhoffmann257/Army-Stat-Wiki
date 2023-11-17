@@ -1,54 +1,122 @@
 # Rails Template
+Warhammer Unit search platform:
 
-This is a base Ruby on Rails repository configured for learning with Codespaces (and Gitpod).
+Let anyone view the rules for individual units, along with there stats and weapons profiles. Allow the user to navigate based on the faction and the role of the unit.
 
-- Ruby version: `3.2.1`
-- Rails version: `7.0.4.3`
+Pain Point:
 
+It is often hard to search for the information for a needed unit
 
-We've added additional Ruby gems and other software that aren't automatically available in a new Rails app.
+User Stories:
 
-### Additional gems:
+I want to be able to search for all units in a faction.
 
-- [`appdev_support`](https://github.com/firstdraft/appdev_support)
-- [`annotate`](https://github.com/ctran/annotate_models)
-- [`awesome_print`](https://github.com/awesome-print/awesome_print)
-- [`better_errors`](https://github.com/BetterErrors/better_errors)
-- [`binding_of_caller`](https://github.com/banister/binding_of_caller)
-- [`dotenv-rails`](https://github.com/bkeepers/dotenv)
-- [`draft_generators`](https://github.com/firstdraft/draft_generators/)
-- [`draft_matchers`](https://github.com/jelaniwoods/draft_matchers/)
-- [`devise`](https://github.com/heartcombo/devise)
-- [`faker`](https://github.com/faker-ruby/faker)
-- [`grade_runner`](https://github.com/firstdraft/grade_runner/)
-- [`htmlbeautifier`](https://github.com/threedaymonk/htmlbeautifier/)
-- [`http`](https://github.com/httprb/http)
-- [`pry_rails`](https://github.com/pry/pry-rails)
-- [`rails_db`](https://github.com/igorkasyanchuk/rails_db)
-- [`rails-erd`](https://github.com/voormedia/rails-erd)
-- [`rspec-html-matchers`](https://github.com/kucaahbe/rspec-html-matchers)
-- [`rspec-rails`](https://github.com/rspec/rspec-rails)
-- [`rufo`](https://github.com/ruby-formatter/rufo)
-- [`specs_to_readme`](https://github.com/firstdraft/specs_to_readme)
-- [`table_print`](https://github.com/arches/table_print)
-- [`web_git`](https://github.com/firstdraft/web_git)
-- [`webmock`](https://github.com/bblimke/webmock)
+I want to be able to find all units of a specific type for a particular faction.
 
-### Additional software:
-- OS Ubuntu 20.04.5 LTS
-- Chromedriver
-- Fly.io's `flyctl`
-- Google Chrome (headless browser)
-- Graphviz
-- Heroku 
-- Node JS 18
-- NPM 8.19.3
-- Parity
-- Postgresql 12
-- Redis
-- Yarn
+I want to be able to see all applicable rules for the unit in question.
 
-### VS Code extensions:
-- aliariff.vscode-erb-beautify
-- mbessey.vscode-rufo
-- vortizhe.simple-ruby-erb
+I want to be able to see all weapons and weapons profiles for a particular unit.
+
+I want to be able to see all abilities for a particular unit.
+
+Domain Model:
+
+faction:
+
+name
+
+banner
+
+icon
+
+picture
+
+ 
+
+units:
+
+name
+
+base
+
+cost
+
+role
+
+faction_id
+
+keywords
+
+picture
+
+ 
+
+Models:
+
+movement
+
+toughness
+
+save_value
+
+inverable_save
+
+wounds
+
+leadership
+
+objective_control
+
+unit_id
+
+ 
+
+Equipment:
+
+model_id
+
+weapon_id
+
+ 
+
+Weapons:
+
+name
+
+range
+
+ 
+
+Profiles:
+
+weapon_id
+
+attacks
+
+skill
+
+strength
+
+armor_piercing
+
+damage
+
+ 
+
+Unit_abilites:
+
+ability_id
+
+unit_id
+
+ 
+
+Abilities:
+
+name
+
+description
+
+aura
+
+type
