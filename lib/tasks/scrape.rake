@@ -12,7 +12,7 @@ task({ :scrape_tyranids_data => :environment}) do
   parsed_page = Nokogiri::HTML(page)
 
   CSV.open("lib/sample_data/tyranids_stats.csv", "w") do |csv|
-    csv << ["Model Name","Base Size", "Invurebale Save", "M", "T", "Sv", "W", "Ld", "OC"]  
+    csv << ["Unit_Name","Base_Size", "Model_Name" ,"Invurebale_Save","Desc", "M", "T", "Sv", "W", "Ld", "OC"]  
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
@@ -39,14 +39,6 @@ task({ :scrape_tyranids_data => :environment}) do
             statline << x.to_i
           end 
           csv << statline
-        #m = profile.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #t = profile.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #sv = profile.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #w = profile.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #ld = profile.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-        #oc = profile.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-
-        #csv << [name, m, t, sv, w, ld, oc]
         end
       end
 

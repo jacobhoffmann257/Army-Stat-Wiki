@@ -15,7 +15,7 @@
 #  faction_id      :integer          not null
 #
 class Unit < ApplicationRecord
-  belongs_to :faction, class_name: "Faction", counter_cache: true
+  belongs_to :faction, class_name: "Faction"
   has_many :models
   has_many :abilities
 end

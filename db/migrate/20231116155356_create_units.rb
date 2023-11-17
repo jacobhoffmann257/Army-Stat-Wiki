@@ -4,7 +4,7 @@ class CreateUnits < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :role
       t.integer :cost
-      t.integer :faction_id,  null: false, foreign_key: { to_table: :factions }
+      t.integer :faction_id,  null: false, foreign_key: { to_table: :factions }, index:true
       t.integer :max_size
       t.integer :base_size
       t.string :picture
