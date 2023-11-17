@@ -18,6 +18,7 @@ task({ :scrape_tyranids_data => :environment}) do
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       unitname = unitname.gsub("#{base}", "")
+      base = base.gsub("⌀", "")
       invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
       lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
       
@@ -53,12 +54,12 @@ task({ :scrape_tyranids_data => :environment}) do
   
   end
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Name", "Description", "Aura", "Type" ]
+    csv << ["Unit Name", "Core", "Faction", "Standard", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
       name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       name = name.gsub("#{base}", "")
-      value = 1
+      base = base.gsub("⌀", "")
       #Extracting Ability details
       abilities_list = Array.new
       abilities_list << name
@@ -134,6 +135,7 @@ task({ :scrape_tyranids_data => :environment}) do
       name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       name = name.gsub("#{base}", "")
+      base = base.gsub("⌀", "")
     # Extracting weapon details
       frame.css('.wTable').each do |table|
         table.css('tr').each do |row|
@@ -282,7 +284,8 @@ task({ :scrape_astra_militarum_data => :environment}) do
 
     parsed_page.css('.dsOuterFrame').each do |frame|
     name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-    
+    name = name.gsub("#{base}", "")
+    base = base.gsub("⌀", "")
     # Extracting weapon details
       frame.css('.wTable').each do |table|
         table.css('tr').each do |row|
