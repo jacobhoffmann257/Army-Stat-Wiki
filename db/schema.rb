@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_201838) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
   create_table "abilities", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -80,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_201838) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "models_per_unit"
   end
 
   create_table "weapons", force: :cascade do |t|

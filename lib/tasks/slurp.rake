@@ -55,6 +55,14 @@ namespace :slurp do
   desc "Tyranid stats"
   task tyranid_abilities: :environment do
     require "csv"
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats.csv"))
+    csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
+    csv.each do |row|
+      name = row["Model Name"]
+      u = Unit.new
+      u = Unit.where(name: name).first #gets the unit based on the name
+      
+    end
   end
 
 end
