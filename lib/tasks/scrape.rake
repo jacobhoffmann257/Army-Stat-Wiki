@@ -169,6 +169,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       unitname = unitname.gsub("#{base}", "")
+      base = base.gsub("⌀","")
       invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
       lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
       
@@ -195,14 +196,16 @@ task({ :scrape_astra_militarum_data => :environment}) do
     end
   end
   CSV.open("lib/sample_data/astra_militarum_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Name", "Description", "Aura", "Type" ]
+    csv << ["Unit Name", "Name", "Description", "Aura", "Cost", "Bodygaurd", "Wargear" ]
     parsed_page.css('.dsOuterFrame').each do |box|
       name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       name = name.gsub("#{base}", "")
-      value = 1
+      base = base.gsub("⌀", "")
       #Extracting Ability details
       abilities_list = Array.new
+      wargear = Array.new
+      orders =  Array.new
       abilities_list << name
       box.css('.dsAbility').each do |ability|
         if /CORE/.match(ability.text.strip) || /FACTION/.match(ability.text.strip)
@@ -211,9 +214,24 @@ task({ :scrape_astra_militarum_data => :environment}) do
            change2 = change1.gsub(",","*")
            change3 =  change2.gsub("\"", "")
            thing = change3.split("*")
-           abilities_list << thing
+           stuff = Array.new
+           thing.each do |x|
+           stuff << x
+           end
+           abilities_list << stuff
+          elsif /This unit’s OFFICER/.match(ability.to_s)
+            puts ability.text.strip
+          elsif /Medi-pack/.match(ability.text.strip) || /Regimental Standard/.match(ability.text.strip) ||/Command Rod/.match(ability.text.strip)|| /Master Vox/.match(ability.text.strip)
+            raw = ability.text.strip
+            change1 = raw.gsub(":","*")
+            change3 =  change1.gsub("\"", "")
+            thing = change3.split("*")
+            stuff = Array.new
+            thing.each do |x|
+            wargear << x
+            end
+
         elsif /This model is equipped with/.match(ability.text.strip)
-        elsif /This model is equipped with:/.match(ability.to_s)
         elsif /is equipped with/.match(ability.to_s)
         elsif /<b>/.match(ability.to_s)
           raw = ability.text.strip
@@ -224,7 +242,6 @@ task({ :scrape_astra_militarum_data => :environment}) do
             #pp temp
             parsed << temp
           end
-          pp parsed
           abilities_list << parsed
         elsif /This model can be attached to the following unit/.match(ability.text.strip)
           guard = Array.new
@@ -236,7 +253,6 @@ task({ :scrape_astra_militarum_data => :environment}) do
               
             end
             abilities_list << guard
-            csv << abilities_list
           elsif /<td>/.match(ability.to_s)
           modelsize = Array.new
             ability.css("table").each do |table|
@@ -248,11 +264,15 @@ task({ :scrape_astra_militarum_data => :environment}) do
                 modelsize << spilting
               end
             end
+            
             abilities_list << modelsize
 
         end
      
       end
+      #pp wargear
+      #pp orders
+      abilities_list << wargear
         csv << abilities_list
     end
   end
