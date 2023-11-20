@@ -1,6 +1,34 @@
 
 namespace :slurp do
   desc "tyranid name/stats"
+  task tyranid_weapons: :environment do
+    require "csv"
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_weapons.csv"))
+    csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
+    csv.each do |row|
+      name = row["Name"]
+      unit = Unit.where(name: name).first
+      weapon_name = row["Weapon_Name"]
+      if Weapon.where(name: weapon_name).last
+        if row["Profile"]
+          puts weapon_name + " - " + row["Profile"]
+          
+        else
+          puts weapon_name
+        end
+      else
+        if row["Profile"]
+          puts weapon_name + " - " + row["Profile"]
+          
+        else
+          w = Weapon.new
+          p = Profile.new
+          w.name = weapon_name
+          end
+      end
+    end
+  end
+  desc "tyranid name/stats"
   task tyranid_stats: :environment do
     require "csv"
     csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats.csv"))
@@ -63,11 +91,6 @@ namespace :slurp do
             u.save
             u.unit_id = unit.id
             u.ability_id = Ability.where(name: ability).last.id
-            
-            #puts unit.name
-            #puts u.valid?
-            #puts u.errors.full_messages
-            
           end
         end
       end
@@ -146,4 +169,5 @@ namespace :slurp do
       end
     end
   end
+
 end
