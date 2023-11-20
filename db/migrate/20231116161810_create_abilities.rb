@@ -4,7 +4,6 @@ class CreateAbilities < ActiveRecord::Migration[7.0]
       t.string :name
       t.text :description
       t.string :classification
-
       t.timestamps
     end
   end

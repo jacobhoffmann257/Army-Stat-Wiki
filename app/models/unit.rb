@@ -14,8 +14,12 @@
 #  updated_at      :datetime         not null
 #  faction_id      :integer          not null
 #
+# Indexes
+#
+#  index_units_on_faction_id  (faction_id)
+#
 class Unit < ApplicationRecord
   belongs_to :faction, class_name: "Faction"
   has_many :models
-  has_many :abilities
+  has_many :unit_abilities
 end

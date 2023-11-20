@@ -13,5 +13,9 @@
 #  updated_at     :datetime         not null
 #  weapon_id      :integer          not null
 #
+# Indexes
+#
+#  index_profiles_on_weapon_id  (weapon_id)
+#
 class Profile < ApplicationRecord
 end

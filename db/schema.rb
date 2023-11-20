@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
     t.integer "objective_control"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_models_on_unit_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -61,11 +62,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.index ["weapon_id"], name: "index_profiles_on_weapon_id"
   end
 
   create_table "unit_abilities", force: :cascade do |t|
     t.integer "unit_id"
-    t.integer "abilities_id"
+    t.integer "ability_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,6 +83,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "models_per_unit"
+    t.index ["faction_id"], name: "index_units_on_faction_id"
   end
 
   create_table "weapons", force: :cascade do |t|
