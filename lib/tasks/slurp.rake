@@ -115,6 +115,12 @@ namespace :slurp do
         end
         
       end
+      cost = JSON.parse(row["Cost"])
+      puts cost.length()
+      unit.models_per_unit = cost[0][0]
+      unit.max_size = cost.length()
+      unit.cost = cost[0][1]
+      unit.save
     end
   end
 end
