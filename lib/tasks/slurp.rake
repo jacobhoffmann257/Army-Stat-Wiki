@@ -37,6 +37,7 @@ namespace :slurp do
     csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
+      #Core Abilities
       name = row["Unit_Name"]
       unit = Unit.where(name: name).first
       core = JSON.parse(row["Core"])
@@ -49,9 +50,9 @@ namespace :slurp do
             u.ability_id = a.id
             u.unit_id = unit.id
             u.save
-            puts unit.name
-            puts u.valid?
-            puts u.errors.full_messages
+            #puts unit.name
+            #puts u.valid?
+            #puts u.errors.full_messages
           else
             u = UnitAbility.new
             a = Ability.new
@@ -62,12 +63,57 @@ namespace :slurp do
             u.unit_id = unit.id
             u.ability_id = Ability.where(name: ability).last.id
             
-            puts unit.name
-            puts u.valid?
-            puts u.errors.full_messages
+            #puts unit.name
+            #puts u.valid?
+            #puts u.errors.full_messages
             
           end
         end
+      end
+      #next Faction
+      faction = JSON.parse(row["Faction"])
+      faction.each do |ability|
+        if ability === "FACTION"
+        else
+          if Ability.where(name: ability).last
+            a = Ability.where(name: ability).last
+            u = UnitAbility.new
+            u.ability_id = a.id
+            u.unit_id = unit.id
+            u.save
+          else
+            u = UnitAbility.new
+            a = Ability.new
+            a.name = ability
+            a.save
+            new_ability = Ability.where("created_at").last
+            u.save
+            u.unit_id = unit.id
+            u.ability_id = Ability.where(name: ability).last.id
+          end
+        end
+      end
+      #standard abilities
+      standard = JSON.parse(row["Standard"])
+      standard.each do |ability|
+        if Ability.where(name:  ability[0]).last
+          a = Ability.where(name: ability).last
+          u = UnitAbility.new
+          u.ability_id = a.id
+          u.unit_id = unit.id
+          u.save
+        else
+          u = UnitAbility.new
+          a = Ability.new
+          a.name = ability[0]
+          a.description = ability[1]
+          a.save
+          new_ability = Ability.where("created_at").last
+          u.save
+          u.unit_id = unit.id
+          u.ability_id = Ability.where(name: ability).last.id
+        end
+        
       end
     end
   end
