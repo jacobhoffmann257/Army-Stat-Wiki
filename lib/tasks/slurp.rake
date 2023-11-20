@@ -57,6 +57,7 @@ namespace :slurp do
             u = UnitAbility.new
             a = Ability.new
             a.name = ability
+            a.classification = core
             a.save
             new_ability = Ability.where("created_at").last
             u.save
@@ -85,6 +86,7 @@ namespace :slurp do
             u = UnitAbility.new
             a = Ability.new
             a.name = ability
+            a.classification = "faction"
             a.save
             new_ability = Ability.where("created_at").last
             u.save
@@ -107,20 +109,41 @@ namespace :slurp do
           a = Ability.new
           a.name = ability[0]
           a.description = ability[1]
+          a.classification = "standard"
           a.save
           new_ability = Ability.where("created_at").last
           u.save
           u.unit_id = unit.id
           u.ability_id = Ability.where(name: ability).last.id
         end
-        
       end
       cost = JSON.parse(row["Cost"])
-      puts cost.length()
       unit.models_per_unit = cost[0][0]
       unit.max_size = cost.length()
       unit.cost = cost[0][1]
       unit.save
+      #Wargear, needs to be changed for other factions
+      if row["Wargear"]
+        wargear = JSON.parse(row["Wargear"])
+        if Ability.where(name:  wargear[0]).last
+          a = Ability.where(name: wargear[0]).last
+          u = UnitAbility.new
+          u.ability_id = a.id
+          u.unit_id = unit.id
+          u.save
+        else
+          u = UnitAbility.new
+          a = Ability.new
+          a.name = wargear[0]
+          a.description = wargear[1]
+          a.classification = "wargear"
+          a.save
+          new_ability = Ability.where("created_at").last
+          u.save
+          u.unit_id = unit.id
+          u.ability_id = Ability.where(name: wargear[0]).last.id
+        end
+      end
     end
   end
 end
