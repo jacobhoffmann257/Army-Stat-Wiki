@@ -1,5 +1,5 @@
-# Rails Template
-Unit Stat search platform:
+# Army Stat Checker
+Army Stat search platform:
 
 Let anyone view the rules for individual units, along with there stats and weapons profiles. Allow the user to navigate based on the faction and the role of the unit.
 
