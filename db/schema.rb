@@ -66,8 +66,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
   end
 
   create_table "unit_abilities", force: :cascade do |t|
-    t.integer "unit_id"
-    t.integer "ability_id"
+    t.integer "unit_id", null: false
+    t.integer "ability_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

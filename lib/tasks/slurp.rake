@@ -9,29 +9,106 @@ namespace :slurp do
       name = row["Name"]
       unit = Unit.where(name: name).first
       weapon_name = row["Weapon_Name"]
-      if Weapon.where(name: weapon_name).last
-        if row["Profile"]
-          puts weapon_name + " - " + row["Profile"]
+      if row["Profile"]
+        profile_name = row["Profile"]
+        if profile_name === unit.name
+          w = Weapon.new
+          w.name = row["Weapon_Name"]
           
-        else
-          puts weapon_name
-        end
-      else
-        if row["Profile"]
-          puts weapon_name + " - " + row["Profile"]
+          #checks range
+          range = row["Range"]
+          if range === "Melee"
+            #set range to 0 for melee
+            w.range = 0
+          else
+            w.range = range.to_i
+          end
+          #should add a catch for resinsertation?
+          w.save
           
+          p = Profile.new
+          p.name = row["Weapon_Name"]
+          p.armor_piercing = row["AP"]
+          p.attacks = row["A"]
+          p.damage = row["D"]
+          p.skill = row["BS/WS"]
+          p.strength = row["S"]
+          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
+          #add after i save weapon
+          p.weapon_id = Weapon.where("created_at").last.id
+          p.save
+          e = Equipment.new
+          e.model_id = unit.id
+          e.weapon_id = Weapon.where("created_at").last.id
+          e.save
         else
           w = Weapon.new
-          p = Profile.new
-          w.name = weapon_name
+          w.name = row["Weapon_Name"]
+          
+          #checks range
+          range = row["Range"]
+          if range === "Melee"
+            #set range to 0 for melee
+            w.range = 0
+          else
+            w.range = range.to_i
           end
+          #should add a catch for resinsertation?
+          w.save
+          
+          p = Profile.new
+          p.name = row["Profile"]
+          p.armor_piercing = row["AP"]
+          p.attacks = row["A"]
+          p.damage = row["D"]
+          p.skill = row["BS/WS"]
+          p.strength = row["S"]
+          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
+          #add after i save weapon
+          p.weapon_id = Weapon.where("created_at").last.id
+          p.save
+          e = Equipment.new
+          e.model_id = unit.id
+          e.weapon_id = Weapon.where("created_at").last.id
+          e.save
+        end
+      else
+        w = Weapon.new
+          w.name = row["Weapon_Name"]
+          
+          #checks range
+          range = row["Range"]
+          if range === "Melee"
+            #set range to 0 for melee
+            w.range = 0
+          else
+            w.range = range.to_i
+          end
+          #should add a catch for resinsertation?
+          w.save
+          
+          p = Profile.new
+          p.name = row["Weapon_Name"]
+          p.armor_piercing = row["AP"]
+          p.attacks = row["A"]
+          p.damage = row["D"]
+          p.skill = row["BS/WS"]
+          p.strength = row["S"]
+          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
+          #add after i save weapon
+          p.weapon_id = Weapon.where("created_at").last.id
+          p.save
+          e = Equipment.new
+          e.model_id = unit.id
+          e.weapon_id = Weapon.where("created_at").last.id
+          e.save
       end
     end
   end
   desc "tyranid name/stats"
   task tyranid_stats: :environment do
     require "csv"
-    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats.csv"))
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats2.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     f = Faction.new
     f.name = "Tyranids2"
@@ -62,7 +139,7 @@ namespace :slurp do
   task tyranid_abilities: :environment do
     require "csv"
     require "json"
-    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities.csv"))
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities2.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
       #Core Abilities

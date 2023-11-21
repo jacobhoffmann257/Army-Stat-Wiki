@@ -9,4 +9,6 @@
 #  updated_at :datetime         not null
 #
 class Weapon < ApplicationRecord
+  has_many :equipment
+  has_many :profile
 end

@@ -11,6 +11,6 @@
 #  weapon_id  :integer          not null
 #
 class Equipment < ApplicationRecord
-  belongs_to :model, class_name: "Model", counter_cache: true
-  has_many :weapons
+  belongs_to :model
+  belongs_to :weapon
 end

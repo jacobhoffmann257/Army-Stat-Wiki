@@ -11,4 +11,5 @@
 #  updated_at :datetime         not null
 #
 class Faction < ApplicationRecord
+  has_many :unit
 end

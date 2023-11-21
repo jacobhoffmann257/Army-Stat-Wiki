@@ -18,4 +18,5 @@
 #  index_profiles_on_weapon_id  (weapon_id)
 #
 class Profile < ApplicationRecord
+  belongs_to :weapon
 end
