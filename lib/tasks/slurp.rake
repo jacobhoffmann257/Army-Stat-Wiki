@@ -1,107 +1,65 @@
 
 namespace :slurp do
-  desc "tyranid name/stats"
+  desc "tyranid weapons"
   task tyranid_weapons: :environment do
     require "csv"
-    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_weapons.csv"))
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_weapons2.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
-      name = row["Name"]
-      unit = Unit.where(name: name).first
-      weapon_name = row["Weapon_Name"]
+      model = Model.where(name: row["Name"]).first
+      csv_weapon = Weapon.new
+      csv_weapon.name = row["Weapon_Name"]
+      if row["Range"] === "Melee"
+        csv_weapon.range = 0
+      else
+        csv_weapon.range = row["Range"].to_i
+      end
+      #csv_weapon has been read
+      csv_profile = Profile.new
+      csv_profile.armor_piercing = row["AP"].to_i
+      csv_profile.attacks  = row["A"].to_i
+      csv_profile.damage = row["d"].to_i
       if row["Profile"]
-        profile_name = row["Profile"]
-        if profile_name === unit.name
-          w = Weapon.new
-          w.name = row["Weapon_Name"]
-          
-          #checks range
-          range = row["Range"]
-          if range === "Melee"
-            #set range to 0 for melee
-            w.range = 0
+        csv_profile.name = row["Profile"]
+      else
+        csv_profile.name = row["Weapon_Name"]
+      end
+      csv_profile.skill = row["BS/WS"].to_i
+      csv_profile.strength = row["S"].to_i
+      #csv_profile has been read
+      if Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
+        if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength).last
+          weapon = Weapon.where(name: csv_weapon.name).last
+          if Equipment.where(model_id: model.id, weapon_id: weapon.id).last
+            puts "#{model.name} already has this #{weapon.name} equipment" 
           else
-            w.range = range.to_i
+            equipment = Equipment.new
+            equipment.weapon_id = weapon.id
+            equipment.model_id = model.id
+            equipment.save
           end
-          #should add a catch for resinsertation?
-          w.save
-          
-          p = Profile.new
-          p.name = row["Weapon_Name"]
-          p.armor_piercing = row["AP"]
-          p.attacks = row["A"]
-          p.damage = row["D"]
-          p.skill = row["BS/WS"]
-          p.strength = row["S"]
-          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
-          #add after i save weapon
-          p.weapon_id = Weapon.where("created_at").last.id
-          p.save
-          e = Equipment.new
-          e.model_id = unit.id
-          e.weapon_id = Weapon.where("created_at").last.id
-          e.save
         else
-          w = Weapon.new
-          w.name = row["Weapon_Name"]
-          
-          #checks range
-          range = row["Range"]
-          if range === "Melee"
-            #set range to 0 for melee
-            w.range = 0
-          else
-            w.range = range.to_i
-          end
-          #should add a catch for resinsertation?
-          w.save
-          
-          p = Profile.new
-          p.name = row["Profile"]
-          p.armor_piercing = row["AP"]
-          p.attacks = row["A"]
-          p.damage = row["D"]
-          p.skill = row["BS/WS"]
-          p.strength = row["S"]
-          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
-          #add after i save weapon
-          p.weapon_id = Weapon.where("created_at").last.id
-          p.save
-          e = Equipment.new
-          e.model_id = unit.id
-          e.weapon_id = Weapon.where("created_at").last.id
-          e.save
+        csv_weapon.save
+        weapon = Weapon.where("created_at").last
+        csv_profile.weapon_id = weapon.id
+        csv_profile.save
+        profile = Profile.where("created_at").last
+        equipment = Equipment.new
+        equipment.model_id = model.id
+        equipment.weapon_id = weapon.id
+        equipment.save
+        puts "New weapons profile for #{model.name} added"
         end
       else
-        w = Weapon.new
-          w.name = row["Weapon_Name"]
-          
-          #checks range
-          range = row["Range"]
-          if range === "Melee"
-            #set range to 0 for melee
-            w.range = 0
-          else
-            w.range = range.to_i
-          end
-          #should add a catch for resinsertation?
-          w.save
-          
-          p = Profile.new
-          p.name = row["Weapon_Name"]
-          p.armor_piercing = row["AP"]
-          p.attacks = row["A"]
-          p.damage = row["D"]
-          p.skill = row["BS/WS"]
-          p.strength = row["S"]
-          puts p.armor_piercing.to_s + "," + p.attacks.to_s + "," + p.damage.to_s + "," + p.skill.to_s + "," + p.strength.to_s
-          #add after i save weapon
-          p.weapon_id = Weapon.where("created_at").last.id
-          p.save
-          e = Equipment.new
-          e.model_id = unit.id
-          e.weapon_id = Weapon.where("created_at").last.id
-          e.save
+        csv_weapon.save
+        weapon = Weapon.where("created_at").last
+        csv_profile.weapon_id = weapon.id
+        csv_profile.save
+        profile = Profile.where("created_at").last
+        equipment = Equipment.new
+        equipment.model_id = model.id
+        equipment.weapon_id = weapon.id
+        equipment.save
       end
     end
   end
