@@ -1,8 +1,10 @@
 <div id="<%= dom_id profile %>">
-  <p>
-    <strong>Weapon:</strong>
-    <%= profile.weapon_id %>
-  </p>
+    <% if profile.name  != profile.weapon.name %>
+      <p>
+      <strong>Profile</strong>
+      <%= profile.name %>
+      </p>
+    <% end %>
 
   <p>
     <strong>Attacks:</strong>

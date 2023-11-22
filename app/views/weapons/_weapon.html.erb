@@ -3,10 +3,18 @@
     <strong>Name:</strong>
     <%= weapon.name %>
   </p>
-
+<% if weapon.range === 0 %>
+  <p>
+    <strong>Range: </strong>
+      Melee
+  </p>
+<% else %>
   <p>
     <strong>Range:</strong>
     <%= weapon.range %>
   </p>
-
+<% end%>
+  <% weapon.profile.each do |profile|%>
+    <%= render "profiles/profile", profile: profile%>
+  <% end %>
 </div>

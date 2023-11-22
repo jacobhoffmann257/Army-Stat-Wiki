@@ -64,7 +64,7 @@ class ProfilesController < ApplicationController
       @profile = Profile.find(params[:id])
     end
     def set_weapon
-      @weapon = Weapon.find(params[:weapon_id])
+      @weapon = Weapon.find(params[:id])
     end
     # Only allow a list of trusted parameters through.
     def profile_params

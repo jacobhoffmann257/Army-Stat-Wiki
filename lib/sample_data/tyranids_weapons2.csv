@@ -7,8 +7,8 @@ Hive Tyrant,Monstrous bonesword and lash whip [twin-linked],Melee,6,2+,9,-2,3
 Hive Tyrant,Monstrous scything talons [extra attacks],Melee,4,2+,7,-2,2
 Neurotyrant,"Psychic scream [ignores cover, psychic, torrent]","18""",2D6,N/A,5,-1,2
 Neurotyrant,Neurotyrant claws and lashes,Melee,6,3+,5,0,1
-Old One Eye,Old One Eye’s claws and talons,Melee,6,3+,14,-3,D6+1,no,strike
-Old One Eye,Old One Eye’s claws and talons,Melee,12,3+,6,-1,1,no,sweep
+Old One Eye,Old One Eye’s claws and talons,Melee,6,3+,14,-3,D6+1,strike
+Old One Eye,Old One Eye’s claws and talons,Melee,12,3+,6,-1,1,sweep
 Parasite Of Mortrex,"Barbed ovipositor [anti-infantry 3+, extra attacks]",Melee,1,2+,3,-2,3
 Parasite Of Mortrex,Clawed limbs,Melee,6,2+,5,-1,1
 Tervigon,Stinger salvoes,"24""",8,3+,5,0,1

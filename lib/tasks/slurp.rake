@@ -18,7 +18,7 @@ namespace :slurp do
       csv_profile = Profile.new
       csv_profile.armor_piercing = row["AP"].to_i
       csv_profile.attacks  = row["A"].to_i
-      csv_profile.damage = row["d"].to_i
+      csv_profile.damage = row["D"]
       if row["Profile"]
         csv_profile.name = row["Profile"]
       else
