@@ -1,13 +1,12 @@
 <div id="<%= dom_id model %>">
-  <p>
-    <strong>Name:</strong>
-    <%= model.name %>
-  </p>
 
-  <p>
-    <strong>Unit it:</strong>
-    <%= model.unit_id %>
-  </p>
+
+  <% if model.name  != model.unit.name%>
+    <p>
+      <strong>Name:</strong>
+      <%= model.name %>
+    </p>
+  <% end%>
 
   <p>
     <strong>Movement:</strong>

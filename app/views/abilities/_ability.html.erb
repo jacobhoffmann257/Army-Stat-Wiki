@@ -3,15 +3,12 @@
     <strong>Name:</strong>
     <%= ability.name %>
   </p>
-  <p>
-    <strong>Classification:</strong>
-    <%= ability.classification %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= ability.description %>
-  </p>
-
+  <% if ability.description != nil %>
+    <p>
+      <strong>Description:</strong>
+      <%= ability.description %>
+    </p>
+  <%end%>
 
 
 </div>

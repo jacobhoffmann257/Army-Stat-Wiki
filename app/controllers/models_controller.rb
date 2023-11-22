@@ -63,6 +63,7 @@ class ModelsController < ApplicationController
 
   def set_unit
     @unit = Unit.find(params[:unit_id])
+    puts @unit.name
   end
 
   def set_model
