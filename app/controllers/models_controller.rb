@@ -1,9 +1,11 @@
 class ModelsController < ApplicationController
+  before_action :set_unit
   before_action :set_model, only: %i[ show edit update destroy ]
+
 
   # GET /models or /models.json
   def index
-    @models = Model.all
+    @models = @unit.models.all
   end
 
   # GET /models/1 or /models/1.json
@@ -12,7 +14,7 @@ class ModelsController < ApplicationController
 
   # GET /models/new
   def new
-    @model = Model.new
+    @model = @unit.models.new
   end
 
   # GET /models/1/edit
@@ -21,7 +23,7 @@ class ModelsController < ApplicationController
 
   # POST /models or /models.json
   def create
-    @model = Model.new(model_params)
+    @model = @unit.models.new(model_params)
 
     respond_to do |format|
       if @model.save
@@ -58,13 +60,16 @@ class ModelsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_model
-      @model = Model.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def model_params
-      params.require(:model).permit(:name, :unit_it, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
-    end
+  def set_unit
+    @unit = Unit.find(params[:unit_id])
+  end
+
+  def set_model
+    @model = Model.find(params[:id])
+  end
+
+  def model_params
+    params.require(:model).permit(:name, :unit_it, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
+  end
 end

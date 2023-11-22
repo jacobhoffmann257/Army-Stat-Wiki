@@ -69,7 +69,7 @@ namespace :slurp do
     csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats2.csv"))
     csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     f = Faction.new
-    f.name = "Tyranids2"
+    f.name = "Tyranids"
     f.save
     csv.each do |row|
       #Adding unit
@@ -83,8 +83,8 @@ namespace :slurp do
       m.name = row["Model_Name"]
       m.invulnerable_save = row["Invurebale_Save"]
       m.leadership = row["Ld"]
-      m.movement = ["M"]
-      m.objective_control = ["OC"]
+      m.movement = row["M"]
+      m.objective_control = row["OC"]
       m.save_value = row["Sv"]
       m.toughness = row["T"]
       m.wounds = row["W"]

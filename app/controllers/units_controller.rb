@@ -8,8 +8,12 @@ class UnitsController < ApplicationController
 
   # GET /units/1 or /units/1.json
   def show
+    @unit = Unit.find(name: params.fetch(:id))
+    #puts "#{@unit.name}"
   end
-
+  def show 
+    @unit = Unit.find(params.fetch(:id))
+  end
   # GET /units/new
   def new
     @unit = Unit.new
@@ -60,7 +64,7 @@ class UnitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_unit
-      @unit = Unit.find(params[:id])
+      @unit = Unit.where(name: params[:id])
     end
 
     # Only allow a list of trusted parameters through.
