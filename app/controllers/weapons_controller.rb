@@ -1,4 +1,5 @@
 class WeaponsController < ApplicationController
+  before_action :set_equipment
   before_action :set_weapon, only: %i[ show edit update destroy ]
 
   # GET /weapons or /weapons.json
@@ -62,7 +63,9 @@ class WeaponsController < ApplicationController
     def set_weapon
       @weapon = Weapon.find(params[:id])
     end
-
+    def set_equipment
+      @equipment = Equipment.find(params[:equipment_id])
+    end
     # Only allow a list of trusted parameters through.
     def weapon_params
       params.require(:weapon).permit(:name, :range)

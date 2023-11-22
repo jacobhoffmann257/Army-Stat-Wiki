@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :set_weapon
   before_action :set_profile, only: %i[ show edit update destroy ]
 
   # GET /profiles or /profiles.json
@@ -62,7 +63,9 @@ class ProfilesController < ApplicationController
     def set_profile
       @profile = Profile.find(params[:id])
     end
-
+    def set_weapon
+      @weapon = Weapon.find(params[:weapon_id])
+    end
     # Only allow a list of trusted parameters through.
     def profile_params
       params.require(:profile).permit(:weapon_id, :attacks, :skill, :strength, :armor_piercing, :damage)
