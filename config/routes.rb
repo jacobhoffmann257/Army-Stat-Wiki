@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   
-
-  resources :profiles
-  resources :equipment
-  resources :weapons
   resources :units do
     resources :models
+    resources :equipment do
+      resources :weapons do 
+        resources :profiles
+      end
+    end
     resources :unit_abilities do 
-    resources :abilities
+      resources :abilities
     end
   end
   resources :factions

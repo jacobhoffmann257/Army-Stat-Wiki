@@ -4,11 +4,12 @@
     <%= unit.name %>
   </p>
 
-  <p>
-    <strong>Role:</strong>
-    <%= unit.role %>
-  </p>
-
+  <% if unit.role != nil%>
+    <p>
+      <strong>Role:</strong>
+      <%= unit.role %>
+    </p>
+  <%end%>
   <p>
     <strong>Cost:</strong>
     <%= unit.cost %>
@@ -16,7 +17,7 @@
 
   <p>
     <strong>Faction:</strong>
-    <%= unit.faction_id %>
+    <%= Faction.where(id: unit.faction_id).last.name %>
   </p>
 
   <p>
@@ -29,10 +30,12 @@
     <%= unit.base_size %>
   </p>
 
+ <% if unit.picture != nil%>
   <p>
     <strong>Picture:</strong>
     <%= unit.picture %>
   </p>
+  <%end%>
 <% unit.models.each do |model| %>
     
   <%= render "models/model", model: model %>
