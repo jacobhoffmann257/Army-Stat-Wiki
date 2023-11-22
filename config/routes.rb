@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :weapons
   resources :units do
     resources :models
-    resources :unit_abilities 
+    resources :unit_abilities do 
+    resources :abilities
+    end
   end
   resources :factions
 

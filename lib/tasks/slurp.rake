@@ -122,7 +122,7 @@ namespace :slurp do
             u = UnitAbility.new
             a = Ability.new
             a.name = ability
-            a.classification = core
+            a.classification = "core"
             a.save
             new_ability = Ability.where("created_at").last
             
