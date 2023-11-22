@@ -42,5 +42,7 @@
     <strong>Objective control:</strong>
     <%= model.objective_control %>
   </p>
-
+<% model.equipments.each do |equipment|%>
+  <%= render "equipments/equipment", equipment: equipment%>
+<% end %>
 </div>

@@ -21,5 +21,5 @@
 #
 class Model < ApplicationRecord
   belongs_to :unit, class_name: "Unit"
-  has_many :equipments
+  has_many :equipments, class_name: "Equipment"
 end
