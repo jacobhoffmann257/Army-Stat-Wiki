@@ -104,8 +104,10 @@ namespace :slurp do
       name = row["Unit_Name"]
       unit = Unit.where(name: name).first
       core = JSON.parse(row["Core"])
+      puts core
       core.each do |ability|
         if ability === "CORE"
+          puts ability
         else
           if Ability.where(name: ability).last
             a = Ability.where(name: ability).last
@@ -113,7 +115,7 @@ namespace :slurp do
             u.ability_id = a.id
             u.unit_id = unit.id
             u.save
-            puts unit.name
+            puts ability
             #puts u.valid?
             #puts u.errors.full_messages
           else
@@ -123,9 +125,10 @@ namespace :slurp do
             a.classification = core
             a.save
             new_ability = Ability.where("created_at").last
-            u.save
+            
             u.unit_id = unit.id
             u.ability_id = Ability.where(name: ability).last.id
+            u.save
           end
         end
       end
@@ -147,9 +150,10 @@ namespace :slurp do
             a.classification = "faction"
             a.save
             new_ability = Ability.where("created_at").last
-            u.save
+            
             u.unit_id = unit.id
             u.ability_id = Ability.where(name: ability).last.id
+            u.save
           end
         end
       end
@@ -170,9 +174,10 @@ namespace :slurp do
           a.classification = "standard"
           a.save
           new_ability = Ability.where("created_at").last
-          u.save
+          
           u.unit_id = unit.id
           u.ability_id = Ability.where(name: ability).last.id
+          u.save
         end
       end
       cost = JSON.parse(row["Cost"])
@@ -197,9 +202,10 @@ namespace :slurp do
           a.classification = "wargear"
           a.save
           new_ability = Ability.where("created_at").last
-          u.save
+          
           u.unit_id = unit.id
           u.ability_id = Ability.where(name: wargear[0]).last.id
+          u.save
         end
       end
     end
