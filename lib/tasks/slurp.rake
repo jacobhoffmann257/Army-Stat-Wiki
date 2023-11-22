@@ -113,7 +113,7 @@ namespace :slurp do
             u.ability_id = a.id
             u.unit_id = unit.id
             u.save
-            #puts unit.name
+            puts unit.name
             #puts u.valid?
             #puts u.errors.full_messages
           else

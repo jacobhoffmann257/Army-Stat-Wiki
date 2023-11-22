@@ -1,4 +1,5 @@
 class UnitAbilitiesController < ApplicationController
+  before_action :set_unit
   before_action :set_unit_ability, only: %i[ show edit update destroy ]
 
   # GET /unit_abilities or /unit_abilities.json
@@ -12,7 +13,7 @@ class UnitAbilitiesController < ApplicationController
 
   # GET /unit_abilities/new
   def new
-    @unit_ability = UnitAbility.new
+    @unit_ability = @unit.unit_abilities.new
   end
 
   # GET /unit_abilities/1/edit
