@@ -11,4 +11,5 @@
 class Weapon < ApplicationRecord
   has_many :equipment
   has_many :profile
+
 end
