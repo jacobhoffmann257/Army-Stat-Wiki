@@ -20,6 +20,6 @@
 #
 class Unit < ApplicationRecord
   belongs_to :faction, class_name: "Faction"
-  has_many :models
+  has_many :models, class_name: "Model"
   has_many :unit_abilities
 end

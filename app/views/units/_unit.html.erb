@@ -39,13 +39,13 @@
   <% unit.models.each do |model| %>
     <%= render "models/model", model: model %>
   <% end %>
-      <% unit.unit_abilities.each do |unit_abilities| %>
-        <%= render "unit_abilities/unit_ability", unit_ability: unit_abilities %>
-      <% end %>
+      <%# unit.unit_abilities.each do |unit_abilities| %>
+        <%#= render "unit_abilities/unit_ability", unit_ability: unit_abilities %>
+      <%# end %>
 
 <% unit.models.each do |model| %>
-  <% model.equipments.melee_weapons.each do |weapon| %>
-    <%= render "weapons/weapon", weapon: weapon %>
+  <% model.equipments.each do |equipment| %>
+    <%= render "equipments/equipment", equipment: equipment %>
   <% end %>
 <% end %>
 <div class="container text-center">

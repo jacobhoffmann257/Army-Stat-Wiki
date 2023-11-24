@@ -11,5 +11,6 @@
 class Weapon < ApplicationRecord
   has_many :equipment
   has_many :profile
-
+  #scope :melee_weapons, -> { Weapon.where(range: 0)
+  #scope :range_weapons, -> { Weapon.where("range > ? ", 0) }
 end
