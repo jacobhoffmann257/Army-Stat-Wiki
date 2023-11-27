@@ -1,34 +1,44 @@
 <div id="<%= dom_id profile %>">
-    <% if profile.name  != profile.weapon.name %>
-      <p>
-      <strong>Profile</strong>
-      <%= profile.name %>
-      </p>
-    <% end %>
-
-  <p>
-    <strong>Attacks:</strong>
-    <%= profile.attacks %>
-  </p>
-
-  <p>
-    <strong>Skill:</strong>
-    <%= profile.skill %>
-  </p>
-
-  <p>
-    <strong>Strength:</strong>
-    <%= profile.strength %>
-  </p>
-
-  <p>
-    <strong>Armor piercing:</strong>
-    <%= profile.armor_piercing %>
-  </p>
-
-  <p>
-    <strong>Damage:</strong>
-    <%= profile.damage %>
-  </p>
-
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <% if profile.name  != profile.weapon.name %>
+            <p>
+            <strong>Profile</strong>
+            <%= profile.name %>
+            </p>
+          <% end %>
+        </div>
+        <div class="col">
+          <p>
+            <strong>Attacks:</strong>
+            <%= profile.attacks %>
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            <strong>Skill:</strong>
+            <%= profile.skill %>
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            <strong>Strength:</strong>
+            <%= profile.strength %>
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            <strong>Armor piercing:</strong>
+            <%= profile.armor_piercing %>
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            <strong>Damage:</strong>
+            <%= profile.damage %>
+          </p>
+        </div>
+      </div>
+  </div>
 </div>
