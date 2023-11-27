@@ -1,77 +1,73 @@
 <div id="<%= dom_id model %>">
 <div class="container text-center border">
-    <div class="d-flex justify-content-start">
-
-      <div class="row border">
-        <% if model.name  != model.unit.name%>
-          <div class="col border">
-            <p>
-              <strong>Name:</strong>
-            </p>
-          </div>
-        <% end%>
-        <div class="col border">
-          <p><strong>M</strong></p>
-        </div>
-        <div class="col border">
-          <p><strong>T</strong></p>
-        </div>
-        <div class="col border">
-          <p><strong>SV</strong></p>
-        </div>
-        <% if model.invulnerable_save  != 0%>
-          <div class="col">
-            <p>
-              <strong>Invulnerable Save</strong>
-            </p>
-          </div>
-        <% end%>
-        <div class="col border">
-          <p><strong>W</strong></p>
-        </div>
-        <div class="col border">
-          <p><strong>LD</strong></p>
-        </div>
-        <div class="col border">
-          <p><strong>OC</strong></p>
-        </div>
-
+  <div class="row border">
+    <% if model.name != model.unit.name %>
+      <div class="col border">
+        <p>
+          <strong>Name:</strong>
+        </p>
       </div>
+    <% end%>
+    <div class="col border">
+      <p><strong>M</strong></p>
     </div>
-    <div class= "d-flex justify-content-start">
-      <div class="row border">
-        <% if model.name  != model.unit.name%>
-          <div class="col">
-            <p>
-              <%= model.name%>
-            </p>
-          </div>
-        <% end%>
-        <div class="col border">
-          <%= model.movement %>
-        </div>
-        <div class="col border">
-          <%= model.toughness %>
-        </div>
-            <div class="col border">
-          <%= model.save_value %>
-        </div>
-        <% if model.invulnerable_save  != 0%>
-          <div class="col border">
-            <p>
-              <%= model.invulnerable_save%>
-            </p>
-          </div>
-        <% end%>
-        <div class="col border">
-          <%= model.leadership %>
-        </div>
-            <div class="col border">
-          <%= model.objective_control %>
-        </div>
-
+    <div class="col border">
+      <p><strong>T</strong></p>
+    </div>
+    <div class="col border">
+      <p><strong>SV</strong></p>
+    </div>
+    <% if model.invulnerable_save  != 0%>
+      <div class="col">
+        <p>
+          <strong>Invulnerable Save</strong>
+        </p>
       </div>
-      
+    <% end%>
+    <div class="col border">
+      <p><strong>W</strong></p>
     </div>
+    <div class="col border">
+      <p><strong>LD</strong></p>
+    </div>
+    <div class="col border">
+      <p><strong>OC</strong></p>
+    </div>
+
+  </div>
+  <div class="row border">
+    <% if model.name  != model.unit.name%>
+      <div class="col">
+        <p>
+          <%= model.name%>
+        </p>
+      </div>
+    <% end%>
+    <div class="col border">
+      <%= model.movement %>
+    </div>
+    <div class="col border">
+      <%= model.toughness %>
+    </div>
+        <div class="col border">
+      <%= model.save_value %>
+    </div>
+    <% if model.invulnerable_save  != 0%>
+      <div class="col border">
+        <p>
+          <%= model.invulnerable_save%>
+        </p>
+      </div>
+    <% end%>
+    <div class="col border">
+      <%= model.wounds %>
+    </div>
+    <div class="col border">
+      <%= model.leadership %>
+    </div>
+        <div class="col border">
+      <%= model.objective_control %>
+    </div>
+
   </div>
 </div>
