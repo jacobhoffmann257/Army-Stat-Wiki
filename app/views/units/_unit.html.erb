@@ -6,8 +6,13 @@
         </div>
     </div>
     <div class= "row border">
-      <p>Weapons</p>
-        <%= render "units/weapons", unit: unit%>
+      <div class= "col border">
+        <p>Weapons</p>
+          <%= render "units/weapons", unit: unit%>
+      </div>
+      <div class="col border">
+        <p>Abilities</p>
+      </div>
     </div>
   </div>
   <%# gets models %>
