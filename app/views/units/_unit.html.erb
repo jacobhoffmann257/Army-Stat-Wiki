@@ -1,4 +1,14 @@
 <div id="<%= dom_id unit %>">
-  <%= render "units/stats", unit: unit%>
+  <div class="container border">
+    <div class="row border">
+      <div class="col border">
+          <%= render "units/stats", unit: unit%>
+        </div>
+    </div>
+    <div class= "row border">
+      <p>Weapons</p>
+        <%= render "units/weapons", unit: unit%>
+    </div>
+  </div>
   <%# gets models %>
 </div>

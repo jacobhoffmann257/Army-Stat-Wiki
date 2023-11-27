@@ -1,0 +1,44 @@
+<div id="<%= dom_id unit %>">
+    <% melee = Array.new %>
+    <% range = Array.new %>
+    <%# Searchs there a models weapons and puts the as melee or range %>
+    <% unit.models.each do |model| %>
+      <% model.equipments.each do |equipment| %>
+        <%if equipment.weapon.range == 0 %>
+          <% if melee.include?(equipment)%>
+          <% else %>
+            <% melee.push(equipment) %>
+          <% end %>
+        <% else%>
+          <% if range.include?(equipment)%>
+          <% else %>
+            <% range.push(equipment) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%# Shows melee weapons and range weapons if they exist %>
+    <% if range.length !=0 %>
+    <div class= "row border">
+      <p>Range Weapons</p>
+        <ul class= "list-group">
+          <% range.each do |equipment| %>
+            <li class="list-group-item">
+              <%= render "equipments/equipment", equipment: equipment%>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <div class="row border">
+      <p>Melee Weapons</p>
+      <ul class= "list-group">
+          <% range.each do |equipment| %>
+            <li class="list-group-item">
+              <%= render "equipments/equipment", equipment: equipment%>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+
+</div>
