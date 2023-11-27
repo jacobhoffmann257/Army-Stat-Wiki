@@ -40,18 +40,29 @@
     <%= render "models/model", model: model %>
   <% end %>
 <%# gets weapons %>
-<% unit.models.each do |model| %>
-  <% melee = Array.new %>
-  <% model.equipments.each do |equipment| %>
-    <% if(equipment.weapon.range == 0)%>
-    <% melee.push(equipment) %>
+  <% unit.models.each do |model| %>
+    <% melee = Array.new %>
+    <% range = Array.new %>
+    <% model.equipments.each do |equipment| %>
+      <% if(equipment.weapon.range == 0)%>
+        <% melee.push(equipment) %>
+      <% else %>
+        <% range.push(equipment)%>
+      <% end %>
+    <% end %>
+    <%if range.length == 0 %>
+        <% melee.each do |equipment|%>
+        <%= render "equipments/equipment", equipment: equipment %>
+        <% end %>
+    <%else%>
+        <% range.each do |equipment|%>
+        <%= render "equipments/equipment", equipment: equipment %>
+        <% end %>
+        <% melee.each do |equipment|%>
+        <%= render "equipments/equipment", equipment: equipment %>
+        <% end %>
     <% end %>
   <% end %>
-
-  <% melee.each do |equipment|%>
-    <%= render "equipments/equipment", equipment: equipment %>
-  <% end %>
-<% end %>
 
 <%# This following block works on collecting all weapons for a model %>
 <%# unit.models.each do |model| %>

@@ -17,7 +17,7 @@ namespace :slurp do
       #csv_weapon has been read
       csv_profile = Profile.new
       csv_profile.armor_piercing = row["AP"].to_i
-      csv_profile.attacks  = row["A"].to_i
+      csv_profile.attacks  = row["A"]
       csv_profile.damage = row["D"]
       if row["Profile"]
         csv_profile.name = row["Profile"]
