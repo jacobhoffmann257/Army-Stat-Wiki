@@ -14,4 +14,8 @@ class Equipment < ApplicationRecord
   belongs_to :model
   belongs_to :weapon
 
+  # has_many :weapon, class_name: "Weapon", foreign_key: "weapon_id"
+  
+  # has_many :melee_weapon, -> {weapon.select(range: 0)}
+  #scope :melee, -> { where range: 0 }
 end

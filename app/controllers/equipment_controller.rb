@@ -9,6 +9,9 @@ class EquipmentController < ApplicationController
 
   # GET /equipment/1 or /equipment/1.json
   def show
+    @melee = Equipment.melee_weapons
+    pp "hi"
+    puts @melee
   end
 
   # GET /equipment/new

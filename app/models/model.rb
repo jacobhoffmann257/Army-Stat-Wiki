@@ -22,5 +22,6 @@
 class Model < ApplicationRecord
   belongs_to :unit, class_name: "Unit"
   has_many :equipments, class_name: "Equipment"
-  has_many :melee_weapons, through: :melee_weapons, class_name: "Equipment"
+  #has_and_belongs_to_many :weapon, join_table: 'equipment'
+ #has_many :melee_weapons, through: :melee_weapons, class_name: "Equipment"
 end

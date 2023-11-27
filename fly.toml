@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for delicate-forest-1816 on 2023-11-24T21:30:27Z
+# fly.toml app configuration file generated for damp-glade-504 on 2023-11-24T22:58:40Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "delicate-forest-1816"
+app = "damp-glade-504"
 primary_region = "ord"
 console_command = "/rails/bin/rails console"
 
