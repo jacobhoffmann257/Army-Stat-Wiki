@@ -48,7 +48,7 @@ task({ :scrape_tyranids_data => :environment}) do
   
   end
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Core", "Faction", "Standard", "Cost", "Bodygaurd","Wargear" ]
+    csv << ["Unit Name", "Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
       name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
@@ -91,7 +91,10 @@ task({ :scrape_tyranids_data => :environment}) do
             end
             abilities_list << guard
         elsif /<td>/.match(ability.to_s)
-          #model size
+          #model size and cost
+          if !abilities_list[4]
+            abilities_list << ["Wargear", "*"]
+          end
           modelsize = Array.new
             ability.css("table").each do |table|
               table.css("tr").each do |row|
