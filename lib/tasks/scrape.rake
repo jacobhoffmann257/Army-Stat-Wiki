@@ -48,7 +48,7 @@ task({ :scrape_tyranids_data => :environment}) do
   
   end
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Core", "Faction", "Standard", "Cost", "Bodygaurd" ]
+    csv << ["Unit Name", "Core", "Faction", "Standard", "Cost", "Bodygaurd","Wargear" ]
     parsed_page.css('.dsOuterFrame').each do |box|
       name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
@@ -58,8 +58,10 @@ task({ :scrape_tyranids_data => :environment}) do
       #Extracting Ability details
       abilities_list = Array.new
       abilities_list << name
+
       box.css('.dsAbility').each do |ability|
-        if /CORE/.match(ability.text.strip) || /FACTION/.match(ability.text.strip)
+        
+        if /CORE/.match(ability.text.strip)
           #gets core and faction 
           raw = ability.text.strip
            change1 = raw.gsub(":","*")
@@ -67,6 +69,16 @@ task({ :scrape_tyranids_data => :environment}) do
            change3 =  change2.gsub("\"", "")
            thing = change3.split("*")
            abilities_list << thing
+        elsif /FACTION/.match(ability.text.strip)
+         if !abilities_list[1]
+           abilities_list << ["CORE", "*"]
+          end
+          raw = ability.text.strip
+          change1 = raw.gsub(":","*")
+          change2 = change1.gsub(",","*")
+          change3 =  change2.gsub("\"", "")
+          thing = change3.split("*")
+          abilities_list << thing
         elsif /This model is equipped with/.match(ability.text.strip)
         elsif /This model can be attached to the following unit/.match(ability.text.strip)
           guard = Array.new
@@ -78,7 +90,6 @@ task({ :scrape_tyranids_data => :environment}) do
               
             end
             abilities_list << guard
-            abilities_list << csv
         elsif /<td>/.match(ability.to_s)
           #model size
           modelsize = Array.new
@@ -120,6 +131,7 @@ task({ :scrape_tyranids_data => :environment}) do
               final_ability << ability_array[pos]
             end
             abilities_list << final_ability
+          
           elsif /<div class="dsLineHor">/.match(ability.to_s)
             raw = ability.text.strip
             raw = raw.split(".")

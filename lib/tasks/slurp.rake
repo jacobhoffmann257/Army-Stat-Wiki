@@ -1,5 +1,35 @@
 
 namespace :slurp do
+  desc "tyranid data"
+  task tyranid_data: :enviroment do 
+    require "csv"
+    #Stats
+    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats2.csv"))
+    csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
+    f = Faction.new
+    f.name = "Tyranids"
+    f.save
+    csv.each do |row|
+      #Adding unit
+      u = Unit.new
+      u.name = row["Unit_Name"]
+      u.faction_id = f.id
+      u.base_size = row["Base_Size"]
+      u.save
+      #Adding Models
+      m = Model.new
+      m.name = row["Model_Name"]
+      m.invulnerable_save = row["Invurebale_Save"]
+      m.leadership = row["Ld"]
+      m.movement = row["M"]
+      m.objective_control = row["OC"]
+      m.save_value = row["Sv"]
+      m.toughness = row["T"]
+      m.wounds = row["W"]
+      m.unit_id = Unit.where(name: u.name).first.id
+      m.save
+    end
+  end
   desc "tyranid weapons"
   task tyranid_weapons: :environment do
     require "csv"
