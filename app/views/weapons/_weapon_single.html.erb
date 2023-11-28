@@ -1,2 +1,19 @@
 <div id="<%= dom_id weapon %>">
+  <div class="row border" >
+    <div class="col border">
+      <p><%= weapon.name %></p>
+    </div>
+    <div class="col-sm-2 border">
+      <% if weapon.range === 0%>
+        <p>Melee</p>
+      <% else %>
+        <p><%= weapon.range%></p>
+      <% end %>
+    </div>
+    <div class="col border">
+      <% profile.each do |p|%>
+        <%= render "profiles/profile", profile: p %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,28 +1,12 @@
 <div id="<%= dom_id weapon %>">
-  <div class="container text-center">
-    <div class="row border">
-      <div class="col border">
-        <p>
-          <%= weapon.name %>
-        </p>
-      </div>
-      <div class="col border">
-        <% if weapon.range %>
-          <p>
-            <strong>Range: </strong>
-              Melee
-          </p>
-        <% else %>
-          <p>
-            <strong>Range:</strong>
-            <%= weapon.range %>
-          </p>
-        <% end%>
-      </div>
-      <div class="col">
-        <% weapon.profile.each do |profile|%>
-          <%= render "profiles/profile", profile: profile%>
-        <% end %>
-      </div>
-    </div>
+<% @profile_array = weapon.get_profiles%>
+<% if @profile_array.length > 1 %>
+  <% @profile_array.each do |profile|%>
+    <%= render "weapons/weapon_multiple", weapon: weapon%>
+  <% end %>
+<% else %>
+  <% @profile_array.each do |profile|%>
+    <%= render "weapons/weapon_single", weapon: weapon, profile: @profile_array %>
+  <% end %>
+<% end %>
 </div>
