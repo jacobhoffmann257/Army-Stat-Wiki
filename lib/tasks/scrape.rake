@@ -136,7 +136,9 @@ task({ :scrape_tyranids_data => :environment}) do
               ability_array = raw.split("*")
               if /<i>/.match(ability.to_s) 
                 ability.css("i").each do |i|
-                  ability_array << i.text.strip
+                  raw = i.text.strip
+                  raw = raw.gsub("’","'")
+                  ability_array << raw
                 end
               end
               abilitity_names.each do |abilname|

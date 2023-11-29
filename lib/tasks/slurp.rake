@@ -142,6 +142,7 @@ namespace :slurp do
               u.save
             end
           end
+        end
           #Faction abilities
           faction = JSON.parse(row["Faction"])
           faction.each do |ability|
@@ -199,36 +200,39 @@ namespace :slurp do
           unit.save
           #Wargear
           wargear = JSON.parse(row["Wargear"])
+            puts wargear.length
+            x = 1
             wargear.each do |gear|
+              
               if gear[0] === "Wargear"
               else
+                puts x.to_s
                 ability = Ability.new
                 ability.name = gear[0]
                 ability.description = gear[1]
                 if Ability.where(name:  ability.name, description: ability.description).last
                   #Checks if the wargear exists
-                  a = Ability.where(name: ability).last
+                  a = Ability.where(name: ability.name).last
                   u = UnitAbility.new
                   u.ability_id = a.id
                   u.unit_id = unit.id
                   u.save
+                  puts ability.name
                 else
+                  puts x.to_s
                   u = UnitAbility.new
-                  a = Ability.new
-                  a.name = ability[0]
-                  a.description = ability[1]
-                  a.classification = "standard"
-                  a.save
+                  a.classification = "wargear"
+                  ability.save
                   new_ability = Ability.where("created_at").last
-                  
                   u.unit_id = unit.id
-                  u.ability_id = Ability.where(name: ability).last.id
+                  u.ability_id = new_ability.id
                   u.save
                 end
+                x = x+1
               end
             end
           #Bodygaurds
-        end
+        
       end
       #Keywords
   end
