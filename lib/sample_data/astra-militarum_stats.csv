@@ -1,0 +1,131 @@
+Unit_Name,Base_Size,Model_Name,Invurebale_Save,Desc,M,T,Sv,W,Ld,OC
+‘Iron Hand' Straken,(25mm),‘Iron Hand' Straken,4+,records purged,6,3,3,4,7,1
+Cadian Castellan,(28mm),Cadian Castellan,5+,records purged,6,3,5,4,7,1
+Cadian Command Squad,(28mm),CADIAN COMMANDER,0,records purged,6,3,5,3,7,1
+Cadian Command Squad,(28mm),VETERAN GUARDSMAN,0,records purged,6,3,5,1,7,1
+Commissar,(28mm),Commissar,5+,records purged,6,3,5,3,6,1
+Gaunt's Ghosts,(28mm),TANITH GHOST,5+,records purged,6,3,5,2,7,1
+Gaunt's Ghosts,(28mm),IBRAM GAUNT,5+,records purged,6,3,4,3,6,1
+Lord Solar Leontus,(80mm),Lord Solar Leontus,4+,records purged,12,4,3,8,6,2
+Militarum Tempestus Command Squad,(25mm),TEMPESTUS SCION,0,records purged,6,3,4,1,7,1
+Militarum Tempestus Command Squad,(25mm),TEMPESTOR PRIME,0,records purged,6,3,4,3,7,1
+Platoon Command Squad,(25mm),PLATOON COMMANDER,0,records purged,6,3,5,3,7,1
+Platoon Command Squad,(25mm),VETERAN HEAVY WEAPONS TEAM,0,records purged,6,3,5,2,7,2
+Platoon Command Squad,(25mm),VETERAN GUARDSMAN,0,records purged,6,3,5,1,7,1
+Primaris Psyker,(32mm),Primaris Psyker,0,records purged,6,3,5,3,7,1
+Regimental Enginseer,(32mm),Regimental Enginseer,5+,records purged,6,4,3,3,7,1
+Regimental Preacher,(25mm),Regimental Preacher,4+,records purged,6,3,6,3,7,1
+Sergeant Harker,(25mm),Sergeant Harker,0,records purged,6,4,5,3,7,1
+Sly Marbo,(32mm),Sly Marbo,0,records purged,6,3,5,4,7,1
+Tank Commander,(Use model),Tank Commander,0,records purged,10,11,2,13,7,3
+Ursula Creed,(32mm),Ursula Creed,5+,records purged,6,3,4,4,7,1
+Death Korps Marshal,(25mm),Death Korps Marshal,5+,records purged,6,3,5,4,7,1
+Death Rider Squadron Commander,(40mm),Death Rider Squadron Commander,5+,records purged,12,4,4,5,7,1
+Death Rider Commissar,(40mm),Death Rider Commissar,5+,records purged,12,4,4,4,6,1
+Quartermaster Cadre Squad,(25mm),QUARTERMASTER REVENANT,0,records purged,6,3,4,3,7,1
+Quartermaster Cadre Squad,(25mm),MEDICAE SERVITOR,0,records purged,6,3,4,1,8,0
+Rein And Raus,(25mm),Rein And Raus,0,records purged,6,2,6,1,8,1
+Cadian Shock Troops,(25mm),Cadian Shock Troops,0,records purged,6,3,5,1,7,2
+Catachan Jungle Fighters,(25mm),Catachan Jungle Fighters,0,records purged,6,3,5,1,7,2
+Death Korps Of Krieg,(25mm),Death Korps Of Krieg,0,records purged,6,3,5,1,7,2
+Infantry Squad,(25mm),GUARDSMAN,0,records purged,6,3,5,1,7,2
+Infantry Squad,(25mm),HEAVY WEAPONS TEAM,0,records purged,6,3,5,2,7,4
+Chimera,(Use model),Chimera,0,records purged,10,9,3,11,7,2
+Taurox,(Use model),Taurox,0,records purged,12,8,3,10,7,2
+Taurox Prime,(Use model),Taurox Prime,0,records purged,12,8,3,10,7,2
+Storm Chimera,(Use model),Storm Chimera,0,records purged,10,9,3,11,7,2
+Aegis Defence Line,(Use model),Aegis Defence Line,0,records purged,0,12,2,10,7,0
+Earthshaker Platform,(Use model),Earthshaker Platform,0,records purged,0,8,3,8,7,2
+Hydra Platform,(Use model),Hydra Platform,0,records purged,0,8,3,8,7,2
+Manticore Platform,(Use model),Manticore Platform,0,records purged,0,8,3,8,7,2
+Sabre Weapons Battery,(Use model),Sabre Weapons Battery,0,records purged,0,4,4,4,7,1
+Armoured Sentinels,(80mm),Armoured Sentinels,0,records purged,8,8,2,7,7,2
+Attilan Rough Riders,(60 x 35mm),Attilan Rough Riders,0,records purged,12,4,4,2,7,1
+Baneblade,(Use model),Baneblade,0,records purged,9,13,2,24,7,8
+Banehammer,(Use model),Banehammer,0,records purged,9,13,2,24,7,8
+Banesword,(Use model),Banesword,0,records purged,9,13,2,24,7,8
+Basilisk,(Use model),Basilisk,0,records purged,10,9,3,11,7,3
+Bullgryn Squad,(40mm),Bullgryn Squad,0,records purged,6,6,4,3,7,1
+Deathstrike,(Use model),Deathstrike,0,records purged,10,10,3,11,7,3
+Doomhammer,(Use model),Doomhammer,0,records purged,9,13,2,24,7,8
+Field Ordnance Battery,(100mm),Field Ordnance Battery,0,records purged,4,5,4,6,7,2
+Heavy Weapons Squad,(50mm),Heavy Weapons Squad,0,records purged,6,3,5,2,7,2
+Hellhammer,(Use model),Hellhammer,0,records purged,9,13,2,24,7,8
+Hellhound,(Use model),Hellhound,0,records purged,10,10,2,11,7,3
+Hydra,(Use model),Hydra,0,records purged,10,9,3,11,7,3
+Kasrkin,(28mm),Kasrkin,0,records purged,6,3,4,1,7,1
+Leman Russ Battle Tank,(Use model),Leman Russ Battle Tank,0,records purged,10,11,2,13,7,3
+Leman Russ Demolisher,(Use model),Leman Russ Demolisher,0,records purged,10,11,2,13,7,3
+Leman Russ Eradicator,(Use model),Leman Russ Eradicator,0,records purged,10,11,2,13,7,3
+Leman Russ Executioner,(Use model),Leman Russ Executioner,0,records purged,10,11,2,13,7,3
+Leman Russ Exterminator,(Use model),Leman Russ Exterminator,0,records purged,10,11,2,13,7,3
+Leman Russ Punisher,(Use model),Leman Russ Punisher,0,records purged,10,11,2,13,7,3
+Leman Russ Vanquisher,(Use model),Leman Russ Vanquisher,0,records purged,10,11,2,13,7,3
+Manticore,(Use model),Manticore,0,records purged,10,10,3,11,7,3
+Munitorum Servitors,(25mm),Munitorum Servitors,6+,records purged,6,3,4,1,8,0
+Nork Deddog,(40mm),Nork Deddog,0,records purged,6,6,4,6,7,1
+Ogryn Bodyguard,(40mm),Ogryn Bodyguard,0,records purged,6,6,5,6,7,1
+Ogryn Squad,(40mm),Ogryn Squad,0,records purged,6,6,5,3,7,1
+Ratling Snipers,(25mm),Ratling Snipers,0,records purged,6,2,6,1,8,1
+Regimental Attachés,Unknown,Regimental Attachés,0,records purged,6,3,5,1,7,1
+Rogal Dorn Battle Tank,(Use model),Rogal Dorn Battle Tank,0,records purged,10,12,2,18,7,5
+Scout Sentinels,(80mm),Scout Sentinels,0,records purged,10,7,3,7,7,2
+Shadowsword,(Use model),Shadowsword,0,records purged,9,13,2,24,7,8
+Stormlord,(Use model),Stormlord,0,records purged,9,13,2,24,7,8
+Stormsword,(Use model),Stormsword,0,records purged,9,13,2,24,7,8
+Tempestus Scions,(25mm),Tempestus Scions,0,records purged,6,3,4,1,7,1
+Valkyrie,(120 x 92mm flying base),Valkyrie,0,records purged,10,2,14,7,0
+Wyvern,(Use model),Wyvern,0,records purged,10,9,3,11,7,3
+Avenger Strike Fighter,(120 x 92mm flying base),Avenger Strike Fighter,0,records purged,9,3,14,7,0
+Carnodon,(Use model),Carnodon,0,records purged,12,10,2,12,7,3
+Colossus,(Use model),Colossus,0,records purged,10,10,2,11,7,3
+Crassus,(Use model),Crassus,0,records purged,10,11,2,18,7,5
+Cyclops Demolition Vehicle,(Use model),Cyclops Demolition Vehicle,0,records purged,8,4,3,4,8,0
+Death Rider Squadron,(40mm),Death Rider Squadron,0,records purged,12,4,4,2,7,1
+Earthshaker Carriage Battery,(Use model),Earthshaker Carriage Battery,0,records purged,4,7,4,6,7,2
+Hades Breaching Drill,(Use model),Hades Breaching Drill,0,records purged,6,9,3,8,7,2
+Macharius,(Use model),Macharius,0,records purged,9,13,2,20,7,8
+Macharius Vanquisher,(Use model),Macharius Vanquisher,0,records purged,9,13,2,20,7,8
+Macharius Vulcan,(Use model),Macharius Vulcan,0,records purged,9,13,2,20,7,8
+Malcador,(Use model),Malcador,0,records purged,10,11,2,18,7,5
+Malcador Annihilator,(Use model),Malcador Annihilator,0,records purged,10,11,2,18,7,5
+Malcador Defender,(Use model),Malcador Defender,0,records purged,10,11,2,18,7,5
+Malcador Infernus,(Use model),Malcador Infernus,0,records purged,10,11,2,18,7,5
+Marauder Bomber,(Use model),Marauder Bomber,0,records purged,10,2,20,7,0
+Marauder Destroyer,(Use model),Marauder Destroyer,0,records purged,10,2,20,7,0
+Medusa Carriage Battery,(Use model),Medusa Carriage Battery,0,records purged,4,7,4,6,7,2
+Praetor,(Use model),Praetor,0,records purged,10,11,2,18,7,5
+Rapier Laser Destroyer Battery,(Use model),Rapier Laser Destroyer Battery,0,records purged,6,4,4,3,7,1
+Stormblade,(Use model),Stormblade,0,records purged,9,13,2,24,7,8
+Tarantula Battery,(Use model),Tarantula Battery,0,records purged,0,5,3,4,7,0
+Thunderbolt Heavy Fighter,(120 x 92mm flying base),Thunderbolt Heavy Fighter,0,records purged,10,3,15,7,0
+Trojan Support Vehicle,(Use model),Trojan Support Vehicle,0,records purged,10,9,3,11,7,2
+Valdor,(Use model),Valdor,0,records purged,9,13,2,20,7,8
+Voss-pattern Lightning,(120 x 92mm flying base),Voss-pattern Lightning,0,records purged,9,3,14,7,0
+Vulture Gunship,(120 x 92mm flying base),Vulture Gunship,0,records purged,10,2,14,7,0
+Aquila Lander,(120 x 92mm flying base),Aquila Lander,0,records purged,9,3,12,7,0
+Arkurian Stormhammer,(Use model),Arkurian Stormhammer,0,records purged,9,13,2,24,7,8
+Armageddon-pattern Medusa,(Use model),Armageddon-pattern Medusa,0,records purged,10,9,3,11,7,3
+Arvus Lighter,(120 x 92mm flying base),Arvus Lighter,0,records purged,8,3,8,7,0
+Atlas Recovery Vehicle,(Use model),Atlas Recovery Vehicle,0,records purged,10,9,3,10,7,3
+Centaur Light Carrier,(Use model),Centaur Light Carrier,0,records purged,10,7,3,7,7,1
+Death Korps Grenadier Squad,(25mm),GRENADIER,0,records purged,6,3,4,1,7,2
+Death Korps Grenadier Squad,(25mm),HEAVY WEAPONS TEAM,0,records purged,6,3,4,2,7,1
+Dominus Armoured Siege Bombard,(Use model),Dominus Armoured Siege Bombard,0,records purged,9,13,2,20,7,8
+Elysian Drop Sentinel,(60mm),Elysian Drop Sentinel,0,records purged,10,6,3,6,7,2
+Elysian Sniper Squad,(60mm),Elysian Sniper Squad,0,records purged,6,3,5,2,7,2
+Gorgon Heavy Transport,(Use model),Gorgon Heavy Transport,5+,records purged,9,13,2,20,7,8
+Griffon Mortar Carrier,(Use model),Griffon Mortar Carrier,0,records purged,10,9,3,11,7,3
+Heavy Mortar Team,(Use model),Heavy Mortar Team,0,records purged,4,5,3,4,7,2
+Heavy Quad Launcher Team,(Use model),Heavy Quad Launcher Team,0,records purged,4,5,3,4,7,2
+Macharius Omega,(Use model),Macharius Omega,0,records purged,9,13,2,20,7,8
+Minotaur,(Use model),Minotaur,0,records purged,10,11,2,18,7,5
+Mukaali Riders,(40mm),Mukaali Riders,0,records purged,8,6,4,5,7,2
+Salamander Command Vehicle,(Use model),Salamander Command Vehicle,0,records purged,12,8,3,10,7,3
+Salamander Scout Vehicle,(Use model),Salamander Scout Vehicle,0,records purged,12,8,3,10,7,3
+Sentinel Powerlifter,(Use model),Sentinel Powerlifter,0,records purged,8,7,3,6,7,2
+Stygies Destroyer Tank Hunter,(Use model),Stygies Destroyer Tank Hunter,0,records purged,10,11,2,13,7,3
+Tauros Assault Vehicle,(Use model),Tauros Assault Vehicle,0,records purged,12,6,4,6,7,2
+Tauros Venator,(Use model),Tauros Venator,0,records purged,12,6,4,6,7,2
+Valkyrie Sky Talon,(120 x 92mm flying base),Valkyrie Sky Talon,0,records purged,10,2,14,7,0
+Vendetta Gunship,(120 x 92mm flying base),Vendetta Gunship,0,records purged,10,2,14,7,0
