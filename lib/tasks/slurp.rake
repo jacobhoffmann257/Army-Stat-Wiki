@@ -121,8 +121,10 @@ namespace :slurp do
         core = JSON.parse(row["Core"])
         core.each do |ability|
           #Core abilities
-          if ability === "CORE"
+          if ability === "CORE"|| ability === "*"
           else
+            puts name
+            puts ability
             if Ability.where(name: ability).last
               #Checks if the ability exists if it does it makes a new point to the unit
               a = Ability.where(name: ability).last
@@ -147,7 +149,7 @@ namespace :slurp do
           #Faction abilities
           faction = JSON.parse(row["Faction"])
           faction.each do |ability|
-            if ability === "FACTION"
+            if ability === "FACTION"|| ability === "*"
             else
               if Ability.where(name: ability).last
                 #checks if the ability exists
@@ -233,123 +235,4 @@ namespace :slurp do
       end
       #Keywords
   end
-
-  desc "tyranid abilities"
-  task tyranid_abilities: :environment do
-    require "csv"
-    require "json"
-    csv_text = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities2.csv"))
-    csv = CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
-    csv.each do |row|
-      #Core Abilities
-      name = row["Unit_Name"]
-      unit = Unit.where(name: name).first
-      core = JSON.parse(row["Core"])
-      puts core
-      core.each do |ability|
-        if ability === "CORE"
-          puts ability
-        else
-          if Ability.where(name: ability).last
-            a = Ability.where(name: ability).last
-            u = UnitAbility.new
-            u.ability_id = a.id
-            u.unit_id = unit.id
-            u.save
-            puts ability
-            #puts u.valid?
-            #puts u.errors.full_messages
-          else
-            u = UnitAbility.new
-            a = Ability.new
-            a.name = ability
-            a.classification = "core"
-            a.save
-            new_ability = Ability.where("created_at").last
-            
-            u.unit_id = unit.id
-            u.ability_id = Ability.where(name: ability).last.id
-            u.save
-          end
-        end
-      end
-      #next Faction
-      faction = JSON.parse(row["Faction"])
-      faction.each do |ability|
-        if ability === "FACTION"
-        else
-          if Ability.where(name: ability).last
-            a = Ability.where(name: ability).last
-            u = UnitAbility.new
-            u.ability_id = a.id
-            u.unit_id = unit.id
-            u.save
-          else
-            u = UnitAbility.new
-            a = Ability.new
-            a.name = ability
-            a.classification = "faction"
-            a.save
-            new_ability = Ability.where("created_at").last
-            
-            u.unit_id = unit.id
-            u.ability_id = Ability.where(name: ability).last.id
-            u.save
-          end
-        end
-      end
-      #standard abilities
-      standard = JSON.parse(row["Standard"])
-      standard.each do |ability|
-        if Ability.where(name:  ability[0]).last
-          a = Ability.where(name: ability).last
-          u = UnitAbility.new
-          u.ability_id = a.id
-          u.unit_id = unit.id
-          u.save
-        else
-          u = UnitAbility.new
-          a = Ability.new
-          a.name = ability[0]
-          a.description = ability[1]
-          a.classification = "standard"
-          a.save
-          new_ability = Ability.where("created_at").last
-          
-          u.unit_id = unit.id
-          u.ability_id = Ability.where(name: ability).last.id
-          u.save
-        end
-      end
-      cost = JSON.parse(row["Cost"])
-      unit.models_per_unit = cost[0][0]
-      unit.max_size = cost.length()
-      unit.cost = cost[0][1]
-      unit.save
-      #Wargear, needs to be changed for other factions
-      if row["Wargear"]
-        wargear = JSON.parse(row["Wargear"])
-        if Ability.where(name:  wargear[0]).last
-          a = Ability.where(name: wargear[0]).last
-          u = UnitAbility.new
-          u.ability_id = a.id
-          u.unit_id = unit.id
-          u.save
-        else
-          u = UnitAbility.new
-          a = Ability.new
-          a.name = wargear[0]
-          a.description = wargear[1]
-          a.classification = "wargear"
-          a.save
-          new_ability = Ability.where("created_at").last
-          
-          u.unit_id = unit.id
-          u.ability_id = Ability.where(name: wargear[0]).last.id
-          u.save
-        end
-      end
-    end
-  end
-
 end
