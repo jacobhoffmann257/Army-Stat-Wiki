@@ -1,5 +1,62 @@
 Rails.application.routes.draw do
   
+  # Routes for the Unit keyword resource:
+
+  # CREATE
+  post("/insert_unit_keyword", { :controller => "unit_keywords", :action => "create" })
+          
+  # READ
+  get("/unit_keywords", { :controller => "unit_keywords", :action => "index" })
+  
+  get("/unit_keywords/:path_id", { :controller => "unit_keywords", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_unit_keyword/:path_id", { :controller => "unit_keywords", :action => "update" })
+  
+  # DELETE
+  get("/delete_unit_keyword/:path_id", { :controller => "unit_keywords", :action => "destroy" })
+
+  #------------------------------
+
+  # Routes for the Keyword resource:
+
+  # CREATE
+  post("/insert_keyword", { :controller => "keywords", :action => "create" })
+          
+  # READ
+  get("/keywords", { :controller => "keywords", :action => "index" })
+  
+  get("/keywords/:path_id", { :controller => "keywords", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_keyword/:path_id", { :controller => "keywords", :action => "update" })
+  
+  # DELETE
+  get("/delete_keyword/:path_id", { :controller => "keywords", :action => "destroy" })
+
+  #------------------------------
+
+  # Routes for the Bodyguard resource:
+
+  # CREATE
+  post("/insert_bodyguard", { :controller => "bodyguards", :action => "create" })
+          
+  # READ
+  get("/bodyguards", { :controller => "bodyguards", :action => "index" })
+  
+  get("/bodyguards/:path_id", { :controller => "bodyguards", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_bodyguard/:path_id", { :controller => "bodyguards", :action => "update" })
+  
+  # DELETE
+  get("/delete_bodyguard/:path_id", { :controller => "bodyguards", :action => "destroy" })
+
+  #------------------------------
+
   resources :units do
     resources :models
     resources :equipment do

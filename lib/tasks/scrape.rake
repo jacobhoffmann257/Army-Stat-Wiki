@@ -50,106 +50,121 @@ task({ :scrape_tyranids_data => :environment}) do
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
     csv << ["Unit Name", "Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
-      name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-      base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-      name = name.gsub("#{base}", "")
-      name = name.gsub("’","'")
-      base = base.gsub("⌀", "")
+
       #Extracting Ability details
-      abilities_list = Array.new
-      abilities_list << name
 
-      box.css('.dsAbility').each do |ability|
-        
-        if /CORE/.match(ability.text.strip)
-          #gets core and faction 
-          raw = ability.text.strip
-           change1 = raw.gsub(":","*")
-           change2 = change1.gsub(",","*")
-           change3 =  change2.gsub("\"", "")
-           thing = change3.split("*")
-           abilities_list << thing
-        elsif /FACTION/.match(ability.text.strip)
-         if !abilities_list[1]
-           abilities_list << ["CORE", "*"]
-          end
-          raw = ability.text.strip
-          change1 = raw.gsub(":","*")
-          change2 = change1.gsub(",","*")
-          change3 =  change2.gsub("\"", "")
-          thing = change3.split("*")
-          abilities_list << thing
-        elsif /This model is equipped with/.match(ability.text.strip)
-        elsif /This model can be attached to the following unit/.match(ability.text.strip)
-          guard = Array.new
-            ability.css("ul").each do |bullet|
-              bullet.css("li").each do |guardian|
-
-              guard << guardian.text
-              end
-              
-            end
-            abilities_list << guard
-        elsif /<td>/.match(ability.to_s)
-          #model size and cost
-          if !abilities_list[4]
-            abilities_list << ["Wargear", "*"]
-          end
-          modelsize = Array.new
-            ability.css("table").each do |table|
-              table.css("tr").each do |row|
-                raw = row.text.strip
-                remove = raw.gsub("model","")
-                removes = remove.gsub("s","")
-                spilting = removes.split(" ")
-                modelsize << spilting
-              end
-            end
-            abilities_list << modelsize
-          elsif /This model is equipped with:/.match(ability.to_s)
-          elsif /model is equipped with/.match(ability.to_s)
-          elsif /This unit can be led by the following unit/.match(ability.to_s)
-          elsif /<b>/.match(ability.to_s)
-            #this gets the  ability name
-            abilitity_names = Array.new
-            ability.css('b').each do |b|
-              abilitity_names.push(b.text.strip)
-            end
-            raw = ability.text.strip
-            raw = raw.gsub("TYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDS","Tyranids")
-            raw = raw.gsub("’","'")
-            raw =raw.gsub("\’","\'")
-            abilitity_names.each do |abilname|
-              if abilitity_names[0] != abilname
-                raw = raw.gsub(abilname, "*")
-              else
-                raw = raw.gsub(abilname, "")
-              end
-            end
-            ability_array = raw.split("*")
-            final_ability = Array.new
-            abilitity_names.each do |abilname|
-              pos = abilitity_names.find_index{|x| x === abilname}
-              final_ability << abilname
-              final_ability << ability_array[pos]
-            end
-            abilities_list << final_ability
+      box.css('.dsRightСol').each do |col|
+        name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+        base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+        name = name.gsub("#{base}", "")
+        name = name.gsub("’","'")
+        base = base.gsub("⌀", "")
+        abilities_list = Array.new
+        abilities_list << name
+        col.css('.dsAbility').each do |ability|
           
-          elsif /<div class="dsLineHor">/.match(ability.to_s)
+          if /CORE/.match(ability.text.strip)
+            #gets core and faction 
             raw = ability.text.strip
-            raw = raw.split(".")
-            parsed = Array.new
-            raw.each do |second|
-              temp = second.split(":")
-              parsed << temp
+            change1 = raw.gsub(":","*")
+            change2 = change1.gsub(",","*")
+            change3 =  change2.gsub("\"", "")
+            thing = change3.split("*")
+            abilities_list << thing
+          elsif /FACTION/.match(ability.text.strip)
+          if !abilities_list[1]
+            abilities_list << ["CORE", "*"]
             end
+            raw = ability.text.strip
+            change1 = raw.gsub(":","*")
+            change2 = change1.gsub(",","*")
+            change3 =  change2.gsub("\"", "")
+            thing = change3.split("*")
+            abilities_list << thing
+          elsif /This model is equipped with/.match(ability.text.strip)
+          elsif /This model can be attached to the following unit/.match(ability.text.strip)
+            guard = Array.new
+              ability.css("ul").each do |bullet|
+                bullet.css("li").each do |guardian|
 
-            abilities_list << parsed
+                guard << guardian.text
+                end
+                
+              end
+              abilities_list << guard
+          elsif /<td>/.match(ability.to_s)
+            #model size and cost
+            if !abilities_list[4]
+              abilities_list << [["Wargear", "*"]]
+            end
+            modelsize = Array.new
+              ability.css("table").each do |table|
+                table.css("tr").each do |row|
+                  raw = row.text.strip
+                  remove = raw.gsub("model","")
+                  removes = remove.gsub("s","")
+                  spilting = removes.split(" ")
+                  modelsize << spilting
+                end
+              end
+              abilities_list << modelsize
+            elsif /This model is equipped with:/.match(ability.to_s)
+            elsif /model is equipped with/.match(ability.to_s)
+            elsif /This unit can be led by the following unit/.match(ability.to_s)
+            elsif /<b>/.match(ability.to_s)
+              #this gets the  ability name
+              holder_aray = Array.new
+              abilitity_names = Array.new
+              ability.css('b').each do |b|
+                abilitity_names.push(b.text.strip)
+                
+              end
+              raw = ability.text.strip
+              raw = raw.gsub("TYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDSTYRANIDS","Tyranids")
+              raw = raw.gsub("’","'")
+              raw =raw.gsub("\’","\'")
+              abilitity_names.each do |abilname|
+                if abilitity_names[0] != abilname
+                  raw = raw.gsub(abilname, "*")
+                else
+                  raw = raw.gsub(abilname, "")
+                end
+              end
+              ability_array = raw.split("*")
+              if /<i>/.match(ability.to_s) 
+                ability.css("i").each do |i|
+                  ability_array << i.text.strip
+                end
+              end
+              abilitity_names.each do |abilname|
+                final_ability = Array.new
+                pos = abilitity_names.find_index{|x| x === abilname}
+                final_ability << abilname
+                final_ability << ability_array[pos]
+                #puts final_ability
+                holder_aray << final_ability
+              end
+              abilities_list << holder_aray
+            
+            elsif /<div class="dsLineHor">/.match(ability.to_s)
+              raw = ability.text.strip
+              raw = raw.split(".")
+              parsed = Array.new
+              raw.each do |second|
+                temp = second.split(":")
+                parsed << temp
+              end
+
+              abilities_list << parsed
+          end
+
+      
         end
-
-     
+        if abilities_list.length >= 2
+          #checks if it is the first or second col
+          csv << abilities_list
+        end
       end
-        csv << abilities_list
     end
   end
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
@@ -169,6 +184,7 @@ task({ :scrape_tyranids_data => :environment}) do
           if row.at_css('.wTable2_short')
             weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
             weapon_name = weapon_name.gsub("’","'")
+            weapon_name = weapon_name.gsub("–","*")
             range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
             a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
             bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'

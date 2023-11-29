@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_29_165853) do
   create_table "abilities", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "classification"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "bodyguards", force: :cascade do |t|
+    t.integer "leader_id", null: false
+    t.integer "unit_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["leader_id"], name: "index_bodyguards_on_leader_id"
+    t.index ["unit_id"], name: "index_bodyguards_on_unit_id"
   end
 
   create_table "equipment", force: :cascade do |t|
@@ -33,6 +42,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
     t.string "banner"
     t.string "icon"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,6 +85,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_190347) do
     t.integer "ability_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "unit_keywords", force: :cascade do |t|
+    t.integer "unit_id", null: false
+    t.integer "keyword_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["keyword_id"], name: "index_unit_keywords_on_keyword_id"
+    t.index ["unit_id"], name: "index_unit_keywords_on_unit_id"
   end
 
   create_table "units", force: :cascade do |t|

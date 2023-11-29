@@ -1,0 +1,102 @@
+<div>
+  <div>
+    <h1>
+      List of all bodyguards
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new bodyguard
+    </h2>
+
+    <form action="/insert_bodyguard" method="post">
+      <div>
+        <label for="leader_id_box">
+          Leader
+        </label>
+
+        <input type="text" id="leader_id_box" name="query_leader_id">
+      </div>
+
+      <div>
+        <label for="unit_id_box">
+          Unit
+        </label>
+
+        <input type="text" id="unit_id_box" name="query_unit_id">
+      </div>
+
+      <button>
+        Create bodyguard
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Leader
+        </th>
+
+        <th>
+          Unit
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_bodyguards.each do |a_bodyguard| %>
+      <tr>
+        <td>
+          <%= a_bodyguard.id %>
+        </td>
+
+        <td>
+          <%= a_bodyguard.leader_id %>
+        </td>
+
+        <td>
+          <%= a_bodyguard.unit_id %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_bodyguard.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_bodyguard.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/bodyguards/<%= a_bodyguard.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

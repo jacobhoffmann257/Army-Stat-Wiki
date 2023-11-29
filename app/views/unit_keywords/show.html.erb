@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      Unit keyword #<%= @the_unit_keyword.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/unit_keywords">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_unit_keyword/<%= @the_unit_keyword.id %>">
+          Delete unit keyword
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Unit
+      </dt>
+      <dd>
+        <%= @the_unit_keyword.unit_id %>
+      </dd>
+
+      <dt>
+        Keyword
+      </dt>
+      <dd>
+        <%= @the_unit_keyword.keyword_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_unit_keyword.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_unit_keyword.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit unit keyword
+    </h2>
+
+    <form action="/modify_unit_keyword/<%= @the_unit_keyword.id %>"  method="post" >
+      <div>
+        <label for="unit_id_box">
+          Unit
+        </label>
+
+        <input type="text" id="unit_id_box" name="query_unit_id" value="<%= @the_unit_keyword.unit_id %>">
+      </div>
+
+      <div>
+        <label for="keyword_id_box">
+          Keyword
+        </label>
+
+        <input type="text" id="keyword_id_box" name="query_keyword_id" value="<%= @the_unit_keyword.keyword_id %>">
+      </div>
+
+      <button>
+        Update unit keyword
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
