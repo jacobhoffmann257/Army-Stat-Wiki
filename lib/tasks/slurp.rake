@@ -1,5 +1,6 @@
 
 namespace :slurp do
+  
   desc "tyranid data"
   task tyranid_data: :environment do 
     require "csv"
@@ -200,13 +201,10 @@ namespace :slurp do
           unit.save
           #Wargear
           wargear = JSON.parse(row["Wargear"])
-            puts wargear.length
-            x = 1
             wargear.each do |gear|
               
               if gear[0] === "Wargear"
               else
-                puts x.to_s
                 ability = Ability.new
                 ability.name = gear[0]
                 ability.description = gear[1]
@@ -219,8 +217,8 @@ namespace :slurp do
                   u.save
                   puts ability.name
                 else
-                  puts x.to_s
                   u = UnitAbility.new
+                  a = Ability.new
                   a.classification = "wargear"
                   ability.save
                   new_ability = Ability.where("created_at").last
@@ -228,7 +226,6 @@ namespace :slurp do
                   u.ability_id = new_ability.id
                   u.save
                 end
-                x = x+1
               end
             end
           #Bodygaurds
