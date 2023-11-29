@@ -115,7 +115,7 @@ namespace :slurp do
       csv_ability = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities.csv"))
       csv = CSV.parse(csv_ability, :headers => true, :encoding => "ISO-8859-1")
       csv.each do |row|
-        name = row["Unit Name"]
+        name = row["Unit_Name"]
         unit = Unit.where(name: name).last
         core = JSON.parse(row["Core"])
         core.each do |ability|

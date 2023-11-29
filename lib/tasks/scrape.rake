@@ -48,12 +48,10 @@ task({ :scrape_tyranids_data => :environment}) do
   
   end
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
+    csv << ["Unit_Name", "Weapon_Ability","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
 
       #Extracting Ability details
-
-      box.css('.dsRightСol').each do |col|
         name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
         base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
         name = name.gsub("#{base}", "")
@@ -61,10 +59,13 @@ task({ :scrape_tyranids_data => :environment}) do
         base = base.gsub("⌀", "")
         abilities_list = Array.new
         abilities_list << name
-        col.css('.dsAbility').each do |ability|
+        box.css('.dsAbility').each do |ability|
           
           if /CORE/.match(ability.text.strip)
             #gets core and faction 
+            if !abilities_list[1]
+              abilities_list << ["Weapon", "*"]
+            end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
             change2 = change1.gsub(",","*")
@@ -72,8 +73,10 @@ task({ :scrape_tyranids_data => :environment}) do
             thing = change3.split("*")
             abilities_list << thing
           elsif /FACTION/.match(ability.text.strip)
-          if !abilities_list[1]
-            abilities_list << ["CORE", "*"]
+
+            if !abilities_list[2]
+              abilities_list << ["Weapon", "*"]
+              abilities_list << ["CORE", "*"]
             end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
@@ -94,7 +97,7 @@ task({ :scrape_tyranids_data => :environment}) do
               abilities_list << guard
           elsif /<td>/.match(ability.to_s)
             #model size and cost
-            if !abilities_list[4]
+            if !abilities_list[5]
               abilities_list << [["Wargear", "*"]]
             end
             modelsize = Array.new
@@ -160,11 +163,8 @@ task({ :scrape_tyranids_data => :environment}) do
 
       
         end
-        if abilities_list.length >= 2
           #checks if it is the first or second col
           csv << abilities_list
-        end
-      end
     end
   end
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
