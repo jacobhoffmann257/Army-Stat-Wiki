@@ -235,7 +235,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
   page = HTTParty.get(url)
   parsed_page = Nokogiri::HTML(page)
 
-  CSV.open("lib/sample_data/astra-militarum_stats.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_stats2.csv", "w") do |csv|
     csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"]  
     parsed_page.css('.dsOuterFrame').each do |frame|
 
@@ -272,7 +272,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
     end
   
   end
-  CSV.open("lib/sample_data/astra-militarum_abilities.csv","w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_abilities2.csv","w") do |csv|
     csv << ["Unit_Name", "Weapon_Ability","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
 
@@ -396,7 +396,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
           csv << abilities_list
     end
   end
-  CSV.open("lib/sample_data/astra-militarum_weapons.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_weapons2.csv", "w") do |csv|
     
     csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
