@@ -1,8 +1,8 @@
 Name,Weapon Name,Range,A,BS/WS,S,AP,D
-‘Iron Hand' Straken,Auto shotgun [assault],"12""",3,3+,4,0,2
-‘Iron Hand' Straken,Plasma pistol * standard [pistol],"12""",1,3+,7,-2,1
-‘Iron Hand' Straken,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8,-3,2
-‘Iron Hand' Straken,Bionic arm with devil's claw [anti-monster 4+],Melee,6,2+,6,-2,2
+'Iron Hand' Straken,Auto shotgun [assault],"12""",3,3+,4,0,2
+'Iron Hand' Straken,Plasma pistol * standard [pistol],"12""",1,3+,7,-2,1
+'Iron Hand' Straken,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8,-3,2
+'Iron Hand' Straken,Bionic arm with devil's claw [anti-monster 4+],Melee,6,2+,6,-2,2
 Cadian Castellan,Bolt pistol [pistol],"12""",1,3+,4,0,1
 Cadian Castellan,Boltgun [rapid fire 1],"24""",1,3+,4,0,1
 Cadian Castellan,Laspistol [pistol],"12""",1,3+,3,0,1
@@ -11,76 +11,76 @@ Cadian Castellan,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8
 Cadian Castellan,Chainsword,Melee,5,3+,3,0,1
 Cadian Castellan,Power fist,Melee,3,3+,6,-2,2
 Cadian Castellan,Power weapon,Melee,4,3+,4,-2,1
-Cadian Command Squad,Bolt pistol [pistol],"12""",1,4+,4,0,1
-Cadian Command Squad,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Cadian Command Squad,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
-Cadian Command Squad,Grenade launcher * krak,"24""",1,4+,9,-2,D3
-Cadian Command Squad,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
-Cadian Command Squad,Laspistol [pistol],"12""",1,4+,3,0,1
-Cadian Command Squad,Meltagun [melta 2],"12""",1,4+,9,-4,D6
-Cadian Command Squad,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
-Cadian Command Squad,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
-Cadian Command Squad,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
-Cadian Command Squad,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
-Cadian Command Squad,Chainsword,Melee,4,4+,3,0,1
-Cadian Command Squad,Close combat weapon,Melee,2,4+,3,0,1
-Cadian Command Squad,Power fist,Melee,3,4+,6,-2,2
-Cadian Command Squad,Power weapon,Melee,3,4+,4,-2,1
+CADIAN COMMANDER,Bolt pistol [pistol],"12""",1,4+,4,0,1
+VETERAN GUARDSMAN,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
+VETERAN GUARDSMAN,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
+VETERAN GUARDSMAN,Grenade launcher * krak,"24""",1,4+,9,-2,D3
+VETERAN GUARDSMAN,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
+VETERAN GUARDSMAN,Laspistol [pistol],"12""",1,4+,3,0,1
+VETERAN GUARDSMAN,Meltagun [melta 2],"12""",1,4+,9,-4,D6
+VETERAN GUARDSMAN,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
+VETERAN GUARDSMAN,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
+VETERAN GUARDSMAN,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
+VETERAN GUARDSMAN,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
+CADIAN COMMANDER,Chainsword,Melee,4,4+,3,0,1
+VETERAN GUARDSMAN,Close combat weapon,Melee,2,4+,3,0,1
+CADIAN COMMANDER,Power fist,Melee,3,4+,6,-2,2
+CADIAN COMMANDER,Power weapon,Melee,3,4+,4,-2,1
 Commissar,Bolt pistol [pistol],"12""",1,3+,4,0,1
 Commissar,Plasma pistol * standard [pistol],"12""",1,3+,7,-2,1
 Commissar,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8,-3,2
 Commissar,Chainsword,Melee,4,3+,3,0,1
 Commissar,Power weapon,Melee,3,3+,4,-2,1
-Gaunt's Ghosts,Bragg's autocannon [heavy],"48""",4,5+,9,-1,3
-Gaunt's Ghosts,Bolt pistol [pistol],"12""",1,2+,4,0,1
-Gaunt's Ghosts,Corbec's hot-shot lascarbine [assault],"24""",3,3+,3,-1,1
-Gaunt's Ghosts,"Larkin's long-las [heavy, precision]","36""",1,2+,5,-2,4
-Gaunt's Ghosts,Lascarbine [assault],"24""",3,3+,3,0,1
-Gaunt's Ghosts,"Rawne's lascarbine [assault, sustained hits]","24""",3,3+,3,0,1
-Gaunt's Ghosts,Gaunt's chainsword,Melee,5,2+,3,-1,1
-Gaunt's Ghosts,Straight silver knife,Melee,3,3+,3,0,1
-Gaunt's Ghosts,"Mkoll's straight silver knife [devastating wounds, precision]",Melee,5,2+,3,-1,1
+TANITH GHOST,Bragg's autocannon [heavy],"48""",4,5+,9,-1,3
+IBRAM GAUNT,Bolt pistol [pistol],"12""",1,2+,4,0,1
+TANITH GHOST,Corbec's hot-shot lascarbine [assault],"24""",3,3+,3,-1,1
+TANITH GHOST,"Larkin's long-las [heavy, precision]","36""",1,2+,5,-2,4
+TANITH GHOST,Lascarbine [assault],"24""",3,3+,3,0,1
+TANITH GHOST,"Rawne's lascarbine [assault, sustained hits]","24""",3,3+,3,0,1
+IBRAM GAUNT,Gaunt's chainsword,Melee,5,2+,3,-1,1
+TANITH GHOST,Straight silver knife,Melee,3,3+,3,0,1
+TANITH GHOST,"Mkoll's straight silver knife [devastating wounds, precision]",Melee,5,2+,3,-1,1
 Lord Solar Leontus,Sol's Righteous Gaze [pistol],"12""",2,2+,8,-2,2
 Lord Solar Leontus,Conquest,Melee,6,2+,6,-2,2
 Lord Solar Leontus,Konstantin's hooves [extra attacks],Melee,2,4+,4,0,1
-Militarum Tempestus Command Squad,Bolt pistol [pistol],"12""",1,3+,4,0,1
-Militarum Tempestus Command Squad,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Militarum Tempestus Command Squad,Grenade launcher * frag [blast],"24""",D3,3+,4,0,1
-Militarum Tempestus Command Squad,Grenade launcher * krak,"24""",1,3+,9,-2,D3
-Militarum Tempestus Command Squad,Hot-shot lasgun [rapid fire 1],"24""",1,3+,3,-1,1
-Militarum Tempestus Command Squad,Hot-shot laspistol [pistol],"12""",1,3+,3,-1,1
-Militarum Tempestus Command Squad,Hot-shot volley gun [rapid fire 2],"30""",2,3+,4,-1,1
-Militarum Tempestus Command Squad,Meltagun [melta 2],"12""",1,3+,9,-4,D6
-Militarum Tempestus Command Squad,Plasma gun * standard [rapid fire 1],"24""",1,3+,7,-2,1
-Militarum Tempestus Command Squad,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,3+,8,-3,2
-Militarum Tempestus Command Squad,Plasma pistol * standard [pistol],"12""",1,3+,7,-2,1
-Militarum Tempestus Command Squad,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8,-3,2
-Militarum Tempestus Command Squad,Close combat weapon,Melee,2,4+,3,0,1
-Militarum Tempestus Command Squad,Tempestus dagger,Melee,4,3+,3,0,1
-Platoon Command Squad,Autocannon [heavy],"48""",2,5+,9,-1,3
-Platoon Command Squad,Boltgun [rapid fire 1],"24""",1,4+,4,0,1
-Platoon Command Squad,Bolt pistol [PISTOL],"12""",1,4+,4,0,1
-Platoon Command Squad,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Platoon Command Squad,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
-Platoon Command Squad,Grenade launcher * krak,"24""",1,4+,9,-2,D3
-Platoon Command Squad,"Heavy bolter [heavy, sustained hits 1]","36""",3,5+,5,-1,2
-Platoon Command Squad,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Platoon Command Squad,Lascannon [heavy],"48""",1,5+,12,-3,D6+1
-Platoon Command Squad,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
-Platoon Command Squad,Laspistol [pistol],"12""",1,4+,3,0,1
-Platoon Command Squad,Meltagun [melta 2],"12""",1,4+,9,-4,D6
-Platoon Command Squad,"Missile launcher * frag [BLAST, HEAVY]","48""",D6,5+,4,0,1
-Platoon Command Squad,Missile launcher * krak  [HEAVY],"48""",1,5+,9,-2,D6
-Platoon Command Squad,"Mortar [blast, heavy, indirect fire]","48""",D6,5+,5,0,1
-Platoon Command Squad,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
-Platoon Command Squad,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
-Platoon Command Squad,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
-Platoon Command Squad,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
-Platoon Command Squad,"Sniper rifle [heavy, precision]","36""",1,4+,4,-2,2
-Platoon Command Squad,Chainsword,Melee,3,4+,3,0,1
-Platoon Command Squad,Close combat weapon,Melee,2,4+,3,0,1
-Platoon Command Squad,Power fist,Melee,3,4+,6,-2,2
-Platoon Command Squad,Power weapon,Melee,3,4+,4,-2,1
+TEMPESTOR PRIME,Bolt pistol [pistol],"12""",1,3+,4,0,1
+TEMPESTUS SCION,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
+TEMPESTUS SCION,Grenade launcher * frag [blast],"24""",D3,3+,4,0,1
+TEMPESTUS SCION,Grenade launcher * krak,"24""",1,3+,9,-2,D3
+TEMPESTUS SCION,Hot-shot lasgun [rapid fire 1],"24""",1,3+,3,-1,1
+TEMPESTUS SCION,Hot-shot laspistol [pistol],"12""",1,3+,3,-1,1
+TEMPESTUS SCION,Hot-shot volley gun [rapid fire 2],"30""",2,3+,4,-1,1
+TEMPESTUS SCION,Meltagun [melta 2],"12""",1,3+,9,-4,D6
+TEMPESTUS SCION,Plasma gun * standard [rapid fire 1],"24""",1,3+,7,-2,1
+TEMPESTUS SCION,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,3+,8,-3,2
+TEMPESTUS SCION,Plasma pistol * standard [pistol],"12""",1,3+,7,-2,1
+TEMPESTUS SCION,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,3+,8,-3,2
+TEMPESTUS SCION,Close combat weapon,Melee,2,4+,3,0,1
+TEMPESTOR PRIME,Tempestus dagger,Melee,4,3+,3,0,1
+VETERAN HEAVY WEAPONS TEAM,Autocannon [heavy],"48""",2,5+,9,-1,3
+PLATOON COMMANDER,Boltgun [rapid fire 1],"24""",1,4+,4,0,1
+PLATOON COMMANDER,Bolt pistol [PISTOL],"12""",1,4+,4,0,1
+VETERAN GUARDSMAN,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
+VETERAN GUARDSMAN,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
+VETERAN GUARDSMAN,Grenade launcher * krak,"24""",1,4+,9,-2,D3
+VETERAN HEAVY WEAPONS TEAM,"Heavy bolter [heavy, sustained hits 1]","36""",3,5+,5,-1,2
+VETERAN GUARDSMAN,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
+VETERAN HEAVY WEAPONS TEAM,Lascannon [heavy],"48""",1,5+,12,-3,D6+1
+VETERAN GUARDSMAN,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
+PLATOON COMMANDER,Laspistol [pistol],"12""",1,4+,3,0,1
+VETERAN GUARDSMAN,Meltagun [melta 2],"12""",1,4+,9,-4,D6
+VETERAN HEAVY WEAPONS TEAM,"Missile launcher * frag [BLAST, HEAVY]","48""",D6,5+,4,0,1
+VETERAN HEAVY WEAPONS TEAM,Missile launcher * krak  [HEAVY],"48""",1,5+,9,-2,D6
+VETERAN HEAVY WEAPONS TEAM,"Mortar [blast, heavy, indirect fire]","48""",D6,5+,5,0,1
+VETERAN GUARDSMAN,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
+VETERAN GUARDSMAN,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
+PLATOON COMMANDER,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
+PLATOON COMMANDER,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
+VETERAN GUARDSMAN,"Sniper rifle [heavy, precision]","36""",1,4+,4,-2,2
+VETERAN GUARDSMAN,Chainsword,Melee,3,4+,3,0,1
+PLATOON COMMANDER,Close combat weapon,Melee,2,4+,3,0,1
+VETERAN GUARDSMAN,Power fist,Melee,3,4+,6,-2,2
+VETERAN GUARDSMAN,Power weapon,Melee,3,4+,4,-2,1
 Primaris Psyker,Laspistol [pistol],"12""",1,3+,3,0,1
 Primaris Psyker,"Psychic Maelstrom * witchfire [blast, devastating wounds, psychic]","18""",D6,3+,6,-2,1
 Primaris Psyker,"Psychic Maelstrom * focused witchfire [blast, devastating wounds, hazardous, psychic]","18""",D6+3,3+,6,-2,2
@@ -128,16 +128,6 @@ Death Rider Squadron Commander,Plasma pistol * standard [pistol],"12""",1,4+,7,-
 Death Rider Squadron Commander,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
 Death Rider Squadron Commander,Death Rider hunting lance [lance],Melee,5,3+,4,-1,1
 Death Rider Squadron Commander,Savage claws [extra attacks],Melee,2,4+,4,-1,1
-Death Rider Commissar,Commissar's pistol [pistol],"12""",1,3+,3,-1,1
-Death Rider Commissar,Commissar's close combat weapon,Melee,3,3+,4,-2,1
-Death Rider Commissar,Savage claws [extra attacks],Melee,2,4+,4,-1,1
-Quartermaster Cadre Squad,Quartermaster's pistol [pistol],"12""",1,3+,3,-1,1
-Quartermaster Cadre Squad,Medical scalpels,Melee,1,5+,3,0,1
-Quartermaster Cadre Squad,Quartermaster's close combat weapon,Melee,2,3+,4,-2,1
-Rein And Raus,"Demolition charge [blast, hazardous, one shot]","6""",D6+3,4+,12,-2,2
-Rein And Raus,"Sniper rifle [heavy, precision]","36""",1,3+,4,-2,2
-Rein And Raus,Stub pistol [pistol],"12""",1,3+,4,0,1
-Rein And Raus,Close combat weapon,Melee,1,5+,2,0,1
 Cadian Shock Troops,Bolt pistol [pistol],"12""",1,4+,4,0,1
 Cadian Shock Troops,Drum-fed autogun,"24""",2,4+,3,0,1
 Cadian Shock Troops,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
@@ -170,28 +160,28 @@ Death Korps Of Krieg,"Sniper rifle [heavy, precision]","36""",1,4+,4,-2,2
 Death Korps Of Krieg,Chainsword,Melee,3,4+,3,0,1
 Death Korps Of Krieg,Close combat weapon,Melee,1,4+,3,0,1
 Death Korps Of Krieg,Power weapon,Melee,2,4+,4,-2,1
-Infantry Squad,Autocannon [heavy],"48""",2,5+,9,-1,3
-Infantry Squad,Bolt pistol [PISTOL],"12""",1,4+,4,0,1
-Infantry Squad,Boltgun [rapid fire 1],"24""",1,4+,4,0,1
-Infantry Squad,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Infantry Squad,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
-Infantry Squad,Grenade launcher * krak,"24""",1,4+,9,-2,D3
-Infantry Squad,"Heavy bolter [heavy, sustained hits 1]","36""",3,5+,5,-1,2
-Infantry Squad,Lascannon [heavy],"48""",1,5+,12,-3,D6+1
-Infantry Squad,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
-Infantry Squad,Laspistol [pistol],"12""",1,4+,3,0,1
-Infantry Squad,Meltagun [melta 2],"12""",1,4+,9,-4,D6
-Infantry Squad,"Missile launcher * frag [blast, heavy]","48""",D6,5+,4,0,1
-Infantry Squad,Missile launcher * krak [heavy],"48""",1,5+,9,-2,D6
-Infantry Squad,"Mortar [blast, heavy, indirect fire]","48""",D6,5+,5,0,1
-Infantry Squad,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
-Infantry Squad,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
-Infantry Squad,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
-Infantry Squad,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
-Infantry Squad,"Sniper rifle [heavy, precision]","36""",1,4+,4,-2,2
-Infantry Squad,Chainsword,Melee,3,4+,3,0,1
-Infantry Squad,Close combat weapon,Melee,1,4+,3,0,1
-Infantry Squad,Power weapon,Melee,2,4+,4,-2,1
+HEAVY WEAPONS TEAM,Autocannon [heavy],"48""",2,5+,9,-1,3
+HEAVY WEAPONS TEAM,Bolt pistol [PISTOL],"12""",1,4+,4,0,1
+GUARDSMAN,Boltgun [rapid fire 1],"24""",1,4+,4,0,1
+GUARDSMAN,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
+GUARDSMAN,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
+GUARDSMAN,Grenade launcher * krak,"24""",1,4+,9,-2,D3
+HEAVY WEAPONS TEAM,"Heavy bolter [heavy, sustained hits 1]","36""",3,5+,5,-1,2
+HEAVY WEAPONS TEAM,Lascannon [heavy],"48""",1,5+,12,-3,D6+1
+GUARDSMAN,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
+GUARDSMAN,Laspistol [pistol],"12""",1,4+,3,0,1
+GUARDSMAN,Meltagun [melta 2],"12""",1,4+,9,-4,D6
+HEAVY WEAPONS TEAM,"Missile launcher * frag [blast, heavy]","48""",D6,5+,4,0,1
+HEAVY WEAPONS TEAM,Missile launcher * krak [heavy],"48""",1,5+,9,-2,D6
+HEAVY WEAPONS TEAM,"Mortar [blast, heavy, indirect fire]","48""",D6,5+,5,0,1
+GUARDSMAN,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
+GUARDSMAN,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
+GUARDSMAN,Plasma pistol * standard [pistol],"12""",1,4+,7,-2,1
+GUARDSMAN,"Plasma pistol * supercharge [hazardous, pistol]","12""",1,4+,8,-3,2
+GUARDSMAN,"Sniper rifle [heavy, precision]","36""",1,4+,4,-2,2
+GUARDSMAN,Chainsword,Melee,3,4+,3,0,1
+GUARDSMAN,Close combat weapon,Melee,1,4+,3,0,1
+GUARDSMAN,Power weapon,Melee,2,4+,4,-2,1
 Chimera,Chimera heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
 Chimera,"Chimera heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
 Chimera,Chimera multi-laser,"36""",4,4+,6,0,1
@@ -651,139 +641,3 @@ Vulture Gunship,Multiple rocket pod [blast],"36""",D6,4+,6,0,1
 Vulture Gunship,Vulture gatling cannon [sustained hits 1],"24""",18,4+,5,0,1
 Vulture Gunship,Vulture hellstrike rack [anti-fly 2+],"48""",2,4+,10,-3,D6
 Vulture Gunship,Armoured hull,Melee,6,4+,4,0,1
-Aquila Lander,Autocannon,"48""",2,4+,9,-1,3
-Aquila Lander,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Aquila Lander,Multi-laser,"36""",4,4+,6,0,1
-Aquila Lander,Armoured hull,Melee,3,4+,6,0,1
-Arkurian Stormhammer,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Arkurian Stormhammer,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Arkurian Stormhammer,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Arkurian Stormhammer,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Arkurian Stormhammer,Lascannon,"48""",1,4+,12,-3,D6+1
-Arkurian Stormhammer,Multi-laser,"36""",4,4+,6,0,1
-Arkurian Stormhammer,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Arkurian Stormhammer,Stormhammer cannon [blast],"72""",3D6,4+,12,-2,3
-Arkurian Stormhammer,"Twin battle cannon [blast, twin-linked]","48""",D6+3,4+,9,-1,3
-Arkurian Stormhammer,Armoured tracks,Melee,6,4+,8,0,1
-Armageddon-pattern Medusa,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Armageddon-pattern Medusa,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Armageddon-pattern Medusa,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Armageddon-pattern Medusa,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Armageddon-pattern Medusa,"Medusa siege cannon [blast, indirect fire]","36""",D6,4+,12,-2,4
-Armageddon-pattern Medusa,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Armageddon-pattern Medusa,Armoured tracks,Melee,3,4+,6,0,1
-Arvus Lighter,Armoured hull,Melee,2,4+,5,0,1
-Atlas Recovery Vehicle,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Atlas Recovery Vehicle,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Atlas Recovery Vehicle,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Atlas Recovery Vehicle,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Atlas Recovery Vehicle,Armoured tracks,Melee,3,4+,6,0,1
-Centaur Light Carrier,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Centaur Light Carrier,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Centaur Light Carrier,Armoured tracks,Melee,3,4+,6,0,1
-Death Korps Grenadier Squad,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Death Korps Grenadier Squad,Grenade launcher * frag [blast],"24""",D3,3+,4,0,1
-Death Korps Grenadier Squad,Grenade launcher * krak,"24""",1,3+,9,-2,D3
-Death Korps Grenadier Squad,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Death Korps Grenadier Squad,"Heavy stubber [heavy, rapid fire 3]","36""",3,4+,4,0,1
-Death Korps Grenadier Squad,Hot-shot lasgun [rapid fire 1],"24""",1,3+,3,-1,1
-Death Korps Grenadier Squad,Meltagun [melta 2],"12""",1,3+,9,-4,D6
-Death Korps Grenadier Squad,Plasma gun * standard [rapid fire 1],"24""",1,3+,7,-2,1
-Death Korps Grenadier Squad,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,3+,8,-3,2
-Death Korps Grenadier Squad,Sergeant's pistol [pistol],"12""",1,3+,3,-1,1
-Death Korps Grenadier Squad,"Sniper rifle [heavy, precision]","36""",1,3+,4,-2,2
-Death Korps Grenadier Squad,Close combat weapon,Melee,1,4+,3,0,1
-Death Korps Grenadier Squad,Sergeant's close combat weapon,Melee,2,4+,4,-2,1
-Dominus Armoured Siege Bombard,Autocannon,"48""",2,4+,9,-1,3
-Dominus Armoured Siege Bombard,"Dominus triple bombard [blast, indirect fire]","48""",2D6,4+,12,-2,3
-Dominus Armoured Siege Bombard,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Dominus Armoured Siege Bombard,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Dominus Armoured Siege Bombard,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Dominus Armoured Siege Bombard,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Dominus Armoured Siege Bombard,Lascannon,"48""",1,4+,12,-3,D6+1
-Dominus Armoured Siege Bombard,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Dominus Armoured Siege Bombard,Armoured tracks,Melee,3,4+,6,0,1
-Elysian Drop Sentinel,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Elysian Drop Sentinel,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Elysian Drop Sentinel,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Elysian Drop Sentinel,Multi-melta [melta 2],"18""",2,4+,9,-4,D6
-Elysian Drop Sentinel,Close combat weapon,Melee,2,4+,6,0,1
-Elysian Sniper Squad,Lasgun [rapid fire 1],"24""",1,4+,3,0,1
-Elysian Sniper Squad,"Sniper rifle [heavy, precision]","36""",1,3+,4,-2,2
-Elysian Sniper Squad,Close combat weapon,Melee,1,4+,3,0,1
-Gorgon Heavy Transport,"Gorgon mortar [blast, indirect fire]","48""",D6,4+,5,0,1
-Gorgon Heavy Transport,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Gorgon Heavy Transport,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Gorgon Heavy Transport,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Gorgon Heavy Transport,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Gorgon Heavy Transport,"Twin heavy stubber [rapid fire 3, twin-linked]","36""",3,4+,4,0,1
-Gorgon Heavy Transport,Landing ramp,Melee,6,4+,8,0,1
-Griffon Mortar Carrier,"Griffon heavy mortar [blast, indirect fire]","48""",D6,4+,7,-1,2
-Griffon Mortar Carrier,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Griffon Mortar Carrier,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Griffon Mortar Carrier,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Griffon Mortar Carrier,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Griffon Mortar Carrier,Armoured tracks,Melee,3,4+,6,0,1
-Heavy Mortar Team,"Heavy mortar [heavy, blast, indirect fire]","48""",D6,5+,6,-1,2
-Heavy Mortar Team,Close combat weapons,Melee,3,4+,3,0,1
-Heavy Quad Launcher Team,"Heavy quad launcher [blast, indirect fire]","48""",2D6,4+,5,0,1
-Heavy Quad Launcher Team,Close combat weapons,Melee,3,4+,3,0,1
-Macharius Omega,Autocannon,"48""",2,4+,9,-1,3
-Macharius Omega,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Macharius Omega,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Macharius Omega,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Macharius Omega,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Macharius Omega,Omega-pattern plasma blastgun * standard [blast],"60""",2D6,4+,8,-2,2
-Macharius Omega,"Omega-pattern plasma blastgun * supercharge [blast, hazardous]","60""",2D6,4+,9,-3,3
-Macharius Omega,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Macharius Omega,Armoured tracks,Melee,3,4+,6,0,1
-Minotaur,"Minotaur twin earthshaker cannon [blast, indirect fire, twin-linked]","240""",D6+3,4+,8,-2,2
-Minotaur,Armoured tracks,Melee,3,4+,6,0,1
-Mukaali Riders,"Flamer [ignores cover, torrent]","12""",D6,N/A,4,0,1
-Mukaali Riders,Grenade launcher * frag [blast],"24""",D3,4+,4,0,1
-Mukaali Riders,Grenade launcher * krak,"24""",1,4+,9,-2,D3
-Mukaali Riders,Laspistol [pistol],"12""",1,4+,3,0,1
-Mukaali Riders,Meltagun [melta 2],"12""",1,4+,9,-4,D6
-Mukaali Riders,Plasma gun * standard [rapid fire 1],"24""",1,4+,7,-2,1
-Mukaali Riders,"Plasma gun * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
-Mukaali Riders,Plasma pistol * standard [rapid fire 1],"24""",1,4+,7,-2,1
-Mukaali Riders,"Plasma pistol * supercharge [hazardous, rapid fire 1]","24""",1,4+,8,-3,2
-Mukaali Riders,Chainsword,Melee,4,4+,3,0,1
-Mukaali Riders,Hunting lance [lance],Melee,3,4+,4,0,1
-Mukaali Riders,Power weapon,Melee,3,4+,4,-2,1
-Mukaali Riders,Stomping feet [extra attacks],Melee,2,4+,4,0,1
-Salamander Command Vehicle,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Salamander Command Vehicle,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Salamander Command Vehicle,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Salamander Command Vehicle,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Salamander Command Vehicle,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Salamander Command Vehicle,Armoured tracks,Melee,3,4+,6,0,1
-Salamander Scout Vehicle,Autocannon,"48""",2,4+,9,-1,3
-Salamander Scout Vehicle,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Salamander Scout Vehicle,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Salamander Scout Vehicle,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Salamander Scout Vehicle,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Salamander Scout Vehicle,Armoured tracks,Melee,3,4+,6,0,1
-Sentinel Powerlifter,Powerlifter,Melee,3,4+,10,-2,D3
-Stygies Destroyer Tank Hunter,Heavy stubber [rapid fire 3],"36""",3,4+,4,0,1
-Stygies Destroyer Tank Hunter,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Stygies Destroyer Tank Hunter,Storm bolter [rapid fire 2],"24""",2,4+,4,0,1
-Stygies Destroyer Tank Hunter,Stygies laser destroyer [heavy],"72""",2,4+,14,-4,D6+3
-Stygies Destroyer Tank Hunter,Armoured tracks,Melee,3,4+,6,0,1
-Tauros Assault Vehicle,"Heavy flamer [ignores cover, torrent]","12""",D6,N/A,5,-1,1
-Tauros Assault Vehicle,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Tauros Assault Vehicle,Tauros grenade launcher * frag [blast],"24""",D6,4+,4,0,1
-Tauros Assault Vehicle,Tauros grenade launcher * krak,"24""",2,4+,9,-2,D3
-Tauros Assault Vehicle,Armoured frame,Melee,2,4+,5,0,1
-Tauros Venator,Hunter-killer missile [one shot],"48""",1,4+,14,-3,D6
-Tauros Venator,Twin lascannon [twin-linked],"48""",1,4+,12,-3,D6+1
-Tauros Venator,Twin multi-laser [twin-linked],"36""",4,4+,6,0,1
-Tauros Venator,Armoured frame,Melee,2,4+,5,0,1
-Valkyrie Sky Talon,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Valkyrie Sky Talon,Hellstrike missile [anti-fly 2+],"48""",1,4+,10,-3,D6
-Valkyrie Sky Talon,Multiple rocket pod [blast],"36""",D6,4+,6,0,1
-Valkyrie Sky Talon,Armoured hull,Melee,3,4+,6,0,1
-Vendetta Gunship,Heavy bolter [sustained hits 1],"36""",3,4+,5,-1,2
-Vendetta Gunship,Vendetta hellstrike rack [anti-fly 2+],"48""",2,4+,10,-3,D6
-Vendetta Gunship,Vendetta twin lascannon [twin-linked],"48""",1,4+,12,-3,D6+1
-Vendetta Gunship,Armoured hull,Melee,3,4+,6,0,1

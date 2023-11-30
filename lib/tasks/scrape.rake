@@ -12,7 +12,7 @@ task({ :scrape_tyranids_data => :environment}) do
   parsed_page = Nokogiri::HTML(page)
 
   CSV.open("lib/sample_data/tyranids_stats.csv", "w") do |csv|
-    csv << ["Unit_Name","Base_Size", "Model_Name" ,"Invurebale_Save","Desc", "M", "T", "Sv", "W", "Ld", "OC"]  
+    csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"] 
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
@@ -236,13 +236,14 @@ task({ :scrape_astra_militarum_data => :environment}) do
   parsed_page = Nokogiri::HTML(page)
 
   CSV.open("lib/sample_data/astra-militarum_stats.csv", "w") do |csv|
-    csv << ["Unit_Name","Base_Size", "Model_Name" ,"Invurebale_Save","Desc", "M", "T", "Sv", "W", "Ld", "OC"]  
+    csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"]  
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       unitname = unitname.gsub("#{base}", "")
       unitname = unitname.gsub("’","'")
+      unitname = unitname.gsub("‘","'")
       base = base.gsub("⌀", "")
       invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
       lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
@@ -280,6 +281,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
         base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
         name = name.gsub("#{base}", "")
         name = name.gsub("’","'")
+        name = name.gsub("‘","'")
         base = base.gsub("⌀", "")
         abilities_list = Array.new
         abilities_list << name
@@ -402,6 +404,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
       name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
       base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
       name = name.gsub("’","'")
+      name = name.gsub("‘","'")
       name = name.gsub("#{base}", "")
       base = base.gsub("⌀", "")
     # Extracting weapon details
