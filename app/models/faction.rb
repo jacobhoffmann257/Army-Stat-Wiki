@@ -12,4 +12,14 @@
 #
 class Faction < ApplicationRecord
   has_many :unit
+
+  def get_units
+    unit_array = Array.new
+    self.unit.each do |unit|
+      if !unit_array.include?(unit)
+        unit_array.push(unit)
+      end
+    end
+    return unit_array
+  end
 end

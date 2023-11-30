@@ -5,7 +5,10 @@ class FactionsController < ApplicationController
   def index
     @factions = Faction.all
   end
-
+  def datasheets
+   @faction = Faction.where(name: params[:faction]).last
+   @units = @faction.get_units
+  end
   # GET /factions/1 or /factions/1.json
   def show
   end

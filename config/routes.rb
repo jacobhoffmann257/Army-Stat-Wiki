@@ -75,6 +75,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get "/units/:unit_name" => "unit#show", as: :unit
-
-  root "units#index"
+  #get "datasheets/:faction" => "factions#datasheets", as: :faction_unit
+  get ":faction/datasheets" => "factions#datasheets", as: :faction_unit
+  root "factions#index"
 end
