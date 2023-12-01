@@ -63,8 +63,11 @@ namespace :slurp do
     csv = CSV.parse(csv_weapon, :headers => true, :encoding => "ISO-8859-1")
     
       csv.each do |row|
-          model = Model.where(name: row["Name"]).last
-
+        unit = Unit.where(name: row["Unit_Name"]).last
+        puts unit.name
+        model = Model.where(name: row["Name"], unit_id: unit.id).first
+        puts row["Weapon Name"]
+        puts model.id
         csv_weapon = Weapon.new
         #Checks if there is a -
         profile = String.new
@@ -124,6 +127,7 @@ namespace :slurp do
           csv_profile.save
           profile = Profile.where("created_at").last
           equipment = Equipment.new
+          puts model.id
           equipment.model_id = model.id
           equipment.weapon_id = weapon.id
           equipment.save
@@ -311,7 +315,7 @@ namespace :slurp do
           csv_weapon.name = holder[0]
           profile = holder[1]
         else
-          csv_weapon.name 
+          csv_weapon.name = row["Weapon Name"] 
         end
         if row["Range"] === "Melee"
           csv_weapon.range = 0
