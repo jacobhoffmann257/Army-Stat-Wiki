@@ -77,5 +77,5 @@ Rails.application.routes.draw do
   # get "/units/:unit_name" => "unit#show", as: :unit
   #get "datasheets/:faction" => "factions#datasheets", as: :faction_unit
   get ":faction/datasheets" => "factions#datasheets", as: :faction_unit
-  root "factions#index"
+  root "factions#home"
 end
