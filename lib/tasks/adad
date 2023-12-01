@@ -1,0 +1,77 @@
+csv_weapon = File.read(Rails.root.join("lib", "sample_data", "tyranids_weapons.csv"))
+    csv = CSV.parse(csv_weapon, :headers => true, :encoding => "ISO-8859-1")
+    
+      csv.each do |row|
+        model = Model.where(name: row["Name"]).first
+        csv_weapon = Weapon.new
+        #Checks if there is a -
+        profile = String.new
+        if row["Weapon Name"].include?("*")
+          holder = row["Weapon Name"].split("*")
+          csv_weapon.name = holder[0]
+          profile = holder[1]
+        else
+          csv_weapon.name = row["Weapon Name"] 
+        end
+        if row["Range"] === "Melee"
+          csv_weapon.range = 0
+        else
+          csv_weapon.range = row["Range"].to_i
+        end
+        #csv_weapon has been read
+        csv_profile = Profile.new
+        csv_profile.armor_piercing = row["AP"].to_i
+        csv_profile.attacks  = row["A"]
+        csv_profile.damage = row["D"]
+        if profile.length != 0
+          csv_profile.name = profile
+        else
+          csv_profile.name = row["Weapon Name"]
+        end
+        csv_profile.skill = row["BS/WS"].to_i
+        csv_profile.strength = row["S"].to_i
+        #csv_profile has been read
+        puts csv_weapon.name
+        puts csv_weapon.range
+        if Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
+          weapon = Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
+          #checks if the profile exists in the database
+          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength,weapon_id: weapon.id).last
+            if Equipment.where(model_id: model.id, weapon_id: weapon.id).last
+              puts "#{model.name} already has this #{weapon.name} equipment" 
+            else
+              equipment = Equipment.new
+              equipment.weapon_id = weapon.id
+              equipment.model_id = model.id
+              equipment.save
+            end
+          else
+            #checks if any equipment match the unit and weapon
+            if  Equipment.where(weapon_id: weapon.id, model_id: model.id).last
+              puts " allready has this equipment"
+            else
+              csv_weapon.save
+              weapon = Weapon.where("created_at").last
+              csv_profile.weapon_id = weapon.id
+              csv_profile.save
+              profile = Profile.where("created_at").last
+              equipment = Equipment.new
+              equipment.model_id = model.id
+              equipment.weapon_id = weapon.id
+              equipment.save
+              puts "New weapons profile for #{model.name} added"
+            end
+
+          end
+        else
+          csv_weapon.save
+          weapon = Weapon.where("created_at").last
+          csv_profile.weapon_id = weapon.id
+          csv_profile.save
+          profile = Profile.where("created_at").last
+          equipment = Equipment.new
+          equipment.model_id = model.id
+          equipment.weapon_id = weapon.id
+          equipment.save
+        end
+      end

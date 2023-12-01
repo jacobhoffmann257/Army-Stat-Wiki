@@ -1,6 +1,6 @@
 <div id="<%= dom_id weapon %>">
 <% @profile_array = weapon.get_profiles%>
-<% if @profile_array.length > 1 %>
+<% if @profile_array.length >= 2 %>
   <% @profile_array.each do |profile|%>
     <%= render "weapons/weapon_multiple", weapon: weapon%>
   <% end %>

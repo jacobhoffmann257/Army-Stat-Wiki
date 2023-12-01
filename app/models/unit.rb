@@ -39,8 +39,10 @@ class Unit < ApplicationRecord
       end
     end
     weapons = Array.new
+    if range_weapons.length != 0
+      weapons.push(range_weapons)
+    end
     weapons.push(melee_weapons)
-    weapons.push(range_weapons)
     return weapons
   end
 

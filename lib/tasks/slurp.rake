@@ -75,8 +75,10 @@ namespace :slurp do
           holder = row["Weapon Name"].split("*")
           csv_weapon.name = holder[0]
           profile = holder[1]
+          puts csv_weapon.name
+          puts profile
         else
-          csv_weapon.name = row["Weapon Name"]
+          csv_weapon.name = row["Weapon Name"] 
         end
         if row["Range"] === "Melee"
           csv_weapon.range = 0
@@ -89,6 +91,7 @@ namespace :slurp do
         csv_profile.attacks  = row["A"]
         csv_profile.damage = row["D"]
         if profile.length != 0
+          puts "hi"
           csv_profile.name = profile
         else
           csv_profile.name = row["Weapon Name"]
@@ -97,9 +100,10 @@ namespace :slurp do
         csv_profile.strength = row["S"].to_i
         #csv_profile has been read
         if Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
+          weapon = Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
           #checks if the profile exists in the database
-          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength).last
-            weapon = Weapon.where(name: csv_weapon.name).last
+          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength,weapon_id: weapon.id).last
+
             if Equipment.where(model_id: model.id, weapon_id: weapon.id).last
               puts "#{model.name} already has this #{weapon.name} equipment" 
             else
@@ -109,16 +113,23 @@ namespace :slurp do
               equipment.save
             end
           else
-          csv_weapon.save
-          weapon = Weapon.where("created_at").last
-          csv_profile.weapon_id = weapon.id
-          csv_profile.save
-          profile = Profile.where("created_at").last
-          equipment = Equipment.new
-          equipment.model_id = model.id
-          equipment.weapon_id = weapon.id
-          equipment.save
-          puts "New weapons profile for #{model.name} added"
+            #checks if any equipment match the unit and weapon
+            if  Equipment.where(weapon_id: weapon.id, model_id: model.id).last
+              puts " allready has this equipment"
+              csv_profile.weapon_id = weapon.id
+              csv_profile.save
+            else
+              csv_weapon.save
+              weapon = Weapon.where("created_at").last
+              csv_profile.weapon_id = weapon.id
+              csv_profile.save
+              profile = Profile.where("created_at").last
+              equipment = Equipment.new
+              equipment.model_id = model.id
+              equipment.weapon_id = weapon.id
+              equipment.save
+              puts "New weapons profile for #{model.name} added"
+            end
           end
         else
           csv_weapon.save
@@ -127,7 +138,7 @@ namespace :slurp do
           csv_profile.save
           profile = Profile.where("created_at").last
           equipment = Equipment.new
-          puts model.id
+          #puts model.id
           equipment.model_id = model.id
           equipment.weapon_id = weapon.id
           equipment.save
@@ -144,8 +155,8 @@ namespace :slurp do
           #Core abilities
           if ability === "CORE"|| ability === "*"
           else
-            puts name
-            puts ability
+            #puts name
+            #puts ability
             if Ability.where(name: ability).last
               #Checks if the ability exists if it does it makes a new point to the unit
               a = Ability.where(name: ability).last
@@ -188,7 +199,7 @@ namespace :slurp do
                 new_ability = Ability.where("created_at").last
 
                 u.unit_id = unit.id
-                puts a.name
+                #puts a.name
                 u.ability_id = Ability.where(name: ability).last.id
                 u.save
               end
@@ -242,7 +253,7 @@ namespace :slurp do
                   u.ability_id = a.id
                   u.unit_id = unit.id
                   u.save
-                  puts ability.name
+                  #puts ability.name
                 else
                   u = UnitAbility.new
                   a = Ability.new
@@ -335,10 +346,12 @@ namespace :slurp do
         csv_profile.skill = row["BS/WS"].to_i
         csv_profile.strength = row["S"].to_i
         #csv_profile has been read
+        puts csv_weapon.name
+        puts csv_weapon.range
         if Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
+          weapon = Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
           #checks if the profile exists in the database
-          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength).last
-            weapon = Weapon.where(name: csv_weapon.name).last
+          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength,weapon_id: weapon.id).last
             if Equipment.where(model_id: model.id, weapon_id: weapon.id).last
               puts "#{model.name} already has this #{weapon.name} equipment" 
             else
@@ -348,16 +361,24 @@ namespace :slurp do
               equipment.save
             end
           else
-          csv_weapon.save
-          weapon = Weapon.where("created_at").last
-          csv_profile.weapon_id = weapon.id
-          csv_profile.save
-          profile = Profile.where("created_at").last
-          equipment = Equipment.new
-          equipment.model_id = model.id
-          equipment.weapon_id = weapon.id
-          equipment.save
-          puts "New weapons profile for #{model.name} added"
+            #checks if any equipment match the unit and weapon
+            if  Equipment.where(weapon_id: weapon.id, model_id: model.id).last
+              puts " allready has this equipment"
+              csv_profile.weapon_id = weapon.id
+              csv_profile.save
+            else
+              csv_weapon.save
+              weapon = Weapon.where("created_at").last
+              csv_profile.weapon_id = weapon.id
+              csv_profile.save
+              profile = Profile.where("created_at").last
+              equipment = Equipment.new
+              equipment.model_id = model.id
+              equipment.weapon_id = weapon.id
+              equipment.save
+              puts "New weapons profile for #{model.name} added"
+            end
+
           end
         else
           csv_weapon.save
