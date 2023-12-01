@@ -2,13 +2,18 @@
 <%  weapons = unit.get_weapons %>
     <%# Shows melee weapons and range weapons if they exist %>
   <% weapons.each do |weapon_type| %>
-  <p>asdfasdfasdfa</p>
-    <% weapon_type.each do |weapon| %>
+      <% if weapon_type[0] %>
+        <% if weapon_type[0].range != 0%>
+          <p>Range Weapons</p>
+        <% else %>
+          <p>Melee Weapons</p>
+        <% end %>
+      <% end %>
       <ul class="list-group">
-        <li class="list-group-item"><%= render "weapons/weapon", weapon: weapon %></li>
+        <% weapon_type.each do |weapon| %>
+            <li class="list-group-item"><%= render "weapons/weapon", weapon: weapon %></li>
+        <% end %>
       </ul>
-    <% end %>
-
   <% end %>
 
 </div>

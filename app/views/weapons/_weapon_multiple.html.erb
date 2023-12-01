@@ -1,3 +1,31 @@
 <div id="<%= dom_id weapon %>">
-  <p>multiple</p>
+    <div class="row border" >
+    <div class="col border">
+        <p><%= weapon.name %></p>
+        <ul class="list-group">
+        <% @profile_array.each do |p|%>
+          <li class="list-group-item"><%= p.name %></li>
+        <% end %>
+        </ul>
+    </div>
+    <div class="col-sm-2 border">
+        <p></p>
+        <ul class="list-group">
+          <% @profile_array.each do |p|%>
+            <% if weapon.range === 0 %>
+              <li class="list-group-item">Melee</li>
+            <% else %>
+              <li class="list-group-item"><%= weapon.range%></li>
+            <% end %>
+          <% end %>
+        </ul>
+
+    </div>
+    <div class="col border">
+      <p></p>
+      <% @profile_array.each do |p|%>
+        <%= render "profiles/profile", profile: p %>
+      <% end %>
+    </div>
+  </div>
 </div>
