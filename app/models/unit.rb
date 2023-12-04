@@ -45,5 +45,4 @@ class Unit < ApplicationRecord
     weapons.push(melee_weapons)
     return weapons
   end
-
 end
