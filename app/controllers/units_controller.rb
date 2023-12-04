@@ -9,10 +9,14 @@ class UnitsController < ApplicationController
   # GET /units/1 or /units/1.json
   def show
     @unit = Unit.find(name: params.fetch(:id))
+    format.js do
+      render template: "units/unit.js.erb"
+    end
     #puts "#{@unit.name}"
   end
   def show 
     @unit = Unit.find(params.fetch(:id))
+
   end
   # GET /units/new
   def new

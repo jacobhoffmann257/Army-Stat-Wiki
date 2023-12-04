@@ -9,6 +9,7 @@ namespace :slurp do
     csv = CSV.parse(csv_data, :headers => true, :encoding => "ISO-8859-1")
     f = Faction.new
     f.name = "Astra Militarum"
+    f.icon = "Astra_Militarum_Icon.png"
     if Faction.where(name: f.name).last
     else
     f.save
@@ -20,6 +21,7 @@ namespace :slurp do
       u.name = row["Unit_Name"]
       u.faction_id = f.id
       u.base_size = row["Base_Size"]
+      u.role = row["type"]
       #checking if unit exists
       if Unit.where(name: u.name, faction_id: u.faction_id, base_size: u.base_size).last
         unit = Unit.where(name: u.name, faction_id: u.faction_id, base_size: u.base_size).last
@@ -280,6 +282,7 @@ namespace :slurp do
     csv = CSV.parse(csv_data, :headers => true, :encoding => "ISO-8859-1")
     f = Faction.new
     f.name = "Tyranids"
+    f.icon = "Tyranids_Icon.png"
     if Faction.where(name: f.name).last
     else
     f.save
@@ -289,7 +292,8 @@ namespace :slurp do
       u = Unit.new
       u.name = row["Unit_Name"]
       u.faction_id = f.id
-      u.base_size = row["Base_Size"]
+      u.base_size = row["Base_Size"]    
+      u.role =row["type"]
       #checking if unit exists
       if Unit.where(name: u.name, faction_id: u.faction_id, base_size: u.base_size).last
       else
@@ -304,6 +308,7 @@ namespace :slurp do
         m.save_value = row["Sv"]
         m.toughness = row["T"]
         m.wounds = row["W"]
+    
         m.unit_id = Unit.where(name: u.name).first.id
         #Checking if model exists in database
         if Model.where(name: m.name, invulnerable_save: m.invulnerable_save, leadership: m.leadership, movement: m.movement, objective_control: m.objective_control, save_value: m.save_value, toughness: m.toughness, wounds: m.wounds, unit_id: m.unit_id).last
