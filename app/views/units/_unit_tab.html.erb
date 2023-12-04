@@ -5,7 +5,9 @@
         <p><%= unit.name %><%= unit.base_size%></p>
       </div>
       <div class= "col ">
-        <%= link_to image_tag("#{unit.faction.name.gsub(" ","_")}_Icon.png")%>
+      <% if unit.faction.icon %>
+        <%= link_to image_tag(unit.faction.icon)%>
+      <% end %>
       </div>
     </div>
   <div class="row border">
