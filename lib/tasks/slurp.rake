@@ -248,6 +248,7 @@ namespace :slurp do
                 ability = Ability.new
                 ability.name = gear[0]
                 ability.description = gear[1]
+                ability.classification = "wargear"
                 if Ability.where(name:  ability.name, description: ability.description).last
                   #Checks if the wargear exists
                   a = Ability.where(name: ability.name).last
@@ -258,8 +259,6 @@ namespace :slurp do
                   #puts ability.name
                 else
                   u = UnitAbility.new
-                  a = Ability.new
-                  a.classification = "wargear"
                   ability.save
                   new_ability = Ability.where("created_at").last
                   u.unit_id = unit.id

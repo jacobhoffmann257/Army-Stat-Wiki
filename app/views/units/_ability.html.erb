@@ -1,51 +1,43 @@
 <div id="<%= dom_id unit %>">
-  <% core = Array.new %>
-  <% standard = Array.new %>
-  <% faction = Array.new %>
-  <% unit.unit_abilities.each do |unit_ability| %>
-    <% ability = Ability.where(id: unit_ability.ability_id).first %>
-      <% if ability.classification === "faction" %>
-        <% if !faction.include?(ability) %>
-          <% faction.push(ability)%>
-        <% end %>
-      <% elsif ability.classification === "core" %>
-        <% if !core.include?(ability) %>
-          <% core.push(ability)%>
-        <% end %>
-      <% elsif ability.classification === "standard" %>
-        <% if !standard.include?(ability) %>
-          <% standard.push(ability)%>
-        <% end %>
-      <% end %>
-  <% end %>
-  <% if core.length != 0 %>
+  <% if unit.get_abilities("core").length != 0 %>
     <div class="row border" >
       <div class= "col border">
         <p>Core:</p>
       </div>
-        <% core.each do |ability| %>
+        <% unit.get_abilities("core").each do |ability| %>
           <div class= "col border">
             <p><%= ability.name %></p>
           </div>
         <% end %>
     </div>
   <% end %>
-  <% if faction.length != 0 %>
+  <% if unit.get_abilities("faction").length != 0 %>
     <div class="row border" >
       <div class="col border">
         <p>Faction:</p>
       </div>
-        <% faction.each do |ability| %>
+        <% unit.get_abilities("faction").each do |ability| %>
           <div class= "col border">
             <p><%= ability.name %></p>
           </div>
         <% end %>
     </div>
   <% end %>
-  <% if standard.length != 0%>
+  <% if unit.get_abilities("standard").length != 0 %>
     <div class="row border" >
       <ul class= "list-group">
-        <% standard.each do |ability|%>
+        <% unit.get_abilities("standard").each do |ability| %>
+            <li class="list-group-item">
+                <%= render "abilities/ability", ability: ability%>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <% if unit.get_abilities("wargear").length != 0 %>
+    <div class="row border" >
+      <ul class= "list-group">
+        <% unit.get_abilities("wargear").each do |ability| %>
             <li class="list-group-item">
                 <%= render "abilities/ability", ability: ability%>
             </li>

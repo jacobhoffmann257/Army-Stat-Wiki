@@ -22,4 +22,13 @@ class Faction < ApplicationRecord
     end
     return unit_array
   end
+  def get_units_by_class (type)
+    unit_array = Array.new
+    self.unit.each do |unit|
+      if unit.role === type
+        unit_array.push(unit)
+      end
+    end
+    return unit_array
+  end
 end

@@ -1,0 +1,7 @@
+<ul>
+  <li><%= link_to "Charaters",type_path(@faction.name, "character"),faction: @faction, type: "character" %></li>
+  <li><%= link_to "Battleline",type_path(@faction.name, "battleline"),faction: @faction, type: "battleline" %></li>
+  <li><%= link_to "Transport",type_path(@faction.name,"transport"),faction: @faction, type: "transport"  %></li>
+  <li><%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></li>
+  <li><%= link_to "All",all_path(@faction.name),faction: @faction  %></li>
+</ul>

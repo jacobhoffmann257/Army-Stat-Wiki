@@ -2,6 +2,14 @@ class FactionsController < ApplicationController
   before_action :set_faction, only: %i[ show edit update destroy ]
 
   # GET /factions or /factions.json
+  def base 
+    @faction = Faction.where(name: params[:faction]).last
+  end
+  def type
+    @faction = Faction.where(name: params[:faction]).last
+    @type = params[:type]
+    @units = @faction.get_units_by_class(@type)
+  end
   def index
     @factions = Faction.all
   end

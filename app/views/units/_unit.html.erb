@@ -1,18 +1,19 @@
 <div id="<%= dom_id unit %>">
-  <div class="container border">
-    <div class="row border">
-      <div class="col border">
-          <%= render "units/stats", unit: unit%>
-      </div>
-    </div>
-    <div class= "row border">
-      <div class= "col border">
-          <%= render "units/weapons", unit: unit%>
-      </div>
-      <div class="col border">
-        <p>Abilities</p>
-          <%= render"units/ability",unit: unit %>
-      </div>
-    </div>
-  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <%= render "units/stats", unit: unit%>
+      </tr>
+    </thead>
+      <tbody>
+        <th>
+
+            <%= render "units/weapons", unit: unit%>
+        </th>
+        <th>
+          <p>Abilities</p>
+            <%= render"units/ability",unit: unit %>
+        </th>
+    </tbody>
+  </table>
 </div>

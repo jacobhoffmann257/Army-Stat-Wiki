@@ -45,4 +45,15 @@ class Unit < ApplicationRecord
     weapons.push(melee_weapons)
     return weapons
   end
+  def get_abilities (type)
+    unit_abilities = self.unit_abilities
+    abilities = Array.new
+    unit_abilities.each do |ability|
+      ability = Ability.where(id: ability.ability_id).first
+      if ability.classification === type
+        abilities.push(ability)
+      end
+    end
+    return abilities
+  end
 end

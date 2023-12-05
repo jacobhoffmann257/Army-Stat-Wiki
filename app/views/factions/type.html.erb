@@ -1,0 +1,4 @@
+<h1><%= @type.capitalize() %> for <%= @faction.name %></h1>
+<% @units.each do |unit| %>
+  <%= render "units/unit_tab", unit: unit %>
+<% end %>

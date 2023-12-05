@@ -3,11 +3,57 @@
     <%# Shows melee weapons and range weapons if they exist %>
   <% weapons.each do |weapon_type| %>
       <% if weapon_type[0] %>
-        <% if weapon_type[0].range != 0%>
-          <p>Range Weapons</p>
-        <% else %>
-          <p>Melee Weapons</p>
-        <% end %>
+        <div class="row border">
+          <% if weapon_type[0].range != 0%>
+            <div class="col">
+              <p>Range Weapons</p>
+            </div>
+              <div class="col">
+                <p>range</p>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>A</p>
+                </div>
+                <div class="col">
+                  <p>BS</p>
+                </div>
+                <div class="col">
+                  <p>S</p>
+                </div>
+                <div class="col">
+                  <p>AP</p>
+                </div>
+                <div class="col">
+                  <p>Damage</p>
+                </div>
+              </div>
+          <% else %>
+            <div class="col">
+              <p>Melee Weapons</p>
+            </div>
+            <div class="col">
+              <p>Range</p>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>A</p>
+              </div>
+              <div class="col">
+                <p>BS</p>
+              </div>
+              <div class="col">
+                <p>S</p>
+              </div>
+              <div class="col">
+                <p>AP</p>
+              </div>
+              <div class="col">
+                <p>Damage</p>
+              </div>
+            </div>
+          <% end %>
+        </div>
       <% end %>
       <ul class="list-group">
         <% weapon_type.each do |weapon| %>
