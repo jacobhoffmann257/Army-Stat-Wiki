@@ -1,65 +1,69 @@
 <div id="<%= dom_id unit %>">
 <%  weapons = unit.get_weapons %>
     <%# Shows melee weapons and range weapons if they exist %>
-  <% weapons.each do |weapon_type| %>
-      <% if weapon_type[0] %>
-        <div class="row border">
-          <% if weapon_type[0].range != 0%>
-            <div class="col">
-              <p>Range Weapons</p>
-            </div>
-              <div class="col">
-                <p>range</p>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <p>A</p>
-                </div>
-                <div class="col">
-                  <p>BS</p>
-                </div>
-                <div class="col">
-                  <p>S</p>
-                </div>
-                <div class="col">
-                  <p>AP</p>
-                </div>
-                <div class="col">
-                  <p>Damage</p>
-                </div>
-              </div>
-          <% else %>
-            <div class="col">
-              <p>Melee Weapons</p>
-            </div>
-            <div class="col">
-              <p>Range</p>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p>A</p>
-              </div>
-              <div class="col">
-                <p>BS</p>
-              </div>
-              <div class="col">
-                <p>S</p>
-              </div>
-              <div class="col">
-                <p>AP</p>
-              </div>
-              <div class="col">
-                <p>Damage</p>
-              </div>
-            </div>
-          <% end %>
-        </div>
+      <% if weapons.length > 1 %>
+      <% weapons.each do |type| %>
+        <table class="table">
+          <thead>
+            <tr>
+              <% if type[0].range != 0 %>
+                <th>Range Weapons:</th>
+              <% else %>
+                <th>Melee Weapons:</th>
+              <% end %>
+              <th>Range: </th>
+              <th>A</th>
+              <% if type[0].range != 0 %>
+                <th>BS</th>
+              <% else %>
+                <th>AS</th>
+              <% end %>
+              <th>S</th>
+              <th>AP</th>
+              <th>Damage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% type.each do |weapon| %>
+              <tr>
+                <td><%= weapon.name%></td>
+                <% if weapon.profile.length > 1 %>
+                  </tr>
+                  <% weapon.profile.each do |profile|%>
+                    <tr>
+                    <td><%= profile.name %></td>
+                    <td>
+                    <% if weapon.range === 0%>
+                    Melee
+                    <% else %>
+                    <%= weapon.range %>
+                    <% end %>
+                    </td>
+                    <td><%= profile.attacks%></td>
+                    <td><%= profile.skill%></td>
+                    <td><%= profile.strength%></td>
+                    <td><%= profile.armor_piercing%></td>
+                    <td><%= profile.damage%></td>
+                    </tr>
+                  <% end %>
+                <% else %>
+                  <td>
+                  <% if weapon.range === 0%>
+                  Melee
+                  <% else %>
+                  <%= weapon.range %>
+                  <% end %>
+                  </td>
+                    <td><%= weapon.profile.last.attacks%></td>
+                    <td><%= weapon.profile.last.skill%></td>
+                    <td><%= weapon.profile.last.strength%></td>
+                    <td><%= weapon.profile.last.armor_piercing%></td>
+                    <td><%= weapon.profile.last.damage%></td>
+                <% end %>
+              </tr> 
+            <% end %>
+          </tbody>
+        </table>
+      <% end%>
       <% end %>
-      <ul class="list-group">
-        <% weapon_type.each do |weapon| %>
-            <li class="list-group-item"><%= render "weapons/weapon", weapon: weapon %></li>
-        <% end %>
-      </ul>
-  <% end %>
-
 </div>
