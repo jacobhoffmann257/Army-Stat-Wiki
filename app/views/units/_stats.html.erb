@@ -1,10 +1,73 @@
 <div id="<%= dom_id unit %>">
-        <div class= "row text-left border">
-          <p><%= unit.name %></p>
-        </div>
-        <div class="row border">
-          <% unit.models.each do |model| %>
-            <%= render "models/model", model: model %>
-          <% end %>
-        </div>
+  <div class= "row text-left border">
+    <p><%= unit.name %></p>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <% if unit.models[0].name != unit.name %>
+          <th scope="col">
+            <strong>Name:</strong>
+          </th>
+        <% end%>
+        <th scope="col">
+          <p><strong>M</strong></p>
+        </th>
+        <th scope="col">
+          <p><strong>T</strong></p>
+        </th>
+        <th scope="col">
+          <p><strong>SV</strong></p>
+        </th>
+        <% if unit.models[0].invulnerable_save  != 0%>
+          <th scope="col">
+            <strong>Invulnerable Save</strong>
+          </th>
+        <% end%>
+        <th scope="col">
+          <p><strong>W</strong></p>
+        </th>
+        <th scope="col">
+          <p><strong>LD</strong></p>
+        </th>
+        <th scope="col">
+          <p><strong>OC</strong></p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% unit.models.each do |model| %>
+        <tr>
+          <% if model.name  != model.unit.name%>
+            <td>
+              <%= model.name%>
+            </td>
+          <% end%>
+          <td>
+            <%= model.movement %>
+          </td>
+          <td>
+            <%= model.toughness %>
+          </td>
+          <td>
+            <%= model.save_value %>
+          </td>
+          <% if model.invulnerable_save  != 0%>
+            <td>
+                <%= model.invulnerable_save%>
+            </td>
+          <% end%>
+          <td>
+            <%= model.wounds %>
+          </td>
+          <td>
+            <%= model.leadership %>
+          </td>
+          <td>
+            <%= model.objective_control %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

@@ -1,74 +1,69 @@
 <div id="<%= dom_id model %>">
-<div class="container text-center border">
-  <div class="row border">
-    <% if model.name != model.unit.name %>
-      <div class="col border">
-        <p>
-          <strong>Name:</strong>
-        </p>
-      </div>
-    <% end%>
-    <div class="col border">
-      <p><strong>M</strong></p>
-    </div>
-    <div class="col border">
-      <p><strong>T</strong></p>
-    </div>
-    <div class="col border">
-      <p><strong>SV</strong></p>
-    </div>
-    <% if model.invulnerable_save  != 0%>
-      <div class="col">
-        <p>
+<%# This page is mostly redundant %>
+<table class="table">
+  <thead>
+    <tr>
+      <% if model.name != model.unit.name %>
+        <th scope="col">
+            <strong>Name:</strong>
+        </th>
+      <% end%>
+      <th scope="col">
+        <p><strong>M</strong></p>
+      </th>
+      <th scope="col">
+        <p><strong>T</strong></p>
+      </th>
+      <th scope="col">
+        <p><strong>SV</strong></p>
+      </th>
+      <% if model.invulnerable_save  != 0%>
+        <th scope="col">
           <strong>Invulnerable Save</strong>
-        </p>
-      </div>
-    <% end%>
-    <div class="col border">
-      <p><strong>W</strong></p>
-    </div>
-    <div class="col border">
-      <p><strong>LD</strong></p>
-    </div>
-    <div class="col border">
-      <p><strong>OC</strong></p>
-    </div>
-
-  </div>
-  <div class="row border">
-    <% if model.name  != model.unit.name%>
-      <div class="col">
-        <p>
-          <%= model.name%>
-        </p>
-      </div>
-    <% end%>
-    <div class="col border">
-      <%= model.movement %>
-    </div>
-    <div class="col border">
-      <%= model.toughness %>
-    </div>
-        <div class="col border">
-      <%= model.save_value %>
-    </div>
-    <% if model.invulnerable_save  != 0%>
-      <div class="col border">
-        <p>
-          <%= model.invulnerable_save%>
-        </p>
-      </div>
-    <% end%>
-    <div class="col border">
-      <%= model.wounds %>
-    </div>
-    <div class="col border">
-      <%= model.leadership %>
-    </div>
-        <div class="col border">
-      <%= model.objective_control %>
-    </div>
-
-  </div>
-</div>
+        </th>
+      <% end%>
+      <th scope="col">
+        <p><strong>W</strong></p>
+      </th>
+      <th scope="col">
+        <p><strong>LD</strong></p>
+      </th>
+      <th scope="col">
+        <p><strong>OC</strong></p>
+      </th>
+    </tr>
+  </thead>
+  </tbody>
+    <tr scope="row">
+      <% if model.name  != model.unit.name%>
+        <td>
+            <%= model.name%>
+        </td>
+      <% end%>
+      <td>
+        <%= model.movement %>
+      </td>
+      <td>
+        <%= model.toughness %>
+      </td>
+      <td>
+        <%= model.save_value %>
+      </td>
+      <% if model.invulnerable_save  != 0%>
+        <td>
+            <%= model.invulnerable_save%>
+        </td>
+      <% end%>
+      <td>
+        <%= model.wounds %>
+      </td>
+      <td>
+        <%= model.leadership %>
+      </td>
+      <td>
+        <%= model.objective_control %>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
