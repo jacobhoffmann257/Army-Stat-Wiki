@@ -89,6 +89,7 @@ Rails.application.routes.draw do
     end
   end
   resources :factions
+  resources :favorites
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -100,5 +101,8 @@ Rails.application.routes.draw do
   get ":faction/datasheets" => "factions#datasheets", as: :all
   get ":faction/datasheets/:type" => "factions#type", as: :type
   get ":username/favorite" => "favorites#mine", as: :my_favs
+  post "favorite/new" => "favorites#create", as: :new_fav
+  get "delete_favorite/:id" => "favorites#destroy", as: :delete_favorite
+  
   root "factions#home"
 end

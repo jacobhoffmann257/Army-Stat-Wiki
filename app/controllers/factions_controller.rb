@@ -9,6 +9,10 @@ class FactionsController < ApplicationController
     @faction = Faction.where(name: params[:faction]).last
     @type = params[:type]
     @units = @faction.get_units_by_class(@type)
+    @units.each do |unit|
+      unit.favorites.build
+    end
+
   end
   def index
     @factions = Faction.all

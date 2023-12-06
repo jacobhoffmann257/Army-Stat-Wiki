@@ -31,9 +31,9 @@ class FavoritesController < ApplicationController
 
     if the_favorite.valid?
       the_favorite.save
-      redirect_to("/favorites", { :notice => "Favorite created successfully." })
+      redirect_back fallback_location: root_url, :notice => "Favorite created successfully." 
     else
-      redirect_to("/favorites", { :alert => the_favorite.errors.full_messages.to_sentence })
+      redirect_to(redirect_back, { :alert => the_favorite.errors.full_messages.to_sentence })
     end
   end
 
@@ -58,6 +58,6 @@ class FavoritesController < ApplicationController
 
     the_favorite.destroy
 
-    redirect_to("/favorites", { :notice => "Favorite deleted successfully."} )
+    redirect_back fallback_location: root_url, :notice => "Favorite created successfully." 
   end
 end

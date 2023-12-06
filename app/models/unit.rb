@@ -23,7 +23,8 @@ class Unit < ApplicationRecord
   has_many :models, class_name: "Model"
   has_many :unit_abilities
   has_many  :favorites, class_name: "Favorite", foreign_key: "unit_id", dependent: :destroy
-  
+  accepts_nested_attributes_for :favorites, allow_destroy: true
+
   def get_weapons
     # needs to get models and then their weapons and filter out the ones that are duplicates
     models = self.models

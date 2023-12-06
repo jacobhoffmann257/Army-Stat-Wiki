@@ -1,37 +1,52 @@
 <div id="<%= dom_id unit %>">
 <%  weapons = unit.get_weapons %>
     <%# Shows melee weapons and range weapons if they exist %>
-      <% if weapons.length > 1 %>
       <% weapons.each do |type| %>
-        <table class="table">
-          <thead>
-            <tr>
-              <% if type[0].range != 0 %>
-                <th>Range Weapons:</th>
-              <% else %>
-                <th>Melee Weapons:</th>
-              <% end %>
-              <th>Range: </th>
-              <th>A</th>
-              <% if type[0].range != 0 %>
-                <th>BS</th>
-              <% else %>
-                <th>AS</th>
-              <% end %>
-              <th>S</th>
-              <th>AP</th>
-              <th>Damage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% type.each do |weapon| %>
+        <% if type[0] %>
+          <table class="table">
+            <thead>
               <tr>
-                <td><%= weapon.name%></td>
-                <% if weapon.profile.length > 1 %>
-                  </tr>
-                  <% weapon.profile.each do |profile|%>
-                    <tr>
-                    <td><%= profile.name %></td>
+                <% if type[0].range != 0 %>
+                  <th>Range Weapons:</th>
+                <% else %>
+                  <th>Melee Weapons:</th>
+                <% end %>
+                <th>Range: </th>
+                <th>A</th>
+                <% if type[0].range != 0 %>
+                  <th>BS</th>
+                <% else %>
+                  <th>AS</th>
+                <% end %>
+                <th>S</th>
+                <th>AP</th>
+                <th>Damage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% type.each do |weapon| %>
+                <tr>
+                  <td><%= weapon.name%></td>
+                  <% if weapon.profile.length > 1 %>
+                    </tr>
+                    <% weapon.profile.each do |profile|%>
+                      <tr>
+                      <td><%= profile.name %></td>
+                      <td>
+                      <% if weapon.range === 0%>
+                      Melee
+                      <% else %>
+                      <%= weapon.range %>
+                      <% end %>
+                      </td>
+                      <td><%= profile.attacks%></td>
+                      <td><%= profile.skill%></td>
+                      <td><%= profile.strength%></td>
+                      <td><%= profile.armor_piercing%></td>
+                      <td><%= profile.damage%></td>
+                      </tr>
+                    <% end %>
+                  <% else %>
                     <td>
                     <% if weapon.range === 0%>
                     Melee
@@ -39,31 +54,16 @@
                     <%= weapon.range %>
                     <% end %>
                     </td>
-                    <td><%= profile.attacks%></td>
-                    <td><%= profile.skill%></td>
-                    <td><%= profile.strength%></td>
-                    <td><%= profile.armor_piercing%></td>
-                    <td><%= profile.damage%></td>
-                    </tr>
+                      <td><%= weapon.profile.last.attacks%></td>
+                      <td><%= weapon.profile.last.skill%></td>
+                      <td><%= weapon.profile.last.strength%></td>
+                      <td><%= weapon.profile.last.armor_piercing%></td>
+                      <td><%= weapon.profile.last.damage%></td>
                   <% end %>
-                <% else %>
-                  <td>
-                  <% if weapon.range === 0%>
-                  Melee
-                  <% else %>
-                  <%= weapon.range %>
-                  <% end %>
-                  </td>
-                    <td><%= weapon.profile.last.attacks%></td>
-                    <td><%= weapon.profile.last.skill%></td>
-                    <td><%= weapon.profile.last.strength%></td>
-                    <td><%= weapon.profile.last.armor_piercing%></td>
-                    <td><%= weapon.profile.last.damage%></td>
-                <% end %>
-              </tr> 
-            <% end %>
-          </tbody>
-        </table>
+                </tr> 
+              <% end %>
+            </tbody>
+          </table>
+          <%end%>
       <% end%>
-      <% end %>
 </div>

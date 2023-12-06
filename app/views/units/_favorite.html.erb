@@ -1,0 +1,11 @@
+<div id="<%= dom_id unit %>_fav">
+  <div class="d-flex align-items-right">
+    <% fav = current_user.favorites.find_by(unit: unit)%>
+    <% if fav %> 
+      <%= link_to 'Unfavorite', delete_favorite_path(fav), method: :destroy, class: "btn btn-link" %>
+    <% else %>
+      <%= render "favorites/form", unit: unit%>
+    <% end %>
+  </div>
+
+</div>

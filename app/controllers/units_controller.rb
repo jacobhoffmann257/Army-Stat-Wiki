@@ -1,6 +1,6 @@
 class UnitsController < ApplicationController
   before_action :set_unit, only: %i[ show edit update destroy ]
-
+  
   # GET /units or /units.json
   def index
     @units = Unit.all
@@ -16,7 +16,6 @@ class UnitsController < ApplicationController
   end
   def show 
     @unit = Unit.find(params.fetch(:id))
-
   end
   # GET /units/new
   def new
@@ -73,6 +72,6 @@ class UnitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def unit_params
-      params.require(:unit).permit(:name, :role, :cost, :faction_id, :max_size, :base_size, :picture)
+      params.require(:unit).permit(:name, :role, :cost, :faction_id, :max_size, :base_size, :picture, :favorites_attributes[:unit_id, :user_id])
     end
 end
