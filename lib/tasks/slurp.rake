@@ -155,7 +155,7 @@ namespace :slurp do
         core = JSON.parse(row["Core"])
         core.each do |ability|
           #Core abilities
-          if ability === "CORE"|| ability === "*" || ability === "core"
+          if ability === "CORE"|| ability === "*" || ability === "core"||ability === "Core"
           else
             #puts name
             #puts ability
@@ -246,7 +246,7 @@ namespace :slurp do
               if gear[0] === "Wargear"
               else
                 ability = Ability.new
-                ability.name = gear[0].JSON.parse
+                ability.name = gear[0]
                 ability.description = gear[1]
                 ability.classification = "wargear"
                 if Ability.where(name:  ability.name, description: ability.description).last
