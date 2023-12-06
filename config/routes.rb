@@ -99,5 +99,6 @@ Rails.application.routes.draw do
   get ":faction/info" => "factions#base", as: :base
   get ":faction/datasheets" => "factions#datasheets", as: :all
   get ":faction/datasheets/:type" => "factions#type", as: :type
+  get ":username/favorite" => "favorites#mine", as: :my_favs
   root "factions#home"
 end

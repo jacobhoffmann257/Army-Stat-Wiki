@@ -1,0 +1,4 @@
+<p><%= @user.email %></p>
+<% @units.each do |unit| %>
+  <%= render "units/unit_tab", unit: unit.first %>
+<% end %>

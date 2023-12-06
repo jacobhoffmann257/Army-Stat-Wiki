@@ -6,7 +6,14 @@ class FavoritesController < ApplicationController
 
     render({ :template => "favorites/index" })
   end
-
+  def mine
+    @user = current_user
+    favorites = Favorite.where(user_id: @user.id)
+    @units = Array.new
+    favorites.each do |fav|
+      @units.push(Unit.where(id: fav.unit_id))
+    end
+  end
   def show
     the_id = params.fetch("path_id")
 
