@@ -58,6 +58,6 @@ class FavoritesController < ApplicationController
 
     the_favorite.destroy
 
-    redirect_back fallback_location: root_url, :notice => "Favorite created successfully." 
+    redirect_back fallback_location: root_url, :notice => "Favorite destroyed successfully." 
   end
 end
