@@ -4,4 +4,7 @@
   <li><%= link_to "Transport",type_path(@faction.name,"transport"),faction: @faction, type: "transport"  %></li>
   <li><%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></li>
   <li><%= link_to "All",all_path(@faction.name),faction: @faction  %></li>
+  <% if current_user.admin === true %>
+    <li><%= link_to "Edit this Faction", edit_faction_path( @faction)%></li>
+  <% end %>
 </ul>
