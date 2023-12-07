@@ -55,9 +55,7 @@ class FavoritesController < ApplicationController
   def destroy
     the_id = params.fetch("path_id")
     the_favorite = Favorite.where({ :id => the_id }).at(0)
-
     the_favorite.destroy
-
-    redirect_back fallback_location: root_url, :notice => "Favorite destroyed successfully." 
+    redirect_back fallback_location: root_url, notice: "Removed from favorites" 
   end
 end
