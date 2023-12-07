@@ -1,6 +1,6 @@
 class UnitsController < ApplicationController
   before_action :set_unit, only: %i[ show edit update destroy ]
-  
+  before_action :unit_pundit, only: [:show,:create,:update,:destroy]
   # GET /units or /units.json
   def index
     @units = Unit.all
@@ -24,6 +24,7 @@ class UnitsController < ApplicationController
 
   # GET /units/1/edit
   def edit
+    @unit = Unit.where(params.fetch("id")).first
   end
 
   # POST /units or /units.json
@@ -67,11 +68,18 @@ class UnitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_unit
-      @unit = Unit.where(name: params[:id])
+      @unit = Unit.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def unit_params
-      params.require(:unit).permit(:name, :role, :cost, :faction_id, :max_size, :base_size, :picture, :favorites_attributes[:unit_id, :user_id])
+      params.require(:unit).permit(:id, :name, :role, :cost, :faction_id, :max_size, :base_size, :picture)
+    end
+    def unit_pundit
+      if UnitPolicy.new(current_user).show?
+      elsif !UnitPolicy.new(current_user).create?
+      elsif !UnitPolicy.new(current_user).destroy?
+      elsif !UnitPolicy.new(current_user).update?
+      end
     end
 end

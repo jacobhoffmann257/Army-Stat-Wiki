@@ -102,6 +102,7 @@ Rails.application.routes.draw do
   get ":faction/datasheets/:type" => "factions#type", as: :type
   get ":username/favorite" => "favorites#mine", as: :my_favs
   post "favorite/new" => "favorites#create", as: :new_fav
+ 
   get "delete_favorite/:id" => "favorites#destroy", as: :delete_favorite
   
   root "factions#home"

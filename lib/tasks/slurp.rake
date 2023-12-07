@@ -279,6 +279,11 @@ namespace :slurp do
     #Stats
     csv_data = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats.csv"))
     csv = CSV.parse(csv_data, :headers => true, :encoding => "ISO-8859-1")
+    user = User.new
+    user.email = "jake@email.com"
+    user.admin = true
+    user.password = "password"
+    user.save
     f = Faction.new
     f.name = "Tyranids"
     f.icon = "Tyranids_Icon.png"
