@@ -90,7 +90,7 @@ Rails.application.routes.draw do
   end
   resources :factions
   resources :favorites
-
+  resources :models
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -104,6 +104,6 @@ Rails.application.routes.draw do
   post "favorite/new" => "favorites#create", as: :new_fav
  
   get "delete_favorite/:id" => "favorites#destroy", as: :delete_favorite
-  
+  get "update_model/:unit_id/:id" =>"models#update", as: :update_model
   root "factions#home"
 end

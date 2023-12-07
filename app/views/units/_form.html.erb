@@ -38,4 +38,8 @@
       <%= form.submit %>
     </div>
   <% end %>
-</div>
+  <div>
+      <% @unit.models.each do |model|%>
+        <%= link_to model.name, unit_model_path(@unit.id, model), remote: false %>
+      <% end %>
+  </div>

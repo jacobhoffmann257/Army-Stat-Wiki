@@ -62,7 +62,7 @@ class ModelsController < ApplicationController
   private
 
   def set_unit
-    @unit = Unit.find(params[:unit_id])
+    @unit = Unit.find(Model.find(params[:id]).unit_id)
   end
 
   def set_model
@@ -70,6 +70,6 @@ class ModelsController < ApplicationController
   end
 
   def model_params
-    params.require(:model).permit(:name, :unit_it, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
+    params.require(:model).permit(:name, :unit_id, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
   end
 end
