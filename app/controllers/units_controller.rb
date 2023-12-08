@@ -5,11 +5,13 @@ class UnitsController < ApplicationController
   # GET /units or /units.json
   def index
     @units = Unit.all
+    authorize @unit
   end
 
   # GET /units/1 or /units/1.json
   def show
     @unit = Unit.find(name: params.fetch(:id))
+    authorize @unit
     format.js do
       render template: "units/unit.js.erb"
     end
@@ -17,15 +19,18 @@ class UnitsController < ApplicationController
   end
   def show 
     @unit = Unit.find(params.fetch(:id))
+    authorize @unit
   end
   # GET /units/new
   def new
     @unit = Unit.new
+    authorize @unit
   end
 
   # GET /units/1/edit
   def edit
     @unit = Unit.where(params.fetch("id")).first
+    authorize @unit
     if authorize current_user, @unit
     else
       redirect_to units_url, notice: "Unit was successfully destroyed."
@@ -63,6 +68,7 @@ class UnitsController < ApplicationController
 
   # DELETE /units/1 or /units/1.json
   def destroy
+    authorize @unit
     @unit.destroy
 
     respond_to do |format|

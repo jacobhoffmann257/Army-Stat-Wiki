@@ -5,25 +5,29 @@ class WeaponsController < ApplicationController
   # GET /weapons or /weapons.json
   def index
     @weapons = Weapon.all
+    authorize @weapons
   end
 
   # GET /weapons/1 or /weapons/1.json
   def show
+    authorize @weapon
   end
 
   # GET /weapons/new
   def new
     @weapon = Weapon.new
+    authorize @weapon
   end
 
   # GET /weapons/1/edit
   def edit
+    authorize @weapon
   end
 
   # POST /weapons or /weapons.json
   def create
     @weapon = Weapon.new(weapon_params)
-
+    authorize @weapon
     respond_to do |format|
       if @weapon.save
         format.html { redirect_to weapon_url(@weapon), notice: "Weapon was successfully created." }
@@ -50,6 +54,7 @@ class WeaponsController < ApplicationController
 
   # DELETE /weapons/1 or /weapons/1.json
   def destroy
+    authorize @weapon
     @weapon.destroy
 
     respond_to do |format|

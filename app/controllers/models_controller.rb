@@ -1,24 +1,28 @@
 class ModelsController < ApplicationController
   before_action :set_unit
   before_action :set_model, only: %i[ show edit update destroy ]
-
+  before_action{authorize(@model|| model)}
 
   # GET /models or /models.json
   def index
     @models = @unit.models.all
+    authorize @models
   end
 
   # GET /models/1 or /models/1.json
   def show
+    authorize @model
   end
 
   # GET /models/new
   def new
     @model = @unit.models.new
+    authorize @model
   end
 
   # GET /models/1/edit
   def edit
+    authorize @model
   end
 
   # POST /models or /models.json
@@ -51,6 +55,7 @@ class ModelsController < ApplicationController
 
   # DELETE /models/1 or /models/1.json
   def destroy
+    authorize @model
     @model.destroy
 
     respond_to do |format|

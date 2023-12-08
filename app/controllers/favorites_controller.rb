@@ -1,4 +1,6 @@
 class FavoritesController < ApplicationController
+  before_action :set_unit
+  before_action :set_user
   before_action :favorite_pundit, only: [:show, :create, :update, :destroy]
   def index
     matching_favorites = Favorite.all
