@@ -1,0 +1,2 @@
+class ModelPolicy < ApplicationPolicy
+end
