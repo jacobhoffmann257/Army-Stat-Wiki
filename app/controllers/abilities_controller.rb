@@ -65,7 +65,6 @@ class AbilitiesController < ApplicationController
     def set_ability
       @ability = Ability.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def ability_params
       params.require(:ability).permit(:name, :description, :classification)

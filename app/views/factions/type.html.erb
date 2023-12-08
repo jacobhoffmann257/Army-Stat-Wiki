@@ -1,4 +1,8 @@
 <h1><%= @type.capitalize() %> for <%= @faction.name %></h1>
-<% @units.each do |unit| %>
-  <%= render "units/unit_tab", unit: unit %>
-<% end %>
+<ul class="list-group">
+  <% @units.each do |unit| %>
+  <li class="list-group-item">
+    <%= render "units/unit_tab", unit: unit %>
+  </li>
+  <% end %>
+</ul>
