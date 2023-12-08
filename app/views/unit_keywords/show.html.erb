@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @unit_keyword %>
+
+<div>
+  <%= link_to "Edit this unit keyword", edit_unit_keyword_path(@unit_keyword) %> |
+  <%= link_to "Back to unit keywords", unit_keywords_path %>
+
+  <%= button_to "Destroy this unit keyword", @unit_keyword, method: :delete %>
+</div>

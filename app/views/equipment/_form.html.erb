@@ -1,0 +1,37 @@
+<%= form_with(model: equipment) do |form| %>
+  <% if equipment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(equipment.errors.count, "error") %> prohibited this equipment from being saved:</h2>
+
+      <ul>
+        <% equipment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :model_id, style: "display: block" %>
+    <%= form.number_field :model_id %>
+  </div>
+
+  <div>
+    <%= form.label :weapon, style: "display: block" %>
+    <%= form.number_field :weapon %>
+  </div>
+
+  <div>
+    <%= form.label :limits, style: "display: block" %>
+    <%= form.number_field :limits %>
+  </div>
+
+  <div>
+    <%= form.label :slot, style: "display: block" %>
+    <%= form.number_field :slot %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

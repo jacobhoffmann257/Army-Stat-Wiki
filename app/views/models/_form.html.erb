@@ -12,11 +12,6 @@
   <% end %>
 
   <div>
-    <%= form.label :unit, style: "display: block" %>
-    <%= form.number_field :unit %>
-  </div>
-
-  <div>
     <%= form.label :movement, style: "display: block" %>
     <%= form.number_field :movement %>
   </div>
@@ -29,6 +24,11 @@
   <div>
     <%= form.label :save_value, style: "display: block" %>
     <%= form.number_field :save_value %>
+  </div>
+
+  <div>
+    <%= form.label :invulnerable_save, style: "display: block" %>
+    <%= form.number_field :invulnerable_save %>
   </div>
 
   <div>
@@ -47,8 +47,13 @@
   </div>
 
   <div>
-    <%= form.label :invulnerable_save, style: "display: block" %>
-    <%= form.number_field :invulnerable_save %>
+    <%= form.label :unit_id, style: "display: block" %>
+    <%= form.number_field :unit_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>

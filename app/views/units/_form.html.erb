@@ -12,13 +12,8 @@
   <% end %>
 
   <div>
-    <%= form.label :small, style: "display: block" %>
-    <%= form.number_field :small %>
-  </div>
-
-  <div>
-    <%= form.label :large, style: "display: block" %>
-    <%= form.number_field :large %>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>
@@ -27,13 +22,43 @@
   </div>
 
   <div>
+    <%= form.label :cost, style: "display: block" %>
+    <%= form.number_field :cost %>
+  </div>
+
+  <div>
+    <%= form.label :min_size, style: "display: block" %>
+    <%= form.number_field :min_size %>
+  </div>
+
+  <div>
+    <%= form.label :max_size, style: "display: block" %>
+    <%= form.number_field :max_size %>
+  </div>
+
+  <div>
+    <%= form.label :role, style: "display: block" %>
+    <%= form.text_field :role %>
+  </div>
+
+  <div>
+    <%= form.label :damage, style: "display: block" %>
+    <%= form.check_box :damage %>
+  </div>
+
+  <div>
+    <%= form.label :dmg_amount, style: "display: block" %>
+    <%= form.number_field :dmg_amount %>
+  </div>
+
+  <div>
     <%= form.label :captain, style: "display: block" %>
     <%= form.check_box :captain %>
   </div>
 
   <div>
-    <%= form.label :damage, style: "display: block" %>
-    <%= form.number_field :damage %>
+    <%= form.label :picture, style: "display: block" %>
+    <%= form.text_field :picture %>
   </div>
 
   <div>

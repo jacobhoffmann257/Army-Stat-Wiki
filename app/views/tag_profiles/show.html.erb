@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tag_profile %>
+
+<div>
+  <%= link_to "Edit this tag profile", edit_tag_profile_path(@tag_profile) %> |
+  <%= link_to "Back to tag profiles", tag_profiles_path %>
+
+  <%= button_to "Destroy this tag profile", @tag_profile, method: :delete %>
+</div>

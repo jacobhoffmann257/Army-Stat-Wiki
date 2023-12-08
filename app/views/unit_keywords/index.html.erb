@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Unit keywords</h1>
+
+<div id="unit_keywords">
+  <% @unit_keywords.each do |unit_keyword| %>
+    <%= render unit_keyword %>
+    <p>
+      <%= link_to "Show this unit keyword", unit_keyword %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New unit keyword", new_unit_keyword_path %>
