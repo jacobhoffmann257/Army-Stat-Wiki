@@ -1,6 +1,7 @@
 class UnitsController < ApplicationController
   before_action :set_unit, only: %i[ show edit update destroy ]
-  before_action :unit_pundit, only: [:show,:create,:update,:destroy]
+  before_action(except: [:show]){authorize(@unit|| Unit)}
+  #before_action :unit_pundit, only: [:show, :create, :update]
   # GET /units or /units.json
   def index
     @units = Unit.all
@@ -25,6 +26,10 @@ class UnitsController < ApplicationController
   # GET /units/1/edit
   def edit
     @unit = Unit.where(params.fetch("id")).first
+    if authorize current_user, @unit
+    else
+      redirect_to units_url, notice: "Unit was successfully destroyed."
+    end
   end
 
   # POST /units or /units.json
@@ -44,6 +49,7 @@ class UnitsController < ApplicationController
 
   # PATCH/PUT /units/1 or /units/1.json
   def update
+    #authorize @unit
     respond_to do |format|
       if @unit.update(unit_params)
         format.html { redirect_to unit_url(@unit), notice: "Unit was successfully updated." }
@@ -76,10 +82,11 @@ class UnitsController < ApplicationController
       params.require(:unit).permit(:id, :name, :role, :cost, :faction_id, :max_size, :base_size, :picture)
     end
     def unit_pundit
-      if UnitPolicy.new(current_user).show?
-      elsif !UnitPolicy.new(current_user).create?
-      elsif !UnitPolicy.new(current_user).destroy?
-      elsif !UnitPolicy.new(current_user).update?
+      if UnitPolicy.new(current_user, @unit).show?
+      elsif UnitPolicy.new(current_user, @unit).create?
+        redirect_back fallback_location: root_url
+      elsif UnitPolicy.new(current_user, @unit).update?
+        redirect_back fallback_location: root_url
       end
     end
 end

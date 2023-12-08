@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id                     :integer          not null, primary key
-#  admin                  :boolean
+#  admin                  :boolean          default(FALSE)
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  remember_created_at    :datetime
@@ -24,4 +24,5 @@ class User < ApplicationRecord
   has_many  :favorites, class_name: "Favorite", foreign_key: "user_id", dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
 end

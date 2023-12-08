@@ -1,12 +1,12 @@
 Unit_Name,Base_Size,Model_Name,Invurebale_Save,Desc,M,T,Sv,W,Ld,OC,type
-'Iron Hand' Straken,(25mm),'Iron Hand' Straken,4+,records purged,6,3,3,4,7,1,character
+'Iron Hand' Straken,(25mm),'Iron Hand' Straken,4+,records purged,6,3,3,4,7,1,epic hero
 Cadian Castellan,(28mm),Cadian Castellan,5+,records purged,6,3,5,4,7,1,character
 Cadian Command Squad,(28mm),CADIAN COMMANDER,0,records purged,6,3,5,3,7,1,character
 Cadian Command Squad,(28mm),VETERAN GUARDSMAN,0,records purged,6,3,5,1,7,1,character
 Commissar,(28mm),Commissar,5+,records purged,6,3,5,3,6,1,character
-Gaunt's Ghosts,(28mm),TANITH GHOST,5+,records purged,6,3,5,2,7,1,character
-Gaunt's Ghosts,(28mm),IBRAM GAUNT,5+,records purged,6,3,4,3,6,1,character
-Lord Solar Leontus,(80mm),Lord Solar Leontus,4+,records purged,12,4,3,8,6,2,character
+Gaunt's Ghosts,(28mm),TANITH GHOST,5+,records purged,6,3,5,2,7,1,epic hero
+Gaunt's Ghosts,(28mm),IBRAM GAUNT,5+,records purged,6,3,4,3,6,1,epic hero
+Lord Solar Leontus,(80mm),Lord Solar Leontus,4+,records purged,12,4,3,8,6,2,epic hero
 Militarum Tempestus Command Squad,(25mm),TEMPESTUS SCION,0,records purged,6,3,4,1,7,1,character
 Militarum Tempestus Command Squad,(25mm),TEMPESTOR PRIME,0,records purged,6,3,4,3,7,1,character
 Platoon Command Squad,(25mm),PLATOON COMMANDER,0,records purged,6,3,5,3,7,1,character
@@ -15,10 +15,10 @@ Platoon Command Squad,(25mm),VETERAN GUARDSMAN,0,records purged,6,3,5,1,7,1,char
 Primaris Psyker,(32mm),Primaris Psyker,0,records purged,6,3,5,3,7,1,character
 Regimental Enginseer,(32mm),Regimental Enginseer,5+,records purged,6,4,3,3,7,1,character
 Regimental Preacher,(25mm),Regimental Preacher,4+,records purged,6,3,6,3,7,1,character
-Sergeant Harker,(25mm),Sergeant Harker,0,records purged,6,4,5,3,7,1,character
-Sly Marbo,(32mm),Sly Marbo,0,records purged,6,3,5,4,7,1,character
+Sergeant Harker,(25mm),Sergeant Harker,0,records purged,6,4,5,3,7,1,epic hero
+Sly Marbo,(32mm),Sly Marbo,0,records purged,6,3,5,4,7,1,epic hero
 Tank Commander,(Use model),Tank Commander,0,records purged,10,11,2,13,7,3,character
-Ursula Creed,(32mm),Ursula Creed,5+,records purged,6,3,4,4,7,1,character
+Ursula Creed,(32mm),Ursula Creed,5+,records purged,6,3,4,4,7,1,epic hero
 Death Korps Marshal,(25mm),Death Korps Marshal,5+,records purged,6,3,5,4,7,1,character
 Death Rider Squadron Commander,(40mm),Death Rider Squadron Commander,5+,records purged,12,4,4,5,7,1,character
 Cadian Shock Troops,(25mm),Cadian Shock Troops,0,records purged,6,3,5,1,7,2,battleline

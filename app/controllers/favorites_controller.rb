@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+  before_action :favorite_pundit, only: [:show, :create, :update, :destroy]
   def index
     matching_favorites = Favorite.all
 
@@ -25,15 +26,16 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    the_favorite = Favorite.new
-    the_favorite.user_id = params.fetch("query_user_id")
-    the_favorite.unit_id = params.fetch("query_unit_id")
+    @favorite = Favorite.new
+    authorize @favorite
+    @favorite.user_id = params.fetch("query_user_id")
+    @favorite.unit_id = params.fetch("query_unit_id")
 
-    if the_favorite.valid?
-      the_favorite.save
+    if @favorite.valid?
+      @favorite.save
       redirect_back fallback_location: root_url, :notice => "Favorite created successfully." 
     else
-      redirect_to(redirect_back, { :alert => the_favorite.errors.full_messages.to_sentence })
+      redirect_to(redirect_back, { :alert => @favorite.errors.full_messages.to_sentence })
     end
   end
 
@@ -57,5 +59,15 @@ class FavoritesController < ApplicationController
     the_favorite = Favorite.where({ :id => the_id }).at(0)
     the_favorite.destroy
     redirect_back fallback_location: root_url, notice: "Removed from favorites" 
+  end
+  def favorite_pundit
+    if FavoritePolicy.new(current_user, @favorite).show?
+    elsif FavoritePolicy.new(current_user, @favorite).create?
+      redirect_back fallback_location: root_url
+    elsif FavoritePolicy.new(current_user,@favorite).destroy?
+      redirect_back fallback_location: root_url
+    elsif FavoritePolicy.new(current_user,@favorite).update?
+      redirect_back fallback_location: root_url
+    end
   end
 end

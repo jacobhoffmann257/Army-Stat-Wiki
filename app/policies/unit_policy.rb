@@ -1,14 +1,15 @@
-class UnitPolicy
-  attr_reader :user
-
-  def initialize(user)
+class UnitPolicy < ApplicationPolicy
+  attr_reader :user, :unit
+  def initialize(user, unit)
     @user = user
-  end
+    @unit = unit
+  end  
+
   def show?
     true
   end
   def edit?
-    @user.admin?
+    update?
   end
   def update?
     #only admins can update
@@ -20,6 +21,6 @@ class UnitPolicy
   end
   def create?
     #only admins can create
-    @user.admin?
+    @user.admin = true 
   end
 end

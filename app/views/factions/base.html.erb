@@ -1,10 +1,76 @@
 <ul>
-  <li><%= link_to "Charaters",type_path(@faction.name, "character"),faction: @faction, type: "character" %></li>
-  <li><%= link_to "Battleline",type_path(@faction.name, "battleline"),faction: @faction, type: "battleline" %></li>
-  <li><%= link_to "Transport",type_path(@faction.name,"transport"),faction: @faction, type: "transport"  %></li>
-  <li><%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></li>
-  <li><%= link_to "All",all_path(@faction.name),faction: @faction  %></li>
-  <% if current_user.admin === true %>
-    <li><%= link_to "Edit this Faction", edit_faction_path( @faction)%></li>
+  <li>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Epic Hero</h5>
+        <p class="card-text">Unique Characters in the setup every army can only have one at each</p>
+        <button class="btn btn-primary">Epic Heros<%= link_to "Epic Heros",type_path(@faction.name, "epic hero"),faction: @faction, type: "epic hero" %></button>
+      </div>
+    </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Characters</h5>
+          <p class="card-text">Characters fill the role of battlefield commanders some can lead units and an army can have three of each</p>
+          <button class="btn btn-primary">Characters<%= link_to "Charaters",type_path(@faction.name, "character"),faction: @faction, type: "character" %></button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Battleline</h5>
+          <p class="card-text">Standard rank and file troop, an army can have 6 of each unit</p>
+          <button class="btn btn-primary">Battleline<%= link_to "Battleline",type_path(@faction.name, "battleline"),faction: @faction, type: "battleline" %></button>
+        </div>
+      </div>
+    </li>
+<li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Transports</h5>
+          <p class="card-text">Units that transport others in to combat, a army can only have 6 of each</p>
+          <button class="btn btn-primary">Transport<%= link_to "Transport",type_path(@faction.name,"transport"),faction: @faction, type: "transport"  %></button>
+        </div>
+      </div>
+    </li>    
+    <li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Other</h5>
+          <p class="card-text">Armor, Specialists and other elite troops, an army can have 3 of each</p>
+          <button class="btn btn-primary">Battleline<%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">All</h5>
+          <p class="card-text">Show all units for this faction</p>
+          <button class="btn btn-primary">Battleline<%= link_to "All",all_path(@faction.name),faction: @faction  %></button>
+        </div>
+      </div>
+    </li>
+  <% if user_signed_in? %>
+    <% if current_user.admin === true %>
+    <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="app/assests/images/Tyranids_Icon" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Edit</h5>
+            <p class="card-text">Edit this faction</p>
+            <button class="btn btn-primary">Edit<%= link_to "Edit this Faction", edit_faction_path( @faction)%></button>
+          </div>
+        </div>
+      </li>
+    <% end %>
   <% end %>
 </ul>

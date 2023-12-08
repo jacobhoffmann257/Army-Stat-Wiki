@@ -1,12 +1,12 @@
 Unit_Name,Base_Size,Model_Name,Invurebale_Save,Desc,M,T,Sv,W,Ld,OC,type
 Broodlord,(75 x 42mm),Broodlord,4+,records purged,8,5,4,6,7,1,character
-Deathleaper,(60mm),Deathleaper,4+,records purged,8,6,3,7,7,1,character
+Deathleaper,(60mm),Deathleaper,4+,records purged,8,6,3,7,7,1,epic hero
 Hive Tyrant,(60mm),Hive Tyrant,4+,records purged,8,10,2,10,7,3,character
 Neurotyrant,(50mm),Neurotyrant,4+,records purged,6,8,4,9,7,3,character
-Old One Eye,(105 x 70mm),Old One Eye,0,records purged,8,9,2,9,8,3,character
+Old One Eye,(105 x 70mm),Old One Eye,0,records purged,8,9,2,9,8,3,epic hero
 Parasite Of Mortrex,(40mm),Parasite Of Mortrex,0,records purged,12,5,4,5,8,1,character
 Tervigon,(120 x 92mm),Tervigon,0,records purged,8,11,2,16,7,5,character
-The Swarmlord,(60mm),The Swarmlord,4+,records purged,8,10,2,10,7,3,character
+The Swarmlord,(60mm),The Swarmlord,4+,records purged,8,10,2,10,7,3,epic hero
 Winged Hive Tyrant,(60mm),Winged Hive Tyrant,4+,records purged,12,9,2,10,7,3,character
 Winged Tyranid Prime,(50mm),Winged Tyranid Prime,0,records purged,12,5,4,6,7,1,character
 Gargoyles,(32mm flying base),Gargoyles,0,records purged,12,3,6,1,8,2,battleline

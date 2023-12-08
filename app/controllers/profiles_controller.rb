@@ -64,10 +64,10 @@ class ProfilesController < ApplicationController
       @profile = Profile.find(params[:id])
     end
     def set_weapon
-      @weapon = Weapon.find(params[:id])
+      @weapon = Weapon.find(params[:weapon_id])
     end
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.require(:profile).permit(:weapon_id, :attacks, :skill, :strength, :armor_piercing, :damage)
+      params.require(:profile).permit(:id,:weapon_id, :attacks, :skill, :strength, :armor_piercing, :damage)
     end
 end
