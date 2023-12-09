@@ -377,10 +377,10 @@ namespace :slurp do
               csv_profile.save
             else
               csv_weapon.save
-              weapon = Weapon.where("created_at").last
+              weapon = Weapon.all.last
               csv_profile.weapon_id = weapon.id
               csv_profile.save
-              profile = Profile.where("created_at").last
+              profile = Profile.all.last
               equipment = Equipment.new
               equipment.model_id = model.id
               equipment.weapon_id = weapon.id
