@@ -1,12 +1,14 @@
 databases:
   - name: armystat
+    plan: free
     databaseName: armystat
     user: armystat
 
 services:
   - type: web
     name: armystat
-    runtime: ruby
+    plan: free
+    env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
