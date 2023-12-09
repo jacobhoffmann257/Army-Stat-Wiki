@@ -66,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
     t.integer "toughness"
     t.integer "save_value"
     t.integer "invulnerable_save"
+    t.integer "invulnerable_save"
     t.integer "wounds"
     t.integer "leadership"
     t.integer "objective_control"

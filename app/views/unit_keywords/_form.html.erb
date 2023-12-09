@@ -1,0 +1,27 @@
+<%= form_with(model: unit_keyword) do |form| %>
+  <% if unit_keyword.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(unit_keyword.errors.count, "error") %> prohibited this unit_keyword from being saved:</h2>
+
+      <ul>
+        <% unit_keyword.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :unit_id, style: "display: block" %>
+    <%= form.number_field :unit_id %>
+  </div>
+
+  <div>
+    <%= form.label :keyword_id, style: "display: block" %>
+    <%= form.number_field :keyword_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -42,6 +42,11 @@
   </div>
 
   <div>
+    <%= form.label :invulnerable_save, style: "display: block" %>
+    <%= form.number_field :invulnerable_save %>
+  </div>
+
+  <div>
     <%= form.label :wounds, style: "display: block" %>
     <%= form.number_field :wounds %>
   </div>
@@ -54,6 +59,16 @@
   <div>
     <%= form.label :objective_control, style: "display: block" %>
     <%= form.number_field :objective_control %>
+  </div>
+
+  <div>
+    <%= form.label :unit_id, style: "display: block" %>
+    <%= form.number_field :unit_id %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>

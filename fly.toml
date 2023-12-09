@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for damp-glade-504 on 2023-12-08T21:39:22Z
+# fly.toml app configuration file generated for jacobhoffmannproject on 2023-12-08T23:01:51Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "damp-glade-504"
+app = "jacobhoffmannproject"
 primary_region = "ord"
 console_command = "/rails/bin/rails console"
 
@@ -16,6 +16,11 @@ console_command = "/rails/bin/rails console"
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
 
 [[statics]]
   guest_path = "/rails/public"

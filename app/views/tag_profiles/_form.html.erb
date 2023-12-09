@@ -1,0 +1,27 @@
+<%= form_with(model: tag_profile) do |form| %>
+  <% if tag_profile.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tag_profile.errors.count, "error") %> prohibited this tag_profile from being saved:</h2>
+
+      <ul>
+        <% tag_profile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tag_id, style: "display: block" %>
+    <%= form.number_field :tag_id %>
+  </div>
+
+  <div>
+    <%= form.label :profile_id, style: "display: block" %>
+    <%= form.number_field :profile_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
