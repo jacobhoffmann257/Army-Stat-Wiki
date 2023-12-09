@@ -10,6 +10,11 @@
 #  model_id   :integer          not null
 #  weapon_id  :integer          not null
 #
+# Indexes
+#
+#  index_equipment_on_model_id   (model_id)
+#  index_equipment_on_weapon_id  (weapon_id)
+#
 class Equipment < ApplicationRecord
   belongs_to :model
   belongs_to :weapon

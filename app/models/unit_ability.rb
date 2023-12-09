@@ -8,6 +8,11 @@
 #  ability_id :integer          not null
 #  unit_id    :integer          not null
 #
+# Indexes
+#
+#  index_unit_abilities_on_ability_id  (ability_id)
+#  index_unit_abilities_on_unit_id     (unit_id)
+#
 class UnitAbility < ApplicationRecord
   belongs_to :unit
   belongs_to :ability

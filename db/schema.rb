@@ -35,6 +35,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
     t.integer "slot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["model_id"], name: "index_equipment_on_model_id"
+    t.index ["weapon_id"], name: "index_equipment_on_weapon_id"
   end
 
   create_table "factions", force: :cascade do |t|
@@ -66,7 +68,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
     t.integer "toughness"
     t.integer "save_value"
     t.integer "invulnerable_save"
-    t.integer "invulnerable_save"
     t.integer "wounds"
     t.integer "leadership"
     t.integer "objective_control"
@@ -76,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
   end
 
   create_table "profiles", force: :cascade do |t|
+    t.string "name"
     t.integer "weapon_id", null: false
     t.string "attacks"
     t.integer "skill"
@@ -84,8 +86,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
     t.string "damage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.index ["weapon_id"], name: "index_profiles_on_weapon_id"
+  end
+
+  create_table "tag_profiles", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "profile_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_tag_profiles_on_profile_id"
+    t.index ["tag_id"], name: "index_tag_profiles_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "unit_abilities", force: :cascade do |t|
@@ -93,6 +110,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
     t.integer "ability_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ability_id"], name: "index_unit_abilities_on_ability_id"
+    t.index ["unit_id"], name: "index_unit_abilities_on_unit_id"
   end
 
   create_table "unit_keywords", force: :cascade do |t|
@@ -106,12 +125,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
 
   create_table "units", force: :cascade do |t|
     t.string "name"
-    t.string "role"
-    t.integer "cost"
     t.integer "faction_id", null: false
+    t.integer "cost"
+    t.integer "min_size"
     t.integer "max_size"
-    t.string "base_size"
+    t.string "role"
+    t.boolean "damage"
+    t.integer "dmg_amount"
+    t.boolean "captain"
     t.string "picture"
+    t.string "base_size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "models_per_unit"

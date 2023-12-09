@@ -6,7 +6,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.string :attacks
       t.integer :skill
       t.integer :strength
-      t.integer :aarmor_piercing
+      t.integer :armor_piercing
       t.string :damage
 
       t.timestamps

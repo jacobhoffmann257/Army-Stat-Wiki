@@ -4,8 +4,12 @@
 #
 #  id              :integer          not null, primary key
 #  base_size       :string
+#  captain         :boolean
 #  cost            :integer
+#  damage          :boolean
+#  dmg_amount      :integer
 #  max_size        :integer
+#  min_size        :integer
 #  models_per_unit :integer
 #  name            :string
 #  picture         :string

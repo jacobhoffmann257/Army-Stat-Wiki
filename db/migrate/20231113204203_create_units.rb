@@ -11,6 +11,7 @@ class CreateUnits < ActiveRecord::Migration[7.0]
       t.integer :dmg_amount
       t.boolean :captain
       t.string :picture
+      t.string :base_size
 
       t.timestamps
     end
