@@ -122,10 +122,10 @@ namespace :slurp do
               csv_profile.save
             else
               csv_weapon.save
-              weapon = Weapon.where("created_at").last
+              weapon = Weapon.all.last
               csv_profile.weapon_id = weapon.id
               csv_profile.save
-              profile = Profile.where("created_at").last
+              profile = Profile.all.last
               equipment = Equipment.new
               equipment.model_id = model.id
               equipment.weapon_id = weapon.id
@@ -135,10 +135,10 @@ namespace :slurp do
           end
         else
           csv_weapon.save
-          weapon = Weapon.where("created_at").last
+          weapon = Weapon.all.last
           csv_profile.weapon_id = weapon.id
           csv_profile.save
-          profile = Profile.where("created_at").last
+          profile = Profile.all.last
           equipment = Equipment.new
           #puts model.id
           equipment.model_id = model.id
@@ -173,7 +173,7 @@ namespace :slurp do
               a.name = ability
               a.classification = "core"
               a.save
-              new_ability = Ability.where("created_at").last
+              new_ability = Ability.all.last
               u.unit_id = unit.id
               u.ability_id = Ability.where(name: ability).last.id
               u.save
@@ -198,7 +198,7 @@ namespace :slurp do
                 a.name = ability
                 a.classification = "faction"
                 a.save
-                new_ability = Ability.where("created_at").last
+                new_ability = Ability.all.last
 
                 u.unit_id = unit.id
                 #puts a.name
@@ -227,7 +227,7 @@ namespace :slurp do
               a.description = ability[1]
               a.classification = "standard"
               a.save
-              new_ability = Ability.where("created_at").last
+              new_ability = Ability.all.last
               
               u.unit_id = unit.id
               u.ability_id = Ability.where(name: ability).last.id
@@ -260,7 +260,7 @@ namespace :slurp do
                 else
                   u = UnitAbility.new
                   ability.save
-                  new_ability = Ability.where("created_at").last
+                  new_ability = Ability.all.last
                   u.unit_id = unit.id
                   u.ability_id = new_ability.id
                   u.save
@@ -391,10 +391,10 @@ namespace :slurp do
           end
         else
           csv_weapon.save
-          weapon = Weapon.where("created_at").last
+          weapon = Weapon.all.last
           csv_profile.weapon_id = weapon.id
           csv_profile.save
-          profile = Profile.where("created_at").last
+          profile = Profile.all.last
           equipment = Equipment.new
           equipment.model_id = model.id
           equipment.weapon_id = weapon.id
@@ -428,7 +428,7 @@ namespace :slurp do
               a.name = ability
               a.classification = "core"
               a.save
-              new_ability = Ability.where("created_at").last
+              new_ability = Ability.all.last
               u.unit_id = unit.id
               u.ability_id = Ability.where(name: ability).last.id
               u.save
@@ -453,7 +453,7 @@ namespace :slurp do
                 a.name = ability
                 a.classification = "faction"
                 a.save
-                new_ability = Ability.where("created_at").last
+                new_ability = Ability.all.last
 
                 u.unit_id = unit.id
                 u.ability_id = Ability.where(name: ability).last.id
@@ -478,7 +478,7 @@ namespace :slurp do
               a.description = ability[1]
               a.classification = "standard"
               a.save
-              new_ability = Ability.where("created_at").last
+              new_ability = Ability.all.last
               
               u.unit_id = unit.id
               u.ability_id = Ability.where(name: ability).last.id
@@ -512,7 +512,7 @@ namespace :slurp do
                   a = Ability.new
                   ability.classification = "wargear"
                   ability.save
-                  new_ability = Ability.where("created_at").last
+                  new_ability = Ability.all.last
                   u.unit_id = unit.id
                   u.ability_id = new_ability.id
                   u.save
