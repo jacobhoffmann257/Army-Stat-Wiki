@@ -1,0 +1,26 @@
+<div id="<%= dom_id weapon %>">
+    <div class="row border" >
+      <p><%= weapon.name %></p>
+    </div>
+    <ul>
+      <% weapon.profile.each do |profile|%>
+      <li>
+        <div class="row border" >
+          <div class="col border">
+            <%= profile.name%>
+          </div>
+          <div class="col-sm-2 border">
+            <% if weapon.range === 0%>
+              <p>Melee</p>
+            <% else %>
+              <p><%= weapon.range%></p>
+            <% end %>
+          </div>
+          <div class="col border">
+            <%= render "profiles/profile", profile: profile %>
+          </div>
+        </div>
+      </li>
+      <%end%>
+    </ul>
+</div>

@@ -6,7 +6,7 @@
   <% @factions.each do |faction| %>
     <%= render faction %>
     <p>
-      <%= link_to "Show this faction", faction %>
+      <%= link_to "Show Units for this faction",base_path(faction.name),faction: faction  %>
     </p>
   <% end %>
 </div>

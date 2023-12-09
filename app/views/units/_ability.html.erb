@@ -1,0 +1,48 @@
+<div id="<%= dom_id unit %>">
+  <% if unit.get_abilities("core").length != 0 %>
+    <div class="row border" >
+      <div class= "col border">
+        <p>Core:</p>
+      </div>
+        <% unit.get_abilities("core").each do |ability| %>
+          <div class= "col border">
+            <p><%= ability.name %></p>
+          </div>
+        <% end %>
+    </div>
+  <% end %>
+  <% if unit.get_abilities("faction").length != 0 %>
+    <div class="row border" >
+      <div class="col border">
+        <p>Faction:</p>
+      </div>
+        <% unit.get_abilities("faction").each do |ability| %>
+          <div class= "col border">
+            <p><%= ability.name %></p>
+          </div>
+        <% end %>
+    </div>
+  <% end %>
+  <% if unit.get_abilities("standard").length != 0 %>
+    <div class="row border" >
+      <ul class= "list-group">
+        <% unit.get_abilities("standard").each do |ability| %>
+            <li class="list-group-item">
+                <%= render "abilities/ability", ability: ability%>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <% if unit.get_abilities("wargear").length != 0 %>
+    <div class="row border" >
+      <ul class= "list-group">
+        <% unit.get_abilities("wargear").each do |ability| %>
+            <li class="list-group-item">
+                <%= render "abilities/ability", ability: ability%>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

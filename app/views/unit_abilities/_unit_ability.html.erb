@@ -1,12 +1,5 @@
 <div id="<%= dom_id unit_ability %>">
   <p>
-    <strong>Unit:</strong>
-    <%= unit_ability.unit_id %>
+  <%= render "abilities/ability", ability: unit_ability.ability%>
   </p>
-
-  <p>
-    <strong>Ability:</strong>
-    <%= unit_ability.ability_id %>
-  </p>
-
 </div>

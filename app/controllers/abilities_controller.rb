@@ -1,6 +1,7 @@
 class AbilitiesController < ApplicationController
+  before_action :set_unit_ability
   before_action :set_ability, only: %i[ show edit update destroy ]
-
+  before_action{authorize(@ability|| ability)}
   # GET /abilities or /abilities.json
   def index
     @abilities = Ability.all
@@ -13,10 +14,12 @@ class AbilitiesController < ApplicationController
   # GET /abilities/new
   def new
     @ability = Ability.new
+    authorize @ability
   end
 
   # GET /abilities/1/edit
   def edit
+    authorize @ability
   end
 
   # POST /abilities or /abilities.json
@@ -49,8 +52,8 @@ class AbilitiesController < ApplicationController
 
   # DELETE /abilities/1 or /abilities/1.json
   def destroy
+    authorize @ability
     @ability.destroy
-
     respond_to do |format|
       format.html { redirect_to abilities_url, notice: "Ability was successfully destroyed." }
       format.json { head :no_content }
@@ -62,9 +65,8 @@ class AbilitiesController < ApplicationController
     def set_ability
       @ability = Ability.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def ability_params
-      params.require(:ability).permit(:name, :description, :unit_ability_id)
+      params.require(:ability).permit(:name, :description, :classification)
     end
 end

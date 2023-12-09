@@ -14,4 +14,6 @@
 #  index_unit_abilities_on_unit_id     (unit_id)
 #
 class UnitAbility < ApplicationRecord
+  belongs_to :unit
+  belongs_to :ability
 end

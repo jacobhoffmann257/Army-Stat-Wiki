@@ -1,52 +1,18 @@
 <div id="<%= dom_id unit %>">
-  <p>
-    <strong>Name:</strong>
-    <%= unit.name %>
-  </p>
-
-  <p>
-    <strong>Faction:</strong>
-    <%= unit.faction_id %>
-  </p>
-
-  <p>
-    <strong>Cost:</strong>
-    <%= unit.cost %>
-  </p>
-
-  <p>
-    <strong>Min size:</strong>
-    <%= unit.min_size %>
-  </p>
-
-  <p>
-    <strong>Max size:</strong>
-    <%= unit.max_size %>
-  </p>
-
-  <p>
-    <strong>Role:</strong>
-    <%= unit.role %>
-  </p>
-
-  <p>
-    <strong>Damage:</strong>
-    <%= unit.damage %>
-  </p>
-
-  <p>
-    <strong>Dmg amount:</strong>
-    <%= unit.dmg_amount %>
-  </p>
-
-  <p>
-    <strong>Captain:</strong>
-    <%= unit.captain %>
-  </p>
-
-  <p>
-    <strong>Picture:</strong>
-    <%= unit.picture %>
-  </p>
-
+  <div class="container border">
+    <div class="row border">
+      <div class="col border">
+          <%= render "units/stats", unit: unit%>
+      </div>
+    </div>
+    <div class= "row border">
+      <div class= "col border">
+          <%= render "units/weapons", unit: unit%>
+      </div>
+      <div class="col border">
+        <p>Abilities</p>
+          <%= render"units/ability",unit: unit %>
+      </div>
+    </div>
+  </div>
 </div>

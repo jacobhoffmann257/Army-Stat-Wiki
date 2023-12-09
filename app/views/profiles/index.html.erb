@@ -4,11 +4,10 @@
 
 <div id="profiles">
   <% @profiles.each do |profile| %>
-    <%= render profile %>
+    <%#= render profile %>
+    <%= profile.id %>
     <p>
-      <%= link_to "Show this profile", profile %>
+      <%= link_to "Show this profile", unit_equipment_weapon_profile_path(@unit.id, @equipment.id, @weapon, profile) %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New profile", new_profile_path %>

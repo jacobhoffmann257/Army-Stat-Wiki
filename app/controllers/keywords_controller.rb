@@ -1,70 +1,54 @@
 class KeywordsController < ApplicationController
-  before_action :set_keyword, only: %i[ show edit update destroy ]
-
-  # GET /keywords or /keywords.json
   def index
-    @keywords = Keyword.all
+    matching_keywords = Keyword.all
+
+    @list_of_keywords = matching_keywords.order({ :created_at => :desc })
+
+    render({ :template => "keywords/index" })
   end
 
-  # GET /keywords/1 or /keywords/1.json
   def show
+    the_id = params.fetch("path_id")
+
+    matching_keywords = Keyword.where({ :id => the_id })
+
+    @the_keyword = matching_keywords.at(0)
+
+    render({ :template => "keywords/show" })
   end
 
-  # GET /keywords/new
-  def new
-    @keyword = Keyword.new
-  end
-
-  # GET /keywords/1/edit
-  def edit
-  end
-
-  # POST /keywords or /keywords.json
   def create
-    @keyword = Keyword.new(keyword_params)
+    the_keyword = Keyword.new
+    the_keyword.name = params.fetch("query_name")
 
-    respond_to do |format|
-      if @keyword.save
-        format.html { redirect_to keyword_url(@keyword), notice: "Keyword was successfully created." }
-        format.json { render :show, status: :created, location: @keyword }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @keyword.errors, status: :unprocessable_entity }
-      end
+    if the_keyword.valid?
+      the_keyword.save
+      redirect_to("/keywords", { :notice => "Keyword created successfully." })
+    else
+      redirect_to("/keywords", { :alert => the_keyword.errors.full_messages.to_sentence })
     end
   end
 
-  # PATCH/PUT /keywords/1 or /keywords/1.json
   def update
-    respond_to do |format|
-      if @keyword.update(keyword_params)
-        format.html { redirect_to keyword_url(@keyword), notice: "Keyword was successfully updated." }
-        format.json { render :show, status: :ok, location: @keyword }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @keyword.errors, status: :unprocessable_entity }
-      end
+    the_id = params.fetch("path_id")
+    the_keyword = Keyword.where({ :id => the_id }).at(0)
+
+    the_keyword.name = params.fetch("query_name")
+
+    if the_keyword.valid?
+      the_keyword.save
+      redirect_to("/keywords/#{the_keyword.id}", { :notice => "Keyword updated successfully."} )
+    else
+      redirect_to("/keywords/#{the_keyword.id}", { :alert => the_keyword.errors.full_messages.to_sentence })
     end
   end
 
-  # DELETE /keywords/1 or /keywords/1.json
   def destroy
-    @keyword.destroy
+    the_id = params.fetch("path_id")
+    the_keyword = Keyword.where({ :id => the_id }).at(0)
 
-    respond_to do |format|
-      format.html { redirect_to keywords_url, notice: "Keyword was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    the_keyword.destroy
+
+    redirect_to("/keywords", { :notice => "Keyword deleted successfully."} )
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_keyword
-      @keyword = Keyword.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def keyword_params
-      params.require(:keyword).permit(:name)
-    end
 end

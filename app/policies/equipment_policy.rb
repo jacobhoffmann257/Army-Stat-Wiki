@@ -1,0 +1,2 @@
+class EquipmentPolicy < ApplicationPolicy
+end

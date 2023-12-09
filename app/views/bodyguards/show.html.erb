@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      Bodyguard #<%= @the_bodyguard.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/bodyguards">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_bodyguard/<%= @the_bodyguard.id %>">
+          Delete bodyguard
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Leader
+      </dt>
+      <dd>
+        <%= @the_bodyguard.leader_id %>
+      </dd>
+
+      <dt>
+        Unit
+      </dt>
+      <dd>
+        <%= @the_bodyguard.unit_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_bodyguard.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_bodyguard.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit bodyguard
+    </h2>
+
+    <form action="/modify_bodyguard/<%= @the_bodyguard.id %>"  method="post" >
+      <div>
+        <label for="leader_id_box">
+          Leader
+        </label>
+
+        <input type="text" id="leader_id_box" name="query_leader_id" value="<%= @the_bodyguard.leader_id %>">
+      </div>
+
+      <div>
+        <label for="unit_id_box">
+          Unit
+        </label>
+
+        <input type="text" id="unit_id_box" name="query_unit_id" value="<%= @the_bodyguard.unit_id %>">
+      </div>
+
+      <button>
+        Update bodyguard
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

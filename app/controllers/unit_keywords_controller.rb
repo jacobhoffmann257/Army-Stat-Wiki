@@ -1,70 +1,56 @@
 class UnitKeywordsController < ApplicationController
-  before_action :set_unit_keyword, only: %i[ show edit update destroy ]
-
-  # GET /unit_keywords or /unit_keywords.json
   def index
-    @unit_keywords = UnitKeyword.all
+    matching_unit_keywords = UnitKeyword.all
+
+    @list_of_unit_keywords = matching_unit_keywords.order({ :created_at => :desc })
+
+    render({ :template => "unit_keywords/index" })
   end
 
-  # GET /unit_keywords/1 or /unit_keywords/1.json
   def show
+    the_id = params.fetch("path_id")
+
+    matching_unit_keywords = UnitKeyword.where({ :id => the_id })
+
+    @the_unit_keyword = matching_unit_keywords.at(0)
+
+    render({ :template => "unit_keywords/show" })
   end
 
-  # GET /unit_keywords/new
-  def new
-    @unit_keyword = UnitKeyword.new
-  end
-
-  # GET /unit_keywords/1/edit
-  def edit
-  end
-
-  # POST /unit_keywords or /unit_keywords.json
   def create
-    @unit_keyword = UnitKeyword.new(unit_keyword_params)
+    the_unit_keyword = UnitKeyword.new
+    the_unit_keyword.unit_id = params.fetch("query_unit_id")
+    the_unit_keyword.keyword_id = params.fetch("query_keyword_id")
 
-    respond_to do |format|
-      if @unit_keyword.save
-        format.html { redirect_to unit_keyword_url(@unit_keyword), notice: "Unit keyword was successfully created." }
-        format.json { render :show, status: :created, location: @unit_keyword }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @unit_keyword.errors, status: :unprocessable_entity }
-      end
+    if the_unit_keyword.valid?
+      the_unit_keyword.save
+      redirect_to("/unit_keywords", { :notice => "Unit keyword created successfully." })
+    else
+      redirect_to("/unit_keywords", { :alert => the_unit_keyword.errors.full_messages.to_sentence })
     end
   end
 
-  # PATCH/PUT /unit_keywords/1 or /unit_keywords/1.json
   def update
-    respond_to do |format|
-      if @unit_keyword.update(unit_keyword_params)
-        format.html { redirect_to unit_keyword_url(@unit_keyword), notice: "Unit keyword was successfully updated." }
-        format.json { render :show, status: :ok, location: @unit_keyword }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @unit_keyword.errors, status: :unprocessable_entity }
-      end
+    the_id = params.fetch("path_id")
+    the_unit_keyword = UnitKeyword.where({ :id => the_id }).at(0)
+
+    the_unit_keyword.unit_id = params.fetch("query_unit_id")
+    the_unit_keyword.keyword_id = params.fetch("query_keyword_id")
+
+    if the_unit_keyword.valid?
+      the_unit_keyword.save
+      redirect_to("/unit_keywords/#{the_unit_keyword.id}", { :notice => "Unit keyword updated successfully."} )
+    else
+      redirect_to("/unit_keywords/#{the_unit_keyword.id}", { :alert => the_unit_keyword.errors.full_messages.to_sentence })
     end
   end
 
-  # DELETE /unit_keywords/1 or /unit_keywords/1.json
   def destroy
-    @unit_keyword.destroy
+    the_id = params.fetch("path_id")
+    the_unit_keyword = UnitKeyword.where({ :id => the_id }).at(0)
 
-    respond_to do |format|
-      format.html { redirect_to unit_keywords_url, notice: "Unit keyword was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    the_unit_keyword.destroy
+
+    redirect_to("/unit_keywords", { :notice => "Unit keyword deleted successfully."} )
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_unit_keyword
-      @unit_keyword = UnitKeyword.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def unit_keyword_params
-      params.require(:unit_keyword).permit(:unit_id, :keyword_id)
-    end
 end

@@ -1,12 +1,8 @@
 <div id="<%= dom_id weapon %>">
-  <p>
-    <strong>Name:</strong>
-    <%= weapon.name %>
-  </p>
-
-  <p>
-    <strong>Range:</strong>
-    <%= weapon.range %>
-  </p>
-
+<% @profile_array = weapon.get_profiles%>
+<% if @profile_array.length >= 2 %>
+    <%= render "weapons/weapon_multiple", weapon: weapon%>
+<% else %>
+    <%= render "weapons/weapon_single", weapon: weapon, profile: @profile_array %>
+<% end %>
 </div>

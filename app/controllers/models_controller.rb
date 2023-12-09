@@ -1,27 +1,33 @@
 class ModelsController < ApplicationController
+  before_action :set_unit
   before_action :set_model, only: %i[ show edit update destroy ]
+  before_action{authorize(@model|| model)}
 
   # GET /models or /models.json
   def index
-    @models = Model.all
+    @models = @unit.models.all
+    authorize @models
   end
 
   # GET /models/1 or /models/1.json
   def show
+    authorize @model
   end
 
   # GET /models/new
   def new
-    @model = Model.new
+    @model = @unit.models.new
+    authorize @model
   end
 
   # GET /models/1/edit
   def edit
+    authorize @model
   end
 
   # POST /models or /models.json
   def create
-    @model = Model.new(model_params)
+    @model = @unit.models.new(model_params)
 
     respond_to do |format|
       if @model.save
@@ -49,6 +55,7 @@ class ModelsController < ApplicationController
 
   # DELETE /models/1 or /models/1.json
   def destroy
+    authorize @model
     @model.destroy
 
     respond_to do |format|
@@ -58,13 +65,16 @@ class ModelsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_model
-      @model = Model.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def model_params
-      params.require(:model).permit(:movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control, :unit_id, :name)
-    end
+  def set_unit
+    @unit = Unit.find(Model.find(params[:id]).unit_id)
+  end
+
+  def set_model
+    @model = Model.find(params[:id])
+  end
+
+  def model_params
+    params.require(:model).permit(:name, :unit_id, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
+  end
 end

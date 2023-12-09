@@ -1,0 +1,2 @@
+class AbilityPolicy < ApplicationPolicy 
+end

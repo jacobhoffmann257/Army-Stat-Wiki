@@ -6,9 +6,9 @@
   <% @models.each do |model| %>
     <%= render model %>
     <p>
-      <%= link_to "Show this model", model %>
+      <%= link_to "Show this model", unit_model_path(@unit, model) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New model", new_model_path %>
+<%= link_to "New model", new_unit_model_path(@unit) %>

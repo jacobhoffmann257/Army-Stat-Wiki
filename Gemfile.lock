@@ -117,6 +117,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     diffy (3.4.2)
+    dockerfile-rails (1.5.12)
+      rails (>= 3.0.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.8.1)
@@ -239,6 +241,8 @@ GEM
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
+    pundit (2.3.1)
+      activesupport (>= 3.0.0)
     racc (1.6.2)
     rack (2.2.7)
     rack-protection (3.0.6)
@@ -419,6 +423,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dockerfile-rails (>= 1.5)
   dotenv-rails
   draft_generators
   draft_matchers
@@ -433,6 +438,7 @@ DEPENDENCIES
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
+  pundit
   rails (~> 7.0.4, >= 7.0.4.3)
   rails-erd
   rails_db

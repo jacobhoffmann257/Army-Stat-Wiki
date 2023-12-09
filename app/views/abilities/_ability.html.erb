@@ -1,17 +1,12 @@
 <div id="<%= dom_id ability %>">
   <p>
-    <strong>Name:</strong>
-    <%= ability.name %>
+    <strong><%= ability.name %></strong>
   </p>
+  <% if ability.description != nil %>
+    <p>
+      <%= ability.description %>
+    </p>
+  <%end%>
 
-  <p>
-    <strong>Description:</strong>
-    <%= ability.description %>
-  </p>
-
-  <p>
-    <strong>Unit ability:</strong>
-    <%= ability.unit_ability_id %>
-  </p>
 
 </div>

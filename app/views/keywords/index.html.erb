@@ -1,14 +1,86 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Keywords</h1>
-
-<div id="keywords">
-  <% @keywords.each do |keyword| %>
-    <%= render keyword %>
-    <p>
-      <%= link_to "Show this keyword", keyword %>
-    </p>
-  <% end %>
+<div>
+  <div>
+    <h1>
+      List of all keywords
+    </h1>
+  </div>
 </div>
 
-<%= link_to "New keyword", new_keyword_path %>
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new keyword
+    </h2>
+
+    <form action="/insert_keyword" method="post">
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name">
+      </div>
+
+      <button>
+        Create keyword
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_keywords.each do |a_keyword| %>
+      <tr>
+        <td>
+          <%= a_keyword.id %>
+        </td>
+
+        <td>
+          <%= a_keyword.name %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_keyword.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_keyword.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/keywords/<%= a_keyword.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

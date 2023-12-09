@@ -1,67 +1,45 @@
-<%= form_with(model: unit) do |form| %>
-  <% if unit.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
 
-      <ul>
-        <% unit.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <%= form_with(model: unit, url: unit_path(@unit), method: :patch, data: { turbo: false }) do |form| %>
+
+    <div>
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, value: "#{@unit.name}" %>
+    </div>
+
+    <div>
+      <%= form.label :role, style: "display: block" %>
+      <%= form.text_field :role, value: "#{@unit.role}" %>
+    </div>
+
+    <div>
+      <%= form.label :cost, style: "display: block" %>
+      <%= form.number_field :cost, value: "#{@unit.cost}" %>
+    </div>
+
+    <div>
+      <%= form.label :max_size, style: "display: block" %>
+      <%= form.number_field :max_size, value: "#{@unit.max_size}" %>
+    </div>
+
+    <div>
+      <%= form.label :base_size, style: "display: block" %>
+      <%= form.number_field :base_size, value: "#{@unit.base_size}" %>
+    </div>
+
+    <div>
+      <%= form.label :picture, style: "display: block" %>
+      <%= form.text_field :picture, value: "#{@unit.picture}" %>
+    </div>
+    <div>
+      <%= form.label :faction_id, style: "display: block" %>
+      <%= form.number_field :faction_id, value:"#{@unit.faction_id}" %>
+    </div>
+    <div>
+      <%= form.submit %>
     </div>
   <% end %>
-
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+      <% @unit.models.each do |model|%>
+        <%= link_to model.name, unit_model_path(@unit.id, model), remote: false %>
+      <% end %>
   </div>
-
-  <div>
-    <%= form.label :faction_id, style: "display: block" %>
-    <%= form.number_field :faction_id %>
-  </div>
-
-  <div>
-    <%= form.label :cost, style: "display: block" %>
-    <%= form.number_field :cost %>
-  </div>
-
-  <div>
-    <%= form.label :min_size, style: "display: block" %>
-    <%= form.number_field :min_size %>
-  </div>
-
-  <div>
-    <%= form.label :max_size, style: "display: block" %>
-    <%= form.number_field :max_size %>
-  </div>
-
-  <div>
-    <%= form.label :role, style: "display: block" %>
-    <%= form.text_field :role %>
-  </div>
-
-  <div>
-    <%= form.label :damage, style: "display: block" %>
-    <%= form.check_box :damage %>
-  </div>
-
-  <div>
-    <%= form.label :dmg_amount, style: "display: block" %>
-    <%= form.number_field :dmg_amount %>
-  </div>
-
-  <div>
-    <%= form.label :captain, style: "display: block" %>
-    <%= form.check_box :captain %>
-  </div>
-
-  <div>
-    <%= form.label :picture, style: "display: block" %>
-    <%= form.text_field :picture %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>

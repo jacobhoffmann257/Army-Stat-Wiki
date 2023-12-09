@@ -1,269 +1,131 @@
 Name,Weapon Name,Range,A,BS/WS,S,AP,D
-Broodlord(⌀75 x 42mm),"Broodlord claws and talons [devastating wounds, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Broodlord(⌀75 x 42mm),"Broodlord claws and talons [devastating wounds, twin-linked]",Melee,5,2+,6,-2,2
-Deathleaper(⌀60mm),Lictor claws and talons [precision],N/A,N/A,N/A,N/A,N/A,N/A
-Deathleaper(⌀60mm),Lictor claws and talons [precision],Melee,6,2+,7,-2,2
-Hive Tyrant(⌀60mm),Heavy venom cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Tyrant(⌀60mm),Heavy venom cannon [blast],"36""",D3,2+,9,-2,3
-Hive Tyrant(⌀60mm),Stranglethorn cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Tyrant(⌀60mm),Stranglethorn cannon [blast],"36""",D6+1,2+,7,-1,2
-Hive Tyrant(⌀60mm),Monstrous bonesword and lash whip [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Tyrant(⌀60mm),Monstrous bonesword and lash whip [twin-linked],Melee,6,2+,9,-2,3
-Hive Tyrant(⌀60mm),Monstrous scything talons [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Tyrant(⌀60mm),Monstrous scything talons [extra attacks],Melee,4,2+,7,-2,2
-Neurotyrant(⌀50mm),"Psychic scream [ignores cover, psychic, torrent]",N/A,N/A,N/A,N/A,N/A,N/A
-Neurotyrant(⌀50mm),"Psychic scream [ignores cover, psychic, torrent]","18""",2D6,N/A,5,-1,2
-Neurotyrant(⌀50mm),Neurotyrant claws and lashes,N/A,N/A,N/A,N/A,N/A,N/A
-Neurotyrant(⌀50mm),Neurotyrant claws and lashes,Melee,6,3+,5,0,1
-Old One Eye(⌀105 x 70mm),Old One Eye’s claws and talons – strike,N/A,N/A,N/A,N/A,N/A,N/A
-Old One Eye(⌀105 x 70mm),Old One Eye’s claws and talons – strike,Melee,6,3+,14,-3,D6+1
-Old One Eye(⌀105 x 70mm),Old One Eye’s claws and talons – sweep,N/A,N/A,N/A,N/A,N/A,N/A
-Old One Eye(⌀105 x 70mm),Old One Eye’s claws and talons – sweep,Melee,12,3+,6,-1,1
-Parasite Of Mortrex(⌀40mm),"Barbed ovipositor [anti-infantry 3+, extra attacks]",N/A,N/A,N/A,N/A,N/A,N/A
-Parasite Of Mortrex(⌀40mm),"Barbed ovipositor [anti-infantry 3+, extra attacks]",Melee,1,2+,3,-2,3
-Parasite Of Mortrex(⌀40mm),Clawed limbs,N/A,N/A,N/A,N/A,N/A,N/A
-Parasite Of Mortrex(⌀40mm),Clawed limbs,Melee,6,2+,5,-1,1
-Tervigon(⌀120 x 92mm),Stinger salvoes,N/A,N/A,N/A,N/A,N/A,N/A
-Tervigon(⌀120 x 92mm),Stinger salvoes,"24""",8,3+,5,0,1
-Tervigon(⌀120 x 92mm),Massive crushing claws,N/A,N/A,N/A,N/A,N/A,N/A
-Tervigon(⌀120 x 92mm),Massive crushing claws,Melee,4,4+,12,-3,D6+1
-Tervigon(⌀120 x 92mm),Massive scything talons – strike,N/A,N/A,N/A,N/A,N/A,N/A
-Tervigon(⌀120 x 92mm),Massive scything talons – strike,Melee,4,3+,9,-2,D6
-Tervigon(⌀120 x 92mm),Massive scything talons – sweep,N/A,N/A,N/A,N/A,N/A,N/A
-Tervigon(⌀120 x 92mm),Massive scything talons – sweep,Melee,8,3+,7,-1,2
-The Swarmlord(⌀60mm),"Synaptic pulse [psychic, torrent]",N/A,N/A,N/A,N/A,N/A,N/A
-The Swarmlord(⌀60mm),"Synaptic pulse [psychic, torrent]","18""",D6+3,N/A,5,-1,2
-The Swarmlord(⌀60mm),Bone sabres [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-The Swarmlord(⌀60mm),Bone sabres [twin-linked],Melee,8,2+,9,-2,3
-Winged Hive Tyrant(⌀60mm),Heavy venom cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Winged Hive Tyrant(⌀60mm),Heavy venom cannon [blast],"36""",D3,2+,9,-2,3
-Winged Hive Tyrant(⌀60mm),Stranglethorn cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Winged Hive Tyrant(⌀60mm),Stranglethorn cannon [blast],"36""",D6+1,2+,7,-1,2
-Winged Hive Tyrant(⌀60mm),Monstrous bonesword and lash whip [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Winged Hive Tyrant(⌀60mm),Monstrous bonesword and lash whip [twin-linked],Melee,6,2+,9,-2,3
-Winged Hive Tyrant(⌀60mm),Monstrous scything talons [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
-Winged Hive Tyrant(⌀60mm),Monstrous scything talons [extra attacks],Melee,4,2+,7,-2,2
-Winged Hive Tyrant(⌀60mm),Tyrant talons,N/A,N/A,N/A,N/A,N/A,N/A
-Winged Hive Tyrant(⌀60mm),Tyrant talons,Melee,5,2+,7,-2,2
-Winged Tyranid Prime(⌀50mm),Prime talons,N/A,N/A,N/A,N/A,N/A,N/A
-Winged Tyranid Prime(⌀50mm),Prime talons,Melee,6,2+,6,-1,2
-Malanthrope(⌀60mm),Grasping tail,N/A,N/A,N/A,N/A,N/A,N/A
-Malanthrope(⌀60mm),Grasping tail,Melee,4,4+,5,0,2
-Gargoyles(⌀32mm flying base),Fleshborer [assault],N/A,N/A,N/A,N/A,N/A,N/A
-Gargoyles(⌀32mm flying base),Fleshborer [assault],"18""",1,4+,5,0,1
-Gargoyles(⌀32mm flying base),Blinding venom,N/A,N/A,N/A,N/A,N/A,N/A
-Gargoyles(⌀32mm flying base),Blinding venom,Melee,1,4+,3,0,1
-Hormagaunts(⌀28mm),Hormagaunt talons,N/A,N/A,N/A,N/A,N/A,N/A
-Hormagaunts(⌀28mm),Hormagaunt talons,Melee,3,4+,3,-1,1
-Termagants(⌀28mm),Fleshborer [assault],N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),Fleshborer [assault],"18""",1,4+,5,0,1
-Termagants(⌀28mm),"Shardlauncher [blast, heavy]",N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),"Shardlauncher [blast, heavy]","18""",D3,4+,5,0,1
-Termagants(⌀28mm),Spike rifle [heavy],N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),Spike rifle [heavy],"24""",1,4+,4,-1,1
-Termagants(⌀28mm),"Strangleweb [assault, devastating wounds, torrent]",N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),"Strangleweb [assault, devastating wounds, torrent]","18""",D6,N/A,2,0,1
-Termagants(⌀28mm),Termagant devourer,N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),Termagant devourer,"18""",2,4+,4,0,1
-Termagants(⌀28mm),"Termagant spinefists [assault, pistol, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),"Termagant spinefists [assault, pistol, twin-linked]","12""",2,4+,3,0,1
-Termagants(⌀28mm),Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
-Termagants(⌀28mm),Chitinous claws and teeth,Melee,1,4+,3,0,1
-Tyrannocyte(⌀100mm),Tyrannocyte bio-weapons,N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannocyte(⌀100mm),Tyrannocyte bio-weapons,"24""",5,4+,5,-1,2
-Tyrannocyte(⌀100mm),Flensing whips,N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannocyte(⌀100mm),Flensing whips,Melee,6,4+,7,-1,2
-Barbgaunts(⌀40mm),"Barblauncher [blast, heavy]",N/A,N/A,N/A,N/A,N/A,N/A
-Barbgaunts(⌀40mm),"Barblauncher [blast, heavy]","24""",D6,4+,5,0,1
-Barbgaunts(⌀40mm),Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
-Barbgaunts(⌀40mm),Chitinous claws and teeth,Melee,1,4+,4,0,1
-Biovores(⌀80mm),"Spore Mine launcher [blast, devastating wounds, heavy, indirect fire]",N/A,N/A,N/A,N/A,N/A,N/A
-Biovores(⌀80mm),"Spore Mine launcher [blast, devastating wounds, heavy, indirect fire]","48""",D3,4+,6,-1,2
-Biovores(⌀80mm),Chitin-barbed limbs,N/A,N/A,N/A,N/A,N/A,N/A
-Biovores(⌀80mm),Chitin-barbed limbs,Melee,2,4+,5,0,1
-Carnifexes(⌀105 x 70mm),"Bio-plasma [assault, blast]",N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),"Bio-plasma [assault, blast]","12""",D3,4+,7,-2,1
-Carnifexes(⌀105 x 70mm),Deathspitters with slimer maggots,N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Deathspitters with slimer maggots,"24""",6,4+,7,-2,1
-Carnifexes(⌀105 x 70mm),Devourers with brainleech worms,N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Devourers with brainleech worms,"18""",12,4+,6,0,1
-Carnifexes(⌀105 x 70mm),Heavy venom cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Heavy venom cannon [blast],"36""",D3,4+,9,-2,3
-Carnifexes(⌀105 x 70mm),Spine banks [assault],N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Spine banks [assault],"6""",5,4+,5,0,1
-Carnifexes(⌀105 x 70mm),Stranglethorn cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Stranglethorn cannon [blast],"36""",D6+1,4+,7,-1,2
-Carnifexes(⌀105 x 70mm),Carnifex crushing claws,N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Carnifex crushing claws,Melee,4,4+,12,-3,D6+1
-Carnifexes(⌀105 x 70mm),Carnifex extra scything talons [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Carnifex extra scything talons [extra attacks],Melee,2,4+,9,-2,3
-Carnifexes(⌀105 x 70mm),Carnifex scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Carnifex scything talons,Melee,6,4+,9,-2,3
-Carnifexes(⌀105 x 70mm),Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
-Carnifexes(⌀105 x 70mm),Chitinous claws and teeth,Melee,4,4+,6,0,1
-Exocrine(⌀120 x 92mm),"Bio-plasmic cannon [blast, heavy]",N/A,N/A,N/A,N/A,N/A,N/A
-Exocrine(⌀120 x 92mm),"Bio-plasmic cannon [blast, heavy]","36""",D6+3,3+,8,-3,3
-Exocrine(⌀120 x 92mm),Powerful limbs,N/A,N/A,N/A,N/A,N/A,N/A
-Exocrine(⌀120 x 92mm),Powerful limbs,Melee,3,3+,7,0,2
-Genestealers(⌀32mm),Genestealer claws and talons,N/A,N/A,N/A,N/A,N/A,N/A
-Genestealers(⌀32mm),Genestealer claws and talons,Melee,4,2+,4,-2,1
-Harpy(⌀120 x 92mm flying base),Stinger salvoes,N/A,N/A,N/A,N/A,N/A,N/A
-Harpy(⌀120 x 92mm flying base),Stinger salvoes,"24""",8,3+,5,0,1
-Harpy(⌀120 x 92mm flying base),"Twin heavy venom cannon [blast, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Harpy(⌀120 x 92mm flying base),"Twin heavy venom cannon [blast, twin-linked]","36""",D3,3+,9,-2,3
-Harpy(⌀120 x 92mm flying base),"Twin stranglethorn cannon [blast, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Harpy(⌀120 x 92mm flying base),"Twin stranglethorn cannon [blast, twin-linked]","36""",D6+1,2+,7,-1,2
-Harpy(⌀120 x 92mm flying base),Scything wings,N/A,N/A,N/A,N/A,N/A,N/A
-Harpy(⌀120 x 92mm flying base),Scything wings,Melee,4,4+,7,-1,2
-Haruspex(⌀120 x 92mm),Grasping tongue [precision],N/A,N/A,N/A,N/A,N/A,N/A
-Haruspex(⌀120 x 92mm),Grasping tongue [precision],"12""",1,3+,6,-2,D6+1
-Haruspex(⌀120 x 92mm),Ravenous maw,N/A,N/A,N/A,N/A,N/A,N/A
-Haruspex(⌀120 x 92mm),Ravenous maw,Melee,14,3+,7,-1,2
-Haruspex(⌀120 x 92mm),Shovelling claws [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
-Haruspex(⌀120 x 92mm),Shovelling claws [extra attacks],Melee,4,3+,14,-2,D6+1
-Hive Crone(⌀120 x 92mm flying base),Drool cannon [torrent],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Crone(⌀120 x 92mm flying base),Drool cannon [torrent],"12""",2D6,N/A,6,-1,1
-Hive Crone(⌀120 x 92mm flying base),Stinger salvoes,N/A,N/A,N/A,N/A,N/A,N/A
-Hive Crone(⌀120 x 92mm flying base),Stinger salvoes,"24""",8,3+,5,0,1
-Hive Crone(⌀120 x 92mm flying base),"Tentaclids [anti-vehicle 4+, devastating wounds]",N/A,N/A,N/A,N/A,N/A,N/A
-Hive Crone(⌀120 x 92mm flying base),"Tentaclids [anti-vehicle 4+, devastating wounds]","36""",4,3+,7,0,2
-Hive Crone(⌀120 x 92mm flying base),Scything wings,N/A,N/A,N/A,N/A,N/A,N/A
-Hive Crone(⌀120 x 92mm flying base),Scything wings,Melee,4,4+,7,-1,2
-Hive Crone(⌀120 x 92mm flying base),"Thorax spur [anti-fly 2+, extra attacks]",N/A,N/A,N/A,N/A,N/A,N/A
-Hive Crone(⌀120 x 92mm flying base),"Thorax spur [anti-fly 2+, extra attacks]",Melee,1,3+,10,-3,D6
-Hive Guard(⌀50mm),"Impaler cannon [heavy, indirect fire]",N/A,N/A,N/A,N/A,N/A,N/A
-Hive Guard(⌀50mm),"Impaler cannon [heavy, indirect fire]","36""",4,4+,5,-1,1
-Hive Guard(⌀50mm),Shockcannon [anti-vehicle 2+],N/A,N/A,N/A,N/A,N/A,N/A
-Hive Guard(⌀50mm),Shockcannon [anti-vehicle 2+],"24""",2,3+,7,-1,3
-Hive Guard(⌀50mm),Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
-Hive Guard(⌀50mm),Chitinous claws and teeth,Melee,3,4+,5,0,1
-Lictor(⌀50mm),Lictor claws and talons [precision],N/A,N/A,N/A,N/A,N/A,N/A
-Lictor(⌀50mm),Lictor claws and talons [precision],Melee,6,2+,7,-2,2
-Maleceptor(⌀120 x 92mm),"Psychic overload [blast, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Maleceptor(⌀120 x 92mm),"Psychic overload [blast, psychic]","18""",D6+3,3+,10,-2,3
-Maleceptor(⌀120 x 92mm),Massive scything talons – strike,N/A,N/A,N/A,N/A,N/A,N/A
-Maleceptor(⌀120 x 92mm),Massive scything talons – strike,Melee,3,3+,9,-2,D6+1
-Maleceptor(⌀120 x 92mm),Massive scything talons – sweep,N/A,N/A,N/A,N/A,N/A,N/A
-Maleceptor(⌀120 x 92mm),Massive scything talons – sweep,Melee,6,3+,7,-1,2
-Mawloc(⌀120 x 92mm),"Distensible jaw [anti-infantry 4+, devastating wounds, extra attacks]",N/A,N/A,N/A,N/A,N/A,N/A
-Mawloc(⌀120 x 92mm),"Distensible jaw [anti-infantry 4+, devastating wounds, extra attacks]",Melee,1,3+,5,0,3
-Mawloc(⌀120 x 92mm),Mawloc scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Mawloc(⌀120 x 92mm),Mawloc scything talons,Melee,16,3+,8,-2,1
-Neurogaunts,Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
+Broodlord,"Broodlord claws and talons [devastating wounds, twin-linked]",Melee,5,2+,6,-2,2
+Deathleaper,Lictor claws and talons [precision],Melee,6,2+,7,-2,2
+Hive Tyrant,Heavy venom cannon [blast],"36""",D3,2+,9,-2,3
+Hive Tyrant,Stranglethorn cannon [blast],"36""",D6+1,2+,7,-1,2
+Hive Tyrant,Monstrous bonesword and lash whip [twin-linked],Melee,6,2+,9,-2,3
+Hive Tyrant,Monstrous scything talons [extra attacks],Melee,4,2+,7,-2,2
+Neurotyrant,"Psychic scream [ignores cover, psychic, torrent]","18""",2D6,N/A,5,-1,2
+Neurotyrant,Neurotyrant claws and lashes,Melee,6,3+,5,0,1
+Old One Eye,Old One Eye's claws and talons * strike,Melee,6,3+,14,-3,D6+1
+Old One Eye,Old One Eye's claws and talons * sweep,Melee,12,3+,6,-1,1
+Parasite Of Mortrex,"Barbed ovipositor [anti-infantry 3+, extra attacks]",Melee,1,2+,3,-2,3
+Parasite Of Mortrex,Clawed limbs,Melee,6,2+,5,-1,1
+Tervigon,Stinger salvoes,"24""",8,3+,5,0,1
+Tervigon,Massive crushing claws,Melee,4,4+,12,-3,D6+1
+Tervigon,Massive scything talons * strike,Melee,4,3+,9,-2,D6
+Tervigon,Massive scything talons * sweep,Melee,8,3+,7,-1,2
+The Swarmlord,"Synaptic pulse [psychic, torrent]","18""",D6+3,N/A,5,-1,2
+The Swarmlord,Bone sabres [twin-linked],Melee,8,2+,9,-2,3
+Winged Hive Tyrant,Heavy venom cannon [blast],"36""",D3,2+,9,-2,3
+Winged Hive Tyrant,Stranglethorn cannon [blast],"36""",D6+1,2+,7,-1,2
+Winged Hive Tyrant,Monstrous bonesword and lash whip [twin-linked],Melee,6,2+,9,-2,3
+Winged Hive Tyrant,Monstrous scything talons [extra attacks],Melee,4,2+,7,-2,2
+Winged Hive Tyrant,Tyrant talons,Melee,5,2+,7,-2,2
+Winged Tyranid Prime,Prime talons,Melee,6,2+,6,-1,2
+Gargoyles,Fleshborer [assault],"18""",1,4+,5,0,1
+Gargoyles,Blinding venom,Melee,1,4+,3,0,1
+Hormagaunts,Hormagaunt talons,Melee,3,4+,3,-1,1
+Termagants,Fleshborer [assault],"18""",1,4+,5,0,1
+Termagants,"Shardlauncher [blast, heavy]","18""",D3,4+,5,0,1
+Termagants,Spike rifle [heavy],"24""",1,4+,4,-1,1
+Termagants,"Strangleweb [assault, devastating wounds, torrent]","18""",D6,N/A,2,0,1
+Termagants,Termagant devourer,"18""",2,4+,4,0,1
+Termagants,"Termagant spinefists [assault, pistol, twin-linked]","12""",2,4+,3,0,1
+Termagants,Chitinous claws and teeth,Melee,1,4+,3,0,1
+Tyrannocyte,Tyrannocyte bio-weapons,"24""",5,4+,5,-1,2
+Tyrannocyte,Flensing whips,Melee,6,4+,7,-1,2
+Barbgaunts,"Barblauncher [blast, heavy]","24""",D6,4+,5,0,1
+Barbgaunts,Chitinous claws and teeth,Melee,1,4+,4,0,1
+Biovores,"Spore Mine launcher [blast, devastating wounds, heavy, indirect fire]","48""",D3,4+,6,-1,2
+Biovores,Chitin-barbed limbs,Melee,2,4+,5,0,1
+Carnifexes,"Bio-plasma [assault, blast]","12""",D3,4+,7,-2,1
+Carnifexes,Deathspitters with slimer maggots,"24""",6,4+,7,-2,1
+Carnifexes,Devourers with brainleech worms,"18""",12,4+,6,0,1
+Carnifexes,Heavy venom cannon [blast],"36""",D3,4+,9,-2,3
+Carnifexes,Spine banks [assault],"6""",5,4+,5,0,1
+Carnifexes,Stranglethorn cannon [blast],"36""",D6+1,4+,7,-1,2
+Carnifexes,Carnifex crushing claws,Melee,4,4+,12,-3,D6+1
+Carnifexes,Carnifex extra scything talons [extra attacks],Melee,2,4+,9,-2,3
+Carnifexes,Carnifex scything talons,Melee,6,4+,9,-2,3
+Carnifexes,Chitinous claws and teeth,Melee,4,4+,6,0,1
+Exocrine,"Bio-plasmic cannon [blast, heavy]","36""",D6+3,3+,8,-3,3
+Exocrine,Powerful limbs,Melee,3,3+,7,0,2
+Genestealers,Genestealer claws and talons,Melee,4,2+,4,-2,1
+Harpy,Stinger salvoes,"24""",8,3+,5,0,1
+Harpy,"Twin heavy venom cannon [blast, twin-linked]","36""",D3,3+,9,-2,3
+Harpy,"Twin stranglethorn cannon [blast, twin-linked]","36""",D6+1,2+,7,-1,2
+Harpy,Scything wings,Melee,4,4+,7,-1,2
+Haruspex,Grasping tongue [precision],"12""",1,3+,6,-2,D6+1
+Haruspex,Ravenous maw,Melee,14,3+,7,-1,2
+Haruspex,Shovelling claws [extra attacks],Melee,4,3+,14,-2,D6+1
+Hive Crone,Drool cannon [torrent],"12""",2D6,N/A,6,-1,1
+Hive Crone,Stinger salvoes,"24""",8,3+,5,0,1
+Hive Crone,"Tentaclids [anti-vehicle 4+, devastating wounds]","36""",4,3+,7,0,2
+Hive Crone,Scything wings,Melee,4,4+,7,-1,2
+Hive Crone,"Thorax spur [anti-fly 2+, extra attacks]",Melee,1,3+,10,-3,D6
+Hive Guard,"Impaler cannon [heavy, indirect fire]","36""",4,4+,5,-1,1
+Hive Guard,Shockcannon [anti-vehicle 2+],"24""",2,3+,7,-1,3
+Hive Guard,Chitinous claws and teeth,Melee,3,4+,5,0,1
+Lictor,Lictor claws and talons [precision],Melee,6,2+,7,-2,2
+Maleceptor,"Psychic overload [blast, psychic]","18""",D6+3,3+,10,-2,3
+Maleceptor,Massive scything talons * strike,Melee,3,3+,9,-2,D6+1
+Maleceptor,Massive scything talons * sweep,Melee,6,3+,7,-1,2
+Mawloc,"Distensible jaw [anti-infantry 4+, devastating wounds, extra attacks]",Melee,1,3+,5,0,3
+Mawloc,Mawloc scything talons,Melee,16,3+,8,-2,1
 Neurogaunts,Chitinous claws and teeth,Melee,1,4+,3,0,1
-Neurolictor,Piercing claws and talons [precision],N/A,N/A,N/A,N/A,N/A,N/A
 Neurolictor,Piercing claws and talons [precision],Melee,6,2+,6,-2,1
-Norn Assimilator,Toxinjector Harpoon [harpooned],N/A,N/A,N/A,N/A,N/A,N/A
 Norn Assimilator,Toxinjector Harpoon [harpooned],"12""",2,2+,12,-3,D6+1
-Norn Assimilator,Monstrous scything talons,N/A,N/A,N/A,N/A,N/A,N/A
 Norn Assimilator,Monstrous scything talons,Melee,6,2+,9,-2,3
-Norn Assimilator,Toxinjector harpoon [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
 Norn Assimilator,Toxinjector harpoon [extra attacks],Melee,4,2+,12,-3,D6+1
-Norn Emissary,"Psychic Tendril – neuroparasite [precision, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Norn Emissary,"Psychic Tendril – neuroparasite [precision, psychic]","18""",2,2+,8,-2,D3
-Norn Emissary,"Psychic Tendril – neuroblast [blast, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Norn Emissary,"Psychic Tendril – neuroblast [blast, psychic]","18""",2D6,2+,6,-2,1
-Norn Emissary,"Psychic Tendril – neurolance [melta 2, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Norn Emissary,"Psychic Tendril – neurolance [melta 2, psychic]","18""",2,2+,12,-3,D6
-Norn Emissary,Monstrous scything talons,N/A,N/A,N/A,N/A,N/A,N/A
+Norn Emissary,"Psychic Tendril * neuroparasite [precision, psychic]","18""",2,2+,8,-2,D3
+Norn Emissary,"Psychic Tendril * neuroblast [blast, psychic]","18""",2D6,2+,6,-2,1
+Norn Emissary,"Psychic Tendril * neurolance [melta 2, psychic]","18""",2,2+,12,-3,D6
 Norn Emissary,Monstrous scything talons,Melee,6,2+,9,-2,3
-Norn Emissary,Monstrous rending claws [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
 Norn Emissary,Monstrous rending claws [extra attacks],Melee,4,2+,7,-2,2
-Psychophage(⌀120 x 92mm),"Psychoclastic torrent [ignores cover, torrent]",N/A,N/A,N/A,N/A,N/A,N/A
-Psychophage(⌀120 x 92mm),"Psychoclastic torrent [ignores cover, torrent]","12""",D6,N/A,6,-1,1
-Psychophage(⌀120 x 92mm),"Talons and betentacled maw [anti-psyker 4+, devastating wounds]",N/A,N/A,N/A,N/A,N/A,N/A
-Psychophage(⌀120 x 92mm),"Talons and betentacled maw [anti-psyker 4+, devastating wounds]",Melee,D6+1,3+,6,-1,2
-Pyrovores(⌀80mm),"Flamespurt [ignores cover, torrent, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Pyrovores(⌀80mm),"Flamespurt [ignores cover, torrent, twin-linked]","12""",D6+1,N/A,6,-1,1
-Pyrovores(⌀80mm),Chitin-barbed limbs,N/A,N/A,N/A,N/A,N/A,N/A
-Pyrovores(⌀80mm),Chitin-barbed limbs,Melee,2,4+,5,0,1
-Raveners(⌀40mm),Thoracic bio-weapon [assault],N/A,N/A,N/A,N/A,N/A,N/A
-Raveners(⌀40mm),Thoracic bio-weapon [assault],"12""",3,4+,4,0,1
-Raveners(⌀40mm),Ravener claws and talons [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Raveners(⌀40mm),Ravener claws and talons [twin-linked],Melee,7,3+,5,-1,1
-Ripper Swarms(⌀40mm),Spinemaws [pistol],N/A,N/A,N/A,N/A,N/A,N/A
-Ripper Swarms(⌀40mm),Spinemaws [pistol],"6""",4,5+,3,0,1
-Ripper Swarms(⌀40mm),Chitinous claws and teeth [sustained hits 1],N/A,N/A,N/A,N/A,N/A,N/A
-Ripper Swarms(⌀40mm),Chitinous claws and teeth [sustained hits 1],Melee,6,5+,2,0,1
-Screamer-killer(⌀90mm),"Bio-plasmic scream [assault, blast]",N/A,N/A,N/A,N/A,N/A,N/A
-Screamer-killer(⌀90mm),"Bio-plasmic scream [assault, blast]","18""",D6+3,4+,8,-2,1
-Screamer-killer(⌀90mm),Screamer-killer talons,N/A,N/A,N/A,N/A,N/A,N/A
-Screamer-killer(⌀90mm),Screamer-killer talons,Melee,10,3+,10,-2,3
-Sporocyst(⌀100mm),Sporocyst bio-weapons,N/A,N/A,N/A,N/A,N/A,N/A
-Sporocyst(⌀100mm),Sporocyst bio-weapons,"24""",10,4+,5,-1,2
-Sporocyst(⌀100mm),Flensing whips,N/A,N/A,N/A,N/A,N/A,N/A
-Sporocyst(⌀100mm),Flensing whips,Melee,6,4+,7,-1,2
-Toxicrene(⌀120 x 92mm),Massive toxic lashes [anti-infantry 2+],N/A,N/A,N/A,N/A,N/A,N/A
-Toxicrene(⌀120 x 92mm),Massive toxic lashes [anti-infantry 2+],"9""",2D6,3+,6,-1,2
-Toxicrene(⌀120 x 92mm),Massive toxic lashes [anti-infantry 2+],N/A,N/A,N/A,N/A,N/A,N/A
-Toxicrene(⌀120 x 92mm),Massive toxic lashes [anti-infantry 2+],Melee,12,3+,6,-1,2
-Trygon(⌀120 x 92mm),Bio-electric pulse [sustained hits 2],N/A,N/A,N/A,N/A,N/A,N/A
-Trygon(⌀120 x 92mm),Bio-electric pulse [sustained hits 2],"12""",6,3+,5,0,1
-Trygon(⌀120 x 92mm),Trygon scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Trygon(⌀120 x 92mm),Trygon scything talons,Melee,12,3+,9,-2,3
-Tyranid Warriors With Melee Bio-weapons(⌀50mm),Tyranid Warrior claws and talons [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Melee Bio-weapons(⌀50mm),Tyranid Warrior claws and talons [twin-linked],Melee,6,3+,5,-2,1
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Barbed strangler [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Barbed strangler [blast],"36""",D6+1,4+,6,-1,1
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Deathspitter,N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Deathspitter,"24""",3,4+,5,-1,1
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Devourer,N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Devourer,"18""",5,4+,4,0,1
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),"Spinefists [assault, pistol, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),"Spinefists [assault, pistol, twin-linked]","12""",2,4+,4,0,1
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Venom cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Venom cannon [blast],"36""",D3,4+,9,-2,2
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Tyranid Warrior claws and talons,N/A,N/A,N/A,N/A,N/A,N/A
-Tyranid Warriors With Ranged Bio-weapons(⌀50mm),Tyranid Warrior claws and talons,Melee,5,3+,5,-1,1
-Tyrannofex(⌀120 x 92mm),Acid spray [torrent],N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannofex(⌀120 x 92mm),Acid spray [torrent],"18""",D6+6,N/A,6,-2,2
-Tyrannofex(⌀120 x 92mm),"Fleshborer hive [heavy, sustained hits 1, twin-linked]",N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannofex(⌀120 x 92mm),"Fleshborer hive [heavy, sustained hits 1, twin-linked]","24""",20,3+,5,0,1
-Tyrannofex(⌀120 x 92mm),Rupture cannon [heavy],N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannofex(⌀120 x 92mm),Rupture cannon [heavy],"48""",2,3+,18,-4,2D6
-Tyrannofex(⌀120 x 92mm),Stinger salvoes,N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannofex(⌀120 x 92mm),Stinger salvoes,"24""",8,3+,5,0,1
-Tyrannofex(⌀120 x 92mm),Powerful limbs,N/A,N/A,N/A,N/A,N/A,N/A
-Tyrannofex(⌀120 x 92mm),Powerful limbs,Melee,4,3+,8,0,2
-Tyrant Guard(⌀50mm),"Bone cleaver, lash whip and rending claws",N/A,N/A,N/A,N/A,N/A,N/A
-Tyrant Guard(⌀50mm),"Bone cleaver, lash whip and rending claws",Melee,3,3+,5,-1,2
-Tyrant Guard(⌀50mm),Crushing claws and rending claws [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Tyrant Guard(⌀50mm),Crushing claws and rending claws [twin-linked],Melee,2,4+,8,-2,2
-Tyrant Guard(⌀50mm),Scything talons and rending claws,N/A,N/A,N/A,N/A,N/A,N/A
-Tyrant Guard(⌀50mm),Scything talons and rending claws,Melee,5,3+,5,-1,1
-Venomthropes(⌀40mm),Toxic lashes [anti-infantry 2+],N/A,N/A,N/A,N/A,N/A,N/A
-Venomthropes(⌀40mm),Toxic lashes [anti-infantry 2+],Melee,5,3+,3,0,1
-Von Ryan’s Leapers(⌀40mm),Leaper’s talons,N/A,N/A,N/A,N/A,N/A,N/A
-Von Ryan’s Leapers(⌀40mm),Leaper’s talons,Melee,6,3+,5,-1,1
-Zoanthropes(⌀40mm),"Warp Blast – witchfire [blast, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Zoanthropes(⌀40mm),"Warp Blast – witchfire [blast, psychic]","24""",D3,3+,7,-2,D3
-Zoanthropes(⌀40mm),"Warp Blast – focused witchfire [lethal hits, psychic]",N/A,N/A,N/A,N/A,N/A,N/A
-Zoanthropes(⌀40mm),"Warp Blast – focused witchfire [lethal hits, psychic]","24""",1,3+,12,-3,D6+1
-Zoanthropes(⌀40mm),Chitinous claws and teeth,N/A,N/A,N/A,N/A,N/A,N/A
-Zoanthropes(⌀40mm),Chitinous claws and teeth,Melee,2,5+,3,0,1
-Barbed Hierodule(⌀127mm),Bio-cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Barbed Hierodule(⌀127mm),Bio-cannon [blast],"48""",D6+3,3+,9,-2,2
-Barbed Hierodule(⌀127mm),Hierodule scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Barbed Hierodule(⌀127mm),Hierodule scything talons,Melee,8,3+,14,-2,D3+3
-Harridan(⌀120 x 92mm flying base),Dire bio-cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Harridan(⌀120 x 92mm flying base),Dire bio-cannon [blast],"48""",D6+6,3+,10,-3,3
-Harridan(⌀120 x 92mm flying base),Gargantuan scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Harridan(⌀120 x 92mm flying base),Gargantuan scything talons,Melee,6,3+,14,-2,D6
-Hierophant(⌀Use model),"Bio-plasma torrent [assault, torrent]",N/A,N/A,N/A,N/A,N/A,N/A
-Hierophant(⌀Use model),"Bio-plasma torrent [assault, torrent]","12""",3D6,N/A,7,-2,1
-Hierophant(⌀Use model),Dire bio-cannon [blast],N/A,N/A,N/A,N/A,N/A,N/A
-Hierophant(⌀Use model),Dire bio-cannon [blast],"48""",D6+6,3+,10,-3,3
-Hierophant(⌀Use model),Lashwhip pods [extra attacks],N/A,N/A,N/A,N/A,N/A,N/A
-Hierophant(⌀Use model),Lashwhip pods [extra attacks],Melee,10,3+,5,-1,1
-Hierophant(⌀Use model),Titanic scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Hierophant(⌀Use model),Titanic scything talons,Melee,8,3+,20,-2,D6+1
-Scythed Hierodule(⌀127mm),Bio-acid spray [torrent],N/A,N/A,N/A,N/A,N/A,N/A
-Scythed Hierodule(⌀127mm),Bio-acid spray [torrent],"18""",3D6,N/A,6,-2,1
-Scythed Hierodule(⌀127mm),Hierodule scything talons,N/A,N/A,N/A,N/A,N/A,N/A
-Scythed Hierodule(⌀127mm),Hierodule scything talons,Melee,10,3+,14,-2,D3+3
-Dimachaeron(⌀120 x 92mm),Massive scything sickle-talons [twin-linked],N/A,N/A,N/A,N/A,N/A,N/A
-Dimachaeron(⌀120 x 92mm),Massive scything sickle-talons [twin-linked],Melee,10,3+,9,-2,3
-Sky-slasher Swarms(⌀40mm),Spinemaws [pistol],N/A,N/A,N/A,N/A,N/A,N/A
-Sky-slasher Swarms(⌀40mm),Spinemaws [pistol],"6""",4,5+,3,0,1
-Sky-slasher Swarms(⌀40mm),Claws and teeth [sustained hits 1],N/A,N/A,N/A,N/A,N/A,N/A
-Sky-slasher Swarms(⌀40mm),Claws and teeth [sustained hits 1],Melee,6,5+,2,0,1
+Psychophage,"Psychoclastic torrent [ignores cover, torrent]","12""",D6,N/A,6,-1,1
+Psychophage,"Talons and betentacled maw [anti-psyker 4+, devastating wounds]",Melee,D6+1,3+,6,-1,2
+Pyrovores,"Flamespurt [ignores cover, torrent, twin-linked]","12""",D6+1,N/A,6,-1,1
+Pyrovores,Chitin-barbed limbs,Melee,2,4+,5,0,1
+Raveners,Thoracic bio-weapon [assault],"12""",3,4+,4,0,1
+Raveners,Ravener claws and talons [twin-linked],Melee,7,3+,5,-1,1
+Ripper Swarms,Spinemaws [pistol],"6""",4,5+,3,0,1
+Ripper Swarms,Chitinous claws and teeth [sustained hits 1],Melee,6,5+,2,0,1
+Screamer-killer,"Bio-plasmic scream [assault, blast]","18""",D6+3,4+,8,-2,1
+Screamer-killer,Screamer-killer talons,Melee,10,3+,10,-2,3
+Sporocyst,Sporocyst bio-weapons,"24""",10,4+,5,-1,2
+Sporocyst,Flensing whips,Melee,6,4+,7,-1,2
+Toxicrene,Massive toxic lashes [anti-infantry 2+],"9""",2D6,3+,6,-1,2
+Toxicrene,Massive toxic lashes [anti-infantry 2+],Melee,12,3+,6,-1,2
+Trygon,Bio-electric pulse [sustained hits 2],"12""",6,3+,5,0,1
+Trygon,Trygon scything talons,Melee,12,3+,9,-2,3
+Tyranid Warriors With Melee Bio-weapons,Tyranid Warrior claws and talons [twin-linked],Melee,6,3+,5,-2,1
+Tyranid Warriors With Ranged Bio-weapons,Barbed strangler [blast],"36""",D6+1,4+,6,-1,1
+Tyranid Warriors With Ranged Bio-weapons,Deathspitter,"24""",3,4+,5,-1,1
+Tyranid Warriors With Ranged Bio-weapons,Devourer,"18""",5,4+,4,0,1
+Tyranid Warriors With Ranged Bio-weapons,"Spinefists [assault, pistol, twin-linked]","12""",2,4+,4,0,1
+Tyranid Warriors With Ranged Bio-weapons,Venom cannon [blast],"36""",D3,4+,9,-2,2
+Tyranid Warriors With Ranged Bio-weapons,Tyranid Warrior claws and talons,Melee,5,3+,5,-1,1
+Tyrannofex,Acid spray [torrent],"18""",D6+6,N/A,6,-2,2
+Tyrannofex,"Fleshborer hive [heavy, sustained hits 1, twin-linked]","24""",20,3+,5,0,1
+Tyrannofex,Rupture cannon [heavy],"48""",2,3+,18,-4,2D6
+Tyrannofex,Stinger salvoes,"24""",8,3+,5,0,1
+Tyrannofex,Powerful limbs,Melee,4,3+,8,0,2
+Tyrant Guard,"Bone cleaver, lash whip and rending claws",Melee,3,3+,5,-1,2
+Tyrant Guard,Crushing claws and rending claws [twin-linked],Melee,2,4+,8,-2,2
+Tyrant Guard,Scything talons and rending claws,Melee,5,3+,5,-1,1
+Venomthropes,Toxic lashes [anti-infantry 2+],Melee,5,3+,3,0,1
+Von Ryan's Leapers,Leaper's talons,Melee,6,3+,5,-1,1
+Zoanthropes,"Warp Blast * witchfire [blast, psychic]","24""",D3,3+,7,-2,D3
+Zoanthropes,"Warp Blast * focused witchfire [lethal hits, psychic]","24""",1,3+,12,-3,D6+1
+Zoanthropes,Chitinous claws and teeth,Melee,2,5+,3,0,1
+Barbed Hierodule,Bio-cannon [blast],"48""",D6+3,3+,9,-2,2
+Barbed Hierodule,Hierodule scything talons,Melee,8,3+,14,-2,D3+3
+Harridan,Dire bio-cannon [blast],"48""",D6+6,3+,10,-3,3
+Harridan,Gargantuan scything talons,Melee,6,3+,14,-2,D6
+Hierophant,"Bio-plasma torrent [assault, torrent]","12""",3D6,N/A,7,-2,1
+Hierophant,Dire bio-cannon [blast],"48""",D6+6,3+,10,-3,3
+Hierophant,Lashwhip pods [extra attacks],Melee,10,3+,5,-1,1
+Hierophant,Titanic scything talons,Melee,8,3+,20,-2,D6+1
+Scythed Hierodule,Bio-acid spray [torrent],"18""",3D6,N/A,6,-2,1
+Scythed Hierodule,Hierodule scything talons,Melee,10,3+,14,-2,D3+3

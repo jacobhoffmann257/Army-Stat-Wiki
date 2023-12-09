@@ -3,8 +3,7 @@
 <%= render @profile %>
 
 <div>
-  <%= link_to "Edit this profile", edit_profile_path(@profile) %> |
-  <%= link_to "Back to profiles", profiles_path %>
+  <%= link_to "Edit this profile", unit_equipment_weapon_profiles_path(@profile) %> |
+  <%= link_to "Back to profiles", unit_equipment_weapon_profiles_path %>
 
-  <%= button_to "Destroy this profile", @profile, method: :delete %>
 </div>
