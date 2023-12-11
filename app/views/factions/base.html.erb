@@ -45,7 +45,7 @@
         <div class="card-body">
           <h5 class="card-title">Other</h5>
           <p class="card-text">Armor, Specialists and other elite troops, an army can have 3 of each</p>
-          <button class="btn btn-primary">Battleline<%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></button>
+          <button class="btn btn-primary">Other<%= link_to "Other",type_path(@faction.name,"other"),faction: @faction, type: "other" %></button>
         </div>
       </div>
     </li>
@@ -55,7 +55,7 @@
         <div class="card-body">
           <h5 class="card-title">All</h5>
           <p class="card-text">Show all units for this faction</p>
-          <button class="btn btn-primary">Battleline<%= link_to "All",all_path(@faction.name),faction: @faction  %></button>
+          <button class="btn btn-primary">All<%= link_to "All",all_path(@faction.name),faction: @faction  %></button>
         </div>
       </div>
     </li>
