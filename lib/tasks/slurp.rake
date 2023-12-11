@@ -9,12 +9,11 @@ namespace :slurp do
     csv = CSV.parse(csv_data, :headers => true, :encoding => "ISO-8859-1")
     f = Faction.new
     f.name = "Astra Militarum"
-    f.icon = "Astra_Militarum_Icon.png"
+    f.icon = "astra_militarum_icon.png"
     if Faction.where(name: f.name).last
     else
     f.save
     end
-    puts "hi"
     csv.each do |row|
       #Reading unit from csv
       u = Unit.new
@@ -22,7 +21,7 @@ namespace :slurp do
       u.faction_id = f.id
       u.base_size = row["Base_Size"]
       u.role = row["type"]
-      if File.file?("app/assets/images/#{u.name.downcase}.jpeg")
+      if File.file?("app/assets/images/#{u.name.downcase.gsub(" ","_")}.jpeg")
         puts "Found image of #{u.name.downcase}"
         u.picture = "#{u.name.downcase}.jpeg"
       else
@@ -292,7 +291,7 @@ namespace :slurp do
     user.save
     f = Faction.new
     f.name = "Tyranids"
-    f.icon = "Tyranids_Icon.png"
+    f.icon = "tyranids_icon.png"
     if Faction.where(name: f.name).last
     else
     f.save
@@ -305,7 +304,7 @@ namespace :slurp do
       u.base_size = row["Base_Size"]    
       u.role =row["type"]
       
-      if File.file?("app/assets/images/#{u.name.downcase}.jpeg")
+      if File.file?("app/assets/images/#{u.name.downcase.gsub(" ","_")}.jpeg")
         puts "Found image of #{u.name.downcase}"
         u.picture = "#{u.name.downcase}.jpeg"
       else
