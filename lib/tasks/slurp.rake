@@ -26,7 +26,7 @@ namespace :slurp do
         puts "Found image of #{u.name.downcase}"
         u.picture = "#{u.name.downcase}.jpeg"
       else
-        u.picture = "#{f.icon}.png"
+        u.picture = f.icon
       end
       #checking if unit exists
       if Unit.where(name: u.name, faction_id: u.faction_id, base_size: u.base_size).last
