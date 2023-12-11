@@ -23,7 +23,7 @@ namespace :slurp do
       u.role = row["type"]
       if File.file?("app/assets/images/#{u.name.downcase.gsub(" ","_")}.jpeg")
         puts "Found image of #{u.name.downcase}"
-        u.picture = "#{u.name.downcase}.jpeg"
+        u.picture = "#{u.name.downcase.gsub(" ", "_")}.jpeg"
       else
         u.picture = f.icon
       end
@@ -306,7 +306,7 @@ namespace :slurp do
       
       if File.file?("app/assets/images/#{u.name.downcase.gsub(" ","_")}.jpeg")
         puts "Found image of #{u.name.downcase}"
-        u.picture = "#{u.name.downcase}.jpeg"
+        u.picture = "#{u.name.downcase.gsub(" ","_")}.jpeg"
       else
         u.picture = f.icon
       end
