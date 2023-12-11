@@ -56,7 +56,20 @@ class FavoritesController < ApplicationController
     end
   end
   def set_unit
-    @unit = Unit.find(params[:unit_id])
+    if params.has_key?(:query_unit_id)
+      @unit = Unit.find(params[:query_unit_id])
+      
+    else
+      @unit = Unit.find(Favorite.find(params[:path_id]).unit_id)
+    end 
+  end
+  def set_user
+    if params.has_key?(:query_user_id)
+      @unit = Unit.find(params[:query_user_id])
+    else
+      
+      @unit = User.find(Favorite.find(params[:path_id]).user_id) 
+    end 
   end
   def destroy
     the_id = params.fetch("path_id")
