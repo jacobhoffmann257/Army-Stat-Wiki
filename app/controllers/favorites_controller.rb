@@ -59,8 +59,9 @@ class FavoritesController < ApplicationController
     if params.has_key?(:query_unit_id)
       @unit = Unit.find(params[:query_unit_id])
       
-    else
+    elsif params.has_key?(:path_id)
       @unit = Unit.find(Favorite.find(params[:path_id]).unit_id)
+    else
     end 
   end
   def set_user
