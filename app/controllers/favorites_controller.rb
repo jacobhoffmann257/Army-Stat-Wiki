@@ -55,7 +55,9 @@ class FavoritesController < ApplicationController
       redirect_to("/favorites/#{the_favorite.id}", { :alert => the_favorite.errors.full_messages.to_sentence })
     end
   end
-
+  def set_unit
+    @unit = Unit.find(Favorite.find(params[:id]).unit_id)
+  end
   def destroy
     the_id = params.fetch("path_id")
     the_favorite = Favorite.where({ :id => the_id }).at(0)
