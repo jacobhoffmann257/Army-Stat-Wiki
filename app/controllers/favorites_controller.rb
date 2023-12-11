@@ -56,7 +56,7 @@ class FavoritesController < ApplicationController
     end
   end
   def set_unit
-    @unit = Unit.find(Favorite.find(params[:id]).unit_id)
+    @unit = Unit.find(Favorite.find(params[:id]).unit_id) || @unit = Unit.find(params[:unit_id])
   end
   def destroy
     the_id = params.fetch("path_id")
