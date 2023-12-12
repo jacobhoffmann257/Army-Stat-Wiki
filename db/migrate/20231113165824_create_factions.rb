@@ -5,7 +5,7 @@ class CreateFactions < ActiveRecord::Migration[7.0]
       t.string :banner
       t.string :icon
       t.string :picture
-
+      t.string :color
       t.timestamps
     end
   end

@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  banner     :string
+#  color      :string
 #  icon       :string
 #  name       :string
 #  picture    :string
