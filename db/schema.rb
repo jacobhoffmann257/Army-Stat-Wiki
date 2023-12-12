@@ -29,13 +29,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
   end
 
   create_table "equipment", force: :cascade do |t|
-    t.integer "model_id", null: false
+    t.integer "unit_id", null: false
     t.integer "weapon_id", null: false
     t.integer "limits"
     t.integer "slot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["model_id"], name: "index_equipment_on_model_id"
+    t.index ["unit_id"], name: "index_equipment_on_unit_id"
     t.index ["weapon_id"], name: "index_equipment_on_weapon_id"
   end
 
@@ -159,6 +159,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_06_152122) do
   create_table "weapons", force: :cascade do |t|
     t.string "name"
     t.integer "range"
+    t.integer "skill"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -23,6 +23,7 @@
 #  index_units_on_faction_id  (faction_id)
 #
 class Unit < ApplicationRecord
+  validates :name, uniqueness: true
   belongs_to :faction, class_name: "Faction"
   has_many :models, class_name: "Model"
   has_many :unit_abilities

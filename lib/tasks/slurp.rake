@@ -294,10 +294,6 @@ namespace :slurp do
     f.icon = "tyranids_icon.png"
     puts f.valid?
     f.save
-    if Faction.where(name: f.name).last
-    else
-    
-    end
     csv.each do |row|
       #Reading unit from csv
       u = Unit.new
@@ -313,11 +309,15 @@ namespace :slurp do
         u.picture = f.icon
       end
       #checking if unit exists
-      if Unit.where(name: u.name, faction_id: u.faction_id, base_size: u.base_size).last
-      else
+      #all check
+      if u.valid?
         u.save
-        #Reading Model from csv
-        m = Model.new
+        puts "New unit added with name #{u.name}"
+      else
+        u = Unit.where(name: u.name).first
+        puts "The unit #{u.name} already exists"
+      end
+      m = Model.new
         m.name = row["Model_Name"]
         m.invulnerable_save = row["Invurebale_Save"]
         m.leadership = row["Ld"]
@@ -328,91 +328,66 @@ namespace :slurp do
         m.wounds = row["W"]
     
         m.unit_id = Unit.where(name: u.name).first.id
-        #Checking if model exists in database
-        if Model.where(name: m.name, invulnerable_save: m.invulnerable_save, leadership: m.leadership, movement: m.movement, objective_control: m.objective_control, save_value: m.save_value, toughness: m.toughness, wounds: m.wounds, unit_id: m.unit_id).last
-        else
+        #new model check
+        if m.valid?
           m.save
+          puts "New model added with the name #{m.name}"
+        else
+          m = Model.where(name: m.name, unit_id: m.unit_id).last
+          puts "The model #{m.name} already exists"
         end
-      end
     end
     #Weapons
     csv_weapon = File.read(Rails.root.join("lib", "sample_data", "tyranids_weapons.csv"))
     csv = CSV.parse(csv_weapon, :headers => true, :encoding => "ISO-8859-1")
     
       csv.each do |row|
-        model = Model.where(name: row["Name"]).first
-        csv_weapon = Weapon.new
+        #need to change this when i fix scrap for militarum
+        unit = Unit.where(id: Model.where(name: row["Name"]).first.unit).last
+        weapon = Weapon.new
         #Checks if there is a -
-        profile = String.new
+        profile_name = String.new
         if row["Weapon Name"].include?("*")
           holder = row["Weapon Name"].split("*")
-          csv_weapon.name = holder[0]
+          weapon.name = holder[0]
           profile = holder[1]
         else
-          csv_weapon.name = row["Weapon Name"] 
+          weapon.name = row["Weapon Name"] 
         end
         if row["Range"] === "Melee"
-          csv_weapon.range = 0
+          weapon.range = 0
         else
-          csv_weapon.range = row["Range"].to_i
+          weapon.range = row["Range"].to_i
         end
         #csv_weapon has been read
-        csv_profile = Profile.new
-        csv_profile.armor_piercing = row["AP"].to_i
-        csv_profile.attacks  = row["A"]
-        csv_profile.damage = row["D"]
-        if profile.length != 0
-          csv_profile.name = profile
+        profile = Profile.new
+        profile.armor_piercing = row["AP"].to_i
+        profile.attacks  = row["A"]
+        profile.damage = row["D"]
+        if profile_name.length != 0
+          profile.name = profile_name
         else
-          csv_profile.name = row["Weapon Name"]
+          profile.name = row["Weapon Name"]
         end
-        csv_profile.skill = row["BS/WS"].to_i
-        csv_profile.strength = row["S"].to_i
+        profile.skill = row["BS/WS"].to_i
+        weapon.skill = row["BS/WS"].to_i
+        profile.strength = row["S"].to_i
         #csv_profile has been read
-        puts csv_weapon.name
-        puts csv_weapon.range
-        if Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
-          weapon = Weapon.where(name: csv_weapon.name, range: csv_weapon.range).last
-          #checks if the profile exists in the database
-          if Profile.where(armor_piercing: csv_profile.armor_piercing, damage: csv_profile.damage, name: csv_profile.name, skill: csv_profile.skill, strength: csv_profile.strength,weapon_id: weapon.id).last
-            if Equipment.where(model_id: model.id, weapon_id: weapon.id).last
-              puts "#{model.name} already has this #{weapon.name} equipment" 
-            else
-              equipment = Equipment.new
-              equipment.weapon_id = weapon.id
-              equipment.model_id = model.id
-              equipment.save
-            end
-          else
-            #checks if any equipment match the unit and weapon
-            if  Equipment.where(weapon_id: weapon.id, model_id: model.id).last
-              puts " allready has this equipment"
-              csv_profile.weapon_id = weapon.id
-              csv_profile.save
-            else
-              csv_weapon.save
-              weapon = Weapon.all.last
-              csv_profile.weapon_id = weapon.id
-              csv_profile.save
-              profile = Profile.all.last
-              equipment = Equipment.new
-              equipment.model_id = model.id
-              equipment.weapon_id = weapon.id
-              equipment.save
-              puts "New weapons profile for #{model.name} added"
-            end
-
-          end
+        #checking validity of the weapon
+        if weapon.valid?
+          weapon.save
+          puts "The weapon #{weapon.name} has been added"
+        else 
+          weapon = Weapon.where(name: weapon.name, range: weapon.range, skill: weapon.skill).last
+          puts "The weapon #{weapon.name} already exists"
+        end
+        profile.weapon_id = weapon.id
+        if profile.valid?
+          puts "The profile #{profile.name} has been added"
+          profile.save
         else
-          csv_weapon.save
-          weapon = Weapon.all.last
-          csv_profile.weapon_id = weapon.id
-          csv_profile.save
-          profile = Profile.all.last
-          equipment = Equipment.new
-          equipment.model_id = model.id
-          equipment.weapon_id = weapon.id
-          equipment.save
+          profile = Profile.where(name: profile.name, weapon: profile.weapon_id).last
+          puts "The profile #{profile.name} already exists"
         end
       end
       #Doing the Abilities

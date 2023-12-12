@@ -7,15 +7,16 @@
 #  slot       :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  model_id   :integer          not null
+#  unit_id    :integer          not null
 #  weapon_id  :integer          not null
 #
 # Indexes
 #
-#  index_equipment_on_model_id   (model_id)
+#  index_equipment_on_unit_id    (unit_id)
 #  index_equipment_on_weapon_id  (weapon_id)
 #
 class Equipment < ApplicationRecord
+  validates :unit_id, uniqueness: { scope: :weapon_id }
   belongs_to :model
   belongs_to :weapon
 
