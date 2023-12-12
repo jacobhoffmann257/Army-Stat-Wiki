@@ -292,9 +292,11 @@ namespace :slurp do
     f = Faction.new
     f.name = "Tyranids"
     f.icon = "tyranids_icon.png"
+    puts f.valid?
+    f.save
     if Faction.where(name: f.name).last
     else
-    f.save
+    
     end
     csv.each do |row|
       #Reading unit from csv

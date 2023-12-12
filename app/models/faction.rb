@@ -12,6 +12,8 @@
 #  updated_at :datetime         not null
 #
 class Faction < ApplicationRecord
+  validates :name, uniqueness: true
+ 
   has_many :unit
 
   def get_units
