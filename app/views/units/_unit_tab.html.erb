@@ -3,8 +3,9 @@
       <div class="row border">
          <div class= "col ">
             <ul class="list-group">
-               <li class="list-group-item" id="list_<%= dom_id unit%>"><%= unit.name %><%= unit.base_size%>
-                  <%= render "units/favorite", unit: unit%>
+               <li class="list-group-item" id="list_<%= dom_id unit%>"><%= unit.name %><%= unit.base_size%></li>
+               <li class="list-group-item">
+                  <%= render "units/favorite", unit: unit%> 
                </li>
             </ul>
          </div>
