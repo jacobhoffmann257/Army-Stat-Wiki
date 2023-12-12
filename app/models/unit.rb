@@ -51,9 +51,9 @@ class Unit < ApplicationRecord
     weapons.push(melee_weapons)
     return weapons
   end
-  def get_emissary
-    emissary = Weapon.where(name: "Norn Emissary").last
-    return emissary
+  def get_one_eye
+    ooe = Unit.where(name: "Old One Eye").last
+    return ooe
   end
   def get_abilities (type)
     unit_abilities = self.unit_abilities
