@@ -26,6 +26,7 @@ class Unit < ApplicationRecord
   validates :name, uniqueness: true
   belongs_to :faction, class_name: "Faction"
   has_many :models, class_name: "Model"
+  has_many :weapons, class_name: "Weapon"
   has_many :unit_abilities
   has_many  :favorites, class_name: "Favorite", foreign_key: "unit_id", dependent: :destroy
   accepts_nested_attributes_for :favorites, allow_destroy: true

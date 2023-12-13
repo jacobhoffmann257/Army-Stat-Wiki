@@ -490,11 +490,47 @@ namespace :slurp do
             puts "#{unit.name} already has the #{ability.name} ability"
           end
         end
+        #end of standard
+        #start of wargear
+        core = JSON.parse(row["Wargear"])
+        core.each do |csv_ability|
+          #removing empty values
+          if csv_ability[0]=== "Wargear"
+          else
+            ability = Ability.new
+            ability.name = csv_ability[0]
+            ability.description = csv_ability[1]
+            ability.classification = "WARGEAR"
+            if ability.valid?
+              ability.save
+              puts "#{ability.name} ability has been add"
+            else
+              puts "#{ability} already exists"
+              ability = Ability.where(name: ability.name).last
+            end
+            unit_ability = UnitAbility.new
+            unit_ability.unit_id = unit.id
+            unit_ability.ability_id = ability.id
+            if unit_ability.valid?
+              unit_ability.save
+              puts "#{unit.name} now has the wargear #{ability.name}"
+            else
+              puts "#{unit.name} already has #{ability.name} wargear"
+            end
+          end
         end
+        #end of wargear
+        #start of size
+          cost = JSON.parse(row["Cost"])
+          unit.models_per_unit = cost[0][0]
+          unit.max_size = cost.length()
+          unit.cost = cost[0][1]
+          unit.save
         #old
           
         
       end
     end
       #Keywords
+  end
   
