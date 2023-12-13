@@ -10,5 +10,6 @@
 #  updated_at     :datetime         not null
 #
 class Ability < ApplicationRecord
+  validates :name, uniqueness: true
   has_many :unit_abilities
 end
