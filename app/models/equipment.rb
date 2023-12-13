@@ -16,8 +16,9 @@
 #  index_equipment_on_weapon_id  (weapon_id)
 #
 class Equipment < ApplicationRecord
-  validates :unit_id, uniqueness: { scope: :weapon_id }
-  belongs_to :model
+  validates :unit_id, uniqueness: { scope: [:weapon_id] }
+  #validates :name, uniqueness: { scope: [:range, :skill] }
+  belongs_to :unit
   belongs_to :weapon
 
   # has_many :weapon, class_name: "Weapon", foreign_key: "weapon_id"
