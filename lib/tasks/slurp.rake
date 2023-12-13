@@ -66,7 +66,9 @@ namespace :slurp do
         if row["Weapon Name"].include?("*")
           holder = row["Weapon Name"].split("*")
           weapon.name = holder[0]
-          profile = holder[1]
+          puts "spilt"
+          profile_name = holder[1]
+          puts holder[1]
         else
           weapon.name = row["Weapon Name"] 
         end
@@ -80,7 +82,7 @@ namespace :slurp do
         profile.armor_piercing = row["AP"].to_i
         profile.attacks  = row["A"]
         profile.damage = row["D"]
-        if profile_name.length != 0
+        if profile_name.length > 0
           profile.name = profile_name
         else
           profile.name = row["Weapon Name"]
@@ -108,6 +110,8 @@ namespace :slurp do
         equipment = Equipment.new
         equipment.weapon_id = weapon.id
         equipment.unit_id = unit.id
+        puts unit._id
+        puts equipment.weapon_id
         if equipment.valid?
           equipment.save
           puts "#{unit.name} now has #{weapon.name} as equipment"
@@ -135,10 +139,10 @@ namespace :slurp do
             #Checking validity of ability
             if ability.valid?
               ability.save
-              puts "#{ability.name} has been added"
+             # puts "#{ability.name} has been added"
             else
               ability = Ability.where(name: ability.name).last
-              puts "#{ability.name} already exists"
+              #puts "#{ability.name} already exists"
             end
             unit_ability = UnitAbility.new
             unit_ability.unit_id = unit.id
@@ -146,9 +150,9 @@ namespace :slurp do
             #Checking that the unit has the ability
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the ability #{ability.name}"
+              #puts "#{unit.name} now has the ability #{ability.name}"
             else
-              puts "#{unit.name} already has the ability #{ability.name}" 
+              #puts "#{unit.name} already has the ability #{ability.name}" 
             end
           end
                   #start of faction
@@ -164,10 +168,10 @@ namespace :slurp do
             #Checking validity of ability
             if ability.valid?
               ability.save
-              puts "#{ability.name} has been added"
+             # puts "#{ability.name} has been added"
             else
               ability = Ability.where(name: ability.name).last
-              puts "#{ability.name} already exists"
+              #puts "#{ability.name} already exists"
             end
             unit_ability = UnitAbility.new
             unit_ability.unit_id = unit.id
@@ -175,9 +179,9 @@ namespace :slurp do
             #Checking that the unit has the ability
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the ability #{ability.name}"
+              #puts "#{unit.name} now has the ability #{ability.name}"
             else
-              puts "#{unit.name} already has the ability #{ability.name}" 
+              #puts "#{unit.name} already has the ability #{ability.name}" 
             end
           end
         end
@@ -189,13 +193,13 @@ namespace :slurp do
           ability.classification = "STANDARD"
           ability.name = csv_ability[0]
           ability.description = csv_ability[1]
-          puts ability.name
-          puts ability.description
+          #puts ability.name
+          #puts ability.description
           if ability.valid?
             ability.save
-            puts "#{ability.name} has been added"
+            #puts "#{ability.name} has been added"
           else
-            puts "#{ability.name} already exists"
+            #puts "#{ability.name} already exists"
             ability = Ability.where(name: ability.name).last
           end
           unit_ability = UnitAbility.new
@@ -203,9 +207,9 @@ namespace :slurp do
           unit_ability.ability_id = ability.id
           if unit_ability.valid?
             unit_ability.save
-            puts "#{unit.name} now has the #{ability.name} ability"
+            #puts "#{unit.name} now has the #{ability.name} ability"
           else
-            puts "#{unit.name} already has the #{ability.name} ability"
+            #puts "#{unit.name} already has the #{ability.name} ability"
           end
         end
         #end of standard
@@ -221,9 +225,9 @@ namespace :slurp do
             ability.classification = "WARGEAR"
             if ability.valid?
               ability.save
-              puts "#{ability.name} ability has been add"
+              #puts "#{ability.name} ability has been add"
             else
-              puts "#{ability} already exists"
+              #puts "#{ability} already exists"
               ability = Ability.where(name: ability.name).last
             end
             unit_ability = UnitAbility.new
@@ -231,9 +235,9 @@ namespace :slurp do
             unit_ability.ability_id = ability.id
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the wargear #{ability.name}"
+              #puts "#{unit.name} now has the wargear #{ability.name}"
             else
-              puts "#{unit.name} already has #{ability.name} wargear"
+              #puts "#{unit.name} already has #{ability.name} wargear"
             end
           end
         end
@@ -314,14 +318,14 @@ namespace :slurp do
     
       csv.each do |row|
         #need to change this when i fix scrap for militarum
-        unit = Unit.where(id: Model.where(name: row["Name"]).first.unit).last
+        unit = Unit.where(name: row["Name"]).last
         weapon = Weapon.new
         #Checks if there is a -
         profile_name = String.new
         if row["Weapon Name"].include?("*")
           holder = row["Weapon Name"].split("*")
           weapon.name = holder[0]
-          profile = holder[1]
+          profile_name = holder[1]
         else
           weapon.name = row["Weapon Name"] 
         end
@@ -363,6 +367,8 @@ namespace :slurp do
         equipment = Equipment.new
         equipment.weapon_id = weapon.id
         equipment.unit_id = unit.id
+        puts equipment.weapon_id.to_s
+        puts equipment.unit_id.to_s
         if equipment.valid?
           equipment.save
           puts "#{unit.name} now has #{weapon.name} as equipment"
@@ -375,7 +381,7 @@ namespace :slurp do
       
       csv.each do |row|
         name = row["Unit_Name"]
-        puts name
+        #puts name
         unit = Unit.where(id: Model.where(name: row["Unit_Name"]).first.unit_id).last
         core = JSON.parse(row["Core"])
         core.each do |csv_ability|
@@ -389,10 +395,10 @@ namespace :slurp do
             #Checking validity of ability
             if ability.valid?
               ability.save
-              puts "#{ability.name} has been added"
+             # puts "#{ability.name} has been added"
             else
               ability = Ability.where(name: ability.name).last
-              puts "#{ability.name} already exists"
+              #puts "#{ability.name} already exists"
             end
             unit_ability = UnitAbility.new
             unit_ability.unit_id = unit.id
@@ -400,9 +406,9 @@ namespace :slurp do
             #Checking that the unit has the ability
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the ability #{ability.name}"
+              #puts "#{unit.name} now has the ability #{ability.name}"
             else
-              puts "#{unit.name} already has the ability #{ability.name}" 
+              #puts "#{unit.name} already has the ability #{ability.name}" 
             end
           end
                   #start of faction
@@ -416,10 +422,10 @@ namespace :slurp do
             #Checking validity of ability
             if ability.valid?
               ability.save
-              puts "#{ability.name} has been added"
+              #puts "#{ability.name} has been added"
             else
               ability = Ability.where(name: ability.name).last
-              puts "#{ability.name} already exists"
+              #puts "#{ability.name} already exists"
             end
             unit_ability = UnitAbility.new
             unit_ability.unit_id = unit.id
@@ -427,9 +433,9 @@ namespace :slurp do
             #Checking that the unit has the ability
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the ability #{ability.name}"
+              #puts "#{unit.name} now has the ability #{ability.name}"
             else
-              puts "#{unit.name} already has the ability #{ability.name}" 
+              #puts "#{unit.name} already has the ability #{ability.name}" 
             end
           end
         end
@@ -441,13 +447,13 @@ namespace :slurp do
           ability.classification = "STANDARD"
           ability.name = csv_ability[0]
           ability.description = csv_ability[1]
-          puts ability.name
-          puts ability.description
+          #puts ability.name
+          #puts ability.description
           if ability.valid?
             ability.save
-            puts "#{ability.name} has been added"
+            #puts "#{ability.name} has been added"
           else
-            puts "#{ability.name} already exists"
+            #puts "#{ability.name} already exists"
             ability = Ability.where(name: ability.name).last
           end
           unit_ability = UnitAbility.new
@@ -455,9 +461,9 @@ namespace :slurp do
           unit_ability.ability_id = ability.id
           if unit_ability.valid?
             unit_ability.save
-            puts "#{unit.name} now has the #{ability.name} ability"
+            #puts "#{unit.name} now has the #{ability.name} ability"
           else
-            puts "#{unit.name} already has the #{ability.name} ability"
+            #puts "#{unit.name} already has the #{ability.name} ability"
           end
         end
         #end of standard
@@ -473,9 +479,9 @@ namespace :slurp do
             ability.classification = "WARGEAR"
             if ability.valid?
               ability.save
-              puts "#{ability.name} ability has been add"
+              #puts "#{ability.name} ability has been add"
             else
-              puts "#{ability} already exists"
+              #puts "#{ability} already exists"
               ability = Ability.where(name: ability.name).last
             end
             unit_ability = UnitAbility.new
@@ -483,9 +489,9 @@ namespace :slurp do
             unit_ability.ability_id = ability.id
             if unit_ability.valid?
               unit_ability.save
-              puts "#{unit.name} now has the wargear #{ability.name}"
+              #puts "#{unit.name} now has the wargear #{ability.name}"
             else
-              puts "#{unit.name} already has #{ability.name} wargear"
+              #puts "#{unit.name} already has #{ability.name} wargear"
             end
           end
         end

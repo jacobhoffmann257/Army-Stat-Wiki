@@ -26,25 +26,22 @@ class Unit < ApplicationRecord
   validates :name, uniqueness: true
   belongs_to :faction, class_name: "Faction"
   has_many :models, class_name: "Model"
-  has_many :weapons, class_name: "Weapon"
-  has_many :unit_abilities
+  has_many :equipments, class_name: "Equipment"
+  has_many :unit_abilities, class_name: "UnitAbility"
   has_many  :favorites, class_name: "Favorite", foreign_key: "unit_id", dependent: :destroy
   accepts_nested_attributes_for :favorites, allow_destroy: true
 
   def get_weapons
     # needs to get models and then their weapons and filter out the ones that are duplicates
-    models = self.models
     range_weapons = Array.new
     melee_weapons = Array.new
-    models.each do |model|
-      model.equipments.each do |equipment|
-        weapon = Weapon.where(id: equipment.weapon_id).last
+    self.equipments.each do |equipment|
+      weapon = Weapon.where(id: equipment.weapon_id).last
         if !melee_weapons.include?(weapon) && weapon.range === 0
           melee_weapons.push(weapon)
         elsif !range_weapons.include?(weapon)&& weapon.range != 0
           range_weapons.push(weapon)
         end
-      end
     end
     weapons = Array.new
     if range_weapons.length != 0
@@ -59,9 +56,10 @@ class Unit < ApplicationRecord
   end
   def get_abilities (type)
     unit_abilities = self.unit_abilities
+    puts unit_abilities.class
     abilities = Array.new
-    unit_abilities.each do |ability|
-      ability = Ability.where(id: ability.ability_id).first
+    unit_abilities.each do |unit_ability|
+      ability = Ability.where(id: unit_ability.ability_id).last
       if ability.classification === type
         abilities.push(ability)
       end
