@@ -14,6 +14,7 @@
 #  index_unit_abilities_on_unit_id     (unit_id)
 #
 class UnitAbility < ApplicationRecord
+  validates :unit_id, uniqueness: { scope: [:ability_id] }
   belongs_to :unit
   belongs_to :ability
 end

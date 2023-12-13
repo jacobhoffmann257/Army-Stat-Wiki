@@ -5,10 +5,12 @@
 #  id         :integer          not null, primary key
 #  name       :string
 #  range      :integer
+#  skill      :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 class Weapon < ApplicationRecord
+  validates :name, uniqueness: { scope: [:range, :skill] }
   has_many :equipment, class_name: "Equipment", foreign_key: "weapon_id", dependent: :destroy
   has_many :profile
   def get_profiles 

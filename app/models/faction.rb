@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  banner     :string
+#  color      :string
 #  icon       :string
 #  name       :string
 #  picture    :string
@@ -11,6 +12,8 @@
 #  updated_at :datetime         not null
 #
 class Faction < ApplicationRecord
+  validates :name, uniqueness: true
+ 
   has_many :unit
 
   def get_units
