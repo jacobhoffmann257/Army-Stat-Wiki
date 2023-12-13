@@ -5,22 +5,22 @@ class FavoritePolicy < ApplicationPolicy
       @favorite = favorite
     end
     def show?
-      true
+      false
     end
     def edit?
-      false
+      @user.id == @favorite.user_id
     end
     def update?
       #only the user can update
-      @user.id?
+      @user.id == @favorite.user_id
     end
     def destroy?
       #only the user can delete
-      @user.admin?
+      @user.id == @favorite.user_id
     end
     def create?
       #only the user can create
-      true
+      @user != nil
     end
   end
   

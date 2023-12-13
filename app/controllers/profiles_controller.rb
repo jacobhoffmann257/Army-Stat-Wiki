@@ -1,27 +1,23 @@
 class ProfilesController < ApplicationController
-  before_action :set_weapon
   before_action :set_profile, only: %i[ show edit update destroy ]
-  before_action(except: [:show]){authorize(@model|| model)}
+  before_action :authorize_user
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # GET /profiles or /profiles.json
   def index
     @profiles = Profile.all
-    authorize @model[0]
   end
 
   # GET /profiles/1 or /profiles/1.json
   def show
-    authorize @model
   end
 
   # GET /profiles/new
   def new
     @profile = Profile.new
-    authorize @model
   end
 
   # GET /profiles/1/edit
   def edit
-    authorize @model
   end
 
   # POST /profiles or /profiles.json
@@ -54,7 +50,6 @@ class ProfilesController < ApplicationController
 
   # DELETE /profiles/1 or /profiles/1.json
   def destroy
-    authorize @model
     @profile.destroy
 
     respond_to do |format|
@@ -69,10 +64,22 @@ class ProfilesController < ApplicationController
       @profile = Profile.find(params[:id])
     end
     def set_weapon
-      @weapon = Weapon.find(params[:weapon_id])
+      @weapon = Weapon.find(id: @profile.weapon_id)
     end
     # Only allow a list of trusted parameters through.
     def profile_params
       params.require(:profile).permit(:id,:weapon_id, :attacks, :skill, :strength, :armor_piercing, :damage)
+    end
+    def user_not_authorized
+      flash[:alert] = "You aren't authorized for that"
+      redirect_to(root_path)
+    end
+    def authorize_user
+      if current_user
+        authorize current_user
+      else
+        flash[:alert]= "You aren't authorized for that."
+        redirect_back fallback_location: root_url
+      end
     end
 end
