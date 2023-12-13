@@ -110,7 +110,7 @@ namespace :slurp do
         equipment = Equipment.new
         equipment.weapon_id = weapon.id
         equipment.unit_id = unit.id
-        puts unit._id
+        puts unit.id
         puts equipment.weapon_id
         if equipment.valid?
           equipment.save
