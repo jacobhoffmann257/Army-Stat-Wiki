@@ -1,4 +1,4 @@
-class FactionPolicy
+class FactionPolicy < ApplicationPolicy
 attr_reader :user
 def initialize(user)
   @user = user
@@ -7,18 +7,18 @@ def show?
   false
 end
 def edit?
-  @user.admin == true
+  @user.admin? 
 end
 def update?
   #only admins can update
-  @user.admin == true
+  @user.admin?
 end
 def destroy?
   #only admins can delete
-  @user.admin == true
+  false
 end
 def create?
   #only admins can create
-  @user.admin == true
+   false 
 end
 end

@@ -1,28 +1,25 @@
 class EquipmentController < ApplicationController
   before_action :set_model
   before_action :set_equipment, only: %i[ show edit update destroy ]
-  before_action{authorize(@equipment|| equipment)}
+  before_action :authorize_user
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # GET /equipment or /equipment.json
   def index
     @equipment = Equipment.all
-    authorize @equipment
   end
 
   # GET /equipment/1 or /equipment/1.json
   def show
-    @melee = Equipment.melee_weapons
-    authorize @equipment
+    #@melee = Equipment.melee_weapons
   end
 
   # GET /equipment/new
   def new
     @equipment = Equipment.new
-    authorize @equipment
   end
 
   # GET /equipment/1/edit
   def edit
-    authorize @equipment
   end
 
   # POST /equipment or /equipment.json
@@ -55,7 +52,6 @@ class EquipmentController < ApplicationController
 
   # DELETE /equipment/1 or /equipment/1.json
   def destroy
-    authorize @equipment
     @equipment.destroy
 
     respond_to do |format|
@@ -77,5 +73,17 @@ class EquipmentController < ApplicationController
     # Only allow a list of trusted parameters through.
     def equipment_params
       params.require(:equipment).permit(:model_id, :weapon_id, :limits, :slot)
+    end
+    def user_not_authorized
+      flash[:alert]
+      redirect_to(home_path)
+    end
+    def authorize_user
+      if current_user
+        authorize current_user
+      else
+        flash[:alert]= "You aren't authorized for that."
+        redirect_back fallback_location: root_url
+      end
     end
 end

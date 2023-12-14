@@ -6,21 +6,21 @@ class UserPolicy < ApplicationPolicy
   end  
 
   def show?
-    true
+    @user.admin? || @user.id === @unit.id
   end
   def edit?
-    update?
+    update?|| @user.id === @unit.id
   end
   def update?
     #only admins can update
-    @user.admin?
+    @user.admin?|| @user.id === @unit.id
   end
   def destroy?
     #only admins can delete
-    @user.admin?
+    false
   end
   def create?
     #only admins can create
-    @user.admin = true 
+    false
   end
 end

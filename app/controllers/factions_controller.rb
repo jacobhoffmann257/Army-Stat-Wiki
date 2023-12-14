@@ -1,6 +1,7 @@
 class FactionsController < ApplicationController
   before_action :set_faction, only: %i[ show edit update destroy ]
-  before_action :faction_pundit, only: [:show, :create, :update]
+  before_action :authorize_user, except: [:home, :index, :base, :type, :datasheets]
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # GET /factions or /factions.json
   def base 
     @faction = Faction.where(name: params[:faction]).last
@@ -37,7 +38,6 @@ class FactionsController < ApplicationController
   # POST /factions or /factions.json
   def create
     @faction = Faction.new(faction_params)
-    authorize @faction
     respond_to do |format|
       if @faction.save
         format.html { redirect_to faction_url(@faction), notice: "Faction was successfully created." }
@@ -82,13 +82,15 @@ class FactionsController < ApplicationController
     def faction_params
       params.require(:faction).permit(:name, :banner, :icon, :picture)
     end
-    def faction_pundit
-      if FactionPolicy.new(current_user).show?
-      elsif FactionPolicy.new(current_user).create?
-        redirect_back fallback_location: root_url
-      elsif !FactionPolicy.new(current_user).destroy?
-        redirect_back fallback_location: root_url
-      elsif !FactionPolicy.new(current_user).update?
+    def user_not_authorized
+      flash[:alert] = "You aren't authorized for that"
+      redirect_to(root_path)
+    end
+    def authorize_user
+      if current_user
+        authorize current_user
+      else
+        flash[:alert]= "You aren't authorized for that."
         redirect_back fallback_location: root_url
       end
     end

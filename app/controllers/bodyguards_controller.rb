@@ -1,4 +1,6 @@
 class BodyguardsController < ApplicationController
+  before_action :authorize_user
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   def index
     matching_bodyguards = Bodyguard.all
 
@@ -52,5 +54,18 @@ class BodyguardsController < ApplicationController
     the_bodyguard.destroy
 
     redirect_to("/bodyguards", { :notice => "Bodyguard deleted successfully."} )
+  end
+  private
+  def user_not_authorized
+    flash[:alert] = "You aren't authorized for that"
+    redirect_to(root_path)
+  end
+  def authorize_user
+    if current_user
+      authorize current_user
+    else
+      flash[:alert]= "You aren't authorized for that."
+      redirect_back fallback_location: root_url
+    end
   end
 end

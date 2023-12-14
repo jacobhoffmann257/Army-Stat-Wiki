@@ -1,7 +1,8 @@
 class ModelsController < ApplicationController
   before_action :set_unit
   before_action :set_model, only: %i[ show edit update destroy ]
-  before_action{authorize(@model|| model)}
+  before_action :authorize_user
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   # GET /models or /models.json
   def index
@@ -73,7 +74,18 @@ class ModelsController < ApplicationController
   def set_model
     @model = Model.find(params[:id])
   end
-
+  def user_not_authorized
+    flash[:alert] ="You aren't authorized for that"
+    redirect_to(root_path)
+  end
+  def authorize_user
+    if current_user
+      authorize current_user
+    else
+      flash[:alert]= "You aren't authorized for that."
+      redirect_back fallback_location: root_url
+    end
+  end
   def model_params
     params.require(:model).permit(:name, :unit_id, :movement, :toughness, :save_value, :invulnerable_save, :wounds, :leadership, :objective_control)
   end

@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
   before_action :set_unit
   before_action :set_user
-  before_action :favorite_pundit, only: [:show, :create, :update, :destroy]
+  before_action :set_favorite
+  before_action :authenticate_user!, only: [ :new, :create, :destroy]
   def index
     matching_favorites = Favorite.all
 
@@ -29,7 +30,7 @@ class FavoritesController < ApplicationController
 
   def create
     @favorite = Favorite.new
-    authorize @favorite
+    #authorize @favorite
     @favorite.user_id = params.fetch("query_user_id")
     @favorite.unit_id = params.fetch("query_unit_id")
 
@@ -73,20 +74,13 @@ class FavoritesController < ApplicationController
       @user = current_user
     end 
   end
+  def set_favorite
+    @favorite = Favorite.where(user_id: @user.id, unit_id: @unit.id).last
+  end
   def destroy
     the_id = params.fetch("path_id")
     the_favorite = Favorite.where({ :id => the_id }).at(0)
     the_favorite.destroy
     redirect_back fallback_location: root_url, notice: "Removed from favorites" 
-  end
-  def favorite_pundit
-    if FavoritePolicy.new(current_user, @favorite).show?
-    elsif FavoritePolicy.new(current_user, @favorite).create?
-      redirect_back fallback_location: root_url
-    elsif FavoritePolicy.new(current_user,@favorite).destroy?
-      redirect_back fallback_location: root_url
-    elsif FavoritePolicy.new(current_user,@favorite).update?
-      redirect_back fallback_location: root_url
-    end
   end
 end
