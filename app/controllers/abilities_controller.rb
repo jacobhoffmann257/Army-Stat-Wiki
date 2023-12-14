@@ -1,6 +1,6 @@
 class AbilitiesController < ApplicationController
   before_action :set_ability, only: %i[ show edit update destroy ]
-  before_action :authorize_user, only:[:create, :update, :edit, :destroy, :new]
+  before_action :authorize_user
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # GET /abilities or /abilities.json
   def index
