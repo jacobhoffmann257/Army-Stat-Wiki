@@ -74,24 +74,26 @@ class FactionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_faction
-      @faction = Faction.find(params[:id])
-    end
+  def set_faction
+    @faction = Faction.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def faction_params
-      params.require(:faction).permit(:name, :banner, :icon, :picture)
+  # Only allow a list of trusted parameters through.
+  def faction_params
+    params.require(:faction).permit(:name, :banner, :icon, :picture)
+  end
+
+  def user_not_authorized
+    flash[:alert] = "You aren't authorized for that"
+    redirect_to(root_path)
+  end
+
+  def authorize_user
+    if current_user
+      authorize current_user
+    else
+      flash[:alert]= "You aren't authorized for that."
+      redirect_back fallback_location: root_url
     end
-    def user_not_authorized
-      flash[:alert] = "You aren't authorized for that"
-      redirect_to(root_path)
-    end
-    def authorize_user
-      if current_user
-        authorize current_user
-      else
-        flash[:alert]= "You aren't authorized for that."
-        redirect_back fallback_location: root_url
-      end
-    end
+  end
 end

@@ -1,5 +1,6 @@
 class BodyguardsController < ApplicationController
   before_action :authorize_user
+  # You are already inhereiting Pundit from your application contoller so line 4 is redundant and this applies to all controllers inheriting from the Application controller
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   def index
     matching_bodyguards = Bodyguard.all
@@ -37,6 +38,7 @@ class BodyguardsController < ApplicationController
     the_bodyguard = Bodyguard.where({ :id => the_id }).at(0)
 
     the_bodyguard.leader_id = params.fetch("query_leader_id")
+    # You can set a private method from bodyguard params
     the_bodyguard.unit_id = params.fetch("query_unit_id")
 
     if the_bodyguard.valid?
@@ -55,11 +57,14 @@ class BodyguardsController < ApplicationController
 
     redirect_to("/bodyguards", { :notice => "Bodyguard deleted successfully."} )
   end
+
   private
+  # both private method could be in the application controller and be inhereited like Pundit (DRY)
   def user_not_authorized
     flash[:alert] = "You aren't authorized for that"
     redirect_to(root_path)
   end
+
   def authorize_user
     if current_user
       authorize current_user
@@ -68,4 +73,5 @@ class BodyguardsController < ApplicationController
       redirect_back fallback_location: root_url
     end
   end
+
 end

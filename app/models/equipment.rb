@@ -20,6 +20,8 @@ class Equipment < ApplicationRecord
   #validates :name, uniqueness: { scope: [:range, :skill] }
   belongs_to :unit
   belongs_to :weapon
+  
+  # if this logic is not being used anymore, you should delete this commented code and refer to comments for explanation instead
 
   # has_many :weapon, class_name: "Weapon", foreign_key: "weapon_id"
   

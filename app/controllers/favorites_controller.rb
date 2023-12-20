@@ -3,14 +3,19 @@ class FavoritesController < ApplicationController
   before_action :set_user
   before_action :set_favorite
   before_action :authenticate_user!, only: [ :new, :create, :destroy]
+
   def index
-    matching_favorites = Favorite.all
+    #matching_favorites = Favorite.all
 
-    @list_of_favorites = matching_favorites.order({ :created_at => :desc })
+    # @list_of_favorites = matching_favorites.order({ :created_at => :desc })
 
-    render({ :template => "favorites/index" })
+    # render({ :template => "favorites/index" }) 
+    # this can be refactored into this 
+    @list_of_favorites = Favorite.order
   end
+
   def mine
+    # you already have a private method to find the user this is DRY
     @user = current_user
     favorites = Favorite.where(user_id: @user.id)
     @units = Array.new
@@ -56,6 +61,10 @@ class FavoritesController < ApplicationController
       redirect_to("/favorites/#{the_favorite.id}", { :alert => the_favorite.errors.full_messages.to_sentence })
     end
   end
+
+  private
+  # these should be under private methods
+  
   def set_unit
     if params.has_key?(:query_unit_id)
       @unit = Unit.find(params[:query_unit_id])
@@ -65,6 +74,7 @@ class FavoritesController < ApplicationController
       @unit = Unit.find(Favorite.find(params[:path_id]).unit_id)
     end 
   end
+
   def set_user
     if params.has_key?(:query_user_id)
       @user = Unit.find(params[:query_user_id])
@@ -74,9 +84,11 @@ class FavoritesController < ApplicationController
       @user = current_user
     end 
   end
+
   def set_favorite
     @favorite = Favorite.where(user_id: @user.id, unit_id: @unit.id).last
   end
+
   def destroy
     the_id = params.fetch("path_id")
     the_favorite = Favorite.where({ :id => the_id }).at(0)

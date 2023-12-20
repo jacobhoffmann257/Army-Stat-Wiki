@@ -13,6 +13,7 @@ class UserPolicy < ApplicationPolicy
   end
   def update?
     #only admins can update
+    # this should be the == comparison operator
     @user.admin?|| @user.id === @unit.id
   end
   def destroy?
