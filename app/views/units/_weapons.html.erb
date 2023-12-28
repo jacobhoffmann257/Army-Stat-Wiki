@@ -59,11 +59,19 @@
                     <%= weapon.range %>
                     <% end %>
                     </td>
+                    <% if weapon.profile.last%>
                       <td><%= weapon.profile.last.attacks%></td>
                       <td><%= weapon.profile.last.skill%></td>
                       <td><%= weapon.profile.last.strength%></td>
                       <td><%= weapon.profile.last.armor_piercing%></td>
                       <td><%= weapon.profile.last.damage%></td>
+                      <%else%>
+                      <td>not found</td>
+                      <td>not found</td>
+                      <td>not found</td>
+                      <td>not found</td>
+                      <td>not found</td>
+                      <%end%>
                   <% end %>
                 </tr> 
               <% end %>
