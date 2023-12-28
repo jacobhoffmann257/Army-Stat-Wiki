@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   end
   resources :factions
   resources :favorites
-  resources :models
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get ":faction/info" => "factions#base", as: :base
   get ":faction/datasheets" => "factions#datasheets", as: :all
