@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Routes for the Favorite resource:
-
+  # The long hand and resources routes are DRY
   # CREATE
   post("/insert_favorite", { :controller => "favorites", :action => "create" })
           

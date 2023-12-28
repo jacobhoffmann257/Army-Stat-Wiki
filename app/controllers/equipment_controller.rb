@@ -10,6 +10,8 @@ class EquipmentController < ApplicationController
 
   # GET /equipment/1 or /equipment/1.json
   def show
+  # if this logic is not being used anymore, you should delete this commented code and refer to comments for explanation instead
+
     #@melee = Equipment.melee_weapons
   end
 
@@ -74,10 +76,13 @@ class EquipmentController < ApplicationController
     def equipment_params
       params.require(:equipment).permit(:model_id, :weapon_id, :limits, :slot)
     end
+    
+    # DRY
     def user_not_authorized
       flash[:alert]
       redirect_to(home_path)
     end
+
     def authorize_user
       if current_user
         authorize current_user
@@ -86,4 +91,5 @@ class EquipmentController < ApplicationController
         redirect_back fallback_location: root_url
       end
     end
+
 end
