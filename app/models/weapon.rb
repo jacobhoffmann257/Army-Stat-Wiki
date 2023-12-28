@@ -22,7 +22,4 @@ class Weapon < ApplicationRecord
       end
       return profile_array
   end
-  #scope :melee, -> { where range: 0 }
-  #scope :melee_weapons, -> { equipment.where(range: 0)}
-  #scope :range_weapons, -> { Weapon.where("range > ? ", 0) }
 end
