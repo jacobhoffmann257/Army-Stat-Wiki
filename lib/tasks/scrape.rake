@@ -28,14 +28,12 @@ task({ :scrape_tyranids_data => :environment}) do
         modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
         modelname = modelname.gsub("’","'")
         box.css(".dsProfileWrap").each do |profile|  
-          #statline = String.new
           statline = Array.new
           statline << unitname
           statline << base
           statline << modelname
           statline << invulerable
           statline << lore
-          #statline.concat("#{name}")
           profile.css(".dsCharFrameBack").each do |stat|
             x = stat.at_css('.dsCharValue')&.text&.strip
             statline << x.to_i
@@ -370,13 +368,14 @@ task({ :scrape_astra_militarum_data => :environment}) do
                 pos = abilitity_names.find_index{|x| x === abilname}
                 final_ability << abilname
                 final_ability << ability_array[pos]
-                #puts final_ability
                 holder_aray << final_ability
               end
               if /Medi-pack/.match(ability.to_s)||/Regimental Standard/.match(ability.to_s)||/Command Rod/.match(ability.to_s)||/Master Vox/.match(ability.to_s)
-                wargear_abilities << holder_aray
+                if !wargear_abilities[1]
+                  wargear_abilities << holder_aray
+                end
               else
-              wargear_abilities << holder_aray
+              standard_abilities << holder_aray
               end
             end
 
@@ -384,13 +383,36 @@ task({ :scrape_astra_militarum_data => :environment}) do
         end
           #checks if it is the first or second col
           if abilities_list.length === 1
-          abilities_list << core_abilities
-          abilities_list << faction_abilities
-          abilities_list << standard_abilities
-          abilities_list << wargear_abilities
-          abilities_list  << size_abilities
-          abilities_list << bodyguard_abilities
-          puts abilities_list.length
+            if core_abilities.length != 0
+              abilities_list << core_abilities
+            else
+              abilities_list << ["CORE", "*"]
+            end
+            if faction_abilities.length != 0
+              abilities_list << faction_abilities
+            else
+              abilities_list << ["FACTION","*"]
+            end
+            if standard_abilities.length != 0
+              abilities_list << standard_abilities
+            else
+              abilities_list << ["STANDARD", "*"]
+            end
+            if wargear_abilities.length != 0
+              abilities_list << wargear_abilities
+            else
+              abilities_list << ["WARGEAR","*"]
+            end
+            if size_abilities.length != 0
+              abilities_list  << size_abilities
+            else
+              abilities_list << ["NA","NA"]
+            end
+            if bodyguard_abilities.length != 0
+              abilities_list << bodyguard_abilities
+            else
+              abilities_list << ["BODYGUARD","NA"]
+            end
           end
 
       end
