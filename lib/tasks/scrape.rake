@@ -235,7 +235,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
   page = HTTParty.get(url)
   parsed_page = Nokogiri::HTML(page)
 
-  CSV.open("lib/sample_data/astra-militarum_stats2.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra_militarum_stats.csv", "w") do |csv|
     csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"]  
     parsed_page.css('.dsOuterFrame').each do |frame|
 
@@ -272,44 +272,46 @@ task({ :scrape_astra_militarum_data => :environment}) do
     end
   
   end
-  CSV.open("lib/sample_data/astra-militarum_abilities2.csv","w") do |csv|
-    csv << ["Unit_Name", "Weapon_Ability","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
-    parsed_page.css('.dsOuterFrame').each do |box|
-
-      #Extracting Ability details
-        name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-        base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-        name = name.gsub("#{base}", "")
-        name = name.gsub("’","'")
-        name = name.gsub("‘","'")
-        base = base.gsub("⌀", "")
-        abilities_list = Array.new
-        abilities_list << name
+  CSV.open("lib/sample_data/astra_militarum_abilities.csv","w") do |csv|
+    csv << ["Unit_Name","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
+    parsed_page.css('.dsOuterFrame').each do |outerbox|
+      name = outerbox.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = outerbox.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      name = name.gsub("#{base}", "")
+      name = name.gsub("’","'")
+      name = name.gsub("‘","'")
+      base = base.gsub("⌀", "")
+      abilities_list = Array.new
+      # this pulls out the right column to parse
+      outerbox.css('.dsRightСol').each do |box| # is iterating throught this twice tdk why
+        #Extracting Ability details
+        #Array that will be added to the csv
+        if abilities_list.length === 0
+         abilities_list << name
+        end
+        #Arrays that will hold the info and be put into abilties_list
+        core_abilities = Array.new
+        faction_abilities = Array.new
+        standard_abilities = Array.new
         wargear_abilities = Array.new
+        bodyguard_abilities = Array.new
+        size_abilities = Array.new
         box.css('.dsAbility').each do |ability|
           if /CORE/.match(ability.text.strip)
             #gets core and faction 
-            if !abilities_list[1]
-              abilities_list << ["Weapon", "*"]
-            end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
             change2 = change1.gsub(",","*")
             change3 =  change2.gsub("\"", "")
             thing = change3.split("*")
-            abilities_list << thing
+            core_abilities << thing
           elsif /FACTION/.match(ability.text.strip)
-
-            if !abilities_list[2]
-              abilities_list << ["Weapon", "*"]
-              abilities_list << ["CORE", "*"]
-            end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
             change2 = change1.gsub(",","*")
             change3 =  change2.gsub("\"", "")
             thing = change3.split("*")
-            abilities_list << thing
+            faction_abilities << thing
           elsif /This model is equipped with/.match(ability.to_s)
           elsif /is equipped with/.match(ability.to_s)
           elsif /This model can be attached to the following unit/.match(ability.text.strip)
@@ -321,18 +323,9 @@ task({ :scrape_astra_militarum_data => :environment}) do
                 end
                 
               end
-              abilities_list << guard
+              bodyguard_abilities << guard
           elsif /<td>/.match(ability.to_s)
             #model size and cost
-            if !abilities_list[5]
-              if wargear_abilities.length != 0
-                puts wargear_abilities
-                abilities_list << wargear_abilities
-              else
-                puts wargear_abilities
-                abilities_list << [["Wargear", "*"]]
-              end
-            end
             modelsize = Array.new
               ability.css("table").each do |table|
                 table.css("tr").each do |row|
@@ -343,13 +336,10 @@ task({ :scrape_astra_militarum_data => :environment}) do
                   modelsize << spilting
                 end
               end
-              abilities_list << modelsize
+              size_abilities << modelsize
             elsif /This unit can be led by the following unit/.match(ability.to_s)
             elsif /<b>/.match(ability.to_s) # need to add something to check for wargear
               #this gets the  ability name
-              if !abilities_list[3]
-                abilities_list << [["Faction","*"]]
-              end
               holder_aray = Array.new
               abilitity_names = Array.new
               ability.css('b').each do |b|
@@ -386,17 +376,30 @@ task({ :scrape_astra_militarum_data => :environment}) do
               if /Medi-pack/.match(ability.to_s)||/Regimental Standard/.match(ability.to_s)||/Command Rod/.match(ability.to_s)||/Master Vox/.match(ability.to_s)
                 wargear_abilities << holder_aray
               else
-              abilities_list << holder_aray
+              wargear_abilities << holder_aray
               end
             end
 
       
         end
           #checks if it is the first or second col
-          csv << abilities_list
+          if abilities_list.length === 1
+          abilities_list << core_abilities
+          abilities_list << faction_abilities
+          abilities_list << standard_abilities
+          abilities_list << wargear_abilities
+          abilities_list  << size_abilities
+          abilities_list << bodyguard_abilities
+          puts abilities_list.length
+          end
+
+      end
+      if abilities_list[2]
+        csv << abilities_list
+      end
     end
   end
-  CSV.open("lib/sample_data/astra-militarum_weapons2.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra_militarum_weapons.csv", "w") do |csv|
     
     csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
@@ -454,209 +457,5 @@ task({ :scrape_astra_militarum_data => :environment}) do
         csv << keyword_list
       end
     end
-  end
-end
-desc "old"
-task({ :scrape_astra1_militarum_data => :environment}) do
-
-  url = 'https://wahapedia.ru/wh40k10ed/factions/astra-militarum/datasheets.html'
-  page = HTTParty.get(url)
-  parsed_page = Nokogiri::HTML(page)
-
-  CSV.open("lib/sample_data/astra_militarum_stats.csv", "w") do |csv|
-    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
-    parsed_page.css('.dsOuterFrame').each do |frame|
-
-      unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-      base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-      unitname = unitname.gsub("#{base}", "")
-      base = base.gsub("⌀","")
-      invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
-      lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
-      
-      frame.css(".dsProfileBaseWrap").each do |box|
-
-        modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
-        box.css(".dsProfileWrap").each do |profile|  
-          #statline = String.new
-          statline = Array.new
-          statline << unitname
-          statline << base
-          statline << modelname
-          statline << invulerable
-          statline << lore
-          #statline.concat("#{name}")
-          profile.css(".dsCharFrameBack").each do |stat|
-            x = stat.at_css('.dsCharValue')&.text&.strip
-            statline << x.to_i
-          end 
-          csv << statline
-        end
-      end
-
-    end
-  end
-  CSV.open("lib/sample_data/astra_militarum_abilities.csv","w") do |csv|
-    csv << ["Unit Name", "Name", "Description", "Aura", "Cost", "Bodygaurd", "Wargear" ]
-    parsed_page.css('.dsOuterFrame').each do |box|
-      name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-      base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-      name = name.gsub("#{base}", "")
-      base = base.gsub("⌀", "")
-      #Extracting Ability details
-      abilities_list = Array.new
-      wargear = Array.new
-      orders =  Array.new
-      abilities_list << name
-      box.css('.dsAbility').each do |ability|
-        if /CORE/.match(ability.text.strip) || /FACTION/.match(ability.text.strip)
-           raw = ability.text.strip
-           change1 = raw.gsub(":","*")
-           change2 = change1.gsub(",","*")
-           change3 =  change2.gsub("\"", "")
-           thing = change3.split("*")
-           stuff = Array.new
-           thing.each do |x|
-           stuff << x
-           end
-           abilities_list << stuff
-          elsif /This unit’s OFFICER/.match(ability.to_s)
-            puts ability.text.strip
-          elsif /Medi-pack/.match(ability.text.strip) || /Regimental Standard/.match(ability.text.strip) ||/Command Rod/.match(ability.text.strip)|| /Master Vox/.match(ability.text.strip)
-            raw = ability.text.strip
-            change1 = raw.gsub(":","*")
-            change3 =  change1.gsub("\"", "")
-            thing = change3.split("*")
-            stuff = Array.new
-            thing.each do |x|
-            wargear << x
-            end
-
-        elsif /This model is equipped with/.match(ability.text.strip)
-        elsif /is equipped with/.match(ability.to_s)
-        elsif /<b>/.match(ability.to_s)
-          raw = ability.text.strip
-          raw = raw.split(".")
-          parsed = Array.new
-          raw.each do |second|
-            temp = second.split(":")
-            #pp temp
-            parsed << temp
-          end
-          abilities_list << parsed
-        elsif /This model can be attached to the following unit/.match(ability.text.strip)
-          guard = Array.new
-            ability.css("ul").each do |bullet|
-              bullet.css("li").each do |guardian|
-
-              guard << guardian.text
-              end
-              
-            end
-            abilities_list << guard
-          elsif /<td>/.match(ability.to_s)
-          modelsize = Array.new
-            ability.css("table").each do |table|
-              table.css("tr").each do |row|
-                raw = row.text.strip
-                remove = raw.gsub("model","")
-                removes = remove.gsub("s","")
-                spilting = removes.split(" ")
-                modelsize << spilting
-              end
-            end
-            
-            abilities_list << modelsize
-
-        end
-     
-      end
-      #pp wargear
-      #pp orders
-      abilities_list << wargear
-        csv << abilities_list
-    end
-  end
-  CSV.open("lib/sample_data/astra_militarum_weapons.csv", "w") do |csv|
-
-    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
-
-    parsed_page.css('.dsOuterFrame').each do |frame|
-    name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-    name = name.gsub("#{base}", "")
-    base = base.gsub("⌀", "")
-    # Extracting weapon details
-      frame.css('.wTable').each do |table|
-        table.css('tr').each do |row|
-          next if row.at_css('.wTable_WEAPON') 
-          if row.at_css('.wTable2_short')
-            weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
-            range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
-            a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
-            bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
-            s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
-            ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
-            d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
-            csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
-          end
-        end
-      end
-    end
-    
-  end
-  
-end
-
-
-desc "Scraping necrons Data"
-
-task({ :scrape_necrons_data => :environment}) do
-
-  url = 'https://wahapedia.ru/wh40k10ed/factions/necrons/datasheets.html'
-  page = HTTParty.get(url)
-  parsed_page = Nokogiri::HTML(page)
-
-  CSV.open("lib/sample_data/necrons_stats.csv", "w") do |csv|
-    csv << ["Name", "M", "T", "Sv", "W", "Ld", "OC"] 
-    parsed_page.css('.dsOuterFrame').each do |frame|
-      name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-
-      m = frame.at_css('.dsCharName:contains("M") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      t = frame.at_css('.dsCharName:contains("T") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      sv = frame.at_css('.dsCharName:contains("Sv") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      w = frame.at_css('.dsCharName:contains("W") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      ld = frame.at_css('.dsCharName:contains("Ld") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-      oc = frame.at_css('.dsCharName:contains("OC") + .dsCharFrame .dsCharValue')&.text&.strip || 'N/A'
-
-      csv << [name, m, t, sv, w, ld, oc]
-    end
-  end
-
-  CSV.open("lib/sample_data/necrons_weapons.csv", "w") do |csv|
-
-    csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
-
-    parsed_page.css('.dsOuterFrame').each do |frame|
-    name = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-
-    # Extracting weapon details
-      frame.css('.wTable').each do |table|
-        table.css('tr').each do |row|
-          next if row.at_css('.wTable_WEAPON') 
-          if row.at_css('.wTable2_short')
-            weapon_name = row.at_css('td:nth-child(2)')&.text&.strip || 'N/A'
-            range = row.at_css('td:nth-child(3) .ct')&.text&.strip || 'N/A'
-            a = row.at_css('td:nth-child(4) .ct')&.text&.strip || 'N/A'
-            bs_ws = row.at_css('td:nth-child(5) .ct')&.text&.strip || 'N/A'
-            s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
-            ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
-            d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
-
-            csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
-          end
-        end
-      end
-    end
-    
   end
 end
