@@ -23,7 +23,7 @@ desc "tyranid data"
         u.faction_id = f.id
         u.base_size = row["Base_Size"]    
         u.role =row["type"]
-        
+        puts u.name
         if File.file?("app/assets/images/#{u.name.downcase.gsub(" ","_")}.jpeg")
           puts "Found image of #{u.name.downcase}"
           u.picture = "#{u.name.downcase.gsub(" ","_")}.jpeg"
@@ -125,112 +125,84 @@ desc "tyranid data"
             puts "#{unit.name} already has #{weapon.name} as equipment"
           end
         end
-  end
-  task tyranid_abilities: :environment do 
-    csv_ability = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities.csv"))
-    csv = CSV.parse(csv_ability, :headers => true, :encoding => "ISO-8859-1")
-    
-    csv.each do |row|
-      name = row["Unit_Name"]
-      #puts name
-      unit = Unit.where(id: Model.where(name: row["Unit_Name"]).first.unit_id).last
-      core = JSON.parse(row["Core"])
-      core.each do |csv_ability|
-        #Core abilities
-        #Checking for empty values
-        if csv_ability === "CORE"||csv_ability ==="*"
-        else
-          ability = Ability.new
-          ability.name = csv_ability
-          ability.classification = "CORE"
-          #Checking validity of ability
-          if ability.valid?
-            ability.save
-          puts "#{ability.name} has been added"
+    end
+    task tyranid_abilities: :environment do 
+      csv_ability = File.read(Rails.root.join("lib", "sample_data", "tyranids_abilities.csv"))
+      csv = CSV.parse(csv_ability, :headers => true, :encoding => "ISO-8859-1")
+      
+      csv.each do |row|
+        name = row["Unit_Name"]
+        #puts name
+        unit = Unit.where(id: Model.where(name: row["Unit_Name"]).first.unit_id).last
+        core = JSON.parse(row["Core"])
+        core.each do |csv_ability|
+          #Core abilities
+          #Checking for empty values
+          if csv_ability === "CORE"||csv_ability ==="*"
           else
-            ability = Ability.where(name: ability.name).last
-            puts "#{ability.name} already exists"
+            ability = Ability.new
+            ability.name = csv_ability
+            ability.classification = "CORE"
+            #Checking validity of ability
+            if ability.valid?
+              ability.save
+            puts "#{ability.name} has been added"
+            else
+              ability = Ability.where(name: ability.name).last
+              puts "#{ability.name} already exists"
+            end
+            unit_ability = UnitAbility.new
+            unit_ability.unit_id = unit.id
+            unit_ability.ability_id = ability.id
+            #Checking that the unit has the ability
+            if unit_ability.valid?
+              unit_ability.save
+              puts "#{unit.name} now has the ability #{ability.name}"
+            else
+              puts "#{unit.name} already has the ability #{ability.name}" 
+            end
           end
-          unit_ability = UnitAbility.new
-          unit_ability.unit_id = unit.id
-          unit_ability.ability_id = ability.id
-          #Checking that the unit has the ability
-          if unit_ability.valid?
-            unit_ability.save
-            puts "#{unit.name} now has the ability #{ability.name}"
+                  #start of faction
+        core = JSON.parse(row["Faction"])
+        core.each do |csv_ability|
+          if csv_ability === "FACTION"||csv_ability ==="*"
           else
-            puts "#{unit.name} already has the ability #{ability.name}" 
+            ability = Ability.new
+            ability.name = csv_ability
+            ability.classification = "FACTION"
+            #Checking validity of ability
+            if ability.valid?
+              ability.save
+              puts "#{ability.name} has been added"
+            else
+              ability = Ability.where(name: ability.name).last
+              puts "#{ability.name} already exists"
+            end
+            unit_ability = UnitAbility.new
+            unit_ability.unit_id = unit.id
+            unit_ability.ability_id = ability.id
+            #Checking that the unit has the ability
+            if unit_ability.valid?
+              unit_ability.save
+              puts "#{unit.name} now has the ability #{ability.name}"
+            else
+              puts "#{unit.name} already has the ability #{ability.name}" 
+            end
           end
         end
-                #start of faction
-      core = JSON.parse(row["Faction"])
-      core.each do |csv_ability|
-        if csv_ability === "FACTION"||csv_ability ==="*"
-        else
+        #end of faction
+        #start of Standard
+        core = JSON.parse(row["Standard"])
+        core.each do |csv_ability|
           ability = Ability.new
-          ability.name = csv_ability
-          ability.classification = "FACTION"
-          #Checking validity of ability
+          ability.classification = "STANDARD"
+          ability.name = csv_ability[0]
+          ability.description = csv_ability[1]
           if ability.valid?
             ability.save
             puts "#{ability.name} has been added"
           else
-            ability = Ability.where(name: ability.name).last
             puts "#{ability.name} already exists"
-          end
-          unit_ability = UnitAbility.new
-          unit_ability.unit_id = unit.id
-          unit_ability.ability_id = ability.id
-          #Checking that the unit has the ability
-          if unit_ability.valid?
-            unit_ability.save
-            puts "#{unit.name} now has the ability #{ability.name}"
-          else
-            puts "#{unit.name} already has the ability #{ability.name}" 
-          end
-        end
-      end
-      #end of faction
-      #start of Standard
-      core = JSON.parse(row["Standard"])
-      core.each do |csv_ability|
-        ability = Ability.new
-        ability.classification = "STANDARD"
-        ability.name = csv_ability[0]
-        ability.description = csv_ability[1]
-        if ability.valid?
-          ability.save
-          puts "#{ability.name} has been added"
-        else
-          puts "#{ability.name} already exists"
-          ability = Ability.where(name: ability.name).last
-        end
-        unit_ability = UnitAbility.new
-        unit_ability.unit_id = unit.id
-        unit_ability.ability_id = ability.id
-        if unit_ability.valid?
-          unit_ability.save
-          puts "#{unit.name} now has the #{ability.name} ability"
-        else
-          puts "#{unit.name} already has the #{ability.name} ability"
-        end
-      end
-      #end of standard
-      #start of wargear
-      core = JSON.parse(row["Wargear"])
-      core.each do |csv_ability|
-        #removing empty values
-        if csv_ability[0]=== "Wargear"
-        else
-          ability = Ability.new
-          ability.name = csv_ability[0]
-          ability.description = csv_ability[1]
-          ability.classification = "WARGEAR"
-          if ability.valid?
-            ability.save
-            puts "#{ability.name} ability has been add"
-          else
-            puts "#{ability} already exists"
             ability = Ability.where(name: ability.name).last
           end
           unit_ability = UnitAbility.new
@@ -238,21 +210,50 @@ desc "tyranid data"
           unit_ability.ability_id = ability.id
           if unit_ability.valid?
             unit_ability.save
-            puts "#{unit.name} now has the wargear #{ability.name}"
+            puts "#{unit.name} now has the #{ability.name} ability"
           else
-            puts "#{unit.name} already has #{ability.name} wargear"
+            puts "#{unit.name} already has the #{ability.name} ability"
           end
         end
+        #end of standard
+        #start of wargear
+        core = JSON.parse(row["Wargear"])
+        core.each do |csv_ability|
+          #removing empty values
+          if csv_ability[0]=== "Wargear"
+          else
+            ability = Ability.new
+            ability.name = csv_ability[0]
+            ability.description = csv_ability[1]
+            ability.classification = "WARGEAR"
+            if ability.valid?
+              ability.save
+              puts "#{ability.name} ability has been add"
+            else
+              puts "#{ability} already exists"
+              ability = Ability.where(name: ability.name).last
+            end
+            unit_ability = UnitAbility.new
+            unit_ability.unit_id = unit.id
+            unit_ability.ability_id = ability.id
+            if unit_ability.valid?
+              unit_ability.save
+              puts "#{unit.name} now has the wargear #{ability.name}"
+            else
+              puts "#{unit.name} already has #{ability.name} wargear"
+            end
+          end
+        end
+        #end of wargear
+        #start of size
+          cost = JSON.parse(row["Cost"])
+          unit.models_per_unit = cost[0][0]
+          unit.max_size = cost.length()
+          unit.cost = cost[0][1]
+          unit.save
+        #end of size
       end
-      #end of wargear
-      #start of size
-        cost = JSON.parse(row["Cost"])
-        unit.models_per_unit = cost[0][0]
-        unit.max_size = cost.length()
-        unit.cost = cost[0][1]
-        unit.save
-      #end of size
     end
   end
-end
+
 end

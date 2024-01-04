@@ -34,11 +34,15 @@ task({ :scrape_tyranids_data => :environment}) do
           statline << modelname
           statline << invulerable
           statline << lore
-          profile.css(".dsCharFrameBack").each do |stat|
-            x = stat.at_css('.dsCharValue')&.text&.strip
-            statline << x.to_i
-          end 
-          csv << statline
+            profile.css(".dsCharFrameBack").each do |stat|
+              x = stat.at_css('.dsCharValue')&.text&.strip
+              statline << x.to_i
+            end 
+          #checks for unsupported units
+            if unitname === "Malanthrope" || unitname === "Dimachaeron" || unitname === "Sky-slasher Swarms"
+            else
+              csv << statline
+            end
         end
       end
 
@@ -191,9 +195,11 @@ task({ :scrape_tyranids_data => :environment}) do
           end
 
       end
-      if abilities_list[2]
-        csv << abilities_list
-      end
+          #checks for unsupported units
+          if abilities_list[0] === "Malanthrope" || abilities_list[0] === "Dimachaeron" || abilities_list[0] === "Sky-slasher Swarms"
+          else
+            csv << abilities_list
+          end
     end
   end
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
@@ -220,7 +226,11 @@ task({ :scrape_tyranids_data => :environment}) do
             s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
             ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
             d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
-            csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+            if name === "Malanthrope" || name === "Dimachaeron" || name === "Sky-slasher Swarms"
+            else
+              csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+            end
+            
           end
         end
       end
@@ -242,6 +252,7 @@ task({ :scrape_tyranids_data => :environment}) do
       frame.css('.dsLeftСolKW').each do |key|
         raw = key.text.strip
         raw = raw.gsub("KEYWORDS: ","")
+        raw = raw.gsub("’","'")
         key_array = Array.new
         key_array = raw.split(",")
        
@@ -250,7 +261,11 @@ task({ :scrape_tyranids_data => :environment}) do
 
         end
         keyword_list << key_word_array
-        csv << keyword_list
+        #checks for unsupported units
+        if keyword_list[0] === "Malanthrope" || keyword_list[0] === "Dimachaeron" || keyword_list[0] === "Sky-slasher Swarms"
+        else
+          csv << keyword_list
+        end
       end
     end
   end
@@ -264,38 +279,37 @@ task({ :scrape_astra_militarum_data => :environment}) do
 
   CSV.open("lib/sample_data/astra_militarum_stats.csv", "w") do |csv|
     csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"]  
-    parsed_page.css('.dsOuterFrame').each do |frame|
+    parsed_page.css('.dsOuterFrame' ).each do |frame|
 
-      unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-      base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-      unitname = unitname.gsub("#{base}", "")
-      unitname = unitname.gsub("’","'")
-      unitname = unitname.gsub("‘","'")
-      base = base.gsub("⌀", "")
-      invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
-      lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
-      
-      frame.css(".dsProfileBaseWrap").each do |box|
+        unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+        base = frame.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+        unitname = unitname.gsub("#{base}", "")
+        unitname = unitname.gsub("’","'")
+        unitname = unitname.gsub("‘","'")
+        base = base.gsub("⌀", "")
+        invulerable = frame.at_css('.dsCharInvulBack')&.text&.strip|| '0'
+        lore = frame.at_css('.tooltipstered')&.text&.strip||'records purged'
+        
+        frame.css(".dsProfileBaseWrap").each do |box|
 
-        modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
-        modelname = modelname.gsub("’","'")
-        box.css(".dsProfileWrap").each do |profile|  
-          #statline = String.new
-          statline = Array.new
-          statline << unitname
-          statline << base
-          statline << modelname
-          statline << invulerable
-          statline << lore
-          #statline.concat("#{name}")
-          profile.css(".dsCharFrameBack").each do |stat|
-            x = stat.at_css('.dsCharValue')&.text&.strip
-            statline << x.to_i
-          end 
-          csv << statline
+          modelname = "#{box.at_css('.dsModelName')&.text&.strip || "#{unitname}"}"
+          modelname = modelname.gsub("’","'")
+          box.css(".dsProfileWrap").each do |profile|  
+            #statline = String.new
+            statline = Array.new
+            statline << unitname
+            statline << base
+            statline << modelname
+            statline << invulerable
+            statline << lore
+            #statline.concat("#{name}")
+            profile.css(".dsCharFrameBack").each do |stat|
+              x = stat.at_css('.dsCharValue')&.text&.strip
+              statline << x.to_i
+            end 
+              csv << statline
+          end
         end
-      end
-
     end
   
   end
