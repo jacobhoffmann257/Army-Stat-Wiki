@@ -46,43 +46,47 @@ task({ :scrape_tyranids_data => :environment}) do
   
   end
   CSV.open("lib/sample_data/tyranids_abilities.csv","w") do |csv|
-    csv << ["Unit_Name", "Weapon_Ability","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
-    parsed_page.css('.dsOuterFrame').each do |box|
-
-      #Extracting Ability details
-        name = box.at_css('.dsH2Header')&.text&.strip || 'Unknown'
-        base = box.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
-        name = name.gsub("#{base}", "")
-        name = name.gsub("’","'")
-        base = base.gsub("⌀", "")
-        abilities_list = Array.new
-        abilities_list << name
+    csv << ["Unit_Name","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
+    parsed_page.css('.dsOuterFrame').each do |outerbox|
+      name = outerbox.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = outerbox.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      name = name.gsub("#{base}", "")
+      name = name.gsub("’","'")
+      name = name.gsub("‘","'")
+      base = base.gsub("⌀", "")
+      abilities_list = Array.new
+      # this pulls out the right column to parse
+      outerbox.css('.dsRightСol').each do |box| # is iterating throught this twice tdk why
+        #Extracting Ability details
+        #Array that will be added to the csv
+        if abilities_list.length === 0
+         abilities_list << name
+        end
+        #Arrays that will hold the info and be put into abilties_list
+        core_abilities = Array.new
+        faction_abilities = Array.new
+        standard_abilities = Array.new
+        wargear_abilities = Array.new
+        bodyguard_abilities = Array.new
+        size_abilities = Array.new
         box.css('.dsAbility').each do |ability|
-          
           if /CORE/.match(ability.text.strip)
             #gets core and faction 
-            if !abilities_list[1]
-              abilities_list << ["Weapon", "*"]
-            end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
             change2 = change1.gsub(",","*")
             change3 =  change2.gsub("\"", "")
             thing = change3.split("*")
-            abilities_list << thing
+            core_abilities << thing
           elsif /FACTION/.match(ability.text.strip)
-
-            if !abilities_list[2]
-              abilities_list << ["Weapon", "*"]
-              abilities_list << ["CORE", "*"]
-            end
             raw = ability.text.strip
             change1 = raw.gsub(":","*")
             change2 = change1.gsub(",","*")
             change3 =  change2.gsub("\"", "")
             thing = change3.split("*")
-            abilities_list << thing
-          elsif /This model is equipped with/.match(ability.text.strip)
+            faction_abilities << thing
+          elsif /This model is equipped with/.match(ability.to_s)
+          elsif /is equipped with/.match(ability.to_s)
           elsif /This model can be attached to the following unit/.match(ability.text.strip)
             guard = Array.new
               ability.css("ul").each do |bullet|
@@ -92,12 +96,9 @@ task({ :scrape_tyranids_data => :environment}) do
                 end
                 
               end
-              abilities_list << guard
+              bodyguard_abilities << guard
           elsif /<td>/.match(ability.to_s)
             #model size and cost
-            if !abilities_list[5]
-              abilities_list << [["Wargear", "*"]]
-            end
             modelsize = Array.new
               ability.css("table").each do |table|
                 table.css("tr").each do |row|
@@ -108,11 +109,9 @@ task({ :scrape_tyranids_data => :environment}) do
                   modelsize << spilting
                 end
               end
-              abilities_list << modelsize
-            elsif /This model is equipped with:/.match(ability.to_s)
-            elsif /model is equipped with/.match(ability.to_s)
+              size_abilities << modelsize
             elsif /This unit can be led by the following unit/.match(ability.to_s)
-            elsif /<b>/.match(ability.to_s)
+            elsif /<b>/.match(ability.to_s) # need to add something to check for wargear
               #this gets the  ability name
               holder_aray = Array.new
               abilitity_names = Array.new
@@ -144,27 +143,57 @@ task({ :scrape_tyranids_data => :environment}) do
                 pos = abilitity_names.find_index{|x| x === abilname}
                 final_ability << abilname
                 final_ability << ability_array[pos]
-                #puts final_ability
                 holder_aray << final_ability
               end
-              abilities_list << holder_aray
-            
-            elsif /<div class="dsLineHor">/.match(ability.to_s)
-              raw = ability.text.strip
-              raw = raw.split(".")
-              parsed = Array.new
-              raw.each do |second|
-                temp = second.split(":")
-                parsed << temp
+              if /Medi-pack/.match(ability.to_s)||/Regimental Standard/.match(ability.to_s)||/Command Rod/.match(ability.to_s)||/Master Vox/.match(ability.to_s)
+                if !wargear_abilities[1]
+                  wargear_abilities << holder_aray
+                end
+              else
+              standard_abilities << holder_aray
               end
-
-              abilities_list << parsed
-          end
+            end
 
       
         end
-          #checks if it is the first or second col
-          csv << abilities_list
+          #checks if the unit has an ability and if it does it adds it to the csv if it doesn't it adds a dummy value to maintain form
+          if abilities_list.length === 1
+            if core_abilities.length != 0
+              abilities_list << core_abilities
+            else
+              abilities_list << ["CORE", "*"]
+            end
+            if faction_abilities.length != 0
+              abilities_list << faction_abilities
+            else
+              abilities_list << ["FACTION","*"]
+            end
+            if standard_abilities.length != 0
+              abilities_list << standard_abilities
+            else
+              abilities_list << ["STANDARD", "*"]
+            end
+            if wargear_abilities.length != 0
+              abilities_list << wargear_abilities
+            else
+              abilities_list << ["WARGEAR","*"]
+            end
+            if size_abilities.length != 0
+              abilities_list  << size_abilities
+            else
+              abilities_list << ["NA","NA"]
+            end
+            if bodyguard_abilities.length != 0
+              abilities_list << bodyguard_abilities
+            else
+              abilities_list << ["BODYGUARD","NA"]
+            end
+          end
+
+      end
+      if abilities_list[2]
+        csv << abilities_list
+      end
     end
   end
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
@@ -381,7 +410,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
 
       
         end
-          #checks if it is the first or second col
+          #checks if the unit has an ability and if it does it adds it to the csv if it doesn't it adds a dummy value to maintain form
           if abilities_list.length === 1
             if core_abilities.length != 0
               abilities_list << core_abilities
