@@ -1,8 +1,14 @@
 desc "tyranid data"
   namespace :slurp do
+    require "csv"
+    require "rake"
+    require "json"
+    task :tyranid_all =>
+      [:tyranid_data,
+      :tyranid_weapons,
+      :tyranid_abilities]
+    
     task tyranid_data: :environment do 
-      require "csv"
-      require "json"
       #Stats
       csv_data = File.read(Rails.root.join("lib", "sample_data", "tyranids_stats.csv"))
       csv = CSV.parse(csv_data, :headers => true, :encoding => "ISO-8859-1")
@@ -254,6 +260,7 @@ desc "tyranid data"
         #end of size
       end
     end
+
   end
 
 end
