@@ -62,6 +62,7 @@ task({ :scrape_tyranids_data => :environment}) do
               puts unitname
               csv << statline
             end
+            #end Legends check
         end
       end
 
@@ -186,8 +187,19 @@ task({ :scrape_tyranids_data => :environment}) do
 
       
         end
-          #checks if it is the first or second col
-          csv << abilities_list
+                    #checking against legends array before adding
+                    isLegends = false
+                    legendsArray.each do |check|
+                      if name === check
+                        isLegends = true
+                      end
+                    end
+                    if isLegends ===false 
+                      puts name
+                      csv << abilities_list
+                    end
+                    #end Legends check
+         
     end
   end
   CSV.open("lib/sample_data/tyranids_weapons.csv", "w") do |csv|
@@ -244,7 +256,19 @@ task({ :scrape_tyranids_data => :environment}) do
 
         end
         keyword_list << key_word_array
-        csv << keyword_list
+        #checking against legends array before adding
+        isLegends = false
+        legendsArray.each do |check|
+          if name === check
+            isLegends = true
+          end
+        end
+        if isLegends ===false 
+          puts name
+          csv << keyword_list
+        end
+        #end Legends check
+        
       end
     end
   end
