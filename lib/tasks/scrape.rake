@@ -6,13 +6,25 @@ require 'httparty'
 desc "Scraping tyranids Data"
 
 task({ :scrape_tyranids_data => :environment}) do
-
+  legendsArray = Array.new
   url = 'https://wahapedia.ru/wh40k10ed/factions/tyranids/datasheets.html'
   page = HTTParty.get(url)
   parsed_page = Nokogiri::HTML(page)
 
   CSV.open("lib/sample_data/tyranids_stats.csv", "w") do |csv|
     csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"] 
+    #finds all Legends units and stores them in an array to be checked for later
+    parsed_page.css('.sLegendary').each do |unit|
+      unitname = unit.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+      base = unit.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+      unitname = unitname.gsub("#{base}", "")
+      unitname = unitname.gsub("’","'")
+      if unitname.length > 0
+        legendsArray.push(unitname)
+      else
+      end
+    end
+    #end of Legends check
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
@@ -35,12 +47,21 @@ task({ :scrape_tyranids_data => :environment}) do
           statline << modelname
           statline << invulerable
           statline << lore
-          #statline.concat("#{name}")
           profile.css(".dsCharFrameBack").each do |stat|
             x = stat.at_css('.dsCharValue')&.text&.strip
             statline << x.to_i
           end 
-          csv << statline
+          #checking against legends array before adding
+          isLegends = false
+            legendsArray.each do |check|
+              if unitname === check
+                isLegends = true
+              end
+            end
+            if isLegends ===false 
+              puts unitname
+              csv << statline
+            end
         end
       end
 
