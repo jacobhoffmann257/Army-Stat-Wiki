@@ -275,13 +275,25 @@ task({ :scrape_tyranids_data => :environment}) do
 end
 desc "Scraping astra militarum Data"
 task({ :scrape_astra_militarum_data => :environment}) do
-
+  legendsArray = Array.new
   url = 'https://wahapedia.ru/wh40k10ed/factions/astra-militarum/datasheets.html'
   page = HTTParty.get(url)
   parsed_page = Nokogiri::HTML(page)
 
-  CSV.open("lib/sample_data/astra-militarum_stats2.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_stats.csv", "w") do |csv|
     csv << ["Unit_Name","Base_Size","Model_Name","Invurebale_Save","Desc","M","T","Sv","W","Ld","OC"]  
+        #finds all Legends units and stores them in an array to be checked for later
+        parsed_page.css('.sLegendary').each do |unit|
+          unitname = unit.at_css('.dsH2Header')&.text&.strip || 'Unknown'
+          base = unit.at_css('.ShowBaseSize')&.text&.strip ||'Unknown'
+          unitname = unitname.gsub("#{base}", "")
+          unitname = unitname.gsub("’","'")
+          if unitname.length > 0
+            legendsArray.push(unitname)
+          else
+          end
+        end
+        #end of Legends check
     parsed_page.css('.dsOuterFrame').each do |frame|
 
       unitname = frame.at_css('.dsH2Header')&.text&.strip || 'Unknown'
@@ -305,19 +317,29 @@ task({ :scrape_astra_militarum_data => :environment}) do
           statline << modelname
           statline << invulerable
           statline << lore
-          #statline.concat("#{name}")
           profile.css(".dsCharFrameBack").each do |stat|
             x = stat.at_css('.dsCharValue')&.text&.strip
             statline << x.to_i
           end 
-          csv << statline
+          #checking against legends array before adding
+          isLegends = false
+          legendsArray.each do |check|
+            if unitname === check
+              isLegends = true
+            end
+          end
+          if isLegends ===false 
+            puts unitname
+            csv << statline
+          end
+          #end Legends check
         end
       end
 
     end
   
   end
-  CSV.open("lib/sample_data/astra-militarum_abilities2.csv","w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_abilities.csv","w") do |csv|
     csv << ["Unit_Name", "Weapon_Ability","Core", "Faction", "Standard", "Wargear", "Cost", "Bodygaurd" ]
     parsed_page.css('.dsOuterFrame').each do |box|
 
@@ -438,10 +460,21 @@ task({ :scrape_astra_militarum_data => :environment}) do
       
         end
           #checks if it is the first or second col
-          csv << abilities_list
+          #checking against legends array before adding
+          isLegends = false
+          legendsArray.each do |check|
+            if name === check
+              isLegends = true
+            end
+          end
+          if isLegends ===false 
+            puts name
+            csv << abilities_list
+          end
+          #end Legends check
     end
   end
-  CSV.open("lib/sample_data/astra-militarum_weapons2.csv", "w") do |csv|
+  CSV.open("lib/sample_data/astra-militarum_weapons.csv", "w") do |csv|
     
     csv << ["Name", "Weapon Name", "Range", "A", "BS/WS", "S", "AP", "D"] 
 
@@ -466,7 +499,19 @@ task({ :scrape_astra_militarum_data => :environment}) do
             s = row.at_css('td:nth-child(6) .ct')&.text&.strip || 'N/A'
             ap = row.at_css('td:nth-child(7) .ct')&.text&.strip || 'N/A'
             d = row.at_css('td:nth-child(8) .ct')&.text&.strip || 'N/A'
+          #checking against legends array before adding
+          isLegends = false
+          legendsArray.each do |check|
+            if name === check
+              isLegends = true
+            end
+          end
+          if isLegends ===false 
+            puts name
             csv << [name, weapon_name, range, a, bs_ws, s, ap, d]
+          end
+          #end Legends check
+            
           end
         end
       end
@@ -496,7 +541,19 @@ task({ :scrape_astra_militarum_data => :environment}) do
 
         end
         keyword_list << key_word_array
-        csv << keyword_list
+        #checking against legends array before adding
+        isLegends = false
+        legendsArray.each do |check|
+          if name === check
+            isLegends = true
+          end
+        end
+        if isLegends ===false 
+          puts name
+          csv << keyword_list
+        end
+        #end Legends check
+        
       end
     end
   end
