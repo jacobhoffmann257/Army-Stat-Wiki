@@ -558,7 +558,7 @@ task({ :scrape_astra_militarum_data => :environment}) do
     end
   end
 end
-desc "old"
+
 
 
 
